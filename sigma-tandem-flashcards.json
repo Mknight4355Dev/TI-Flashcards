@@ -1,0 +1,4319 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "sigma-tandem-form-291",
+  "title": "Sigma Tandem Instructor Flashcards",
+  "createdAt": "2026-10-06",
+  "language": "en-US",
+  "description": "All 84 questions and original choices from Form-291 Rev. 6, with independently compiled answers from the supplied manuals. Not an official UPT answer key.",
+  "sourcePolicy": "Answers reflect the uploaded revisions, not independent verification of the latest published requirements. No examiner answer key was provided. Unresolved or incomplete evidence is explicitly flagged.",
+  "usage": {
+    "cardsPath": "cards",
+    "frontFields": [
+      "question",
+      "context",
+      "options"
+    ],
+    "backFields": [
+      "answer",
+      "explanation",
+      "reviewNote",
+      "references"
+    ],
+    "scoringRule": "Score only cards where includeInQuiz is true and correctOptionId is not null. Compare the selected option id with correctOptionId. Never infer a key from answer text.",
+    "reviewRule": "Keep needs_review cards accessible in a review section, excluded from scoring. Keep personal attestations in a separate checklist.",
+    "optionOrderingRule": "Preserve original A/B/C/D labels and option order. Several options refer to other letters (e.g., A and C). Do not relabel/shuffle choices without rewriting those references.",
+    "shuffleCards": true,
+    "sourceLinks": "Match sourceId to sources[].id; pdfPage is 1-based for #page= links; printedPage follows the manual footer.",
+    "procedures": "Some cards link to procedures[] via procedureId; show the referenced steps on the answer side.",
+    "contextRule": "Display context when present, especially Q26 when cards are shuffled.",
+    "statusDefinitions": {
+      "verified": "Answer supported by the cited uploaded passages.",
+      "derived": "Answer follows from cited mechanics, arithmetic, or terminology; inference explained.",
+      "needs_review": "No defensible unique answer key from supplied evidence, or test/manual discrepancy. correctOptionId is null.",
+      "self_attestation": "Candidate must personally answer; not scored."
+    }
+  },
+  "counts": {
+    "total": 84,
+    "quizReady": 73,
+    "verified": 69,
+    "derived": 4,
+    "needs_review": 8,
+    "self_attestation": 3
+  },
+  "sources": [
+    {
+      "id": "exam",
+      "filename": "Sigma-Tandem-Instructor-Exam-FORM-291.pdf",
+      "title": "UPT Sigma Tandem Instructor Exam",
+      "revision": "Form-291 Rev. 6, 12/08/25",
+      "sha256": "593b162018aff9522f4225f20c9155b363cb939dfb6dd6071dbcc50e5335ce55",
+      "role": "question_source"
+    },
+    {
+      "id": "ops",
+      "filename": "Man016_Rev2-Sigma-Tandem-Operations-Manual.pdf",
+      "title": "Sigma Tandem Operations Manual",
+      "revision": "MAN 016 Rev_2, 6/1/2026",
+      "sha256": "682ae523e68bf5aca822d53ae158725b7294996a742d3d51eae12d31ad8cbec1",
+      "role": "supporting_document"
+    },
+    {
+      "id": "owner",
+      "filename": "Man013-Rev4-SigmaII-Tandem-Owners-Manual.pdf",
+      "title": "Sigma Tandem Owner’s Manual",
+      "revision": "MAN 013 Rev. 4.2, 8/11/2026",
+      "sha256": "a8e7bce57a39d978e783111ef3d64eefac92605bc7ec748451f965629450aead",
+      "role": "supporting_document"
+    },
+    {
+      "id": "irm",
+      "filename": "Man_IRM.pdf",
+      "title": "USPA Instructional Rating Manual",
+      "revision": "2026 edition",
+      "sha256": "3d7a3ccad434650b2ca9206ad7bb9ce90bd59faa0ca6ab3fa4dc563b6360e471",
+      "role": "supporting_document"
+    }
+  ],
+  "procedures": [
+    {
+      "id": "total",
+      "name": "Total Malfunction EP",
+      "definition": "The parachute container remains closed.",
+      "steps": [
+        "Look-grab reserve handle",
+        "Arch",
+        "Peel/pull reserve handle",
+        "Check for deployment",
+        "Check altimeter"
+      ],
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "56",
+          "pdfPage": 67,
+          "section": "Four Categories of Emergency Procedures"
+        }
+      ]
+    },
+    {
+      "id": "partial",
+      "name": "Partial Malfunction EP",
+      "definition": "Deployment has begun but the canopy does not fully or properly deploy.",
+      "steps": [
+        "Look-grab cutaway handle",
+        "Look-grab reserve handle",
+        "Arch",
+        "Peel/pull cutaway handle",
+        "Ensure separation of risers, physically assisting if necessary",
+        "Peel/pull reserve handle",
+        "Check for deployment",
+        "Check altimeter"
+      ],
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "56",
+          "pdfPage": 67,
+          "section": "Four Categories of Emergency Procedures"
+        }
+      ]
+    },
+    {
+      "id": "open_container_drogue_issues",
+      "name": "Open Container with Drogue Issues EP",
+      "definition": "Safety pin and main pin have been removed from the closing loop, and the drogue cannot be deployed or does not extract the main bag.",
+      "steps": [
+        "Disconnect RSL",
+        "Look-grab cutaway handle",
+        "Arch and continue to fly body",
+        "Peel/pull cutaway handle",
+        "Ensure separation of main risers, physically assisting if necessary",
+        "Look-grab reserve handle",
+        "Peel/pull reserve handle",
+        "Check for deployment",
+        "Check altimeter"
+      ],
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "56",
+          "pdfPage": 67,
+          "section": "Four Categories of Emergency Procedures"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "57",
+          "pdfPage": 68,
+          "section": "Four Categories of Emergency Procedures"
+        }
+      ]
+    },
+    {
+      "id": "third_party",
+      "name": "Third Party Entanglement EP",
+      "definition": "An outside parachutist becomes entangled in the drogue or its bridle.",
+      "steps": [
+        "Disconnect RSL",
+        "Look-grab cutaway handle",
+        "Arch",
+        "Peel/pull cutaway handle",
+        "Release drogue with either handle",
+        "Ensure separation of main risers, physically assisting if necessary",
+        "Gain horizontal separation",
+        "Look-grab reserve handle",
+        "Peel/pull reserve handle",
+        "Check for deployment",
+        "Check altimeter"
+      ],
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "57",
+          "pdfPage": 68,
+          "section": "Four Categories of Emergency Procedures"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "id": "sigma-291-001",
+      "examQuestionNumber": 1,
+      "category": "Prerequisites and personal confirmations",
+      "type": "multiple_choice",
+      "question": "The responsibility to ensure the valid credentials of the UPT Sigma Tandem Examiner before the course begins, belongs to whom?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Examiner"
+        },
+        {
+          "id": "B",
+          "text": "UPT Tandem Admin"
+        },
+        {
+          "id": "C",
+          "text": "The Tandem Instructor Candidate"
+        },
+        {
+          "id": "D",
+          "text": "None of the Above"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "The tandem instructor candidate.",
+      "explanation": "Candidates are responsible for validating the examiner’s credentials before the course begins.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "6",
+          "pdfPage": 17,
+          "section": "Sigma Tandem Instructor Certification"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "1",
+        "pdfPage": 1
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-002",
+      "examQuestionNumber": 2,
+      "category": "Prerequisites and personal confirmations",
+      "type": "self_attestation",
+      "question": "Have you verified that your UPT Tandem Examiner’s rating is current for the duration of the course?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Yes"
+        },
+        {
+          "id": "B",
+          "text": "No"
+        }
+      ],
+      "correctOptionId": null,
+      "answer": "Personally verify that the examiner is current for your course.",
+      "explanation": "This is a personal confirmation, not a knowledge question. The app cannot attest to completion or eligibility on your behalf.",
+      "status": "self_attestation",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "6",
+          "pdfPage": 17,
+          "section": "Candidate prerequisites / warning"
+        }
+      ],
+      "reviewNote": "Exclude from scored quizzes. Record the candidate’s own response separately.",
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "1",
+        "pdfPage": 1
+      },
+      "includeInQuiz": false,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-003",
+      "examQuestionNumber": 3,
+      "category": "Prerequisites and personal confirmations",
+      "type": "self_attestation",
+      "question": "Have you read the Sigma Manual in its entirety?",
+      "options": [
+        {
+          "id": "A",
+          "text": "No"
+        },
+        {
+          "id": "B",
+          "text": "Yes"
+        }
+      ],
+      "correctOptionId": null,
+      "answer": "Answer truthfully after reading the applicable Sigma manuals in their entirety.",
+      "explanation": "This is a personal confirmation, not a knowledge question. The app cannot attest to completion or eligibility on your behalf.",
+      "status": "self_attestation",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "ii",
+          "pdfPage": 3,
+          "section": "Candidate prerequisites / warning"
+        }
+      ],
+      "reviewNote": "Exclude from scored quizzes. Record the candidate’s own response separately.",
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "1",
+        "pdfPage": 1
+      },
+      "includeInQuiz": false,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-004",
+      "examQuestionNumber": 4,
+      "category": "Prerequisites and personal confirmations",
+      "type": "self_attestation",
+      "question": "Do you have a current and approved medical?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Yes"
+        },
+        {
+          "id": "B",
+          "text": "No"
+        }
+      ],
+      "correctOptionId": null,
+      "answer": "Personally verify that you hold a current, approved medical certificate.",
+      "explanation": "This is a personal confirmation, not a knowledge question. The app cannot attest to completion or eligibility on your behalf.",
+      "status": "self_attestation",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "6",
+          "pdfPage": 17,
+          "section": "Candidate prerequisites / warning"
+        }
+      ],
+      "reviewNote": "Exclude from scored quizzes. Record the candidate’s own response separately.",
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "1",
+        "pdfPage": 1
+      },
+      "includeInQuiz": false,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-005",
+      "examQuestionNumber": 5,
+      "category": "Drogue function and freefall speeds",
+      "type": "multiple_choice",
+      "question": "Normal drogue fall terminal velocity is?",
+      "options": [
+        {
+          "id": "A",
+          "text": "120mph (193 km/h)"
+        },
+        {
+          "id": "B",
+          "text": "130mph (209 km/h)"
+        },
+        {
+          "id": "C",
+          "text": "150mph (241 km/h)"
+        },
+        {
+          "id": "D",
+          "text": "170mph (274 km/h)"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Approximately 120 mph (193 km/h).",
+      "explanation": "The manual gives this as approximate terminal speed with a fully inflated drogue.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "27",
+          "pdfPage": 38,
+          "section": "Introduction to the Drogue"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "1",
+        "pdfPage": 1
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-006",
+      "examQuestionNumber": 6,
+      "category": "Drogue function and freefall speeds",
+      "type": "multiple_choice",
+      "question": "Tandem freefall terminal velocity is?",
+      "options": [
+        {
+          "id": "A",
+          "text": "120mph (193 km/h)"
+        },
+        {
+          "id": "B",
+          "text": "130mph (209 km/h)"
+        },
+        {
+          "id": "C",
+          "text": "150mph (241 km/h)"
+        },
+        {
+          "id": "D",
+          "text": "170mph (274 km/h)"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Approximately 170 mph (274 km/h).",
+      "explanation": "This is tandem terminal speed without a drogue; actual speed varies.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "27",
+          "pdfPage": 38,
+          "section": "Introduction to the Drogue"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "1",
+        "pdfPage": 1
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-007",
+      "examQuestionNumber": 7,
+      "category": "Drogue function and freefall speeds",
+      "type": "multiple_choice",
+      "question": "How many seconds does it take to fall 1,000 feet at terminal velocity with a drogue?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 Seconds"
+        },
+        {
+          "id": "B",
+          "text": "3 Seconds"
+        },
+        {
+          "id": "C",
+          "text": "6 Seconds"
+        },
+        {
+          "id": "D",
+          "text": "8 Seconds"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "Approximately 6 seconds per 1,000 ft.",
+      "explanation": "The manual gives this approximate descent rate during stabilized drogue fall.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "47",
+          "pdfPage": 58,
+          "section": "Drogue Deployment After Exit"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "1",
+        "pdfPage": 1
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-008",
+      "examQuestionNumber": 8,
+      "category": "Drogue function and freefall speeds",
+      "type": "multiple_choice",
+      "question": "How many seconds does it take to fall 1,000 feet at terminal velocity without a drogue?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 Seconds"
+        },
+        {
+          "id": "B",
+          "text": "4 Seconds"
+        },
+        {
+          "id": "C",
+          "text": "6 Seconds"
+        },
+        {
+          "id": "D",
+          "text": "8 Seconds"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "Approximately 4 seconds per 1,000 ft.",
+      "explanation": "The manual gives this approximate descent rate without a deployed drogue at tandem terminal speed.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "47",
+          "pdfPage": 58,
+          "section": "Drogue Deployment After Exit"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "2",
+        "pdfPage": 2
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-009",
+      "examQuestionNumber": 9,
+      "category": "Drogue function and freefall speeds",
+      "type": "multiple_choice",
+      "question": "What is the main purpose of a drogue?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To get stable on exit"
+        },
+        {
+          "id": "B",
+          "text": "Reduce tandem freefall velocity"
+        },
+        {
+          "id": "C",
+          "text": "To aid in stability"
+        },
+        {
+          "id": "D",
+          "text": "To help avoid side spins"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "Reduce tandem freefall velocity.",
+      "explanation": "The primary purpose of the drogue is speed reduction, not achieving exit stability.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "27",
+          "pdfPage": 38,
+          "section": "Introduction to the Drogue"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "2",
+        "pdfPage": 2
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-010",
+      "examQuestionNumber": 10,
+      "category": "Drogue function and freefall speeds",
+      "type": "multiple_choice",
+      "question": "If a drogue is deployed after 20 seconds of tandem freefall, how long will it take to slow the tandem down to 120 mph?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6 seconds or 1000ft (300m)"
+        },
+        {
+          "id": "B",
+          "text": "8 seconds or 1500ft (500m)"
+        },
+        {
+          "id": "C",
+          "text": "10 seconds or 2000ft (600m)"
+        },
+        {
+          "id": "D",
+          "text": "12 seconds or 2500ft (800m)"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "Approximately 10 seconds or 2,000 ft (600 m).",
+      "explanation": "The manual describes this deceleration after drogue deployment at tandem terminal speed; it is an approximate training value.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "47",
+          "pdfPage": 58,
+          "section": "Drogue Deployment After Exit"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "2",
+        "pdfPage": 2
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-011",
+      "examQuestionNumber": 11,
+      "category": "Weights and equipment limits",
+      "type": "multiple_choice",
+      "question": "A packed Sigma tandem system and student harness weighs approximately?",
+      "options": [
+        {
+          "id": "A",
+          "text": "45 lbs. (20.4 kg)"
+        },
+        {
+          "id": "B",
+          "text": "40 lbs. (18.1 kg)"
+        },
+        {
+          "id": "C",
+          "text": "63 lbs. (28.6 kg)"
+        },
+        {
+          "id": "D",
+          "text": "58 lbs. (26.3 kg)"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Approximately 58 lb (26.3 kg), including the student harness.",
+      "explanation": "Derived from the Operations Manual’s approximately 50 lb system plus 8 lb student harness. Use actual equipment weight for loading calculations.",
+      "status": "derived",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "36",
+          "pdfPage": 47,
+          "section": "Weight and Size"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "2",
+        "pdfPage": 2
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-012",
+      "examQuestionNumber": 12,
+      "category": "Weights and equipment limits",
+      "type": "multiple_choice",
+      "question": "A packed Micro Sigma tandem system and student harness weighs approximately?",
+      "options": [
+        {
+          "id": "A",
+          "text": "56 lbs. (25.4 kg)"
+        },
+        {
+          "id": "B",
+          "text": "38 lbs. (17.2 kg)"
+        },
+        {
+          "id": "C",
+          "text": "50 lbs. (22.7 kg)"
+        },
+        {
+          "id": "D",
+          "text": "43 lbs. (19.5 kg)"
+        }
+      ],
+      "correctOptionId": null,
+      "answer": "Micro Sigma packed weight plus student harness: not established by the uploaded manuals.",
+      "explanation": "The Operations Manual provides a generic Sigma system weight of about 50 lb plus an 8 lb student harness, but this does not establish the separate Micro Sigma figure asked here.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "35",
+          "pdfPage": 46,
+          "section": "Instructor Physical Size and Strength; Weight and Size"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "36",
+          "pdfPage": 47,
+          "section": "Instructor Physical Size and Strength; Weight and Size"
+        }
+      ],
+      "reviewNote": "Ask the examiner for the Micro Sigma-specific reference and configuration. Do not reuse the generic Sigma weight as the Micro Sigma answer.",
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "2",
+        "pdfPage": 2
+      },
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-013",
+      "examQuestionNumber": 13,
+      "category": "Weights and equipment limits",
+      "type": "multiple_choice",
+      "question": "What is the minimum exit weight of the Sigma Tandem System?",
+      "options": [
+        {
+          "id": "A",
+          "text": "250 lbs. (113.4 kg) for VR 360 / SR 370"
+        },
+        {
+          "id": "B",
+          "text": "200 lbs. (90.7 kg) for VR 360 / SR 370 / SR 340"
+        },
+        {
+          "id": "C",
+          "text": "200 lbs. (90.7 kg) for VR 360 / SR 360"
+        },
+        {
+          "id": "D",
+          "text": "No defined minimum exit weight"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "Minimum system exit weight: 200 lb (90.7 kg).",
+      "explanation": "The Operations Manual states a 200 lb minimum system exit weight. This is total exit weight, not passenger body weight.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "36",
+          "pdfPage": 47,
+          "section": "Weight and Size"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "2",
+        "pdfPage": 2
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-014",
+      "examQuestionNumber": 14,
+      "category": "Weights and equipment limits",
+      "type": "multiple_choice",
+      "question": "What is the maximum combined suspended weight for the Sigma system? For the Micro Sigma Tandem system? (Specify both reserves)",
+      "options": [
+        {
+          "id": "A",
+          "text": "500 lbs. (226.5 kg) SR 340 / 550 lbs. (249.5 kg) SR 370"
+        },
+        {
+          "id": "B",
+          "text": "450 lbs. (204.1 kg) VR 360 / 500 lbs. (226.5 kg) SR 340"
+        },
+        {
+          "id": "C",
+          "text": "500 lbs. (226.5 kg) VR 360 / 550 lbs. (249.5 kg) SR 370"
+        },
+        {
+          "id": "D",
+          "text": "550 lbs. (249.5 kg) VR 360 / 500 lbs. 226.5 kg) SR 340"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "500 lb with VR360; 550 lb with SR370. The newer manual also permits 550 lb with SR340.",
+      "explanation": "The limits include people and equipment. Option C matches the two reserve models it names; the current uploaded manual additionally lists SR340 at 550 lb.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "2",
+          "pdfPage": 13,
+          "section": "Equipment Limitations; Weight and Size"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "36",
+          "pdfPage": 47,
+          "section": "Equipment Limitations; Weight and Size"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "2",
+        "pdfPage": 2
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-015",
+      "examQuestionNumber": 15,
+      "category": "Weights and equipment limits",
+      "type": "multiple_choice",
+      "question": "How do you calculate your maximum tandem student weight?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Maximum system weight minus tandem instructor weight minus sigma system weight"
+        },
+        {
+          "id": "B",
+          "text": "Maximum system weight minus exit weight"
+        },
+        {
+          "id": "C",
+          "text": "Sigma system weight minus student harness weight minus tandem instructor weight"
+        },
+        {
+          "id": "D",
+          "text": "Maximum system weight minus sigma system & student harness weight minus tandem instructor weight"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Maximum system weight minus instructor weight minus the system AND student harness weight.",
+      "explanation": "The student harness must be included; the manual’s example uses approximately 50 lb for the system and 8 lb for the harness. Other operational restrictions can impose a lower passenger limit.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "36",
+          "pdfPage": 47,
+          "section": "Weight and Size"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "3",
+        "pdfPage": 3
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-016",
+      "examQuestionNumber": 16,
+      "category": "Drogue mechanics, packing and calibration",
+      "type": "multiple_choice",
+      "question": "How long should the trap door effect be?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.5 seconds"
+        },
+        {
+          "id": "B",
+          "text": "1 second"
+        },
+        {
+          "id": "C",
+          "text": "0.5 a second"
+        },
+        {
+          "id": "D",
+          "text": "¾ of a second"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Approximately ¾ second.",
+      "explanation": "Operations describes approximately ¾ second. Owner’s Manual p. 139 gives an ideal ¾ second and minimum ½ second.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "50",
+          "pdfPage": 61,
+          "section": "Trap Door Effect"
+        },
+        {
+          "sourceId": "owner",
+          "printedPage": "139",
+          "pdfPage": 149,
+          "section": "Lengthening the Drogue Kill Line"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "3",
+        "pdfPage": 3
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-017",
+      "examQuestionNumber": 17,
+      "category": "Drogue mechanics, packing and calibration",
+      "type": "multiple_choice",
+      "question": "What problem is caused by a drogue center line that is too short?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hard opening"
+        },
+        {
+          "id": "B",
+          "text": "Slower than normal tandem terminal speed"
+        },
+        {
+          "id": "C",
+          "text": "Longer than normal trap door effect"
+        },
+        {
+          "id": "D",
+          "text": "None of the above"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "Longer-than-normal trap door effect.",
+      "explanation": "A too-short kill line can cause slower openings; lengthening it can reduce excessive drogue collapse and trap door duration.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "owner",
+          "printedPage": "137",
+          "pdfPage": 147,
+          "section": "Drogue Kill Line Calibration"
+        },
+        {
+          "sourceId": "owner",
+          "printedPage": "139",
+          "pdfPage": 149,
+          "section": "Drogue Kill Line Calibration"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "3",
+        "pdfPage": 3
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-018",
+      "examQuestionNumber": 18,
+      "category": "Drogue mechanics, packing and calibration",
+      "type": "multiple_choice",
+      "question": "What problem is caused by a drogue center line that is too long?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Drogue will not extract the bag"
+        },
+        {
+          "id": "B",
+          "text": "Pilot chute in tow"
+        },
+        {
+          "id": "C",
+          "text": "Slower than normal drogue fall speed"
+        },
+        {
+          "id": "D",
+          "text": "Higher snatch force, hard opening"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Higher snatch force / potential hard opening.",
+      "explanation": "The calibration section identifies a too-long kill line as a contributor to hard openings.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "owner",
+          "printedPage": "137",
+          "pdfPage": 147,
+          "section": "Drogue Kill Line Calibration"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "3",
+        "pdfPage": 3
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-019",
+      "examQuestionNumber": 19,
+      "category": "Drogue mechanics, packing and calibration",
+      "type": "multiple_choice",
+      "question": "How can you tell if a drogue was cocked during packing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It was packed by a rigger"
+        },
+        {
+          "id": "B",
+          "text": "If the safety pin is seated correctly"
+        },
+        {
+          "id": "C",
+          "text": "Bridle scrunched and drogue centerline window color"
+        },
+        {
+          "id": "D",
+          "text": "If the closing loop is properly routed"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "Both a scrunched bridle and color visible in the inspection window.",
+      "explanation": "The manual identifies two checks: color in the window and scrunch at the top left of the main container.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "owner",
+          "printedPage": "117",
+          "pdfPage": 127,
+          "section": "Packing the Main Canopy into the Main Tray"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "3",
+        "pdfPage": 3
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-020",
+      "examQuestionNumber": 20,
+      "category": "Drogue mechanics, packing and calibration",
+      "type": "multiple_choice",
+      "question": "What might happen if you deploy a drogue which had not been cocked properly during packing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Could cause instability"
+        },
+        {
+          "id": "B",
+          "text": "Will not create enough drag to pull safety pin"
+        },
+        {
+          "id": "C",
+          "text": "Terminal velocity increases. Drogue should inflate within 6-8 seconds"
+        },
+        {
+          "id": "D",
+          "text": "It will not deploy the main"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "Increased terminal velocity; the Owner’s Manual says the drogue should inflate within 6–8 seconds if there are no other entanglements.",
+      "explanation": "This describes the packing error’s possible behavior, not permission to wait 8 seconds during a malfunction. Operations p. 61 says to release an uninflated drogue if it has not inflated within 6 seconds after setting.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "owner",
+          "printedPage": "116",
+          "pdfPage": 126,
+          "section": "Setting the Drogue"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "61",
+          "pdfPage": 72,
+          "section": "Uninflated Drogue After Drogue Set"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "3",
+        "pdfPage": 3
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-021",
+      "examQuestionNumber": 21,
+      "category": "Drogue mechanics, packing and calibration",
+      "type": "multiple_choice",
+      "question": "What would happen if you held onto the drogue during drogue deployment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Normal drogue deployment"
+        },
+        {
+          "id": "B",
+          "text": "Open Container with Drogue Issues EP"
+        },
+        {
+          "id": "C",
+          "text": "Possible entanglement with drogue bridle"
+        },
+        {
+          "id": "D",
+          "text": "Premature Deployment"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "Possible entanglement with the drogue bridle.",
+      "explanation": "Holding the drogue permits the long bridle to extend before the drogue. Use the prescribed continuous deployment motion.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "27",
+          "pdfPage": 38,
+          "section": "Deploying the Drogue; Drogue Fall"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "48",
+          "pdfPage": 59,
+          "section": "Deploying the Drogue; Drogue Fall"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "3",
+        "pdfPage": 3
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-022",
+      "examQuestionNumber": 22,
+      "category": "Drogue mechanics, packing and calibration",
+      "type": "multiple_choice",
+      "question": "What is the purpose of the “safety pin” on the drogue bridle?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To ensure the drogue is cocked"
+        },
+        {
+          "id": "B",
+          "text": "Guarantees an in-sequence deployment"
+        },
+        {
+          "id": "C",
+          "text": "Ensures the main container opens before the drogue collapses"
+        },
+        {
+          "id": "D",
+          "text": "Helps prevent the main container from opening prematurely"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Help prevent premature main-container opening.",
+      "explanation": "The safety pin is specifically described as preventing accidental main-container openings.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "owner",
+          "printedPage": "9",
+          "pdfPage": 19,
+          "section": "Drogue System; Main Pin and Safety Pin"
+        },
+        {
+          "sourceId": "owner",
+          "printedPage": "119",
+          "pdfPage": 129,
+          "section": "Drogue System; Main Pin and Safety Pin"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "4",
+        "pdfPage": 4
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-023",
+      "examQuestionNumber": 23,
+      "category": "Drogue mechanics, packing and calibration",
+      "type": "multiple_choice",
+      "question": "What length should the exposed kill line be above the grommet at the base of the drogue envelope during drogue calibration?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2.5” – 5.5” (64mm – 140mm) for a 60” drogue"
+        },
+        {
+          "id": "B",
+          "text": "1.5” – 5” (39mm – 128mm) for a 54” drogue"
+        },
+        {
+          "id": "C",
+          "text": "7.5” (191mm) for a 60” drogue"
+        },
+        {
+          "id": "D",
+          "text": "B and C are correct"
+        }
+      ],
+      "correctOptionId": null,
+      "answer": "Uploaded manual factory settings: new 54-inch drogue, 1½ inches; new 60-inch drogue, 7½ inches, measured with the specified tension.",
+      "explanation": "Owner’s p. 138 (including its illustration labels) specifies these new-drogue settings and notes that use may require lengthening. Option C matches the 60-inch value, but the uploaded manual does not establish option B’s full 1½–5-inch range, so D cannot be verified.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "owner",
+          "printedPage": "137",
+          "pdfPage": 147,
+          "section": "Drogue Kill Line Calibration"
+        },
+        {
+          "sourceId": "owner",
+          "printedPage": "138",
+          "pdfPage": 148,
+          "section": "Drogue Kill Line Calibration"
+        },
+        {
+          "sourceId": "owner",
+          "printedPage": "139",
+          "pdfPage": 149,
+          "section": "Drogue Kill Line Calibration"
+        }
+      ],
+      "reviewNote": "Exam choices and newer calibration guidance do not establish a unique best answer across drogue sizes. Confirm with the examiner; do not treat this card as rigging instructions.",
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "4",
+        "pdfPage": 4
+      },
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-024",
+      "examQuestionNumber": 24,
+      "category": "Drogue mechanics, packing and calibration",
+      "type": "multiple_choice",
+      "question": "How often should the drogue calibration be checked?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Between each reserve repack cycle"
+        },
+        {
+          "id": "B",
+          "text": "During every main pack"
+        },
+        {
+          "id": "C",
+          "text": "Approximately every 30 days"
+        },
+        {
+          "id": "D",
+          "text": "Approximately every 25 jumps"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Approximately every 25 jumps.",
+      "explanation": "Inspect the drogue centerline and calibrate if needed every 25 jumps.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "owner",
+          "printedPage": "92",
+          "pdfPage": 102,
+          "section": "Inspecting Main Canopy & Components; Setting the Drogue"
+        },
+        {
+          "sourceId": "owner",
+          "printedPage": "116",
+          "pdfPage": 126,
+          "section": "Inspecting Main Canopy & Components; Setting the Drogue"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "4",
+        "pdfPage": 4
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-025",
+      "examQuestionNumber": 25,
+      "category": "Drogue mechanics, packing and calibration",
+      "type": "multiple_choice",
+      "question": "What would happen if the kill line were not attached to the #5 link at the top of the main deployment bag or the kill line were to break during deployment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Slower than normal canopy deployment"
+        },
+        {
+          "id": "B",
+          "text": "The drogue will collapse"
+        },
+        {
+          "id": "C",
+          "text": "A and B are correct"
+        },
+        {
+          "id": "D",
+          "text": "The drogue would not collapse"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "The drogue would not collapse.",
+      "explanation": "The kill line inverts the drogue apex when the extended bridle becomes longer than the kill line. A broken or unattached kill line cannot perform that function.",
+      "status": "derived",
+      "references": [
+        {
+          "sourceId": "owner",
+          "printedPage": "8",
+          "pdfPage": 18,
+          "section": "The Drogue System"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "4",
+        "pdfPage": 4
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-026",
+      "examQuestionNumber": 26,
+      "category": "Drogue mechanics, packing and calibration",
+      "type": "multiple_choice",
+      "question": "What are the negative consequences of such an occurrence (question # 25)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Potential for hard opening"
+        },
+        {
+          "id": "B",
+          "text": "Open container with drogue issues malfunction"
+        },
+        {
+          "id": "C",
+          "text": "Streamer malfunction"
+        },
+        {
+          "id": "D",
+          "text": "Total malfunction"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Potential hard opening.",
+      "explanation": "The related event is a broken or unattached kill line (Q25), leaving the drogue uncollapsed. The deployment-emergency procedure says to prepare for a hard opening and inspect for canopy damage.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "63",
+          "pdfPage": 74,
+          "section": "Non-Collapsed Drogue During Deployment"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "4",
+        "pdfPage": 4
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": [
+        "sigma-291-025"
+      ],
+      "context": "Question 25 scenario: the drogue kill line is not attached to the deployment-bag link, or it breaks during deployment."
+    },
+    {
+      "id": "sigma-291-027",
+      "examQuestionNumber": 27,
+      "category": "Student control and deployment",
+      "type": "multiple_choice",
+      "question": "Explain the negative consequences of loose student side attachment straps on exit?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rocking drogue fall, student’s legs outside instructors"
+        },
+        {
+          "id": "B",
+          "text": "Uncontrollable turns, unstable drogue fall"
+        },
+        {
+          "id": "C",
+          "text": "Harder to get stable, buffeting"
+        },
+        {
+          "id": "D",
+          "text": "All of the above"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "All listed problems: instability, turns, rocking, buffeting, and poor student positioning.",
+      "explanation": "Operations links loose lower laterals with student lateral shift, involuntary turns, rocking, and buffeting. The combined option is the best match.",
+      "status": "derived",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "43",
+          "pdfPage": 54,
+          "section": "Hook Up Procedures; Ways to Minimize Rocking"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "49",
+          "pdfPage": 60,
+          "section": "Hook Up Procedures; Ways to Minimize Rocking"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "4",
+        "pdfPage": 4
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-028",
+      "examQuestionNumber": 28,
+      "category": "Student control and deployment",
+      "type": "multiple_choice",
+      "question": "What is the main reason to avoid reaching in front of a student?",
+      "options": [
+        {
+          "id": "A",
+          "text": "This is the appropriate response to put the student into the proper position"
+        },
+        {
+          "id": "B",
+          "text": "The student might grab your arms"
+        },
+        {
+          "id": "C",
+          "text": "Can cause instability"
+        },
+        {
+          "id": "D",
+          "text": "Can cause bad handcam footage"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "The student might grab your arms.",
+      "explanation": "This can interfere with control and handle accessibility. Operations cautions against reaching around to physically pull the student’s arms into position.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "48",
+          "pdfPage": 59,
+          "section": "Freefall; Arm Extension"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "49",
+          "pdfPage": 60,
+          "section": "Freefall; Arm Extension"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "4",
+        "pdfPage": 4
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-029",
+      "examQuestionNumber": 29,
+      "category": "Student control and deployment",
+      "type": "multiple_choice",
+      "question": "What should you feel immediately upon pulling the drogue release handle?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The trap door effect"
+        },
+        {
+          "id": "B",
+          "text": "The safety pin releasing"
+        },
+        {
+          "id": "C",
+          "text": "An uninflated drogue"
+        },
+        {
+          "id": "D",
+          "text": "Separation from the main canopy risers"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "The trap door effect.",
+      "explanation": "It is the brief acceleration as the drogue collapses and the main inflates; absence may indicate that the drogue did not release.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "50",
+          "pdfPage": 61,
+          "section": "Trap Door Effect"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "5",
+        "pdfPage": 5
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-030",
+      "examQuestionNumber": 30,
+      "category": "Container, AAD, RSL and Skyhook",
+      "type": "multiple_choice",
+      "question": "Which direction should the closing pin be inserted?",
+      "options": [
+        {
+          "id": "A",
+          "text": "In the 11 o’clock position"
+        },
+        {
+          "id": "B",
+          "text": "In the direction of the arrow on the disk"
+        },
+        {
+          "id": "C",
+          "text": "From the bottom of the container"
+        },
+        {
+          "id": "D",
+          "text": "A and C are correct"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Both A and C: at the 11 o’clock position, inserted from the bottom upward.",
+      "explanation": "Follow the main-pin-cover diagram and keep the recoil ripcord untwisted.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "owner",
+          "printedPage": "119",
+          "pdfPage": 129,
+          "section": "Main Pin Orientation"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "5",
+        "pdfPage": 5
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-031",
+      "examQuestionNumber": 31,
+      "category": "Container, AAD, RSL and Skyhook",
+      "type": "multiple_choice",
+      "question": "What might happen if the closing pin is inserted from or pointing in the wrong direction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It could cause a Partial Malfunction"
+        },
+        {
+          "id": "B",
+          "text": "It could cause a Total Malfunction"
+        },
+        {
+          "id": "C",
+          "text": "It could cause a Horseshoe Malfunction"
+        },
+        {
+          "id": "D",
+          "text": "It could cause an Open Container with Drogue Issues Malfunction"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "A total malfunction.",
+      "explanation": "The Owner’s Manual explicitly warns that wrong pin insertion direction or orientation could cause a total malfunction.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "owner",
+          "printedPage": "119",
+          "pdfPage": 129,
+          "section": "Main Pin Orientation"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "5",
+        "pdfPage": 5
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-032",
+      "examQuestionNumber": 32,
+      "category": "Container, AAD, RSL and Skyhook",
+      "type": "multiple_choice",
+      "question": "What will happen to the pull force if you pack twists into the ripcords below the pin?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cause a Partial Malfunction"
+        },
+        {
+          "id": "B",
+          "text": "Cause a collapsed drogue in tow"
+        },
+        {
+          "id": "C",
+          "text": "Cause hard pulls"
+        },
+        {
+          "id": "D",
+          "text": "None of the above"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "Hard pulls.",
+      "explanation": "Twists in the recoil ripcord can increase pull force.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "owner",
+          "printedPage": "119",
+          "pdfPage": 129,
+          "section": "Main Pin Orientation"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "5",
+        "pdfPage": 5
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-033",
+      "examQuestionNumber": 33,
+      "category": "Container, AAD, RSL and Skyhook",
+      "type": "multiple_choice",
+      "question": "What AAD unit manufacturers are authorized for the Sigma Tandem System? (In the approved tandem configuration or mode)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mars"
+        },
+        {
+          "id": "B",
+          "text": "Cypres"
+        },
+        {
+          "id": "C",
+          "text": "Vigil"
+        },
+        {
+          "id": "D",
+          "text": "All of the above"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "All three listed manufacturers, using only approved models in tandem configuration.",
+      "explanation": "Owner’s p. 12 lists Vigil/Vigil 2/Vigil 2+/Vigil Cuatro, Cypres 2, and M2 (the exam’s Mars choice). This is not blanket approval of every model: original Cypres units are specifically excluded, and the AAD must be a tandem unit or in tandem mode.",
+      "status": "derived",
+      "references": [
+        {
+          "sourceId": "owner",
+          "printedPage": "12",
+          "pdfPage": 22,
+          "section": "Approved Automatic Activation Devices"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "5",
+        "pdfPage": 5
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-034",
+      "examQuestionNumber": 34,
+      "category": "Container, AAD, RSL and Skyhook",
+      "type": "multiple_choice",
+      "question": "The red lanyard attached to the Sigma RSL is connected to the…",
+      "options": [
+        {
+          "id": "A",
+          "text": "Collins Lanyard"
+        },
+        {
+          "id": "B",
+          "text": "Reserve Pin"
+        },
+        {
+          "id": "C",
+          "text": "Skyhook"
+        },
+        {
+          "id": "D",
+          "text": "Cutaway Handle"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "The Skyhook.",
+      "explanation": "The red Skyhook lanyard connects the RSL to the Skyhook.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "owner",
+          "printedPage": "11",
+          "pdfPage": 21,
+          "section": "The Skyhook RSL and Integrated Collins Lanyard"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "5",
+        "pdfPage": 5
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-035",
+      "examQuestionNumber": 35,
+      "category": "Container, AAD, RSL and Skyhook",
+      "type": "multiple_choice",
+      "question": "The Collins Lanyard is designed to do what?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Activate the Skyhook"
+        },
+        {
+          "id": "B",
+          "text": "Deploy the reserve"
+        },
+        {
+          "id": "C",
+          "text": "To act as a secondary cutaway device"
+        },
+        {
+          "id": "D",
+          "text": "Release non-RSL riser if the right riser releases prematurely"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Release the left, non-RSL riser if the right riser releases prematurely.",
+      "explanation": "This is the Collins lanyard’s role; the Skyhook provides main-assisted reserve extraction.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "owner",
+          "printedPage": "11",
+          "pdfPage": 21,
+          "section": "The Skyhook RSL and Integrated Collins Lanyard"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "5",
+        "pdfPage": 5
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-036",
+      "examQuestionNumber": 36,
+      "category": "Operating limits, checks and student briefing",
+      "type": "multiple_choice",
+      "question": "What does the 17 Point Check represent?",
+      "options": [
+        {
+          "id": "A",
+          "text": "On aircraft checks for the instructor and student"
+        },
+        {
+          "id": "B",
+          "text": "Checks under canopy"
+        },
+        {
+          "id": "C",
+          "text": "Gear check"
+        },
+        {
+          "id": "D",
+          "text": "Briefing items under the Part 105.45"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "On-aircraft checks for the instructor and student.",
+      "explanation": "Performed after the student is connected and adjusted, to verify attachments, handles, and system configuration.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "43",
+          "pdfPage": 54,
+          "section": "17 Point Check"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "44",
+          "pdfPage": 55,
+          "section": "17 Point Check"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "5",
+        "pdfPage": 5
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-037",
+      "examQuestionNumber": 37,
+      "category": "Operating limits, checks and student briefing",
+      "type": "multiple_choice",
+      "question": "What is the minimum functionally open main parachute altitude for tandem jumps after probation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4500ft (1400m)"
+        },
+        {
+          "id": "B",
+          "text": "4000ft (1200m)"
+        },
+        {
+          "id": "C",
+          "text": "3500ft (1100m)"
+        },
+        {
+          "id": "D",
+          "text": "3000ft (1000m)"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "4,000 ft AGL, fully operational.",
+      "explanation": "This is the normal post-probation open-main requirement, not the altitude to start deployment.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "vi",
+          "pdfPage": 7,
+          "section": "Standard Operating Procedures; Canopy Deployment Altitudes"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "47",
+          "pdfPage": 58,
+          "section": "Standard Operating Procedures; Canopy Deployment Altitudes"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "6",
+        "pdfPage": 6
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-038",
+      "examQuestionNumber": 38,
+      "category": "Operating limits, checks and student briefing",
+      "type": "multiple_choice",
+      "question": "What is the minimum exit altitude for tandem jumps after probation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "9500ft (3000m) AGL"
+        },
+        {
+          "id": "B",
+          "text": "9500ft (3000m) MSL"
+        },
+        {
+          "id": "C",
+          "text": "7500ft (2300m) AGL"
+        },
+        {
+          "id": "D",
+          "text": "7500ft (2300m) MSL"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "7,500 ft AGL.",
+      "explanation": "This is the normal minimum exit altitude. Training, probationary, and emergency scenarios have their own requirements.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "vi",
+          "pdfPage": 7,
+          "section": "SOPs; Emergency Procedures Introduction"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "55",
+          "pdfPage": 66,
+          "section": "SOPs; Emergency Procedures Introduction"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "6",
+        "pdfPage": 6
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-039",
+      "examQuestionNumber": 39,
+      "category": "Operating limits, checks and student briefing",
+      "type": "multiple_choice",
+      "question": "What are the leading causes for a tandem pair going unstable when leaving the aircraft?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Improper harnessing"
+        },
+        {
+          "id": "B",
+          "text": "Poor presentation into the relative wind"
+        },
+        {
+          "id": "C",
+          "text": "Improper set up, launch, fly away"
+        },
+        {
+          "id": "D",
+          "text": "All of the above"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "All of the above.",
+      "explanation": "Operations identifies improper setup, launch or flyaway, incorrect harness fit, and poor presentation as common causes of exit instability.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "45",
+          "pdfPage": 56,
+          "section": "Exits"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "6",
+        "pdfPage": 6
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-040",
+      "examQuestionNumber": 40,
+      "category": "Operating limits, checks and student briefing",
+      "type": "multiple_choice",
+      "question": "Where can you find the regulations on who may do RW with a tandem pair?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sigma Manual"
+        },
+        {
+          "id": "B",
+          "text": "Examiner Manual"
+        },
+        {
+          "id": "C",
+          "text": "UPT SOPs"
+        },
+        {
+          "id": "D",
+          "text": "All of the above"
+        }
+      ],
+      "correctOptionId": null,
+      "answer": "The Sigma Operations Manual, Section 6, contains the RW participant requirements.",
+      "explanation": "Option A is directly supported. The exam also offers “All of the above,” but the Examiner Manual has not been uploaded, so that combined answer cannot be established from this document set.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "70",
+          "pdfPage": 81,
+          "section": "Relative Work"
+        }
+      ],
+      "reviewNote": "Confirm the intended exam key for A versus D with the examiner. The operational requirements themselves are available on p. 70.",
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "6",
+        "pdfPage": 6
+      },
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-041",
+      "examQuestionNumber": 41,
+      "category": "Operating limits, checks and student briefing",
+      "type": "multiple_choice",
+      "question": "Where do you find the requirements for videographer qualifications before they can film a tandem?",
+      "options": [
+        {
+          "id": "A",
+          "text": "USPA BSR"
+        },
+        {
+          "id": "B",
+          "text": "UPT Service Bulletins"
+        },
+        {
+          "id": "C",
+          "text": "DZ Policy Handbook"
+        },
+        {
+          "id": "D",
+          "text": "Sigma Manual"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "The Sigma Manual.",
+      "explanation": "Section 6 specifies RW qualifications and an additional minimum of 100 camera jumps for videographers.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "70",
+          "pdfPage": 81,
+          "section": "Relative Work"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "6",
+        "pdfPage": 6
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-042",
+      "examQuestionNumber": 42,
+      "category": "Operating limits, checks and student briefing",
+      "type": "multiple_choice",
+      "question": "When should the drogue be deployed during a stable, uneventful tandem exit?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Within 3 seconds of leaving the aircraft"
+        },
+        {
+          "id": "B",
+          "text": "5-8 seconds"
+        },
+        {
+          "id": "C",
+          "text": "10 seconds"
+        },
+        {
+          "id": "D",
+          "text": "Immediately if you feel instability"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "Within 5–8 seconds.",
+      "explanation": "Applies to a stable, uneventful exit. Learn the separate unstable-exit procedures rather than generalizing this timing to emergencies.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "vi",
+          "pdfPage": 7,
+          "section": "SOPs; Drogue Deployment After Exit"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "47",
+          "pdfPage": 58,
+          "section": "SOPs; Drogue Deployment After Exit"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "6",
+        "pdfPage": 6
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-043",
+      "examQuestionNumber": 43,
+      "category": "Operating limits, checks and student briefing",
+      "type": "multiple_choice",
+      "question": "Is backing out of a side door aircraft on tandem jumps allowed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Yes"
+        },
+        {
+          "id": "B",
+          "text": "No"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "No.",
+      "explanation": "Backing out of a side-door aircraft is prohibited.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "v",
+          "pdfPage": 6,
+          "section": "Prohibited Use; Time at the Door"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "46",
+          "pdfPage": 57,
+          "section": "Prohibited Use; Time at the Door"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "6",
+        "pdfPage": 6
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-044",
+      "examQuestionNumber": 44,
+      "category": "Operating limits, checks and student briefing",
+      "type": "multiple_choice",
+      "question": "What is the minimum horizontal separation under canopy for a tandem from any other canopy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1000ft (300m)"
+        },
+        {
+          "id": "B",
+          "text": "100ft (30m)"
+        },
+        {
+          "id": "C",
+          "text": "500ft (150m)"
+        },
+        {
+          "id": "D",
+          "text": "There is no minimum"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "At least 100 ft (30 m) horizontally.",
+      "explanation": "Maintain the stated minimum separation from other canopies.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "vi",
+          "pdfPage": 7,
+          "section": "SOPs; Entanglements; Relative Work"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "68",
+          "pdfPage": 79,
+          "section": "SOPs; Entanglements; Relative Work"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "70",
+          "pdfPage": 81,
+          "section": "SOPs; Entanglements; Relative Work"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "6",
+        "pdfPage": 6
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-045",
+      "examQuestionNumber": 45,
+      "category": "Operating limits, checks and student briefing",
+      "type": "multiple_choice",
+      "question": "The responsibility for pre-flighting a UPT Tandem system belongs to?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tandem instructor jumping the system"
+        },
+        {
+          "id": "B",
+          "text": "Safety and Training Advisor"
+        },
+        {
+          "id": "C",
+          "text": "Chief Instructor"
+        },
+        {
+          "id": "D",
+          "text": "Another tandem instructor"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "The tandem instructor jumping the system.",
+      "explanation": "The instructor must complete a full pre-jump gear check; the required buddy check is additional verification.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "40",
+          "pdfPage": 51,
+          "section": "Pre-Donning and Pre-Boarding Gear Checks"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "42",
+          "pdfPage": 53,
+          "section": "Pre-Donning and Pre-Boarding Gear Checks"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "6",
+        "pdfPage": 6
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-046",
+      "examQuestionNumber": 46,
+      "category": "Operating limits, checks and student briefing",
+      "type": "multiple_choice",
+      "question": "The responsibility for ensuring that a Sigma tandem system have in-date reserve repacks and are Product Service Bulletin compliant falls on whom?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Chief Instructor"
+        },
+        {
+          "id": "B",
+          "text": "Tandem Instructor jumping the system"
+        },
+        {
+          "id": "C",
+          "text": "DZ Owner"
+        },
+        {
+          "id": "D",
+          "text": "Safety and Training Advisor"
+        }
+      ],
+      "correctOptionId": null,
+      "answer": "The operating instructor is responsible for the preflight; confirm the exam’s specific service-bulletin wording with the examiner.",
+      "explanation": "Operations p. 40 assigns the full gear check to the jumping instructor and starts at the reserve data card. IRM pp. 130–131 includes reserve currency in checking airworthiness. I did not locate the exact combined reserve-repack/product-service-bulletin responsibility statement in the uploaded manuals.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "40",
+          "pdfPage": 51,
+          "section": "Pre-Donning Gear Check"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "130",
+          "pdfPage": 135,
+          "section": "The Four Gear Checks"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "131",
+          "pdfPage": 136,
+          "section": "The Four Gear Checks"
+        }
+      ],
+      "reviewNote": "Option B is consistent with the documented preflight responsibility, but the full compound claim is not directly verified.",
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "7",
+        "pdfPage": 7
+      },
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-047",
+      "examQuestionNumber": 47,
+      "category": "Operating limits, checks and student briefing",
+      "type": "multiple_choice",
+      "question": "What is the proper student arm position on exit?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Thumbs under the main lift web, arms crossed"
+        },
+        {
+          "id": "B",
+          "text": "Thumbs under the main lift web, arms uncrossed"
+        },
+        {
+          "id": "C",
+          "text": "Arms at the side"
+        },
+        {
+          "id": "D",
+          "text": "Arms in a neutral box position"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "Thumbs under the main lift web, arms uncrossed.",
+      "explanation": "Student hand placement is a secure grip on their own MLW with uncrossed arms.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "46",
+          "pdfPage": 57,
+          "section": "Student Hand Placement"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "7",
+        "pdfPage": 7
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-048",
+      "examQuestionNumber": 48,
+      "category": "Operating limits, checks and student briefing",
+      "type": "multiple_choice",
+      "question": "What is the minimum briefing you should give any student before a tandem jump?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Briefing on how to exit and freefall"
+        },
+        {
+          "id": "B",
+          "text": "Briefing items under FAR Part 105.45 OR in accordance with governing body’s tandem briefing requirements"
+        },
+        {
+          "id": "C",
+          "text": "Briefing on how to land"
+        },
+        {
+          "id": "D",
+          "text": "Briefing on aircraft procedures"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "The required FAR 105.45 briefing, or the applicable governing body’s tandem briefing requirements.",
+      "explanation": "Include aircraft and post-exit emergencies, exit, freefall, canopy operation, approach and landing. The IRM says the tandem PIC must personally provide the briefing before boarding.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "38",
+          "pdfPage": 49,
+          "section": "Student Briefing"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "39",
+          "pdfPage": 50,
+          "section": "Student Briefing"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "159",
+          "pdfPage": 164,
+          "section": "Tandem Briefing: FAR 105.45 Explained"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "7",
+        "pdfPage": 7
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-049",
+      "examQuestionNumber": 49,
+      "category": "Operating limits, checks and student briefing",
+      "type": "multiple_choice",
+      "question": "What is a negative aspect of over training a tandem student?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Student overconfidence"
+        },
+        {
+          "id": "B",
+          "text": "Information overload"
+        },
+        {
+          "id": "C",
+          "text": "Student becomes afraid"
+        },
+        {
+          "id": "D",
+          "text": "Student refusal"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "Information overload.",
+      "explanation": "Keep the briefing short, simple, specific, and focused on what the passenger needs to do.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "38",
+          "pdfPage": 49,
+          "section": "Student Briefing"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "39",
+          "pdfPage": 50,
+          "section": "Student Briefing"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "7",
+        "pdfPage": 7
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-050",
+      "examQuestionNumber": 50,
+      "category": "Operating limits, checks and student briefing",
+      "type": "multiple_choice",
+      "question": "What is the minimum age for tandem jumping on a UPT Sigma within the United States?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Age of legal consent"
+        },
+        {
+          "id": "B",
+          "text": "18 years of age"
+        },
+        {
+          "id": "C",
+          "text": "21 years of age"
+        },
+        {
+          "id": "D",
+          "text": "With parental consent"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "18 years of age.",
+      "explanation": "UPT’s US minimum is 18; parental consent is not an alternative in the stated requirements.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "v",
+          "pdfPage": 6,
+          "section": "Prohibited Use; Student Passenger Eligibility"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "36",
+          "pdfPage": 47,
+          "section": "Prohibited Use; Student Passenger Eligibility"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "7",
+        "pdfPage": 7
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-051",
+      "examQuestionNumber": 51,
+      "category": "Operating limits, checks and student briefing",
+      "type": "multiple_choice",
+      "question": "Which administrative actions does uninsured United Parachute Technologies, LLC require before a passenger / student does a tandem jump?",
+      "options": [
+        {
+          "id": "A",
+          "text": "B and D are correct"
+        },
+        {
+          "id": "B",
+          "text": "UPT Assumption of Risk Waiver"
+        },
+        {
+          "id": "C",
+          "text": "USA Tandem Waiver Video"
+        },
+        {
+          "id": "D",
+          "text": "USPA or UPT Assumption of Risk Waiver Video"
+        }
+      ],
+      "correctOptionId": null,
+      "answer": "View the UPT waiver video first, then complete and sign the UPT waiver.",
+      "explanation": "The test’s combined option A includes D, which says “USPA or UPT” video. The uploaded Operations Manual specifically requires the UPT Assumption of Risk Waiver Video followed by the UPT written waiver.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "vii",
+          "pdfPage": 8,
+          "section": "Essential Tandem Practices; Waiver and Risk Acknowledgement"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "36",
+          "pdfPage": 47,
+          "section": "Essential Tandem Practices; Waiver and Risk Acknowledgement"
+        }
+      ],
+      "reviewNote": "The exam likely intends both video and written waiver, but its USPA-video alternative is not established by these sources. Confirm before assigning option A as a scored answer.",
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "7",
+        "pdfPage": 7
+      },
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-052",
+      "examQuestionNumber": 52,
+      "category": "Renewal and currency",
+      "type": "multiple_choice",
+      "question": "How many tandem jumps in the last 12 months must a rated instructor make to renew a tandem rating?",
+      "options": [
+        {
+          "id": "A",
+          "text": "20 jumps"
+        },
+        {
+          "id": "B",
+          "text": "25 jumps"
+        },
+        {
+          "id": "C",
+          "text": "15 jumps"
+        },
+        {
+          "id": "D",
+          "text": "30 jumps"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "25 tandem jumps in the preceding 365 days.",
+      "explanation": "This is the normal renewal activity requirement. Operations pp. 14–15 also provides a supervised evaluation pathway for a current instructor with fewer than 25 jumps.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "14",
+          "pdfPage": 25,
+          "section": "Renewing Current Tandem Instructors"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "15",
+          "pdfPage": 26,
+          "section": "Renewing Current Tandem Instructors"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "7",
+        "pdfPage": 7
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-053",
+      "examQuestionNumber": 53,
+      "category": "Renewal and currency",
+      "type": "multiple_choice",
+      "question": "If a Tandem Instructor (after probation) has not made a tandem jump between 90-180 days, they must:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Review SOPs and 2 jumps with an evaluator"
+        },
+        {
+          "id": "B",
+          "text": "Review SOPs and 1 jump with an experienced jumper"
+        },
+        {
+          "id": "C",
+          "text": "Review SOPs and 2 jumps under the supervision of an examiner"
+        },
+        {
+          "id": "D",
+          "text": "Review SOPs and 2 jumps with an experienced jumper"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "Review SOPs and complete one tandem jump with an experienced jumper.",
+      "explanation": "For 90–180 days, the front rider needs at least 100 skydives, a USPA B license or equivalent, and a briefing on tandem emergencies.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "15",
+          "pdfPage": 26,
+          "section": "Renewing Non-Current Tandem Instructors: 90–180 Days"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "16",
+          "pdfPage": 27,
+          "section": "Renewing Non-Current Tandem Instructors: 90–180 Days"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "8",
+        "pdfPage": 8
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-054",
+      "examQuestionNumber": 54,
+      "category": "Renewal and currency",
+      "type": "multiple_choice",
+      "question": "If a Tandem Instructor (after probation) has not made a tandem jump between 181 days – 2 years, they must:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Review SOPs, EPs and 2 jumps with an evaluator"
+        },
+        {
+          "id": "B",
+          "text": "Review SOPs, EPs and 1 jump with an experienced jumper"
+        },
+        {
+          "id": "C",
+          "text": "Review SOPs, EPs, 1 solo jump and 1 tandem jump with an experience jumper under the supervision of an examiner"
+        },
+        {
+          "id": "D",
+          "text": "Review SOPs, EPs and 2 jumps with an experienced jumper"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "Review SOPs/EPs and complete one solo Sigma jump plus one tandem with an experienced jumper under a current UPT examiner’s supervision.",
+      "explanation": "The review also includes gear checks, harnessing, hook-up and pre-exit checks; required jumps must be witnessed, documented and signed by a current examiner.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "16",
+          "pdfPage": 27,
+          "section": "Renewing Non-Current Tandem Instructors: 181 Days–2 Years"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "8",
+        "pdfPage": 8
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-055",
+      "examQuestionNumber": 55,
+      "category": "Student progression, RW and cameras",
+      "type": "multiple_choice",
+      "question": "What additional training must a student be given if they have access to the drogue release?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Be given an altimeter and trained how to use it, 3 PRCPs with full gear on"
+        },
+        {
+          "id": "B",
+          "text": "Where the pull handle is and how to use it"
+        },
+        {
+          "id": "C",
+          "text": "Be given an altimeter"
+        },
+        {
+          "id": "D",
+          "text": "That they must pull 6 inches and then release"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "An altimeter, instruction in its use, and at least three practice ripcord pulls with full gear on.",
+      "explanation": "Operations lists these additional requirements when the student is allowed access to the drogue release.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "35",
+          "pdfPage": 46,
+          "section": "Student Techniques"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "8",
+        "pdfPage": 8
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-056",
+      "examQuestionNumber": 56,
+      "category": "Student progression, RW and cameras",
+      "type": "multiple_choice",
+      "question": "Under what circumstances is relative work (docking) not permitted?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Never"
+        },
+        {
+          "id": "B",
+          "text": "When the student has access to the drogue release and has been trained how to use it"
+        },
+        {
+          "id": "C",
+          "text": "It is always permitted as long as the videographer only docks onto the passenger"
+        },
+        {
+          "id": "D",
+          "text": "It is always permitted as long as the videographer only docks onto the instructor"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "When the student has access to the drogue release and has been briefed how to use it.",
+      "explanation": "Section 6 prohibits RW in this configuration. Outside video and docking are not interchangeable activities.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "49",
+          "pdfPage": 60,
+          "section": "Drogue Release; Relative Work"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "70",
+          "pdfPage": 81,
+          "section": "Drogue Release; Relative Work"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "8",
+        "pdfPage": 8
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-057",
+      "examQuestionNumber": 57,
+      "category": "Student progression, RW and cameras",
+      "type": "multiple_choice",
+      "question": "What is the minimum number of tandem jumps that need to be made before using a handcam on tandem jumps?",
+      "options": [
+        {
+          "id": "A",
+          "text": "25 jumps"
+        },
+        {
+          "id": "B",
+          "text": "50 jumps"
+        },
+        {
+          "id": "C",
+          "text": "125 jumps"
+        },
+        {
+          "id": "D",
+          "text": "200 jumps"
+        }
+      ],
+      "correctOptionId": null,
+      "answer": "200 tandems as instructor, OR 100 tandems plus successful completion of the approved HandCam training program.",
+      "explanation": "The newer Operations Manual contains the 100-jump training alternative. The test only offers 200 among its relevant choices, so it does not represent the absolute minimum under the uploaded manual.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "vii",
+          "pdfPage": 8,
+          "section": "Essential Tandem Practices; Hand Camera Guidelines"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "70",
+          "pdfPage": 81,
+          "section": "Essential Tandem Practices; Hand Camera Guidelines"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "71",
+          "pdfPage": 82,
+          "section": "Essential Tandem Practices; Hand Camera Guidelines"
+        }
+      ],
+      "reviewNote": "D (200) matches the pathway without the approved course. The current minimum with the approved course is 100, which is not offered. Other handcam requirements still apply.",
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "8",
+        "pdfPage": 8
+      },
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-058",
+      "examQuestionNumber": 58,
+      "category": "Student progression, RW and cameras",
+      "type": "multiple_choice",
+      "question": "Are pole camera mounts authorized for use on handcam tandem jumps?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Yes"
+        },
+        {
+          "id": "B",
+          "text": "No"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "No.",
+      "explanation": "Telescopic and fixed camera poles are forbidden under the published guidelines; extraordinary operations require UPT authorization.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "v",
+          "pdfPage": 6,
+          "section": "Prohibited Use; Hand Camera Guidelines"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "71",
+          "pdfPage": 82,
+          "section": "Prohibited Use; Hand Camera Guidelines"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "8",
+        "pdfPage": 8
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-059",
+      "examQuestionNumber": 59,
+      "category": "Student progression, RW and cameras",
+      "type": "multiple_choice",
+      "question": "What is the maximum degree of turn for tandem canopies at or below 500ft (150m) AGL?",
+      "options": [
+        {
+          "id": "A",
+          "text": "90 degrees"
+        },
+        {
+          "id": "B",
+          "text": "180 degrees"
+        },
+        {
+          "id": "C",
+          "text": "Whatever is necessary for a safe landing"
+        },
+        {
+          "id": "D",
+          "text": "Depends on wind conditions"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "90 degrees or less.",
+      "explanation": "The manual restricts turns at or below 500 ft AGL to 90 degrees or less.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "vii",
+          "pdfPage": 8,
+          "section": "Essential Tandem Practices; Canopy Control and Landing"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "52",
+          "pdfPage": 63,
+          "section": "Essential Tandem Practices; Canopy Control and Landing"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "8",
+        "pdfPage": 8
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-060",
+      "examQuestionNumber": 60,
+      "category": "Handles checks",
+      "type": "multiple_choice",
+      "question": "Are Handles Checks REQUIRED on EVERY TANDEM SKYDIVE regardless of whether the tandem instructor is using a handcam device on the tandem jump?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Yes"
+        },
+        {
+          "id": "B",
+          "text": "No"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Yes—on every tandem jump.",
+      "explanation": "Use of HandCam must not delay or replace required handles checks.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "vii",
+          "pdfPage": 8,
+          "section": "Essential Tandem Practices; Drogue Fall; Hand Camera Guidelines"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "48",
+          "pdfPage": 59,
+          "section": "Essential Tandem Practices; Drogue Fall; Hand Camera Guidelines"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "71",
+          "pdfPage": 82,
+          "section": "Essential Tandem Practices; Drogue Fall; Hand Camera Guidelines"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "9",
+        "pdfPage": 9
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-061",
+      "examQuestionNumber": 61,
+      "category": "Handles checks",
+      "type": "multiple_choice",
+      "question": "When are you to start your handles check?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Once you are stable"
+        },
+        {
+          "id": "B",
+          "text": "At some point before drogue release"
+        },
+        {
+          "id": "C",
+          "text": "After you set drogue and check drogue"
+        },
+        {
+          "id": "D",
+          "text": "After you set drogue"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "After setting the drogue and visually checking inflation.",
+      "explanation": "The system handles check follows drogue deployment and the visual drogue check.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "48",
+          "pdfPage": 59,
+          "section": "Drogue Fall"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "9",
+        "pdfPage": 9
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-062",
+      "examQuestionNumber": 62,
+      "category": "Handles checks",
+      "type": "multiple_choice",
+      "question": "What is the correct procedure for handles check in order of execution:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cutaway, reserve, altitude"
+        },
+        {
+          "id": "B",
+          "text": "Left drogue release, secondary, cutaway, reserve, crystal ball"
+        },
+        {
+          "id": "C",
+          "text": "The order is not important as long as you touch all the handles"
+        },
+        {
+          "id": "D",
+          "text": "Left drogue release, right drogue release, cutaway, reserve, RSL, altitude"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Left drogue release → right drogue release → cutaway → reserve → RSL → altitude.",
+      "explanation": "This ordered check follows setting and visually checking the drogue.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "48",
+          "pdfPage": 59,
+          "section": "System Handles Check"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "49",
+          "pdfPage": 60,
+          "section": "System Handles Check"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "9",
+        "pdfPage": 9
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-063",
+      "examQuestionNumber": 63,
+      "category": "Aircraft emergencies",
+      "type": "multiple_choice",
+      "question": "Describe the correct aircraft emergency procedure below 1,500ft (500m).",
+      "options": [
+        {
+          "id": "A",
+          "text": "If aircraft is stable, stay with the aircraft and follow directions from the pilot. Ensure the student is seated and seat belted"
+        },
+        {
+          "id": "B",
+          "text": "If aircraft has catastrophic damage, attach as many attachment points as the situation will allow, starting with the upper left hook. Hold the student with right arm and legs if needed, exit and immediately deploy the reserve"
+        },
+        {
+          "id": "C",
+          "text": "Assure the student that everything is going to be okay"
+        },
+        {
+          "id": "D",
+          "text": "A and B is correct"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Both A and B, depending on whether the aircraft remains stable or has catastrophic damage.",
+      "explanation": "Below 1,500 ft: stable flying aircraft/engine out—stay aboard, follow the pilot, and use independent seat belts. Catastrophic failure—the manual describes minimum upper-left attachment, right-arm student control, exit, scissor the student’s legs, and reserve deployment. Learn the complete aircraft-specific drill with the examiner.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "44",
+          "pdfPage": 55,
+          "section": "Aircraft Emergencies"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "45",
+          "pdfPage": 56,
+          "section": "Aircraft Emergencies"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "9",
+        "pdfPage": 9
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-064",
+      "examQuestionNumber": 64,
+      "category": "Aircraft emergencies",
+      "type": "multiple_choice",
+      "question": "Describe the correct aircraft emergency procedure between 1,500ft (500m) and 4000ft (1200m).",
+      "options": [
+        {
+          "id": "A",
+          "text": "Attach the student, exit the aircraft and immediately deploy the reserve"
+        },
+        {
+          "id": "B",
+          "text": "Assure to the student that everything is going to be okay"
+        },
+        {
+          "id": "C",
+          "text": "Stay in the aircraft and land with the airplane"
+        },
+        {
+          "id": "D",
+          "text": "None of the above"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Attach the student, exit, and deploy the reserve.",
+      "explanation": "For the stated emergency-exit band, Operations describes upper-left connection (minimum), holding with the right arm, exit/scissoring legs, and reserve deployment. The note explains connection-side considerations.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "44",
+          "pdfPage": 55,
+          "section": "Aircraft Emergencies"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "45",
+          "pdfPage": 56,
+          "section": "Aircraft Emergencies"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "9",
+        "pdfPage": 9
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-065",
+      "examQuestionNumber": 65,
+      "category": "Aircraft emergencies",
+      "type": "multiple_choice",
+      "question": "Describe the correct aircraft emergency procedure above 4000ft (1200m).",
+      "options": [
+        {
+          "id": "A",
+          "text": "Stay in the aircraft and land with the airplane"
+        },
+        {
+          "id": "B",
+          "text": "Exit and immediately pull reserve"
+        },
+        {
+          "id": "C",
+          "text": "Attach the student, exit, deploy the drogue, ensure inflation then release drogue"
+        },
+        {
+          "id": "D",
+          "text": "None of the above"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "Attach the student, exit, set and check the drogue, then release it.",
+      "explanation": "The above-4,000-ft emergency procedure uses the main system. Operations describes upper-right attachment (minimum) and left-arm student control; its note discusses attachment-side considerations.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "45",
+          "pdfPage": 56,
+          "section": "Aircraft Emergencies"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "9",
+        "pdfPage": 9
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-066",
+      "examQuestionNumber": 66,
+      "category": "Emergency procedures and incident prevention",
+      "type": "multiple_choice",
+      "question": "Describe the correct cutaway procedure for a partial malfunction.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Deploy the reserve"
+        },
+        {
+          "id": "B",
+          "text": "Remove RSL, cutaway, ensure separation, deploy reserve"
+        },
+        {
+          "id": "C",
+          "text": "Strip the right, track and pull reserve"
+        },
+        {
+          "id": "D",
+          "text": "Cutaway, ensure separation, deploy reserve"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Cut away, ensure main-riser separation, then deploy the reserve.",
+      "explanation": "Full Partial Malfunction EP: look/grab cutaway; look/grab reserve; arch; peel/pull cutaway; ensure riser separation, physically assisting if necessary; peel/pull reserve; check deployment; check altitude. RSL disconnection is not included in this category.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "56",
+          "pdfPage": 67,
+          "section": "Partial Malfunction; Ensure Separation"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "57",
+          "pdfPage": 68,
+          "section": "Partial Malfunction; Ensure Separation"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "10",
+        "pdfPage": 10
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": [],
+      "procedureId": "partial"
+    },
+    {
+      "id": "sigma-291-067",
+      "examQuestionNumber": 67,
+      "category": "Emergency procedures and incident prevention",
+      "type": "multiple_choice",
+      "question": "What is the correct procedure for a premature deployment of your main (horseshoe) in which you cannot deploy the drogue?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Total Malfunction EP"
+        },
+        {
+          "id": "B",
+          "text": "Partial Malfunction EP"
+        },
+        {
+          "id": "C",
+          "text": "Open Container with Drogue Issues EP"
+        },
+        {
+          "id": "D",
+          "text": "Third Party Entanglement EP"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "Open Container with Drogue Issues EP.",
+      "explanation": "The main container is open and the drogue cannot be deployed. Use this category rather than the closed-container Total Malfunction EP.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "56",
+          "pdfPage": 67,
+          "section": "Open Container with Drogue Issues; Open Container Before Set Drogue"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "60",
+          "pdfPage": 71,
+          "section": "Open Container with Drogue Issues; Open Container Before Set Drogue"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "10",
+        "pdfPage": 10
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": [],
+      "procedureId": "open_container_drogue_issues"
+    },
+    {
+      "id": "sigma-291-068",
+      "examQuestionNumber": 68,
+      "category": "Emergency procedures and incident prevention",
+      "type": "multiple_choice",
+      "question": "Which is the correct response to an inflated drogue (“in tow”) that does not release the main pin during a main canopy deployment attempt?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Total Malfunction EP"
+        },
+        {
+          "id": "B",
+          "text": "Partial Malfunction EP"
+        },
+        {
+          "id": "C",
+          "text": "Open Container with Drogue Issues EP"
+        },
+        {
+          "id": "D",
+          "text": "Third Party Entanglement EP"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Total Malfunction EP, after the prescribed release-handle attempts fail.",
+      "explanation": "The main container remains closed. Operations directs the other release handle and then both together for a hard release; if it still will not release, perform Total Malfunction EP.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "56",
+          "pdfPage": 67,
+          "section": "Total Malfunction; Hard Drogue Release"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "63",
+          "pdfPage": 74,
+          "section": "Total Malfunction; Hard Drogue Release"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "10",
+        "pdfPage": 10
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": [],
+      "procedureId": "total"
+    },
+    {
+      "id": "sigma-291-069",
+      "examQuestionNumber": 69,
+      "category": "Emergency procedures and incident prevention",
+      "type": "multiple_choice",
+      "question": "What is the correct response to an uninflated drogue right after drogue set?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Wait 6 seconds for drogue to inflate, if it does not, pull drogue release"
+        },
+        {
+          "id": "B",
+          "text": "Wait 6 seconds for drogue to inflate, if it does not, Total Malfunction EP"
+        },
+        {
+          "id": "C",
+          "text": "Wait 6 seconds for drogue to inflate, if it does not, Partial Malfunction EP"
+        },
+        {
+          "id": "D",
+          "text": "Dip a shoulder to get clean air into your burble"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Continue the system check; if the drogue has not inflated within 6 seconds after setting, release it.",
+      "explanation": "If it then fails to extract the deployment bag, conduct Open Container with Drogue Issues EP. Do not confuse an uninflated drogue with a collapsed drogue after release.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "61",
+          "pdfPage": 72,
+          "section": "Uninflated Drogue After Drogue Set"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "10",
+        "pdfPage": 10
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-070",
+      "examQuestionNumber": 70,
+      "category": "Emergency procedures and incident prevention",
+      "type": "multiple_choice",
+      "question": "What is the correct response to a collapsed drogue in tow?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Total Malfunction EP"
+        },
+        {
+          "id": "B",
+          "text": "Partial Malfunction EP"
+        },
+        {
+          "id": "C",
+          "text": "Open Container with Drogue Issues EP"
+        },
+        {
+          "id": "D",
+          "text": "Third Party Entanglement EP"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "Open Container with Drogue Issues EP.",
+      "explanation": "A collapsed drogue corresponds to an open container with the disc released; the main bag has not been extracted as expected.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "56",
+          "pdfPage": 67,
+          "section": "Four Drogue Configurations; Collapsed Drogue in Tow"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "59",
+          "pdfPage": 70,
+          "section": "Four Drogue Configurations; Collapsed Drogue in Tow"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "63",
+          "pdfPage": 74,
+          "section": "Four Drogue Configurations; Collapsed Drogue in Tow"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "10",
+        "pdfPage": 10
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": [],
+      "procedureId": "open_container_drogue_issues"
+    },
+    {
+      "id": "sigma-291-071",
+      "examQuestionNumber": 71,
+      "category": "Emergency procedures and incident prevention",
+      "type": "multiple_choice",
+      "question": "What should you do if you accidentally pull the drogue release handle before you deploy the drogue?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Expect the trap door effect"
+        },
+        {
+          "id": "B",
+          "text": "Set the drogue"
+        },
+        {
+          "id": "C",
+          "text": "Total Malfunction EP"
+        },
+        {
+          "id": "D",
+          "text": "Expect main canopy deployment"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "Set the drogue.",
+      "explanation": "This is the specified immediate action when a release handle is pulled before drogue deployment.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "61",
+          "pdfPage": 72,
+          "section": "Drogue Release Handle Pulled Before Deploying Drogue"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "10",
+        "pdfPage": 10
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-072",
+      "examQuestionNumber": 72,
+      "category": "Emergency procedures and incident prevention",
+      "type": "multiple_choice",
+      "question": "What should you do if you can’t extract the drogue from its pouch after your second attempt within 10 seconds after exit?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Total Malfunction EP"
+        },
+        {
+          "id": "B",
+          "text": "Partial Malfunction EP"
+        },
+        {
+          "id": "C",
+          "text": "Open Container with Drogue Issues EP"
+        },
+        {
+          "id": "D",
+          "text": "Third Party Entanglement EP"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Total Malfunction EP.",
+      "explanation": "After the second extraction attempt fails, the hard-drogue-pull procedure requires Total Malfunction EP within 10 seconds.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "56",
+          "pdfPage": 67,
+          "section": "Hard Pull (Drogue)"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "60",
+          "pdfPage": 71,
+          "section": "Hard Pull (Drogue)"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "10",
+        "pdfPage": 10
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": [],
+      "procedureId": "total"
+    },
+    {
+      "id": "sigma-291-073",
+      "examQuestionNumber": 73,
+      "category": "Emergency procedures and incident prevention",
+      "type": "multiple_choice",
+      "question": "What should you do if the bridle wraps around you or your passenger and you can’t clear it?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Total Malfunction EP"
+        },
+        {
+          "id": "B",
+          "text": "Partial Malfunction EP"
+        },
+        {
+          "id": "C",
+          "text": "Open Container with Drogue Issues EP"
+        },
+        {
+          "id": "D",
+          "text": "Third Party Entanglement EP"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Total Malfunction EP.",
+      "explanation": "For a drogue entangled with the instructor or student: make one attempt to free it; if it clears, system check; if not, Total Malfunction EP. This differs from a third-party entanglement.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "61",
+          "pdfPage": 72,
+          "section": "Drogue Entangled with Instructor / Student"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "62",
+          "pdfPage": 73,
+          "section": "Drogue Entangled with Instructor / Student"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "10",
+        "pdfPage": 10
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": [],
+      "procedureId": "total"
+    },
+    {
+      "id": "sigma-291-074",
+      "examQuestionNumber": 74,
+      "category": "Emergency procedures and incident prevention",
+      "type": "multiple_choice",
+      "question": "What is the correct response if the drogue does not release after pulling left drogue release, right drogue release, and both together? Conduct…",
+      "options": [
+        {
+          "id": "A",
+          "text": "Total Malfunction EP"
+        },
+        {
+          "id": "B",
+          "text": "Partial Malfunction EP"
+        },
+        {
+          "id": "C",
+          "text": "Open Container with Drogue Issues EP"
+        },
+        {
+          "id": "D",
+          "text": "Third Party Entanglement EP"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Total Malfunction EP.",
+      "explanation": "After opposite-handle and both-handle attempts do not release the drogue, use the closed-container Total Malfunction EP.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "63",
+          "pdfPage": 74,
+          "section": "Hard Drogue Release"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "11",
+        "pdfPage": 11
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": [],
+      "procedureId": "total"
+    },
+    {
+      "id": "sigma-291-075",
+      "examQuestionNumber": 75,
+      "category": "Emergency procedures and incident prevention",
+      "type": "multiple_choice",
+      "question": "Explain the correct way to pull your reserve or cutaway handles free of their Velcro pockets.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Peel upward, then pull downward"
+        },
+        {
+          "id": "B",
+          "text": "Grab handle and punch down"
+        },
+        {
+          "id": "C",
+          "text": "Peel using both hands"
+        },
+        {
+          "id": "D",
+          "text": "As fast as possible"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Peel upward first, then pull downward to full extension.",
+      "explanation": "Practice the specified technique with suitable training handles; straight downward pulling against secured Velcro can make the handles harder to extract.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "26",
+          "pdfPage": 37,
+          "section": "Reserve Activation"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "27",
+          "pdfPage": 38,
+          "section": "Reserve Activation"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "11",
+        "pdfPage": 11
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-076",
+      "examQuestionNumber": 76,
+      "category": "Emergency procedures and incident prevention",
+      "type": "multiple_choice",
+      "question": "What would you do if your left shoulder was dislocated, and you needed to pull your reserve?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pull the reserve handle using your right hand"
+        },
+        {
+          "id": "B",
+          "text": "Ask the student to pull the reserve handle for you"
+        },
+        {
+          "id": "C",
+          "text": "Nothing, the AAD will activate at 2000ft (600m)"
+        },
+        {
+          "id": "D",
+          "text": "Disconnect RSL and pull upwards using the RSL Lanyard to deploy the reserve"
+        }
+      ],
+      "correctOptionId": null,
+      "answer": "The manual includes using the RSL to deploy the reserve when the left arm is incapacitated, but the exact answer depends on the deployment state.",
+      "explanation": "Operations pp. 60 and 62 separates no-drogue and drogue-out scenarios. If the main malfunctions with the left arm still incapacitated, it specifies cutaway and reserve deployment via RSL; if the right hand cannot release the drogue, it says use the RSL to deploy the reserve. The test’s option D gives a manual-disconnect/upward-pull technique not fully described in those passages.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "60",
+          "pdfPage": 71,
+          "section": "Left Arm Incapacitated (No Drogue / Drogue Out)"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "62",
+          "pdfPage": 73,
+          "section": "Left Arm Incapacitated (No Drogue / Drogue Out)"
+        }
+      ],
+      "reviewNote": "Have the examiner demonstrate and confirm the intended technique and conditions. Do not memorize option D as a universal response to any left-shoulder injury.",
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "11",
+        "pdfPage": 11
+      },
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-077",
+      "examQuestionNumber": 77,
+      "category": "Emergency procedures and incident prevention",
+      "type": "multiple_choice",
+      "question": "What is the primary cause of tandem incidents that result in a fatality?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Poor gear maintenance"
+        },
+        {
+          "id": "B",
+          "text": "Poor packing"
+        },
+        {
+          "id": "C",
+          "text": "Instructor error"
+        },
+        {
+          "id": "D",
+          "text": "Canopy collisions"
+        }
+      ],
+      "correctOptionId": null,
+      "answer": "Not established by the uploaded documentation.",
+      "explanation": "I did not find a tandem-specific statistical ranking establishing the primary cause of fatal tandem incidents in the supplied manuals. General emphasis on instructor judgment does not verify a causal ranking.",
+      "status": "needs_review",
+      "references": [],
+      "reviewNote": "Obtain the examiner’s source or official answer explanation; no answer letter has been guessed.",
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "11",
+        "pdfPage": 11
+      },
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-078",
+      "examQuestionNumber": 78,
+      "category": "Emergency procedures and incident prevention",
+      "type": "multiple_choice",
+      "question": "What is the procedure for a videographer caught in your drogue bridle?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Total Malfunction EP"
+        },
+        {
+          "id": "B",
+          "text": "Partial Malfunction EP"
+        },
+        {
+          "id": "C",
+          "text": "Open Container with Drogue Issues EP"
+        },
+        {
+          "id": "D",
+          "text": "Third Party Entanglement EP"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Third Party Entanglement EP.",
+      "explanation": "The manual first allows a few altitude-dependent seconds for the jumper to free themselves. Category sequence: disconnect RSL; look/grab cutaway; arch; peel/pull cutaway; release drogue with either handle; ensure main-riser separation; gain horizontal separation; look/grab reserve; peel/pull reserve; check deployment and altitude.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "57",
+          "pdfPage": 68,
+          "section": "Third Party Entanglement; Parachutist Entangled in Your Drogue"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "61",
+          "pdfPage": 72,
+          "section": "Third Party Entanglement; Parachutist Entangled in Your Drogue"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "11",
+        "pdfPage": 11
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": [],
+      "procedureId": "third_party"
+    },
+    {
+      "id": "sigma-291-079",
+      "examQuestionNumber": 79,
+      "category": "Emergency procedures and incident prevention",
+      "type": "multiple_choice",
+      "question": "In an entanglement scenario where both jumpers have no good canopy and are below 3000ft (900m), what should the entangled parachutists do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both jumpers deploy their reserves"
+        },
+        {
+          "id": "B",
+          "text": "The lower jumper initiates cutaway to increase separation"
+        },
+        {
+          "id": "C",
+          "text": "The higher jumper initiates cutaway first, followed by the lower jumper"
+        },
+        {
+          "id": "D",
+          "text": "Both jumpers disconnect RSLs and attempt to climb above the other"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Both jumpers deploy their reserves.",
+      "explanation": "The manual directs reserve deployment when impact is imminent/below decision altitude and neither jumper has a good canopy. Higher-jumper cutaway priority belongs to the preceding altitude-permitting branch, not a universal rule below decision altitude.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "69",
+          "pdfPage": 80,
+          "section": "Both Jumpers Entangled and Neither Has a Good Canopy"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "11",
+        "pdfPage": 11
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-080",
+      "examQuestionNumber": 80,
+      "category": "Landing, student comfort and decision altitudes",
+      "type": "multiple_choice",
+      "question": "What is the proper instructor action in a high wind landing with no ground assistance available?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Keep toggles in both hands and run with the canopy"
+        },
+        {
+          "id": "B",
+          "text": "Collapse the canopy by releasing one toggle and pulling the other hand-over- hand. If unsuccessful, disconnect RSL and cutaway"
+        },
+        {
+          "id": "C",
+          "text": "Immediately pull the cutaway handle while airborne"
+        },
+        {
+          "id": "D",
+          "text": "Disconnect the RSL and PLF with toggles in hand"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "After landing, collapse the canopy using one toggle hand-over-hand; if unsuccessful, disconnect the RSL and cut away.",
+      "explanation": "With no catchers, Operations specifies a seated landing and canopy-collapse actions; it also describes a seated rear-riser stall alternative. The cutaway described here is after landing, not while airborne.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "53",
+          "pdfPage": 64,
+          "section": "High Wind Landing"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "54",
+          "pdfPage": 65,
+          "section": "High Wind Landing"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "11",
+        "pdfPage": 11
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-081",
+      "examQuestionNumber": 81,
+      "category": "Landing, student comfort and decision altitudes",
+      "type": "multiple_choice",
+      "question": "What can be done, after opening the main canopy, to make the student’s harness more comfortable?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Loosen the chest strap"
+        },
+        {
+          "id": "B",
+          "text": "Reposition the leg straps"
+        },
+        {
+          "id": "C",
+          "text": "Have the student sit back in the harness"
+        },
+        {
+          "id": "D",
+          "text": "All of the above"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "All of the above, using the prescribed controlled adjustments.",
+      "explanation": "After canopy and system checks, adjust the chest strap in 1-inch increments, reposition leg straps forward under the hamstrings, and use the sit-back drill.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "50",
+          "pdfPage": 61,
+          "section": "Post Deployment Procedures: Adjust Student"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "51",
+          "pdfPage": 62,
+          "section": "Post Deployment Procedures: Adjust Student"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "12",
+        "pdfPage": 12
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-082",
+      "examQuestionNumber": 82,
+      "category": "Landing, student comfort and decision altitudes",
+      "type": "multiple_choice",
+      "question": "The Side Lateral Connections must be detached, loosened, and reattached where?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Instructor side lateral connection rings"
+        },
+        {
+          "id": "B",
+          "text": "Onto the student harness"
+        },
+        {
+          "id": "C",
+          "text": "They should never be detached"
+        },
+        {
+          "id": "D",
+          "text": "There is no need to reattach anywhere"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Reattach to the instructor harness side connection/D-ring.",
+      "explanation": "Release one lateral, lengthen it, reattach to the instructor harness, then repeat on the other side. Do not leave the connectors unattached.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "vi",
+          "pdfPage": 7,
+          "section": "SOPs; Adjust Student"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "51",
+          "pdfPage": 62,
+          "section": "SOPs; Adjust Student"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "12",
+        "pdfPage": 12
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-083",
+      "examQuestionNumber": 83,
+      "category": "Landing, student comfort and decision altitudes",
+      "type": "multiple_choice",
+      "question": "What is your decision altitude?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3000ft (1000m)"
+        },
+        {
+          "id": "B",
+          "text": "4000ft (1200m)"
+        },
+        {
+          "id": "C",
+          "text": "2500ft (800m)"
+        },
+        {
+          "id": "D",
+          "text": "3500ft (1100m)"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "3,000 ft AGL.",
+      "explanation": "This is the minimum decision altitude; it is not a target for delaying action.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "vi",
+          "pdfPage": 7,
+          "section": "SOPs; Emergency Procedures Introduction"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "55",
+          "pdfPage": 66,
+          "section": "SOPs; Emergency Procedures Introduction"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "12",
+        "pdfPage": 12
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    },
+    {
+      "id": "sigma-291-084",
+      "examQuestionNumber": 84,
+      "category": "Landing, student comfort and decision altitudes",
+      "type": "multiple_choice",
+      "question": "What is your ‘do not cutaway below’ altitude?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2000ft (600m)"
+        },
+        {
+          "id": "B",
+          "text": "1500ft (500m)"
+        },
+        {
+          "id": "C",
+          "text": "2500ft (800m)"
+        },
+        {
+          "id": "D",
+          "text": "3000ft (1000m)"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "1,500 ft AGL.",
+      "explanation": "Operations p. 55 says that below 1,500 ft the PIC must add fabric by pulling the reserve and be prepared for a dual-canopy scenario. This threshold does not replace the 3,000-ft minimum decision altitude.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "ops",
+          "printedPage": "55",
+          "pdfPage": 66,
+          "section": "Emergency Procedures Introduction"
+        }
+      ],
+      "reviewNote": null,
+      "examReference": {
+        "sourceId": "exam",
+        "printedPage": "12",
+        "pdfPage": 12
+      },
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "relatedQuestionIds": []
+    }
+  ]
+}
