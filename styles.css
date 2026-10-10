@@ -1,4 +1,4 @@
-﻿:root { color-scheme: light; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #163038; background: #f2f4ef; }
+:root { color-scheme: light; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #163038; background: #f2f4ef; }
 * { box-sizing: border-box; }
 body { margin: 0; }
 main { width: min(850px, 100%); margin: 0 auto; padding: 48px 24px 28px; }
@@ -30,3 +30,11 @@ button:focus-visible, .card:focus-visible { outline: 3px solid #4e947e; outline-
 .keyboard { text-align: center; font-size: .875rem; color: #63776e; }
 .policy { margin-top: 30px; font-size: .8rem; color: #64736e; }
 @media (max-width: 520px) { main { padding: 28px 16px; } .deck-bar { flex-direction: column; gap: 4px; } #category { text-align: left; } nav { gap: 8px; } button { padding: 12px 10px; font-size: .875rem; } .card { min-height: 340px; } }
+
+[hidden] { display: none !important; }
+.deck-list { display: grid; gap: 16px; }
+.deck-choice { width: 100%; text-align: left; padding: 24px; }
+.deck-choice h2 { margin-bottom: 8px; }
+.deck-choice p { font-weight: 400; color: #55666b; margin: 8px 0 16px; }
+.deck-choice span { color: #507367; font-size: .875rem; }
+.back-button { margin-bottom: 24px; }

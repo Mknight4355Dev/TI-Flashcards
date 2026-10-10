@@ -1,0 +1,3006 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "uspa-ti-evaluation-2026",
+  "title": "USPA Tandem Instructor Evaluation Practice",
+  "createdAt": "2026-10-10",
+  "language": "en-US",
+  "description": "Original practice flashcards based on the uploaded 2026 IRM tandem evaluation requirements, scoring rubrics, tandem techniques and teaching guidance. These are not official exam questions or a promise of what an examiner will ask.",
+  "sourcePolicy": "Cites the uploaded IRM revision. Manufacturer procedures and the examiner’s briefed jump plan must also be followed. Planned dive-flow altitudes are distinguished from automatic-failure thresholds.",
+  "usage": {
+    "cardsPath": "cards",
+    "frontFields": [
+      "question",
+      "options"
+    ],
+    "backFields": [
+      "answer",
+      "explanation",
+      "references",
+      "practicePrompt"
+    ],
+    "scoringRule": "For included cards, compare selected option id to correctOptionId.",
+    "recallMode": "Hide choices, recall the answer, then reveal answer/explanation.",
+    "practiceMode": "Use non-null practicePrompt to rehearse a teaching or supervision skill. Flashcard scores are not a practical rating sign-off.",
+    "shuffleCards": true,
+    "shuffleOptions": true,
+    "compatibility": "Uses the original Sigma deck’s core cards/options/correctOptionId/answer/explanation/references/includeInQuiz fields. These generated choices contain no letter-dependent answers.",
+    "sourceLinks": "pdfPage is 1-based; printedPage is the IRM footer page, not the embedded SIM page."
+  },
+  "sources": [
+    {
+      "id": "irm",
+      "filename": "Man_IRM.pdf",
+      "title": "USPA Instructional Rating Manual",
+      "revision": "2026 edition",
+      "sha256": "3d7a3ccad434650b2ca9206ad7bb9ce90bd59faa0ca6ab3fa4dc563b6360e471",
+      "role": "supporting_document"
+    }
+  ],
+  "counts": {
+    "total": 67,
+    "quizReady": 67,
+    "verified": 67,
+    "derived": 0,
+    "needs_review": 0,
+    "self_attestation": 0
+  },
+  "cards": [
+    {
+      "id": "uspa-ti-eval-001",
+      "category": "Evaluation structure and scoring",
+      "type": "multiple_choice",
+      "question": "Which three areas does the IRM evaluate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Written answers, packing speed, and jump count."
+        },
+        {
+          "id": "B",
+          "text": "Freefall, tracking, and reserve packing only."
+        },
+        {
+          "id": "C",
+          "text": "Aircraft handling, rigging, and canopy design."
+        },
+        {
+          "id": "D",
+          "text": "Ground training, supervision, and air skills."
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Ground training, supervision, and air skills.",
+      "explanation": "You must demonstrate observation, evaluation and correction of the simulated student across the three areas.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "189",
+          "pdfPage": 194,
+          "section": "Evaluation structure and scoring"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-002",
+      "category": "Evaluation structure and scoring",
+      "type": "multiple_choice",
+      "question": "What is the minimum passing evaluation score?",
+      "options": [
+        {
+          "id": "A",
+          "text": "100%, regardless of automatic failures."
+        },
+        {
+          "id": "B",
+          "text": "At least 75%, even with one automatic failure."
+        },
+        {
+          "id": "C",
+          "text": "At least 75%, with no automatic unsatisfactory result."
+        },
+        {
+          "id": "D",
+          "text": "At least 50%, if the landing is safe."
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "At least 75%, with no automatic unsatisfactory result.",
+      "explanation": "An automatic unsatisfactory result overrides the numerical score; this is distinct from the Sigma written examination requirement.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "189",
+          "pdfPage": 194,
+          "section": "Evaluation structure and scoring"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "192",
+          "pdfPage": 197,
+          "section": "Evaluation structure and scoring"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-003",
+      "category": "Evaluation structure and scoring",
+      "type": "multiple_choice",
+      "question": "Which two ground lessons must a USPA TI candidate pass?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Category A and Category B."
+        },
+        {
+          "id": "B",
+          "text": "Category C and Category D."
+        },
+        {
+          "id": "C",
+          "text": "Two Category G lessons."
+        },
+        {
+          "id": "D",
+          "text": "Category A and Category H."
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Category A and Category B.",
+      "explanation": "The tandem-instructor row lists Category A and B ground evaluations.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "189",
+          "pdfPage": 194,
+          "section": "Evaluation structure and scoring"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": "Teach each lesson to a simulated student using a complete lesson plan."
+    },
+    {
+      "id": "uspa-ti-eval-004",
+      "category": "Evaluation structure and scoring",
+      "type": "multiple_choice",
+      "question": "Which two air evaluations must a USPA TI candidate pass?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Two solo Sigma jumps."
+        },
+        {
+          "id": "B",
+          "text": "One demonstration tandem and one HandCam tandem."
+        },
+        {
+          "id": "C",
+          "text": "A Category A tandem dive plan and a Category B tandem dive plan."
+        },
+        {
+          "id": "D",
+          "text": "Two Category G formation jumps."
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "A Category A tandem dive plan and a Category B tandem dive plan.",
+      "explanation": "Both are supervised by a USPA Tandem Instructor Examiner.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "192",
+          "pdfPage": 197,
+          "section": "Evaluation structure and scoring"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-005",
+      "category": "Evaluation structure and scoring",
+      "type": "multiple_choice",
+      "question": "How many attempts are available to pass the two ground evaluations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Four total attempts."
+        },
+        {
+          "id": "B",
+          "text": "Unlimited attempts during the course."
+        },
+        {
+          "id": "C",
+          "text": "Two attempts for each of four lessons."
+        },
+        {
+          "id": "D",
+          "text": "Fifteen total attempts."
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Four total attempts.",
+      "explanation": "Failure to pass the required two within four attempts fails the ground-evaluation portion; the IRM has separate retesting provisions.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "189",
+          "pdfPage": 194,
+          "section": "Evaluation structure and scoring"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-006",
+      "category": "Evaluation structure and scoring",
+      "type": "multiple_choice",
+      "question": "How many attempts are available to pass the two TI air evaluations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ten total attempts."
+        },
+        {
+          "id": "B",
+          "text": "Unlimited attempts."
+        },
+        {
+          "id": "C",
+          "text": "Four total attempts."
+        },
+        {
+          "id": "D",
+          "text": "Fifteen total attempts."
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "Four total attempts.",
+      "explanation": "Do not confuse this USPA limit with the manufacturer course’s attempt allowance.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "192",
+          "pdfPage": 197,
+          "section": "Evaluation structure and scoring"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-007",
+      "category": "Evaluation structure and scoring",
+      "type": "multiple_choice",
+      "question": "Who can act as the simulated student on the USPA TI air-evaluation jumps?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Any jumper with an A license."
+        },
+        {
+          "id": "B",
+          "text": "Any jumper with 50 jumps, regardless of rating."
+        },
+        {
+          "id": "C",
+          "text": "Any first-time passenger who signs a waiver."
+        },
+        {
+          "id": "D",
+          "text": "A jumper who holds or has held a USPA Coach or higher rating and receives the examiner briefing."
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "A jumper who holds or has held a USPA Coach or higher rating and receives the examiner briefing.",
+      "explanation": "The tandem examiner supervises and briefs the front rider on procedures.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "192",
+          "pdfPage": 197,
+          "section": "Evaluation structure and scoring"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-008",
+      "category": "Evaluation structure and scoring",
+      "type": "multiple_choice",
+      "question": "When does the supervision evaluation begin and end?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It begins at the door and ends at opening."
+        },
+        {
+          "id": "B",
+          "text": "It begins with collecting jump equipment and ends after completing the debrief."
+        },
+        {
+          "id": "C",
+          "text": "It starts on boarding and ends at exit."
+        },
+        {
+          "id": "D",
+          "text": "It begins at opening and ends at touchdown."
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "It begins with collecting jump equipment and ends after completing the debrief.",
+      "explanation": "Supervision pauses during the air-evaluation phase, then resumes through canopy flight, return and debrief.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "189",
+          "pdfPage": 194,
+          "section": "Evaluation structure and scoring"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-009",
+      "category": "Evaluation structure and scoring",
+      "type": "multiple_choice",
+      "question": "When does the air-evaluation phase begin and end?",
+      "options": [
+        {
+          "id": "A",
+          "text": "From deployment until the debrief."
+        },
+        {
+          "id": "B",
+          "text": "From exit until returning to the packing area."
+        },
+        {
+          "id": "C",
+          "text": "From directing door/step setup until the group’s parachutes are open."
+        },
+        {
+          "id": "D",
+          "text": "From manifesting until boarding."
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "From directing door/step setup until the group’s parachutes are open.",
+      "explanation": "The IRM specifies the phase boundaries; supervision resumes after opening.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "189",
+          "pdfPage": 194,
+          "section": "Evaluation structure and scoring"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-010",
+      "category": "Evaluation structure and scoring",
+      "type": "multiple_choice",
+      "question": "When may the candidate call a time-out during an evaluation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "At any time to restart the lesson."
+        },
+        {
+          "id": "B",
+          "text": "For safety reasons."
+        },
+        {
+          "id": "C",
+          "text": "Whenever the score seems low."
+        },
+        {
+          "id": "D",
+          "text": "Whenever a teaching point is forgotten."
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "For safety reasons.",
+      "explanation": "The evaluator may call a time-out when necessary. The candidate’s exception is safety.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "189",
+          "pdfPage": 194,
+          "section": "Evaluation structure and scoring"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-011",
+      "category": "Evaluation structure and scoring",
+      "type": "multiple_choice",
+      "question": "Whose altimeter is the reference for scoring when readings differ slightly?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The average of everyone’s readings."
+        },
+        {
+          "id": "B",
+          "text": "The evaluator’s altimeter."
+        },
+        {
+          "id": "C",
+          "text": "The candidate’s audible."
+        },
+        {
+          "id": "D",
+          "text": "The student’s wrist altimeter."
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "The evaluator’s altimeter.",
+      "explanation": "The IRM identifies the evaluator’s altimeter as the scoring reference.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "189",
+          "pdfPage": 194,
+          "section": "Evaluation structure and scoring"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-012",
+      "category": "Evaluation structure and scoring",
+      "type": "multiple_choice",
+      "question": "What is the general IRM minimum exit altitude for TI evaluation jumps?",
+      "options": [
+        {
+          "id": "A",
+          "text": "7,500 ft MSL in every course jump."
+        },
+        {
+          "id": "B",
+          "text": "9,500 ft MSL, regardless of terrain."
+        },
+        {
+          "id": "C",
+          "text": "9,500 ft AGL; additionally meet the applicable manufacturer jump requirements."
+        },
+        {
+          "id": "D",
+          "text": "4,000 ft AGL."
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "9,500 ft AGL; additionally meet the applicable manufacturer jump requirements.",
+      "explanation": "The IRM’s IAD/static-line Category B exception is not a tandem exception. UPT can require higher exits for particular course jumps.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "189",
+          "pdfPage": 194,
+          "section": "Evaluation structure and scoring"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-013",
+      "category": "Ground teaching and lesson preparation",
+      "type": "multiple_choice",
+      "question": "What teaching structure is explicitly required to avoid a ground-evaluation auto unsat?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Explain every detail before any demonstration."
+        },
+        {
+          "id": "B",
+          "text": "Whole-part-whole."
+        },
+        {
+          "id": "C",
+          "text": "Lecture-test-jump only."
+        },
+        {
+          "id": "D",
+          "text": "Have the student watch repeatedly without practice."
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "Whole-part-whole.",
+      "explanation": "Failure to use whole-part-whole is one of five listed ground automatic failures.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "190",
+          "pdfPage": 195,
+          "section": "Ground teaching and lesson preparation"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "auto_unsat"
+      ],
+      "practicePrompt": "Demonstrate the whole task, practice and correct its parts, then reassemble it."
+    },
+    {
+      "id": "uspa-ti-eval-014",
+      "category": "Ground teaching and lesson preparation",
+      "type": "multiple_choice",
+      "question": "How should the first whole demonstration be presented?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Only verbal instructions without a demo or overview."
+        },
+        {
+          "id": "B",
+          "text": "A lengthy narration of every movement repeated several times."
+        },
+        {
+          "id": "C",
+          "text": "An intentionally incorrect performance for the student to imitate."
+        },
+        {
+          "id": "D",
+          "text": "An accurate big-picture demonstration with minimal detail."
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "An accurate big-picture demonstration with minimal detail.",
+      "explanation": "Use an accurate physical demonstration or video; develop details while the student actively participates.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "165",
+          "pdfPage": 170,
+          "section": "Ground teaching and lesson preparation"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "166",
+          "pdfPage": 171,
+          "section": "Ground teaching and lesson preparation"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-015",
+      "category": "Ground teaching and lesson preparation",
+      "type": "multiple_choice",
+      "question": "What should guide a lesson’s goals?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Only what makes a good video."
+        },
+        {
+          "id": "B",
+          "text": "The number of minutes available alone."
+        },
+        {
+          "id": "C",
+          "text": "The instructor’s favorite exercises regardless of progression."
+        },
+        {
+          "id": "D",
+          "text": "The student’s starting point and measurable ISP advancement goals."
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "The student’s starting point and measurable ISP advancement goals.",
+      "explanation": "Assess the student using their logbook, progression card and relevant questions; state clear goals with measurable outcomes.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "165",
+          "pdfPage": 170,
+          "section": "Ground teaching and lesson preparation"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "194",
+          "pdfPage": 199,
+          "section": "Ground teaching and lesson preparation"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-016",
+      "category": "Ground teaching and lesson preparation",
+      "type": "multiple_choice",
+      "question": "What two questions help select the teaching strategy for each skill?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Is it review or new, and is it mostly doing or thinking?"
+        },
+        {
+          "id": "B",
+          "text": "Is the student visual or auditory, and is the instructor tired?"
+        },
+        {
+          "id": "C",
+          "text": "Can I skip it, and can someone else sign it off?"
+        },
+        {
+          "id": "D",
+          "text": "Is it easy or hard, and is the student tall or short?"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Is it review or new, and is it mostly doing or thinking?",
+      "explanation": "The IRM uses familiarity and skill type to select active teaching strategies.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "166",
+          "pdfPage": 171,
+          "section": "Ground teaching and lesson preparation"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-017",
+      "category": "Ground teaching and lesson preparation",
+      "type": "multiple_choice",
+      "question": "How should you teach a familiar physical skill?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ask the student to show you, observe, and correct imperfections."
+        },
+        {
+          "id": "B",
+          "text": "Repeat the full lecture before letting them move."
+        },
+        {
+          "id": "C",
+          "text": "Assume it is mastered because it was signed off."
+        },
+        {
+          "id": "D",
+          "text": "Change any correct technique to your own preference."
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Ask the student to show you, observe, and correct imperfections.",
+      "explanation": "This is Review-Do: observe actual performance and retain previously learned techniques that are correct.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "166",
+          "pdfPage": 171,
+          "section": "Ground teaching and lesson preparation"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-018",
+      "category": "Ground teaching and lesson preparation",
+      "type": "multiple_choice",
+      "question": "How should you introduce a new physical skill?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Demonstrate slowly, have the student copy, correct, and progress to independent real-time performance."
+        },
+        {
+          "id": "B",
+          "text": "Require a full-speed attempt with no demonstration."
+        },
+        {
+          "id": "C",
+          "text": "Explain it once and move on."
+        },
+        {
+          "id": "D",
+          "text": "Let the student watch without performing it."
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Demonstrate slowly, have the student copy, correct, and progress to independent real-time performance.",
+      "explanation": "This is New-Do; the student performs while you supply feedback.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "166",
+          "pdfPage": 171,
+          "section": "Ground teaching and lesson preparation"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-019",
+      "category": "Ground teaching and lesson preparation",
+      "type": "multiple_choice",
+      "question": "What should you do when a student practices a movement incorrectly?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Wait until the jump to mention it."
+        },
+        {
+          "id": "B",
+          "text": "Only tell them the whole attempt was bad."
+        },
+        {
+          "id": "C",
+          "text": "Let several incorrect repetitions build confidence."
+        },
+        {
+          "id": "D",
+          "text": "Stop and correct the error promptly with positive, specific guidance."
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Stop and correct the error promptly with positive, specific guidance.",
+      "explanation": "Failure to observe and correct is a ground auto unsat; prompt correction prevents an incorrect habit.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "167",
+          "pdfPage": 172,
+          "section": "Ground teaching and lesson preparation"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "190",
+          "pdfPage": 195,
+          "section": "Ground teaching and lesson preparation"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "auto_unsat"
+      ],
+      "practicePrompt": "Have a simulated student misplace a foot in exit practice and give a specific correction."
+    },
+    {
+      "id": "uspa-ti-eval-020",
+      "category": "Ground teaching and lesson preparation",
+      "type": "multiple_choice",
+      "question": "Which set lists all five ground-evaluation automatic failures?",
+      "options": [
+        {
+          "id": "A",
+          "text": "No HandCam; no outside video; no stand-up landing; slow packing; no coach license."
+        },
+        {
+          "id": "B",
+          "text": "Late manifesting; bad spot; poor landing; wrong target; missed debrief."
+        },
+        {
+          "id": "C",
+          "text": "Low exam score; long classroom session; small mockup; no projector; no whiteboard."
+        },
+        {
+          "id": "D",
+          "text": "No whole-part-whole; missing/incorrect information; insufficient repetition; insufficient specific direction; failure to observe/correct."
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "No whole-part-whole; missing/incorrect information; insufficient repetition; insufficient specific direction; failure to observe/correct.",
+      "explanation": "These are the ground auto-unsat list, distinct from the tandem supervision and air lists.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "190",
+          "pdfPage": 195,
+          "section": "Ground teaching and lesson preparation"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "auto_unsat"
+      ],
+      "practicePrompt": "Recite all five and explain how your lesson prevents each."
+    },
+    {
+      "id": "uspa-ti-eval-021",
+      "category": "Ground teaching and lesson preparation",
+      "type": "multiple_choice",
+      "question": "What is the purpose of variable practice?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Let errors continue without correction."
+        },
+        {
+          "id": "B",
+          "text": "Prepare the student to solve problems when events differ from the ideal plan."
+        },
+        {
+          "id": "C",
+          "text": "Create confusion with unrelated tasks."
+        },
+        {
+          "id": "D",
+          "text": "Replace initial correct-skill practice entirely."
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "Prepare the student to solve problems when events differ from the ideal plan.",
+      "explanation": "Introduce realistic variables once the skill is being learned and give corrective feedback.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "167",
+          "pdfPage": 172,
+          "section": "Ground teaching and lesson preparation"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-022",
+      "category": "Ground teaching and lesson preparation",
+      "type": "multiple_choice",
+      "question": "Who must personally give the required passenger briefing, and when?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The tandem PIC, before boarding the aircraft."
+        },
+        {
+          "id": "B",
+          "text": "The pilot, after takeoff."
+        },
+        {
+          "id": "C",
+          "text": "The packer, after boarding."
+        },
+        {
+          "id": "D",
+          "text": "Any DZ employee, at any time before exit."
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "The tandem PIC, before boarding the aircraft.",
+      "explanation": "The IRM’s FAR 105.45 implementation states that the PIC cannot delegate this briefing.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "159",
+          "pdfPage": 164,
+          "section": "Ground teaching and lesson preparation"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-023",
+      "category": "Ground teaching and lesson preparation",
+      "type": "multiple_choice",
+      "question": "What subjects belong in the minimum passenger briefing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Aircraft/post-exit emergencies, exit, freefall, canopy operation, approach and landing."
+        },
+        {
+          "id": "B",
+          "text": "Exit and landing only."
+        },
+        {
+          "id": "C",
+          "text": "Waiver paperwork alone."
+        },
+        {
+          "id": "D",
+          "text": "Packing, reserve repairs and airworthiness certification."
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Aircraft/post-exit emergencies, exit, freefall, canopy operation, approach and landing.",
+      "explanation": "Practice exit and freefall position and legs-up landing; Category A/B instruction adds ISP skills.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "159",
+          "pdfPage": 164,
+          "section": "Ground teaching and lesson preparation"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": "Deliver the briefing aloud and check the passenger’s understanding."
+    },
+    {
+      "id": "uspa-ti-eval-024",
+      "category": "Student supervision and gear checks",
+      "type": "multiple_choice",
+      "question": "When must the four gear checks occur?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Before exit, after exit, after deployment, and at landing."
+        },
+        {
+          "id": "B",
+          "text": "Before boarding only, repeated four times."
+        },
+        {
+          "id": "C",
+          "text": "Before packing, at takeoff, at opening, and after landing."
+        },
+        {
+          "id": "D",
+          "text": "Before donning, immediately after donning, before boarding, and before exit."
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Before donning, immediately after donning, before boarding, and before exit.",
+      "explanation": "Each stage has a different purpose. Use manufacturer-specific checks within this framework.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "130",
+          "pdfPage": 135,
+          "section": "Student supervision and gear checks"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "131",
+          "pdfPage": 136,
+          "section": "Student supervision and gear checks"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "auto_unsat"
+      ],
+      "practicePrompt": "Walk through all four stages using a training harness."
+    },
+    {
+      "id": "uspa-ti-eval-025",
+      "category": "Student supervision and gear checks",
+      "type": "multiple_choice",
+      "question": "What is the purpose of the check before putting equipment on?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Check only how snug the leg straps feel."
+        },
+        {
+          "id": "B",
+          "text": "Confirm that movement in the aircraft caused no changes."
+        },
+        {
+          "id": "C",
+          "text": "Verify that it is airworthy and appropriate for the student."
+        },
+        {
+          "id": "D",
+          "text": "Check that goggles are already worn."
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "Verify that it is airworthy and appropriate for the student.",
+      "explanation": "Inspect condition, currency and suitability while the equipment is fully accessible.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "131",
+          "pdfPage": 136,
+          "section": "Student supervision and gear checks"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-026",
+      "category": "Student supervision and gear checks",
+      "type": "multiple_choice",
+      "question": "What is the purpose of the check immediately after donning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Replace all later checks."
+        },
+        {
+          "id": "B",
+          "text": "Check only the exit order."
+        },
+        {
+          "id": "C",
+          "text": "Check only whether the main is packed."
+        },
+        {
+          "id": "D",
+          "text": "Confirm that it is worn correctly and fits well."
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Confirm that it is worn correctly and fits well.",
+      "explanation": "Verify strap routing, twists, adjustments, stowing and accessible handles.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "131",
+          "pdfPage": 136,
+          "section": "Student supervision and gear checks"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-027",
+      "category": "Student supervision and gear checks",
+      "type": "multiple_choice",
+      "question": "What is the purpose of the pre-boarding check?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Delay harness fitting until jump run."
+        },
+        {
+          "id": "B",
+          "text": "Check only the reserve color."
+        },
+        {
+          "id": "C",
+          "text": "Confirm that the student knows their license number."
+        },
+        {
+          "id": "D",
+          "text": "Confirm that equipment is configured and ready to jump."
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Confirm that equipment is configured and ready to jump.",
+      "explanation": "Waiting and movement can change fit or cause accessories to be left behind.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "131",
+          "pdfPage": 136,
+          "section": "Student supervision and gear checks"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-028",
+      "category": "Student supervision and gear checks",
+      "type": "multiple_choice",
+      "question": "What is the purpose of the pre-exit check?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Confirm that everything is still in place and ready after aircraft movement."
+        },
+        {
+          "id": "B",
+          "text": "Perform the first check of the entire day."
+        },
+        {
+          "id": "C",
+          "text": "Replace the handles check under drogue."
+        },
+        {
+          "id": "D",
+          "text": "Check only the student’s enthusiasm."
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Confirm that everything is still in place and ready after aircraft movement.",
+      "explanation": "Use the applicable manufacturer’s hookup and pre-exit procedures.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "131",
+          "pdfPage": 136,
+          "section": "Student supervision and gear checks"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-029",
+      "category": "Student supervision and gear checks",
+      "type": "multiple_choice",
+      "question": "You overlook major misrigging but the rest of the evaluation goes well. What result applies?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A pass if your score exceeds 75%."
+        },
+        {
+          "id": "B",
+          "text": "An automatic supervision failure."
+        },
+        {
+          "id": "C",
+          "text": "Only an air failure if the landing is off target."
+        },
+        {
+          "id": "D",
+          "text": "Only a warning if the main opens."
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "An automatic supervision failure.",
+      "explanation": "Missing major misrigging overrides the numerical supervision score.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "192",
+          "pdfPage": 197,
+          "section": "Student supervision and gear checks"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "auto_unsat",
+        "scenario"
+      ],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-030",
+      "category": "Student supervision and gear checks",
+      "type": "multiple_choice",
+      "question": "What connection errors are listed as tandem supervision auto unsats?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Keeping the student involved in checks."
+        },
+        {
+          "id": "B",
+          "text": "Performing the final check before setup."
+        },
+        {
+          "id": "C",
+          "text": "Using a passenger who asks questions."
+        },
+        {
+          "id": "D",
+          "text": "Missing an attachment or lateral adjustment."
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Missing an attachment or lateral adjustment.",
+      "explanation": "The rubric evaluates correct hookup and fit under manufacturer guidelines.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "192",
+          "pdfPage": 197,
+          "section": "Student supervision and gear checks"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "auto_unsat"
+      ],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-031",
+      "category": "Student supervision and gear checks",
+      "type": "multiple_choice",
+      "question": "Which environmental checks can produce a supervision auto unsat if missed or violated?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Only whether the student wants to jump."
+        },
+        {
+          "id": "B",
+          "text": "Only whether there are clouds somewhere on the horizon."
+        },
+        {
+          "id": "C",
+          "text": "Only whether the plane reaches maximum altitude."
+        },
+        {
+          "id": "D",
+          "text": "Acceptable winds, a good spot, and cloud clearance."
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Acceptable winds, a good spot, and cloud clearance.",
+      "explanation": "Failure to confirm acceptable winds and a bad spot/cloud-clearance violation are listed automatic failures.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "192",
+          "pdfPage": 197,
+          "section": "Student supervision and gear checks"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "auto_unsat"
+      ],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-032",
+      "category": "Student supervision and gear checks",
+      "type": "multiple_choice",
+      "question": "How far does your responsibility for physically supervising the simulated student extend?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To the aircraft and back to the hangar, including other hazardous training/airport areas."
+        },
+        {
+          "id": "B",
+          "text": "Only inside the classroom."
+        },
+        {
+          "id": "C",
+          "text": "Only after hookup."
+        },
+        {
+          "id": "D",
+          "text": "Only while the evaluator is watching."
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "To the aircraft and back to the hangar, including other hazardous training/airport areas.",
+      "explanation": "Direct supervision includes classroom, training aids, landing areas, taxiways and runways.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "190",
+          "pdfPage": 195,
+          "section": "Student supervision and gear checks"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "192",
+          "pdfPage": 197,
+          "section": "Student supervision and gear checks"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "auto_unsat"
+      ],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-033",
+      "category": "Student supervision and gear checks",
+      "type": "multiple_choice",
+      "question": "What must you provide just before exit?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A final skydive briefing and confirmation of student readiness."
+        },
+        {
+          "id": "B",
+          "text": "Only a reminder to smile at the camera."
+        },
+        {
+          "id": "C",
+          "text": "A request for the student to improvise the dive flow."
+        },
+        {
+          "id": "D",
+          "text": "A detailed reserve-packing lecture."
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "A final skydive briefing and confirmation of student readiness.",
+      "explanation": "Failure to provide the final briefing before exit is an auto unsat; the rubric also scores readiness.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "192",
+          "pdfPage": 197,
+          "section": "Student supervision and gear checks"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "202",
+          "pdfPage": 207,
+          "section": "Student supervision and gear checks"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "auto_unsat"
+      ],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-034",
+      "category": "Category A and B exit and droguefall",
+      "type": "multiple_choice",
+      "question": "Who leads the Category A tandem exit?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The student, with no instructor input."
+        },
+        {
+          "id": "B",
+          "text": "The next group on the aircraft."
+        },
+        {
+          "id": "C",
+          "text": "The camera flyer."
+        },
+        {
+          "id": "D",
+          "text": "The instructor; the student observes setup, count and launch."
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "The instructor; the student observes setup, count and launch.",
+      "explanation": "This is the instructor-led introduction; the student stays in the prescribed safety position until signaled.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "161",
+          "pdfPage": 166,
+          "section": "Category A and B exit and droguefall"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-035",
+      "category": "Category A and B exit and droguefall",
+      "type": "multiple_choice",
+      "question": "Who leads the Category B tandem exit?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The camera flyer always counts."
+        },
+        {
+          "id": "B",
+          "text": "The instructor must prevent the student from counting."
+        },
+        {
+          "id": "C",
+          "text": "The student gives the count; the instructor observes and assists as necessary."
+        },
+        {
+          "id": "D",
+          "text": "The student chooses the spot without supervision."
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "The student gives the count; the instructor observes and assists as necessary.",
+      "explanation": "Category B increases student responsibility while the instructor maintains control.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "161",
+          "pdfPage": 166,
+          "section": "Category A and B exit and droguefall"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-036",
+      "category": "Category A and B exit and droguefall",
+      "type": "multiple_choice",
+      "question": "A Category B student does not start the exit count. What does the IRM describe?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Wait indefinitely at the door."
+        },
+        {
+          "id": "B",
+          "text": "Prompt verbally, then with rocking; remain mindful of the spot and exit when necessary."
+        },
+        {
+          "id": "C",
+          "text": "Ignore the spot to finish the count perfectly."
+        },
+        {
+          "id": "D",
+          "text": "Require the student to leave independently."
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "Prompt verbally, then with rocking; remain mindful of the spot and exit when necessary.",
+      "explanation": "If the count is incorrect, follow their body movement to time the launch and assist when momentum moves outward.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "161",
+          "pdfPage": 166,
+          "section": "Category A and B exit and droguefall"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "scenario"
+      ],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-037",
+      "category": "Category A and B exit and droguefall",
+      "type": "multiple_choice",
+      "question": "A student grabs the aircraft door. What is the described correction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Continue without addressing the grip."
+        },
+        {
+          "id": "B",
+          "text": "Ask the camera flyer to pull them off."
+        },
+        {
+          "id": "C",
+          "text": "Let them keep the door grip during launch."
+        },
+        {
+          "id": "D",
+          "text": "Return their hands to the safety position and remind them to keep them there."
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Return their hands to the safety position and remind them to keep them there.",
+      "explanation": "Anticipate bracing elbows in seated small-door exits; correct position as necessary.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "161",
+          "pdfPage": 166,
+          "section": "Category A and B exit and droguefall"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "scenario"
+      ],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-038",
+      "category": "Category A and B exit and droguefall",
+      "type": "multiple_choice",
+      "question": "When should you signal the student to start the freefall dive flow?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Only after canopy opening."
+        },
+        {
+          "id": "B",
+          "text": "Before deploying the drogue."
+        },
+        {
+          "id": "C",
+          "text": "Before any system checks to save time."
+        },
+        {
+          "id": "D",
+          "text": "After the handles check and confirmation/correction of neutral body position."
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "After the handles check and confirmation/correction of neutral body position.",
+      "explanation": "Category A describes checking position, appropriate correction signals, then a thumbs-up to proceed.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "161",
+          "pdfPage": 166,
+          "section": "Category A and B exit and droguefall"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-039",
+      "category": "Category A and B exit and droguefall",
+      "type": "multiple_choice",
+      "question": "Who initiates Category B leg extensions and team-turn activities?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Either person, without communicating which one."
+        },
+        {
+          "id": "B",
+          "text": "The camera flyer controls the maneuvers."
+        },
+        {
+          "id": "C",
+          "text": "The student; the instructor supplements only after confirming the student’s initiation."
+        },
+        {
+          "id": "D",
+          "text": "The instructor performs all inputs while the student watches."
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "The student; the instructor supplements only after confirming the student’s initiation.",
+      "explanation": "Let the student lead so they can assess their inputs and effects.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "161",
+          "pdfPage": 166,
+          "section": "Category A and B exit and droguefall"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-040",
+      "category": "Category A and B exit and droguefall",
+      "type": "multiple_choice",
+      "question": "What is the Category B leg-awareness exercise?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hold a track for the entire droguefall."
+        },
+        {
+          "id": "B",
+          "text": "Keep the legs motionless and omit altitude checks."
+        },
+        {
+          "id": "C",
+          "text": "Extend the legs enough to feel wind on the shins, hold 3 seconds, then return to neutral."
+        },
+        {
+          "id": "D",
+          "text": "Bend the knees as far as possible for 10 seconds."
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "Extend the legs enough to feel wind on the shins, hold 3 seconds, then return to neutral.",
+      "explanation": "The goal is leg awareness rather than generating forward movement.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "161",
+          "pdfPage": 166,
+          "section": "Category A and B exit and droguefall"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-041",
+      "category": "Category A and B exit and droguefall",
+      "type": "multiple_choice",
+      "question": "What does team-turn option 1 involve?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Continuous 360-degree turns to deployment altitude."
+        },
+        {
+          "id": "B",
+          "text": "Instructor turns while the student remains entirely passive."
+        },
+        {
+          "id": "C",
+          "text": "Instructor and student start and stop together, initially using 90-degree turns."
+        },
+        {
+          "id": "D",
+          "text": "The student releases a connector to steer."
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "Instructor and student start and stop together, initially using 90-degree turns.",
+      "explanation": "Teach start-coast-stop and recognizable starting/ending headings; further turns depend on altitude.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "161",
+          "pdfPage": 166,
+          "section": "Category A and B exit and droguefall"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-042",
+      "category": "Category A and B exit and droguefall",
+      "type": "multiple_choice",
+      "question": "What does team-turn option 2 involve?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The student closes their eyes and waits."
+        },
+        {
+          "id": "B",
+          "text": "The instructor cancels every student correction."
+        },
+        {
+          "id": "C",
+          "text": "The instructor starts a slow turn; the student recognizes and stops it."
+        },
+        {
+          "id": "D",
+          "text": "The instructor starts a fast spin to surprise the student."
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "The instructor starts a slow turn; the student recognizes and stops it.",
+      "explanation": "This introduces heading maintenance; observe the counterturn input before returning to neutral.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "161",
+          "pdfPage": 166,
+          "section": "Category A and B exit and droguefall"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-043",
+      "category": "Category A and B exit and droguefall",
+      "type": "multiple_choice",
+      "question": "What does HAALR stand for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Heading, Altitude, Arch, Legs, Relax."
+        },
+        {
+          "id": "B",
+          "text": "Harness, Altimeter, Attachments, Laterals, RSL."
+        },
+        {
+          "id": "C",
+          "text": "Hands, Aircraft, Altitude, Landing, Reserve."
+        },
+        {
+          "id": "D",
+          "text": "Heading, Airspeed, Arms, Legs, Ripcord."
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Heading, Altitude, Arch, Legs, Relax.",
+      "explanation": "Use it to scan heading/altitude and maintain a relaxed neutral position.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "25",
+          "pdfPage": 30,
+          "section": "Category A and B exit and droguefall"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-044",
+      "category": "Category A and B exit and droguefall",
+      "type": "multiple_choice",
+      "question": "A student fails to begin a normal dive-flow task. What is the general progression?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Prompt with signals, then physically assist if there is no response."
+        },
+        {
+          "id": "B",
+          "text": "Always complete all movements for them before any signal."
+        },
+        {
+          "id": "C",
+          "text": "Ignore the omission through deployment."
+        },
+        {
+          "id": "D",
+          "text": "Immediately abandon altitude awareness to repeat the task."
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Prompt with signals, then physically assist if there is no response.",
+      "explanation": "The IRM has task-specific prompts and assists. Physical techniques must also comply with the manufacturer’s guidance.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "162",
+          "pdfPage": 167,
+          "section": "Category A and B exit and droguefall"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "scenario"
+      ],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-045",
+      "category": "Category A and B exit and droguefall",
+      "type": "multiple_choice",
+      "question": "What prompts can help a student who is not checking the altimeter?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Wait until below deployment altitude."
+        },
+        {
+          "id": "B",
+          "text": "Tell them to check after landing."
+        },
+        {
+          "id": "C",
+          "text": "Point at the camera only."
+        },
+        {
+          "id": "D",
+          "text": "Tap the altimeter; if needed move it in front of their face."
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Tap the altimeter; if needed move it in front of their face.",
+      "explanation": "The table uses this for COA/HAALR and the lock-on sequence; continue to protect deployment altitude.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "162",
+          "pdfPage": 167,
+          "section": "Category A and B exit and droguefall"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-046",
+      "category": "Category A and B exit and droguefall",
+      "type": "multiple_choice",
+      "question": "What does the Category A tandem dive-flow chart assign for practice deployment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Three practice deployments."
+        },
+        {
+          "id": "B",
+          "text": "No practice deployments."
+        },
+        {
+          "id": "C",
+          "text": "One practice deployment under canopy."
+        },
+        {
+          "id": "D",
+          "text": "Ten practice deployments regardless of altitude."
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Three practice deployments.",
+      "explanation": "The chart shows safe exit, COA, practice deploy three times, then COA and the bottom-end sequence.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "23",
+          "pdfPage": 28,
+          "section": "Category A and B exit and droguefall"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-047",
+      "category": "Category A and B exit and droguefall",
+      "type": "multiple_choice",
+      "question": "What are the Category A/B chart’s tandem lock-on and wave-off/pull altitudes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Lock on at 6,000 ft; pull at 5,500 ft, using the solo figures."
+        },
+        {
+          "id": "B",
+          "text": "Lock on at 3,000 ft; pull at 2,500 ft."
+        },
+        {
+          "id": "C",
+          "text": "Lock on at 5,000 ft; pull at 4,000 ft."
+        },
+        {
+          "id": "D",
+          "text": "Lock on at 6,500 ft; wave off and pull at 6,000 ft."
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Lock on at 6,500 ft; wave off and pull at 6,000 ft.",
+      "explanation": "These are the chart’s tandem planned altitudes. Other passages give a 5,000-ft release floor, and UPT course criteria use separate figures. Agree the applicable plan with the examiner; a failure threshold is not a planned pull altitude.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "23",
+          "pdfPage": 28,
+          "section": "Category A and B exit and droguefall"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "31",
+          "pdfPage": 36,
+          "section": "Category A and B exit and droguefall"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-048",
+      "category": "Category A and B exit and droguefall",
+      "type": "multiple_choice",
+      "question": "The student is behind in the bottom-end sequence. What must you protect?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A full video sequence before releasing."
+        },
+        {
+          "id": "B",
+          "text": "Drogue release no lower than 5,000 ft, whether or not the student participates."
+        },
+        {
+          "id": "C",
+          "text": "Completion of all turns before releasing."
+        },
+        {
+          "id": "D",
+          "text": "The student’s chance to pull even below 4,000 ft."
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "Drogue release no lower than 5,000 ft, whether or not the student participates.",
+      "explanation": "Prompt then immediately assist when needed. The 5,000-ft floor does not replace the higher planned deployment altitude.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "161",
+          "pdfPage": 166,
+          "section": "Category A and B exit and droguefall"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "162",
+          "pdfPage": 167,
+          "section": "Category A and B exit and droguefall"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "192",
+          "pdfPage": 197,
+          "section": "Category A and B exit and droguefall"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "scenario",
+        "auto_unsat"
+      ],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-049",
+      "category": "Category A and B exit and droguefall",
+      "type": "multiple_choice",
+      "question": "What duration of instability is a TI air-evaluation auto unsat?",
+      "options": [
+        {
+          "id": "A",
+          "text": "More than 30 seconds."
+        },
+        {
+          "id": "B",
+          "text": "Any student arm movement."
+        },
+        {
+          "id": "C",
+          "text": "More than 10 seconds."
+        },
+        {
+          "id": "D",
+          "text": "Only instability that lasts until main opening."
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "More than 10 seconds.",
+      "explanation": "The list separately includes lack of freefall and droguefall heading control. Do not use a grading threshold as permission to delay correcting instability.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "192",
+          "pdfPage": 197,
+          "section": "Category A and B exit and droguefall"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "auto_unsat"
+      ],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-050",
+      "category": "Category A and B exit and droguefall",
+      "type": "multiple_choice",
+      "question": "What does “freefall below 8,000 ft” mean in the TI air-failure list?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Remaining in the pre-drogue freefall phase below 8,000 ft is an auto unsat."
+        },
+        {
+          "id": "B",
+          "text": "A main must be fully open by 8,000 ft."
+        },
+        {
+          "id": "C",
+          "text": "8,000 ft is a normal post-probation opening requirement."
+        },
+        {
+          "id": "D",
+          "text": "All droguefall must end by 8,000 ft."
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Remaining in the pre-drogue freefall phase below 8,000 ft is an auto unsat.",
+      "explanation": "Keep pre-drogue freefall distinct from droguefall. Follow manufacturer drogue timing and the briefed evaluation plan.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "192",
+          "pdfPage": 197,
+          "section": "Category A and B exit and droguefall"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "auto_unsat"
+      ],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-051",
+      "category": "Category A and B exit and droguefall",
+      "type": "multiple_choice",
+      "question": "Which checks/control omissions automatically fail the TI air evaluation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Omitting HandCam."
+        },
+        {
+          "id": "B",
+          "text": "Not using outside video."
+        },
+        {
+          "id": "C",
+          "text": "Not doing a stand-up landing."
+        },
+        {
+          "id": "D",
+          "text": "Missing droguefall handles checks or inability to control freefall/droguefall heading."
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Missing droguefall handles checks or inability to control freefall/droguefall heading.",
+      "explanation": "Handles checks and heading control are explicit auto-unsat items.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "192",
+          "pdfPage": 197,
+          "section": "Category A and B exit and droguefall"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "auto_unsat"
+      ],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-052",
+      "category": "Canopy instruction and landing",
+      "type": "multiple_choice",
+      "question": "How does canopy instruction differ between Category A and Category B?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both omit pattern instruction."
+        },
+        {
+          "id": "B",
+          "text": "Category A is instructor-led; Category B is student-led with assistance."
+        },
+        {
+          "id": "C",
+          "text": "Both require the student to fly independently without assistance."
+        },
+        {
+          "id": "D",
+          "text": "Category A prohibits student involvement; Category B has no supervision."
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "Category A is instructor-led; Category B is student-led with assistance.",
+      "explanation": "Maintain instructor control and safety while progressively increasing the student’s contribution.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "162",
+          "pdfPage": 167,
+          "section": "Canopy instruction and landing"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "163",
+          "pdfPage": 168,
+          "section": "Canopy instruction and landing"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-053",
+      "category": "Canopy instruction and landing",
+      "type": "multiple_choice",
+      "question": "How should the landing pattern be taught on the ground?",
+      "options": [
+        {
+          "id": "A",
+          "text": "With an overhead map followed, when possible, by a 3D demonstration in view of the landing area."
+        },
+        {
+          "id": "B",
+          "text": "By having the student memorize compass directions without landmarks."
+        },
+        {
+          "id": "C",
+          "text": "Only by pointing vaguely toward the runway."
+        },
+        {
+          "id": "D",
+          "text": "Only after entering final approach."
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "With an overhead map followed, when possible, by a 3D demonstration in view of the landing area.",
+      "explanation": "Use visual orientation and actual landmarks to connect ground planning with canopy flight.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "162",
+          "pdfPage": 167,
+          "section": "Canopy instruction and landing"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "163",
+          "pdfPage": 168,
+          "section": "Canopy instruction and landing"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": "Teach a pattern using a map and point out the holding area and landmarks."
+    },
+    {
+      "id": "uspa-ti-eval-054",
+      "category": "Canopy instruction and landing",
+      "type": "multiple_choice",
+      "question": "What should the student do with their hands immediately after opening?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reach immediately for any available handle."
+        },
+        {
+          "id": "B",
+          "text": "Grab the instructor’s reserve handle for balance."
+        },
+        {
+          "id": "C",
+          "text": "Release attachment points independently."
+        },
+        {
+          "id": "D",
+          "text": "Keep them in the safety position until the instructor hands them the toggles."
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Keep them in the safety position until the instructor hands them the toggles.",
+      "explanation": "This is specified for both Category A and B canopy instruction.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "162",
+          "pdfPage": 167,
+          "section": "Canopy instruction and landing"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "163",
+          "pdfPage": 168,
+          "section": "Canopy instruction and landing"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-055",
+      "category": "Canopy instruction and landing",
+      "type": "multiple_choice",
+      "question": "How can you teach the student to locate the DZ under canopy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Have them stare at the altimeter alone."
+        },
+        {
+          "id": "B",
+          "text": "Always locate it for them without involving them."
+        },
+        {
+          "id": "C",
+          "text": "Ask them to locate it only at final approach."
+        },
+        {
+          "id": "D",
+          "text": "Have them scan from the horizon to straight down, turning and repeating as needed."
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Have them scan from the horizon to straight down, turning and repeating as needed.",
+      "explanation": "Category A introduces the process; Category B checks that they can repeat it independently.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "162",
+          "pdfPage": 167,
+          "section": "Canopy instruction and landing"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "163",
+          "pdfPage": 168,
+          "section": "Canopy instruction and landing"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-056",
+      "category": "Canopy instruction and landing",
+      "type": "multiple_choice",
+      "question": "Why should the student read canopy altitude aloud?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To entertain the camera flyer."
+        },
+        {
+          "id": "B",
+          "text": "To replace the instructor’s own altitude awareness."
+        },
+        {
+          "id": "C",
+          "text": "So they never need to look outside."
+        },
+        {
+          "id": "D",
+          "text": "So the instructor can confirm reading accuracy and check frequency."
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "So the instructor can confirm reading accuracy and check frequency.",
+      "explanation": "Combine altitude with position, landmarks, traffic and pattern awareness.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "162",
+          "pdfPage": 167,
+          "section": "Canopy instruction and landing"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-057",
+      "category": "Canopy instruction and landing",
+      "type": "multiple_choice",
+      "question": "When should you practice flaring for landing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Well before entering the landing pattern."
+        },
+        {
+          "id": "B",
+          "text": "Only after touchdown."
+        },
+        {
+          "id": "C",
+          "text": "Only if the student asks at the last second."
+        },
+        {
+          "id": "D",
+          "text": "Only on final approach at low altitude."
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Well before entering the landing pattern.",
+      "explanation": "Prepare the student early while maintaining traffic awareness and adequate altitude.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "162",
+          "pdfPage": 167,
+          "section": "Canopy instruction and landing"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-058",
+      "category": "Canopy instruction and landing",
+      "type": "multiple_choice",
+      "question": "What wind effects should canopy instruction demonstrate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Only the direction of the windsock."
+        },
+        {
+          "id": "B",
+          "text": "Running, holding, crosswind drift and crabbing to correct it."
+        },
+        {
+          "id": "C",
+          "text": "Only how to perform steep turns near the ground."
+        },
+        {
+          "id": "D",
+          "text": "Only the canopy’s color and size."
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "Running, holding, crosswind drift and crabbing to correct it.",
+      "explanation": "Connect wind direction/speed to ground speed and ground track.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "162",
+          "pdfPage": 167,
+          "section": "Canopy instruction and landing"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-059",
+      "category": "Canopy instruction and landing",
+      "type": "multiple_choice",
+      "question": "What teaching approach is described when the student is confused about the canopy flight plan?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Let confusion continue until landing."
+        },
+        {
+          "id": "B",
+          "text": "Give vague encouragement without direction."
+        },
+        {
+          "id": "C",
+          "text": "Remove all participation immediately in every case."
+        },
+        {
+          "id": "D",
+          "text": "Use prompt, specific commands with familiar radio-style terminology; take toggles as a last resort."
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Use prompt, specific commands with familiar radio-style terminology; take toggles as a last resort.",
+      "explanation": "For example, direct a specific turn back to the holding area. Safety remains the instructor’s responsibility.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "162",
+          "pdfPage": 167,
+          "section": "Canopy instruction and landing"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "scenario"
+      ],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-060",
+      "category": "Canopy instruction and landing",
+      "type": "multiple_choice",
+      "question": "Which additional canopy demonstrations are identified for Category B?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An intentional cutaway."
+        },
+        {
+          "id": "B",
+          "text": "Canopy formation docking."
+        },
+        {
+          "id": "C",
+          "text": "Braked turns from Category F and the low-turn-recovery drill from Category H."
+        },
+        {
+          "id": "D",
+          "text": "Intentional low hook turns in the pattern."
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "Braked turns from Category F and the low-turn-recovery drill from Category H.",
+      "explanation": "These are instructional demonstrations in appropriate conditions and altitude, not permission to perform hazardous low turns.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "163",
+          "pdfPage": 168,
+          "section": "Canopy instruction and landing"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-061",
+      "category": "Canopy instruction and landing",
+      "type": "multiple_choice",
+      "question": "What should you explain about the tandem legs-up landing position?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It eliminates the need for flare training."
+        },
+        {
+          "id": "B",
+          "text": "It is inappropriate for solo-student landings."
+        },
+        {
+          "id": "C",
+          "text": "It is required on every solo jump."
+        },
+        {
+          "id": "D",
+          "text": "It replaces all solo landing training."
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "It is inappropriate for solo-student landings.",
+      "explanation": "Explicitly distinguish tandem and solo landing body positions.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "162",
+          "pdfPage": 167,
+          "section": "Canopy instruction and landing"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-062",
+      "category": "Canopy instruction and landing",
+      "type": "multiple_choice",
+      "question": "A student cannot follow toggle directions reliably. What option does the IRM describe for landing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Have them operate the reserve handle instead."
+        },
+        {
+          "id": "B",
+          "text": "Allow them to keep controlling the flare without correction."
+        },
+        {
+          "id": "C",
+          "text": "Skip the landing briefing."
+        },
+        {
+          "id": "D",
+          "text": "Remove their hands from the toggles and have them mimic inputs, unless using hands to lift legs."
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Remove their hands from the toggles and have them mimic inputs, unless using hands to lift legs.",
+      "explanation": "Adjust participation to preserve a safe landing.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "163",
+          "pdfPage": 168,
+          "section": "Canopy instruction and landing"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "scenario"
+      ],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-063",
+      "category": "Canopy instruction and landing",
+      "type": "multiple_choice",
+      "question": "What is the “Good” landing-accuracy rubric descriptor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A stand-up landing regardless of safety or distance."
+        },
+        {
+          "id": "B",
+          "text": "Within 60 ft is the minimum for every passing evaluation."
+        },
+        {
+          "id": "C",
+          "text": "A safe, effective landing within 82 ft of the target, with appropriate landing-type judgment."
+        },
+        {
+          "id": "D",
+          "text": "Any landing inside 300 ft automatically earns Good."
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "A safe, effective landing within 82 ft of the target, with appropriate landing-type judgment.",
+      "explanation": "The “Excellent” descriptor uses 60 ft. These are rubric descriptors; the overall score and auto-unsat rules still apply.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "203",
+          "pdfPage": 208,
+          "section": "Canopy instruction and landing"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-064",
+      "category": "Debrief and corrective retraining",
+      "type": "multiple_choice",
+      "question": "How should the debrief begin?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By completing paperwork without discussion."
+        },
+        {
+          "id": "B",
+          "text": "Promptly, in a suitable environment, with a student-led review of positive aspects."
+        },
+        {
+          "id": "C",
+          "text": "Only after the next load departs."
+        },
+        {
+          "id": "D",
+          "text": "With a long instructor monologue listing every error."
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "Promptly, in a suitable environment, with a student-led review of positive aspects.",
+      "explanation": "Use questions to reinforce what went well and help the student assess their performance.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "163",
+          "pdfPage": 168,
+          "section": "Debrief and corrective retraining"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "203",
+          "pdfPage": 208,
+          "section": "Debrief and corrective retraining"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": "Ask a simulated student what went well before supplying your observations."
+    },
+    {
+      "id": "uspa-ti-eval-065",
+      "category": "Debrief and corrective retraining",
+      "type": "multiple_choice",
+      "question": "How many grouped improvement points does the tandem debrief rubric call for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Exactly one, regardless of the performance."
+        },
+        {
+          "id": "B",
+          "text": "None if the student enjoyed the jump."
+        },
+        {
+          "id": "C",
+          "text": "As many as you can think of, without priorities."
+        },
+        {
+          "id": "D",
+          "text": "Three to five, prioritized by safety and goals, with fixes and retraining."
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Three to five, prioritized by safety and goals, with fixes and retraining.",
+      "explanation": "The Good descriptor includes retraining at least one safety/goal-related improvement; Excellent covers all safety/goal-related points.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "203",
+          "pdfPage": 208,
+          "section": "Debrief and corrective retraining"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-066",
+      "category": "Debrief and corrective retraining",
+      "type": "multiple_choice",
+      "question": "The instructor identifies an error but gives no corrective retraining. What can result?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An automatic supervision failure."
+        },
+        {
+          "id": "B",
+          "text": "A guaranteed pass if the student agrees."
+        },
+        {
+          "id": "C",
+          "text": "Only a lower video score."
+        },
+        {
+          "id": "D",
+          "text": "No consequence after landing."
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "An automatic supervision failure.",
+      "explanation": "Corrective retraining and limiting improvement points with fixes are explicit supervision auto-unsat requirements.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "192",
+          "pdfPage": 197,
+          "section": "Debrief and corrective retraining"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "203",
+          "pdfPage": 208,
+          "section": "Debrief and corrective retraining"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "auto_unsat",
+        "scenario"
+      ],
+      "practicePrompt": null
+    },
+    {
+      "id": "uspa-ti-eval-067",
+      "category": "Debrief and corrective retraining",
+      "type": "multiple_choice",
+      "question": "What records and next steps should close the debrief?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Leave all goals and progression decisions to the student without guidance."
+        },
+        {
+          "id": "B",
+          "text": "Only ask for a review of the DZ."
+        },
+        {
+          "id": "C",
+          "text": "Only record the instructor’s jump count."
+        },
+        {
+          "id": "D",
+          "text": "Review freefall/canopy goals, complete the logbook and progression card, and establish next steps."
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Review freefall/canopy goals, complete the logbook and progression card, and establish next steps.",
+      "explanation": "The rubric rewards student self-assessment and correctly completed records.",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "irm",
+          "printedPage": "163",
+          "pdfPage": 168,
+          "section": "Debrief and corrective retraining"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "203",
+          "pdfPage": 208,
+          "section": "Debrief and corrective retraining"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [],
+      "practicePrompt": "Have the student explain goals, assess them, and complete the logbook for you to check."
+    }
+  ]
+}

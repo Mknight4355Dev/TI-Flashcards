@@ -1,8 +1,8 @@
-﻿'use strict';
+'use strict';
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
-const files = { '/': 'index.html', '/index.html': 'index.html', '/app.js': 'app.js', '/styles.css': 'styles.css', '/sigma-tandem-flashcards.json': 'sigma-tandem-flashcards.json' };
+const files = { '/': 'index.html', '/index.html': 'index.html', '/app.js': 'app.js', '/styles.css': 'styles.css', '/sigma-tandem-flashcards.json': 'sigma-tandem-flashcards.json', '/uspa-ti-evaluation-flashcards.json': 'uspa-ti-evaluation-flashcards.json' };
 const types = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json' };
 const server = http.createServer((req, res) => {
   const name = files[req.url.split('?')[0]];

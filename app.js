@@ -1,7 +1,33 @@
-﻿'use strict';
+'use strict';
 (function () {
   const get = id => document.getElementById(id);
   let deck, index = 0, showingAnswer = false;
+  const deckFiles = ['sigma-tandem-flashcards.json', 'uspa-ti-evaluation-flashcards.json'];
+  let selectedButton;
+  function selectDeck(data, button) {
+    deck = data;
+    selectedButton = button;
+    index = 0;
+    showingAnswer = false;
+    get('title').textContent = deck.title || 'Flashcards';
+    document.title = deck.title || 'Flashcards';
+    get('description').textContent = deck.description || '';
+    get('policy').textContent = deck.sourcePolicy || '';
+    get('card').removeAttribute('aria-disabled');
+    get('flip').disabled = false;
+    get('selection').hidden = true;
+    get('study').hidden = false;
+    render();
+    get('title').focus();
+  }
+  function showSelection() {
+    if (!deck) return;
+    deck = null;
+    get('study').hidden = true;
+    get('selection').hidden = false;
+    document.title = 'Tandem Instructor Flashcards';
+    selectedButton.focus();
+  }
   const statuses = { verified: 'Verified', derived: 'Derived answer', needs_review: 'Needs review', self_attestation: 'Personal confirmation' };
   function add(tag, text, parent, className) {
     const element = document.createElement(tag);
@@ -28,7 +54,7 @@
     content.textContent = '';
     get('position').textContent = 'Card ' + (index + 1) + ' of ' + deck.cards.length;
     get('category').textContent = card.category || '';
-    get('question-number').textContent = 'Q' + card.examQuestionNumber;
+    get('question-number').textContent = 'Q' + (card.examQuestionNumber != null ? card.examQuestionNumber : (index + 1));
     get('side').textContent = showingAnswer ? 'ANSWER' : 'QUESTION';
     get('card').classList.toggle('answer', showingAnswer);
     get('card').setAttribute('aria-label', showingAnswer ? 'Answer shown. Activate to show question.' : 'Question shown. Activate to reveal answer.');
@@ -37,6 +63,10 @@
       add('h2', (card.correctOptionId ? card.correctOptionId + '. ' : '') + card.answer, content);
       if (card.explanation) add('p', card.explanation, content);
       if (card.reviewNote) add('p', card.reviewNote, content, 'review');
+      if (card.practicePrompt) {
+        add('h3', 'Practice prompt', content);
+        add('p', card.practicePrompt, content);
+      }
       const procedure = (deck.procedures || []).find(item => item.id === card.procedureId);
       if (procedure) {
         add('h3', procedure.name, content);
@@ -72,6 +102,7 @@
     if (event.key === ' ' || event.key === 'Enter') { event.preventDefault(); flip(); }
   });
   get('flip').addEventListener('click', flip);
+  get('back-to-decks').addEventListener('click', showSelection);
   get('previous').addEventListener('click', () => move(-1));
   get('next').addEventListener('click', () => {
     if (!deck) return;
@@ -82,27 +113,34 @@
     }
   });
   document.addEventListener('keydown', event => {
-    if (event.altKey || event.ctrlKey || event.metaKey) return;
+    if (event.altKey || event.ctrlKey || event.metaKey || !deck) return;
+    if (event.key === 'Escape') { event.preventDefault(); showSelection(); return; }
     if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') { event.preventDefault(); move(event.key === 'ArrowLeft' ? -1 : 1); }
     if ((event.key === ' ' || event.key === 'Enter') && (event.target === document.body || event.target === document.documentElement)) { event.preventDefault(); flip(); }
   });
-  fetch('sigma-tandem-flashcards.json').then(response => {
-    if (!response.ok) throw new Error('Could not load the JSON file (HTTP ' + response.status + ').');
-    return response.json();
-  }).then(data => {
-    if (!Array.isArray(data.cards) || !data.cards.length) throw new Error('The JSON file contains no flashcards.');
-    deck = data;
-    get('title').textContent = deck.title || 'Flashcards';
-    document.title = deck.title || 'Flashcards';
-    get('description').textContent = deck.description || '';
-    get('policy').textContent = deck.sourcePolicy || '';
-    get('card').removeAttribute('aria-disabled');
-    get('flip').disabled = false;
-    render();
-  }).catch(error => {
-    get('position').textContent = 'Unable to load cards';
-    get('content').textContent = error.message + ' Start the app with npm start and open http://localhost:3000.';
-    get('hint').textContent = '';
+  Promise.all(deckFiles.map(async file => {
+    try {
+      const response = await fetch(file);
+      if (!response.ok) throw new Error('HTTP ' + response.status);
+      const data = await response.json();
+      if (!Array.isArray(data.cards) || !data.cards.length) throw new Error('No flashcards found');
+      return { file, data };
+    } catch (error) {
+      return { file, error };
+    }
+  })).then(results => {
+    get('selection-status').textContent = results.some(result => result.data)
+      ? '' : 'Unable to load decks. Start the app with npm start and open http://localhost:3000.';
+    results.forEach(({ file, data, error }) => {
+      if (error) {
+        add('p', 'Unable to load ' + file + ': ' + error.message, get('deck-list'), 'review');
+        return;
+      }
+      const button = add('button', '', get('deck-list'), 'deck-choice');
+      add('h2', data.title || 'Flashcards', button);
+      if (data.description) add('p', data.description, button);
+      add('span', data.cards.length + ' cards ? Start studying ?', button);
+      button.addEventListener('click', () => selectDeck(data, button));
+    });
   });
 }());
-
