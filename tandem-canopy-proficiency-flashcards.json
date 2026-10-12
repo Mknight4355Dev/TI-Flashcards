@@ -1,0 +1,479 @@
+{
+  "schemaVersion": "1.0",
+  "id": "tandem-canopy-proficiency",
+  "title": "Tandem Canopy Piloting Proficiency",
+  "createdAt": "2026-10-12",
+  "language": "en",
+  "description": "Recall flashcards from user-supplied course-material images; not official exam questions.",
+  "sourcePolicy": "Source_verified means faithful to the supplied image, not independent verification against every current manual. Older procedures and unattributed checklist values must not silently override newer manufacturer guidance.",
+  "usage": {
+    "mode": "recall",
+    "front": "question",
+    "back": "answer",
+    "grading": "Self-assess recall cards; do not require correctOptionId. Use includeInQuiz for default scored practice; review excluded cards separately.",
+    "practice": "Rehearse EP handle sequences with the examiner in a training harness. Canopy drills are supervised course exercises."
+  },
+  "sources": [
+    {
+      "id": "tandem-canopy-proficiency",
+      "title": "Tandem Canopy Piloting Proficiency",
+      "revision": "UPT Form 332 Rev. 2; copyright 2025",
+      "providedPages": 2,
+      "totalPages": 2,
+      "missingPages": [],
+      "images": [
+        "1000013746.jpg",
+        "1000013747.jpg"
+      ]
+    }
+  ],
+  "counts": {
+    "total": 17,
+    "quizReady": 17,
+    "needsReview": 0
+  },
+  "cards": [
+    {
+      "id": "tandem-canopy-proficiency-001",
+      "category": "Flare",
+      "type": "recall",
+      "question": "What are the three-flare drills and objective?",
+      "answer": "Find first-stage flare sweet spot: identify tandem pair penduluming under canopy nose; two-stage flare looking forward; repeat two-stage flare with eyes closed.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "tandem-canopy-proficiency",
+          "printedPage": "1",
+          "imageFilename": "1000013746.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "tandem-canopy-proficiency-002",
+      "category": "Flare",
+      "type": "recall",
+      "question": "What are the flare-familiarity drills?",
+      "answer": "Full brakes 8–10 seconds then full flight and observe flight cycle; 90-degree turn with quick return to full flight, then another with slow return; observe each cycle.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "tandem-canopy-proficiency",
+          "printedPage": "1",
+          "imageFilename": "1000013746.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "tandem-canopy-proficiency-003",
+      "category": "Flare",
+      "type": "recall",
+      "question": "What are the braked-flare drills?",
+      "answer": "Hold quarter, half, and three-quarter brakes for 5 seconds each, then perform a dynamic flare from each setting.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "tandem-canopy-proficiency",
+          "printedPage": "1",
+          "imageFilename": "1000013746.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "tandem-canopy-proficiency-004",
+      "category": "Rear risers",
+      "type": "recall",
+      "question": "What are the rear-riser familiarity drills?",
+      "answer": "90-degree right/left turns with brakes stowed; repeat unstowed; with brakes unstowed try a rear-riser flare grasping above guide rings and symmetrically pulling approximately 6–8 inches.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "tandem-canopy-proficiency",
+          "printedPage": "1",
+          "imageFilename": "1000013746.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "tandem-canopy-proficiency-005",
+      "category": "Recovery",
+      "type": "recall",
+      "question": "What is the forced-recovery drill?",
+      "answer": "Aggressive 90–180-degree turn; neutralize turn then immediately symmetric flare, “match & finish”; repeat opposite direction. Objective: simulate collision/obstacle avoidance.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "tandem-canopy-proficiency",
+          "printedPage": "1",
+          "imageFilename": "1000013746.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "tandem-canopy-proficiency-006",
+      "category": "Repositioning",
+      "type": "recall",
+      "question": "What is the repositioning-over-ground drill?",
+      "answer": "Hold three-quarter brakes; while in deep brakes turn 90 right, 90 left, 90 left, 90 right to original heading. Also called sashay, S-turn, or quad 90s; objective mid-pattern repositioning for accuracy.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "tandem-canopy-proficiency",
+          "printedPage": "1",
+          "imageFilename": "1000013746.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "tandem-canopy-proficiency-007",
+      "category": "Flat turns",
+      "type": "recall",
+      "question": "What is the flat-turn-to-flare drill?",
+      "answer": "45-degree flat turns followed by a flare after each turn; objective obstacle avoidance.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "tandem-canopy-proficiency",
+          "printedPage": "1",
+          "imageFilename": "1000013746.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "tandem-canopy-proficiency-008",
+      "category": "Turn rate",
+      "type": "recall",
+      "question": "How do you assess altitude loss in turns?",
+      "answer": "360-degree full-input turn then full flight, note altitude loss; repeat with quarter input, note altitude loss.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "tandem-canopy-proficiency",
+          "printedPage": "2",
+          "imageFilename": "1000013747.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "tandem-canopy-proficiency-009",
+      "category": "Traffic",
+      "type": "recall",
+      "question": "What stacking and communication exercises are listed?",
+      "answer": "Compare descent rates; use half brakes to increase vertical separation; pass on-level canopies using full-input turns; ideally establish canopy order by 2,000 feet/600 meters.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "tandem-canopy-proficiency",
+          "printedPage": "2",
+          "imageFilename": "1000013747.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "tandem-canopy-proficiency-010",
+      "category": "Wind",
+      "type": "recall",
+      "question": "How are running, holding, and crabbing assessed?",
+      "answer": "Fly full flight and look down body line to assess ground track; determine heading angle needed for lateral ground track (crabbing).",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "tandem-canopy-proficiency",
+          "printedPage": "2",
+          "imageFilename": "1000013747.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "tandem-canopy-proficiency-011",
+      "category": "Ground rules",
+      "type": "recall",
+      "question": "What check precedes every maneuver?",
+      "answer": "APT: Altitude, Position, Traffic.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "tandem-canopy-proficiency",
+          "printedPage": "2",
+          "imageFilename": "1000013747.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "tandem-canopy-proficiency-012",
+      "category": "Ground rules",
+      "type": "recall",
+      "question": "By what altitude must assigned maneuvers be completed?",
+      "answer": "2,000 feet/600 meters.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "tandem-canopy-proficiency",
+          "printedPage": "2",
+          "imageFilename": "1000013747.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "tandem-canopy-proficiency-013",
+      "category": "Ground rules",
+      "type": "recall",
+      "question": "Which brake systems should be used for maneuvers?",
+      "answer": "Primary and secondary brakes.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "tandem-canopy-proficiency",
+          "printedPage": "2",
+          "imageFilename": "1000013747.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "tandem-canopy-proficiency-014",
+      "category": "Ground rules",
+      "type": "recall",
+      "question": "How may examiners organize or combine drills?",
+      "answer": "Jumps may occur in any order for weather, run-in/release issues, and DZ deconfliction; examiners have creative control; exercises can be combined if altitude permits; candidate can pull slightly higher for additional drill altitude.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "tandem-canopy-proficiency",
+          "printedPage": "2",
+          "imageFilename": "1000013747.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "tandem-canopy-proficiency-015",
+      "category": "Ground rules",
+      "type": "recall",
+      "question": "What preparation and accuracy requirements are listed?",
+      "answer": "Rehearse canopy dive flows on ground before jumping; landing accuracy as directed in Tandem Instructor Logbook.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "tandem-canopy-proficiency",
+          "printedPage": "2",
+          "imageFilename": "1000013747.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "tandem-canopy-proficiency-016",
+      "category": "Ground rules",
+      "type": "recall",
+      "question": "What if safety concerns or unforeseen circumstances prevent drill completion?",
+      "answer": "No repeat jumps necessary, but candidates are encouraged to complete all drills before final endorsement. Safety first.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "tandem-canopy-proficiency",
+          "printedPage": "2",
+          "imageFilename": "1000013747.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "tandem-canopy-proficiency-017",
+      "category": "Ground rules",
+      "type": "recall",
+      "question": "What if the candidate is under a reserve?",
+      "answer": "Concentrate solely on landing priorities and dismiss the briefed canopy dive flow.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "tandem-canopy-proficiency",
+          "printedPage": "2",
+          "imageFilename": "1000013747.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,531 @@
+{
+  "schemaVersion": "1.0",
+  "id": "tandem-skydive-checklist",
+  "title": "Tandem Skydive Checklist",
+  "createdAt": "2026-10-12",
+  "language": "en",
+  "description": "Recall flashcards from user-supplied course-material images; not official exam questions.",
+  "sourcePolicy": "Source_verified means faithful to the supplied image, not independent verification against every current manual. Older procedures and unattributed checklist values must not silently override newer manufacturer guidance.",
+  "usage": {
+    "mode": "recall",
+    "front": "question",
+    "back": "answer",
+    "grading": "Self-assess recall cards; do not require correctOptionId. Use includeInQuiz for default scored practice; review excluded cards separately.",
+    "practice": "Rehearse EP handle sequences with the examiner in a training harness. Canopy drills are supervised course exercises."
+  },
+  "sources": [
+    {
+      "id": "tandem-skydive-checklist",
+      "title": "Tandem Skydive Checklist",
+      "revision": "Publisher, revision and date not visible",
+      "providedPages": 2,
+      "totalPages": 2,
+      "missingPages": [],
+      "images": [
+        "1000013733.jpg",
+        "1000013734.jpg"
+      ]
+    }
+  ],
+  "counts": {
+    "total": 19,
+    "quizReady": 0,
+    "needsReview": 19
+  },
+  "cards": [
+    {
+      "id": "tandem-skydive-checklist-001",
+      "category": "20-minute call",
+      "type": "recall",
+      "question": "What are the initial preparation tasks?",
+      "answer": "Retrieve rig/student harness and move to tandem area; preflight rig; meet student; introduce yourself, ask experience and medical issues, build rapport, offer restroom opportunity.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "tandem-skydive-checklist",
+          "printedPage": "1",
+          "imageFilename": "1000013733.jpg"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "tandem-skydive-checklist-002",
+      "category": "20-minute call",
+      "type": "recall",
+      "question": "What are the harness-fitting and initial briefing tasks?",
+      "answer": "Select jumpsuit if applicable; fit/tighten harness as prescribed; explain actions and where hands will touch; review exit, skydive basics and deployment once harnessed; keep student near gear-up area.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "tandem-skydive-checklist",
+          "printedPage": "1",
+          "imageFilename": "1000013733.jpg"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "tandem-skydive-checklist-003",
+      "category": "20-minute call",
+      "type": "recall",
+      "question": "What does the checklist say about donning the rig and moving to boarding?",
+      "answer": "Don and adjust rig. If rig left your sight since preflight, additional soft gear check. Move together at 5-minute call while maintaining positive student control.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "tandem-skydive-checklist",
+          "printedPage": "1",
+          "imageFilename": "1000013733.jpg"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "tandem-skydive-checklist-004",
+      "category": "Boarding",
+      "type": "recall",
+      "question": "What checks precede boarding?",
+      "answer": "Confirm boarding/exit order; maintain positive control in boarding area; check own gear and student harness just before boarding.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "tandem-skydive-checklist",
+          "printedPage": "1",
+          "imageFilename": "1000013733.jpg"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "tandem-skydive-checklist-005",
+      "category": "Boarding",
+      "type": "recall",
+      "question": "What are the aircraft-entry tasks?",
+      "answer": "Maintain student control; stand between student and propeller if possible; remind student to watch head; direct seating; secure both seat belts and explain operation.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "tandem-skydive-checklist",
+          "printedPage": "1",
+          "imageFilename": "1000013733.jpg"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "tandem-skydive-checklist-006",
+      "category": "Ride to altitude",
+      "type": "recall",
+      "question": "When does this checklist remove seat belts?",
+      "answer": "At 1,500 feet; check both belts completely clear of legs. This is an unverified course-checklist value.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "tandem-skydive-checklist",
+          "printedPage": "1",
+          "imageFilename": "1000013733.jpg"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "tandem-skydive-checklist-007",
+      "category": "Ride to altitude",
+      "type": "recall",
+      "question": "What tasks follow seat-belt removal?",
+      "answer": "Hook both lower attachment points to instructor lower attachment rings; slightly tighten lower straps; complete system check including drogue; signal thumbs-up to door skydiver once complete.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "tandem-skydive-checklist",
+          "printedPage": "1",
+          "imageFilename": "1000013733.jpg"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "tandem-skydive-checklist-008",
+      "category": "Hookup",
+      "type": "recall",
+      "question": "At what altitude does this checklist complete hookup?",
+      "answer": "8,000 feet. Vocalize actions and that each attachment is secure. This is an unverified course-checklist value.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "tandem-skydive-checklist",
+          "printedPage": "1",
+          "imageFilename": "1000013733.jpg"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "tandem-skydive-checklist-009",
+      "category": "Hookup",
+      "type": "recall",
+      "question": "What is the complete-hookup check sequence listed?",
+      "answer": "Own chest/leg strap continuity and fit; tighten student back strap; tighten lowers; clip uppers; tighten uppers; check student leg buckles, loosen belly band, check chest strap; another complete systems check.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "tandem-skydive-checklist",
+          "printedPage": "1",
+          "imageFilename": "1000013733.jpg"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "tandem-skydive-checklist-010",
+      "category": "Exit",
+      "type": "recall",
+      "question": "What door and exit tasks are listed?",
+      "answer": "Slide toward door while checking drogue security; set up, check drogue again, begin count; hard arch with limbs in wide X; check airspace, set drogue, check drogue; complete system check.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "tandem-skydive-checklist",
+          "printedPage": "2",
+          "imageFilename": "1000013734.jpg"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "tandem-skydive-checklist-011",
+      "category": "Drogue fall",
+      "type": "recall",
+      "question": "What orientation and deployment tasks are listed?",
+      "answer": "Face sun if possible; turn perpendicular to jump run before deployment if possible; at 6,000 feet wave and pull drogue release. The altitude is this checklist's planned value.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "tandem-skydive-checklist",
+          "printedPage": "2",
+          "imageFilename": "1000013734.jpg"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "tandem-skydive-checklist-012",
+      "category": "Canopy",
+      "type": "recall",
+      "question": "What checks come immediately after deployment?",
+      "answer": "Assess initial canopy; controllability check with both toggle sets; continuity check from canopy to student; turn appropriate direction; give student yellow toggles if applicable.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "tandem-skydive-checklist",
+          "printedPage": "2",
+          "imageFilename": "1000013734.jpg"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "tandem-skydive-checklist-013",
+      "category": "Student comfort",
+      "type": "recall",
+      "question": "What comfort-adjustment sequence is listed?",
+      "answer": "Explain making student comfortable; use quick ejectors to remove lower straps, lengthen and promptly reattach; slightly loosen chest strap if necessary; ask student to bring knees to chest and slide back in harness.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "tandem-skydive-checklist",
+          "printedPage": "2",
+          "imageFilename": "1000013734.jpg"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "tandem-skydive-checklist-014",
+      "category": "Landing preparation",
+      "type": "recall",
+      "question": "What practice and control-transfer tasks are listed?",
+      "answer": "Two practice landings emphasizing student feet up; retrieve black toggles by 1,500 feet.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "tandem-skydive-checklist",
+          "printedPage": "2",
+          "imageFilename": "1000013734.jpg"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "tandem-skydive-checklist-015",
+      "category": "Landing preparation",
+      "type": "recall",
+      "question": "What high-wind RSL altitude does this checklist list?",
+      "answer": "Below 1,000 feet. This differs from the 2026 EP study guide allowing disconnection below 1,500 feet including on ground; retain source distinction and confirm examiner expectations.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "tandem-skydive-checklist",
+          "printedPage": "2",
+          "imageFilename": "1000013734.jpg"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "tandem-skydive-checklist-016",
+      "category": "Pattern",
+      "type": "recall",
+      "question": "What pattern-entry altitude does this checklist list?",
+      "answer": "600–700 feet, at the appropriate altitude. Treat as a course-specific value requiring verification against the jump plan and other source guidance.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "tandem-skydive-checklist",
+          "printedPage": "2",
+          "imageFilename": "1000013734.jpg"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "tandem-skydive-checklist-017",
+      "category": "Landing",
+      "type": "recall",
+      "question": "What final-approach and landing actions are listed?",
+      "answer": "Repeat legs/feet up instruction; place instructor legs/feet under student's; flare when appropriate; assume slide landing; if winds permit ask student to stand at last moment; if catchers present ask student to open hands.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "tandem-skydive-checklist",
+          "printedPage": "2",
+          "imageFilename": "1000013734.jpg"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "tandem-skydive-checklist-018",
+      "category": "After landing",
+      "type": "recall",
+      "question": "What student-care tasks follow landing?",
+      "answer": "Disconnect student from rig; unbuckle belly/chest straps and loosen legs; keep harness on until gear-up area; instructor or videographer stays with student until clear of landing area.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "tandem-skydive-checklist",
+          "printedPage": "2",
+          "imageFilename": "1000013734.jpg"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "tandem-skydive-checklist-019",
+      "category": "After landing",
+      "type": "recall",
+      "question": "What closes the jump workflow?",
+      "answer": "Stow toggles and gather canopy/gear; deliver gear to packing; meet student in tandem area to remove harness and debrief.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "tandem-skydive-checklist",
+          "printedPage": "2",
+          "imageFilename": "1000013734.jpg"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    }
+  ]
+}

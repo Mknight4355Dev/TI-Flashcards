@@ -1,0 +1,9 @@
+.tools/
+mobile/node_modules/
+mobile/www/
+mobile/android/.gradle/
+mobile/android/.idea/
+mobile/android/local.properties
+mobile/android/**/build/
+*.jks
+*.keystore

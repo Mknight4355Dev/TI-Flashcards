@@ -38,3 +38,6 @@ button:focus-visible, .card:focus-visible { outline: 3px solid #4e947e; outline-
 .deck-choice p { font-weight: 400; color: #55666b; margin: 8px 0 16px; }
 .deck-choice span { color: #507367; font-size: .875rem; }
 .back-button { margin-bottom: 24px; }
+
+/* Let vertical scrolling continue while horizontal gestures change cards. */
+.card { touch-action: pan-y pinch-zoom; }

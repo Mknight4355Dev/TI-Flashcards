@@ -1,0 +1,1706 @@
+{
+  "schemaVersion": "1.0",
+  "id": "sigma-ep-performance-test",
+  "title": "EP Knowledge / Performance Test",
+  "createdAt": "2026-10-12",
+  "language": "en",
+  "description": "Recall flashcards from user-supplied course-material images; not official exam questions.",
+  "sourcePolicy": "Source_verified means faithful to the supplied image, not independent verification against every current manual. Older procedures and unattributed checklist values must not silently override newer manufacturer guidance.",
+  "usage": {
+    "mode": "recall",
+    "front": "question",
+    "back": "answer",
+    "grading": "Self-assess recall cards; do not require correctOptionId. Use includeInQuiz for default scored practice; review excluded cards separately.",
+    "practice": "Rehearse EP handle sequences with the examiner in a training harness. Canopy drills are supervised course exercises."
+  },
+  "sources": [
+    {
+      "id": "sigma-ep-performance-test",
+      "title": "EP Knowledge / Performance Test",
+      "revision": "UPT Form 327 Rev. 1, 6/15/2025",
+      "providedPages": 5,
+      "totalPages": 6,
+      "missingPages": [
+        6
+      ],
+      "images": [
+        "1000013741.jpg",
+        "1000013742.jpg",
+        "1000013743.jpg",
+        "1000013744.jpg",
+        "1000013745.jpg"
+      ]
+    }
+  ],
+  "counts": {
+    "total": 64,
+    "quizReady": 54,
+    "needsReview": 10
+  },
+  "cards": [
+    {
+      "id": "sigma-ep-performance-test-001",
+      "category": "Core EPs",
+      "type": "recall",
+      "question": "What is the total-malfunction procedure when the parachute container remains closed?",
+      "answer": "Look-grab reserve handle; arch; peel/pull reserve handle; check for deployment; check altimeter.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-002",
+      "category": "Core EPs",
+      "type": "recall",
+      "question": "What is the partial-malfunction procedure?",
+      "answer": "Look-grab cutaway handle; look-grab reserve handle; arch; peel/pull cutaway handle; ensure main-riser separation, physically assisting if necessary; peel/pull reserve handle; check deployment; check altimeter.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-003",
+      "category": "Core EPs",
+      "type": "recall",
+      "question": "What defines an open-container-with-drogue-issues malfunction, and what is its EP sequence?",
+      "answer": "Safety pin and main pin are removed from the main closing loop, but the drogue cannot deploy or a collapsed drogue does not extract the main deployment bag. Disconnect RSL; look-grab cutaway handle; arch; peel/pull cutaway; ensure main-riser separation, physically assisting if necessary; look-grab reserve; peel/pull reserve; check deployment; check altimeter.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-004",
+      "category": "Core EPs",
+      "type": "recall",
+      "question": "What is the third-party-entanglement EP sequence?",
+      "answer": "For an outside parachutist entangled with the drogue or bridle: disconnect RSL; look-grab cutaway; arch; peel/pull cutaway; release drogue with either handle; ensure main-riser separation; gain horizontal separation; look-grab reserve; peel/pull reserve; check deployment; check altimeter.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-005",
+      "category": "Aircraft",
+      "type": "recall",
+      "question": "What is the ordinary aircraft-emergency response below 1,500 feet?",
+      "answer": "Remain with the aircraft; follow pilot instructions; sit secured with seat belts; land with the plane.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-006",
+      "category": "Aircraft",
+      "type": "recall",
+      "question": "What does this guide specify for catastrophic aircraft failure below 1,500 feet?",
+      "answer": "Attach at least the top left connection; secure student with right arm; exit; scissor student's legs; deploy reserve.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-007",
+      "category": "Aircraft",
+      "type": "recall",
+      "question": "What is the aircraft-emergency response from 1,500 to 4,000 feet?",
+      "answer": "Attach at least the top left connection; secure student with right arm; exit; scissor student's legs; deploy reserve.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-008",
+      "category": "Aircraft",
+      "type": "recall",
+      "question": "What is the aircraft-emergency response above 4,000 feet?",
+      "answer": "Attach at least the top right connection; secure student with left arm; exit; set drogue; immediately pull drogue release.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-009",
+      "category": "Aircraft",
+      "type": "recall",
+      "question": "How is student refusal in the aircraft handled?",
+      "answer": "Move forward to safe location; disconnect student; sit secured with seat belts and descend with aircraft. Older test omits the newer note about exiting if safer than returning inside.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Preserve the source wording; resolve revision differences with the examiner before scoring this item.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-010",
+      "category": "Freefall",
+      "type": "recall",
+      "question": "What is the proper handle-check order after setting the drogue?",
+      "answer": "Left drogue release; right drogue release; cutaway; reserve; RSL; altitude.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-011",
+      "category": "Freefall",
+      "type": "recall",
+      "question": "What is the unstable-exit response?",
+      "answer": "Attempt to regain stability; set drogue after 10 seconds; if unable to set drogue, Total Malfunction EP.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-012",
+      "category": "Freefall",
+      "type": "recall",
+      "question": "What is the main side-spin response?",
+      "answer": "Bring student's arms in, place wrists at hips; straighten to tracking position; roll belly-to-earth as spin slows. If not corrected in 10 seconds, set drogue if drogue side up; if drogue side down, Total Malfunction EP. Older test omits newer discretionary note and heel-assistance detail.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Preserve the source wording; resolve revision differences with the examiner before scoring this item.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-013",
+      "category": "Freefall",
+      "type": "recall",
+      "question": "What if the main container opens before the drogue is set?",
+      "answer": "Set drogue; if unsuccessful, Open Container with Drogue Issues EP.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-014",
+      "category": "Freefall",
+      "type": "recall",
+      "question": "What if you cannot locate the drogue?",
+      "answer": "Make a second attempt; check whether it has already deployed; if no drogue, Total Malfunction EP; deploy reserve within 10 seconds.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-015",
+      "category": "Freefall",
+      "type": "recall",
+      "question": "What if the drogue is a hard pull?",
+      "answer": "Make a second attempt with elbow against pack tray for leverage; if it cannot deploy, Total Malfunction EP.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-016",
+      "category": "Freefall",
+      "type": "recall",
+      "question": "What if the drogue deploys prematurely?",
+      "answer": "Perform a system check and continue the jump.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-017",
+      "category": "Freefall",
+      "type": "recall",
+      "question": "What if the left arm is incapacitated before drogue deployment?",
+      "answer": "Attempt to free arm; set and check drogue. If main malfunctions and left arm remains incapacitated, pull cutaway and deploy reserve with RSL. If unable to release drogue with right hand, use RSL to deploy reserve. The test does not explicitly list release drogue between check and main-malfunction condition.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Preserve the source wording; resolve revision differences with the examiner before scoring this item.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-018",
+      "category": "Freefall",
+      "type": "recall",
+      "question": "What if the right arm is incapacitated before drogue deployment?",
+      "answer": "Attempt to free arm; if unable, Total Malfunction EP.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-019",
+      "category": "Freefall",
+      "type": "recall",
+      "question": "What if the student grabs both arms before drogue deployment?",
+      "answer": "Free one arm, then follow the applicable left- or right-side procedure.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-020",
+      "category": "Drogue fall",
+      "type": "recall",
+      "question": "What if a drogue-release handle was pulled before deploying the drogue?",
+      "answer": "Set drogue.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "2",
+          "imageFilename": "1000013742.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-021",
+      "category": "Drogue fall",
+      "type": "recall",
+      "question": "What if the drogue remains uninflated after being set?",
+      "answer": "Wait 6 seconds to determine whether drogue inflates; if not, release drogue; if it fails to extract deployment bag, Open Container with Drogue Issues EP.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "2",
+          "imageFilename": "1000013742.jpg"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Preserve the source wording; resolve revision differences with the examiner before scoring this item.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-022",
+      "category": "Drogue fall",
+      "type": "recall",
+      "question": "What if the drogue is blown?",
+      "answer": "Wait 6 seconds to gain speed; release drogue; if it does not extract deployment bag, Open Container with Drogue Issues EP.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "2",
+          "imageFilename": "1000013742.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-023",
+      "category": "Drogue fall",
+      "type": "recall",
+      "question": "What is the response to a detached drogue?",
+      "answer": "Total Malfunction EP.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "2",
+          "imageFilename": "1000013742.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-024",
+      "category": "Drogue fall",
+      "type": "recall",
+      "question": "What if the drogue is deployed but not visible, stuck in the burble?",
+      "answer": "Reach back to confirm deployment. If pouch is empty, reach above main pack tray for drogue canopy/bridle; if located, throw vigorously into relative wind. If unsuccessful, dip right shoulder, then repeat by lowering left shoulder. If still unsuccessful after 10 seconds, deploy reserve.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "2",
+          "imageFilename": "1000013742.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-025",
+      "category": "Drogue fall",
+      "type": "recall",
+      "question": "What if another parachutist is entangled in your drogue?",
+      "answer": "Take a deep breath; allow a few seconds for them to sort themselves out; then Third Party Entanglement EP.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "2",
+          "imageFilename": "1000013742.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-026",
+      "category": "Drogue fall",
+      "type": "recall",
+      "question": "What if the drogue entangles with the instructor or student?",
+      "answer": "Attempt to free entanglement; once clear, systems check; if unable to clear, Total Malfunction EP.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "2",
+          "imageFilename": "1000013742.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-027",
+      "category": "Drogue fall",
+      "type": "recall",
+      "question": "What if the left arm is incapacitated with the drogue out?",
+      "answer": "Attempt to free left arm; release with right drogue release. If main malfunctions and left arm remains incapacitated, pull cutaway and deploy reserve with RSL. If unable to release with right hand, use RSL to deploy reserve.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "2",
+          "imageFilename": "1000013742.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-028",
+      "category": "Drogue fall",
+      "type": "recall",
+      "question": "What if the right arm is incapacitated with the drogue out?",
+      "answer": "Attempt to free right arm; release drogue using left release. If main malfunctions and arm remains incapacitated, deploy reserve; if unable to release with left hand, deploy reserve. Newer guide omits initial free-arm attempt and adds discretion note.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "3",
+          "imageFilename": "1000013743.jpg"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Preserve the source wording; resolve revision differences with the examiner before scoring this item.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-029",
+      "category": "Drogue fall",
+      "type": "recall",
+      "question": "What if both arms are incapacitated with the drogue out?",
+      "answer": "Free one arm; follow applicable left- or right-side procedure.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "3",
+          "imageFilename": "1000013743.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-030",
+      "category": "Drogue fall",
+      "type": "recall",
+      "question": "What if there is a spinning or buffeting arch?",
+      "answer": "Correct student body position; out-fly the student; maintain altitude awareness; release drogue if stability cannot be achieved.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "3",
+          "imageFilename": "1000013743.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-031",
+      "category": "Drogue fall",
+      "type": "recall",
+      "question": "What if a parachute deploys prematurely?",
+      "answer": "Determine which parachute deployed; conduct canopy control check.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "3",
+          "imageFilename": "1000013743.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-032",
+      "category": "Drogue fall",
+      "type": "recall",
+      "question": "What if the altimeter is lost or broken?",
+      "answer": "Scan other tandem jumpers and release drogue when they pull; if unable to locate others, wave off and release drogue.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "3",
+          "imageFilename": "1000013743.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-033",
+      "category": "Drogue fall",
+      "type": "recall",
+      "question": "What if falling through clouds?",
+      "answer": "Stop all movement; maintain altitude awareness; wave off and deploy at designated altitude even if still in cloud.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "3",
+          "imageFilename": "1000013743.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-034",
+      "category": "Deployment",
+      "type": "recall",
+      "question": "What if you cannot locate the drogue-release handle?",
+      "answer": "Attempt to locate the other release; if unable, Total Malfunction EP.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "3",
+          "imageFilename": "1000013743.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-035",
+      "category": "Deployment",
+      "type": "recall",
+      "question": "What is the hard-drogue-release sequence in this guide?",
+      "answer": "Second attempt; pull opposite release; if unsuccessful pull both releases simultaneously. If drogue does not release, Total Malfunction EP. If second attempt collapses drogue but does not extract deployment bag, Open Container with Drogue Issues EP.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "3",
+          "imageFilename": "1000013743.jpg"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Preserve the source wording; resolve revision differences with the examiner before scoring this item.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-036",
+      "category": "Deployment",
+      "type": "recall",
+      "question": "What if the collapsed drogue is in tow?",
+      "answer": "Open Container with Drogue Issues EP.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "3",
+          "imageFilename": "1000013743.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-037",
+      "category": "Deployment",
+      "type": "recall",
+      "question": "What if the drogue does not collapse during deployment?",
+      "answer": "Prepare for hard opening; inspect canopy for damage.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "3",
+          "imageFilename": "1000013743.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-038",
+      "category": "Deployment",
+      "type": "recall",
+      "question": "What if the drogue bridle detaches on release?",
+      "answer": "Clear burble; if unsuccessful, Open Container with Drogue Issues EP.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "3",
+          "imageFilename": "1000013743.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-039",
+      "category": "Deployment",
+      "type": "recall",
+      "question": "How does body orientation affect the bag-lock EP?",
+      "answer": "This older test lists Partial Malfunction EP for bag lock, with right-hand sweep if RSL hangs up. The 2026 guide instead branches by body orientation: horizontal/belly-to-earth uses Open Container with Drogue Issues EP; other orientation uses Partial Malfunction EP.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "3",
+          "imageFilename": "1000013743.jpg"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Preserve the source wording; resolve revision differences with the examiner before scoring this item.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-040",
+      "category": "Deployment",
+      "type": "recall",
+      "question": "What is the streaming-main-canopy response?",
+      "answer": "Grab rear risers and pull down simultaneously to bring slider down; maximum two attempts; if unsuccessful, Partial Malfunction EP.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "3",
+          "imageFilename": "1000013743.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-041",
+      "category": "Post-opening",
+      "type": "recall",
+      "question": "What are the two 50% rule triggers?",
+      "answer": "More than 50% opposite toggle input required for straight flight, or stalling before 50% flare input: Partial Malfunction EP.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "3",
+          "imageFilename": "1000013743.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-042",
+      "category": "Post-opening",
+      "type": "recall",
+      "question": "What if drogue entanglement hinders main opening or controllability?",
+      "answer": "Partial Malfunction EP.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "3",
+          "imageFilename": "1000013743.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-043",
+      "category": "Post-opening",
+      "type": "recall",
+      "question": "What is the line-twist response?",
+      "answer": "Keep hands out of risers while twists form; maintain altitude awareness; grasp risers thumbs down and pull apart or push together; kick to generate momentum in needed direction; do not unstow brakes until twists clear; be prepared for Partial Malfunction EP.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "3",
+          "imageFilename": "1000013743.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-044",
+      "category": "Post-opening",
+      "type": "recall",
+      "question": "How do bottom-skin and top-skin tears differ?",
+      "answer": "Bottom skin: aggressive canopy control check; if tear grows or canopy is uncontrollable, Partial Malfunction EP. Top skin: Partial Malfunction EP.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "4",
+          "imageFilename": "1000013744.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-045",
+      "category": "Post-opening",
+      "type": "recall",
+      "question": "What if a control line releases prematurely during opening?",
+      "answer": "Unstow all control lines; canopy controllability check; if uncontrollable, Partial Malfunction EP.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "4",
+          "imageFilename": "1000013744.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-046",
+      "category": "Post-opening",
+      "type": "recall",
+      "question": "What is the broken-control-line response and its qualification?",
+      "answer": "Unstow all control lines; controllability check; determine rear-riser stall point; land on rear risers if safe, otherwise Partial Malfunction EP. Older test omits newer primary/secondary brake qualification.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "4",
+          "imageFilename": "1000013744.jpg"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Preserve the source wording; resolve revision differences with the examiner before scoring this item.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-047",
+      "category": "Post-opening",
+      "type": "recall",
+      "question": "What broken-suspension-line conditions call for Partial Malfunction EP?",
+      "answer": "After aggressive controllability check: one or more A-lines broken, or two or more B, C, or D lines broken.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "4",
+          "imageFilename": "1000013744.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-048",
+      "category": "Post-opening",
+      "type": "recall",
+      "question": "What if the slider hangs up or end cells stay closed?",
+      "answer": "Full brakes for 3–4 seconds, slowly let up. After two attempts, canopy control check; if uncontrollable, Partial Malfunction EP.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "4",
+          "imageFilename": "1000013744.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-049",
+      "category": "Post-opening",
+      "type": "recall",
+      "question": "What is the main-canopy line-over response?",
+      "answer": "Release brakes; attempt a steady even flare with both primary toggles; if unsuccessful, Partial Malfunction EP.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "4",
+          "imageFilename": "1000013744.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-050",
+      "category": "Post-opening",
+      "type": "recall",
+      "question": "What is the tension-knot response?",
+      "answer": "Identify affected line group; firmly pull corresponding riser, then dynamically release under tension; if unsuccessful, Partial Malfunction EP. This form gives no explicit attempt limit here.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "4",
+          "imageFilename": "1000013744.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-051",
+      "category": "Post-opening",
+      "type": "recall",
+      "question": "What are the dual-canopy instructions on this form?",
+      "answer": "Contain canopy in bag; biplane fly front; side-by-side gentle inputs steering canopies together; downplane cut away main if risers not entangled. If entangled, try bringing canopies overhead by aggressively pulling a rear riser on either canopy. Keep brakes matched; choose large open area and PLF if landing both.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "4",
+          "imageFilename": "1000013744.jpg"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Preserve the source wording; resolve revision differences with the examiner before scoring this item.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-052",
+      "category": "Post-opening",
+      "type": "recall",
+      "question": "What if entering a cloud under canopy?",
+      "answer": "Half brakes; slow right turn to avoid collisions; maintain position.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "4",
+          "imageFilename": "1000013744.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-053",
+      "category": "Post-opening",
+      "type": "recall",
+      "question": "What are the airborne dust-devil instructions?",
+      "answer": "Full flight; fly straight through; attempt canopy control; be prepared to PLF. Dust devils travel with wind: avoid the predicted flight path.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "4",
+          "imageFilename": "1000013744.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-054",
+      "category": "Entanglements",
+      "type": "recall",
+      "question": "What is the imminent-collision procedure?",
+      "answer": "Turn right; assume modified spread-eagle position and protect handles. If no entanglement, check handles, yourself, canopy control and equipment; continue if all in order, remain ready for malfunctions, use clear positive language.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "4",
+          "imageFilename": "1000013744.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-055",
+      "category": "Entanglements",
+      "type": "recall",
+      "question": "What is the initial response to entanglement with another jumper?",
+      "answer": "Turn right to avoid; lower jumper has right of way; modified spread-eagle position, protect handles; attempt to bounce off/separate; maintain positive communication and altitude awareness.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "4",
+          "imageFilename": "1000013744.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-056",
+      "category": "Entanglements",
+      "type": "recall",
+      "question": "What if two jumpers are entangled above 3,000 feet with one good canopy?",
+      "answer": "Higher jumper leads clearing attempt. If successful, canopy should reinflate within 150–200 feet. If unsuccessful and at or above 3,000 feet AGL, lower jumper executes cutaway procedures.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "4",
+          "imageFilename": "1000013744.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-057",
+      "category": "Entanglements",
+      "type": "recall",
+      "question": "What if two jumpers are entangled below 3,000 feet with one good canopy?",
+      "answer": "Land together. Higher jumper maintains control of lower jumper's canopy throughout descent, uses half brakes on final for controlled landing; all jumpers PLF.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "5",
+          "imageFilename": "1000013745.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-058",
+      "category": "Entanglements",
+      "type": "recall",
+      "question": "What if neither entangled jumper has a good canopy?",
+      "answer": "Higher jumper has cutaway priority; both try to free themselves and execute EPs if altitude permits; lower cuts away after higher. If impact is imminent and separation impossible, both deploy reserve to slow descent.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "5",
+          "imageFilename": "1000013745.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-059",
+      "category": "Hazardous landings",
+      "type": "recall",
+      "question": "What does the high-wind landing procedure say about the RSL and collapse?",
+      "answer": "Disconnect RSL. On landing give toggles to catchers; if none, once feet touch ground release one toggle and pull other hand-over-hand, pivot toward pulled toggle and contain canopy nose. If unable to collapse, pull cutaway. Newer guide specifies below-1,500-foot RSL timing and sitting down.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "5",
+          "imageFilename": "1000013745.jpg"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Preserve the source wording; resolve revision differences with the examiner before scoring this item.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-060",
+      "category": "Hazardous landings",
+      "type": "recall",
+      "question": "What is the water-landing sequence?",
+      "answer": "Aim near shore; disconnect RSL; reconnect lower laterals to student harness; student inflates flotation device if worn; unfasten chest strap and belly band if worn; student legs up; flare into wind. In strong wind cut away main after landing. In water disconnect top snaps, push student away, swim out of harness, inflate own flotation device if worn.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "5",
+          "imageFilename": "1000013745.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-061",
+      "category": "Hazardous landings",
+      "type": "recall",
+      "question": "What is the tree-landing response?",
+      "answer": "Keep goggles on; turn into wind; controlled vertical descent between trees; forearms protect faces, feet/knees together; be prepared to PLF. If suspended and unable to climb down, stay calm and await assistance.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "5",
+          "imageFilename": "1000013745.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-062",
+      "category": "Hazardous landings",
+      "type": "recall",
+      "question": "What is the wire-landing response?",
+      "answer": "Disconnect RSL; braked parallel descent to achieve vertical path between wires; prepare to PLF. Upon ground contact immediately cut away and move to safe distance. If suspended, stay until power shut off; avoid touching anyone; do not cut away unless certain you can clear entanglement before reaching ground.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "5",
+          "imageFilename": "1000013745.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-063",
+      "category": "Hazardous landings",
+      "type": "recall",
+      "question": "What if a dust devil catches the canopy on landing?",
+      "answer": "Gather as much canopy as possible and lie on it to prevent inflation; if unable to secure it, disconnect RSL and cut away.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "5",
+          "imageFilename": "1000013745.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    },
+    {
+      "id": "sigma-ep-performance-test-064",
+      "category": "Hazardous landings",
+      "type": "recall",
+      "question": "What if obstacle contact is unavoidable?",
+      "answer": "Avoid target fixation; contact with both feet and PLF.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "status": "source_verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "5",
+          "imageFilename": "1000013745.jpg"
+        }
+      ],
+      "includeInQuiz": true,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall"
+      ]
+    }
+  ]
+}

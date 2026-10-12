@@ -2,12 +2,14 @@
 
 Run `npm start` from this folder, then open http://localhost:3000. No dependencies need to be installed.
 
-Click anywhere on a card to flip between the question and answer. Use Previous/Next or the arrow keys to change cards. Space or Enter also flips the card. Each new card starts on its question side.
+Click anywhere on a card to flip between the question and answer. Use Previous/Next, the arrow keys, or swipe left/right on a card to change cards. Swipe left advances (and restarts after the last card); swipe right goes back. Space or Enter also flips the card. Each new card starts on its question side.
 
-Choose the Sigma or USPA deck on the opening screen. Use **Back to decks** or Escape at any point to return to the selection screen. Selecting a deck starts at its first question.
+Choose from the Sigma, USPA, EP Knowledge / Performance Test, EP Study Guide, Tandem Canopy Piloting Proficiency, and Tandem Skydive Checklist decks on the opening screen. Use **Back to decks** or Escape at any point to return to the selection screen. Selecting a deck starts at its first question.
 
-The app reads `sigma-tandem-flashcards.json` and `uspa-ti-evaluation-flashcards.json` directly. Questions retain their original choice order; answers include explanations, review notes, references, and linked procedure steps, and practice prompts when provided. All 84 cards are available, including personal confirmations and questions needing review. This is an unscored study app.
+The app reads the six `*-flashcards.json` data sets directly. Questions retain their original choice order; answers include explanations, review notes, references, and linked procedure steps, and practice prompts when provided. All 323 cards are available across the six decks, including personal confirmations and questions needing review. This is an unscored study app.
 
 Serve the app using the included server rather than opening index.html directly, because browsers restrict fetching JSON from local file URLs. Stop the server with Ctrl+C.
 
 To add a deck, include its filename in `deckFiles` in `app.js` and add its route to `files` in `server.js`.
+
+The separate [Android version](mobile/README.md) lives in `mobile/`. Its build tools and dependencies do not affect `npm start` or the PC app.

@@ -2,7 +2,11 @@
 (function () {
   const get = id => document.getElementById(id);
   let deck, index = 0, showingAnswer = false;
-  const deckFiles = ['sigma-tandem-flashcards.json', 'uspa-ti-evaluation-flashcards.json'];
+  const deckFiles = ['sigma-tandem-flashcards.json', 'uspa-ti-evaluation-flashcards.json',
+    'sigma-ep-performance-test-flashcards.json',
+    'sigma-ep-study-guide-flashcards.json',
+    'tandem-canopy-proficiency-flashcards.json',
+    'tandem-skydive-checklist-flashcards.json'];
   let selectedButton;
   function selectDeck(data, button) {
     deck = data;
@@ -28,7 +32,7 @@
     document.title = 'Tandem Instructor Flashcards';
     selectedButton.focus();
   }
-  const statuses = { verified: 'Verified', derived: 'Derived answer', needs_review: 'Needs review', self_attestation: 'Personal confirmation' };
+  const statuses = { verified: 'Verified', source_verified: 'Source verified', derived: 'Derived answer', needs_review: 'Needs review', self_attestation: 'Personal confirmation' };
   function add(tag, text, parent, className) {
     const element = document.createElement(tag);
     element.textContent = text;
@@ -97,21 +101,46 @@
     if (!deck || index + delta < 0 || index + delta >= deck.cards.length) return;
     index += delta; showingAnswer = false; render();
   }
-  get('card').addEventListener('click', flip);
+  const cardElement = get('card');
+  let gesture = null, suppressClickUntil = 0;
+  cardElement.addEventListener('pointerdown', event => {
+    if (!event.isPrimary) { gesture = null; return; }
+    if (!deck || event.pointerType === 'mouse') return;
+    suppressClickUntil = 0;
+    gesture = { id: event.pointerId, x: event.clientX, y: event.clientY };
+    cardElement.setPointerCapture(event.pointerId);
+  });
+  cardElement.addEventListener('pointerup', event => {
+    if (!gesture || event.pointerId !== gesture.id) return;
+    const dx = event.clientX - gesture.x, dy = event.clientY - gesture.y;
+    gesture = null;
+    if (Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy) * 1.5) return;
+    // A swipe must not also trigger the card's tap-to-flip action.
+    suppressClickUntil = Date.now() + 500;
+    if (dx < 0) next();
+    else move(-1);
+  });
+  cardElement.addEventListener('pointercancel', () => { gesture = null; });
+  cardElement.addEventListener('lostpointercapture', () => { gesture = null; });
+  cardElement.addEventListener('click', event => {
+    if (event.detail !== 0 && Date.now() < suppressClickUntil) return;
+    flip();
+  });
   get('card').addEventListener('keydown', event => {
     if (event.key === ' ' || event.key === 'Enter') { event.preventDefault(); flip(); }
   });
   get('flip').addEventListener('click', flip);
   get('back-to-decks').addEventListener('click', showSelection);
   get('previous').addEventListener('click', () => move(-1));
-  get('next').addEventListener('click', () => {
+  function next() {
     if (!deck) return;
     if (index === deck.cards.length - 1) {
       index = 0; showingAnswer = false; render();
     } else {
       move(1);
     }
-  });
+  }
+  get('next').addEventListener('click', next);
   document.addEventListener('keydown', event => {
     if (event.altKey || event.ctrlKey || event.metaKey || !deck) return;
     if (event.key === 'Escape') { event.preventDefault(); showSelection(); return; }
@@ -139,7 +168,7 @@
       const button = add('button', '', get('deck-list'), 'deck-choice');
       add('h2', data.title || 'Flashcards', button);
       if (data.description) add('p', data.description, button);
-      add('span', data.cards.length + ' cards ? Start studying ?', button);
+      add('span', data.cards.length + ' cards - Start studying', button);
       button.addEventListener('click', () => selectDeck(data, button));
     });
   });
