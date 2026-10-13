@@ -19,6 +19,12 @@ class Element {
   removeAttribute() {}
   focus() {}
   setPointerCapture() {}
+  animate(frames, options) {
+    const animation = { frames, options, cancelled: false, cancel() { this.cancelled = true; } };
+    this.animations = this.animations || [];
+    this.animations.push(animation);
+    return animation;
+  }
   click() { this.handlers.click({ detail: 0 }); }
 }
 
@@ -40,6 +46,7 @@ async function verify() {
   };
   const context = {
     document, console, App,
+    matchMedia: () => ({ matches: false }),
     Capacitor: { getPlatform: () => 'android' },
     fetch: async file => {
       const packaged = fs.readFileSync(path.join(root, 'www', file));
@@ -67,6 +74,8 @@ async function verify() {
       card.handlers.pointerup({ pointerId: 1, clientX: 200 + dx, clientY: 200 + dy });
     };
     swipe(-100);
+    assert.ok(card.animations.at(-1).frames[0].transform.includes('translateX(64px)'), 'Next card enters from the right');
+    const forwardAnimation = card.animations.at(-1);
     assert.match(elements.position.textContent, /^Card 2 of /);
     card.handlers.click({ detail: 1 });
     assert.equal(elements.side.textContent, 'QUESTION', 'Swipe does not flip the new card');
@@ -82,6 +91,12 @@ async function verify() {
     card.handlers.pointercancel();
     card.handlers.pointerup({ pointerId: 1, clientX: 50, clientY: 200 });
     assert.match(elements.position.textContent, /^Card 1 of /, 'Cancelled gestures do not navigate');
+    context.matchMedia = () => ({ matches: true });
+    const animationCount = card.animations.length;
+    swipe(-100);
+    swipe(100);
+    assert.equal(card.animations.length, animationCount, 'Reduced motion skips card animations');
+    context.matchMedia = () => ({ matches: false });
     elements.flip.click();
     assert.equal(elements.side.textContent, 'ANSWER');
     back();

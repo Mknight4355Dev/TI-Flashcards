@@ -7,7 +7,7 @@
     'sigma-ep-study-guide-flashcards.json',
     'tandem-canopy-proficiency-flashcards.json',
     'tandem-skydive-checklist-flashcards.json'];
-  let selectedButton;
+  let selectedButton, cardAnimation;
   function selectDeck(data, button) {
     deck = data;
     selectedButton = button;
@@ -26,6 +26,7 @@
   }
   function showSelection() {
     if (!deck) return;
+    if (cardAnimation) cardAnimation.cancel();
     deck = null;
     get('study').hidden = true;
     get('selection').hidden = false;
@@ -54,6 +55,7 @@
     });
   }
   function render() {
+    if (cardAnimation) cardAnimation.cancel();
     const card = deck.cards[index], content = get('content');
     content.textContent = '';
     get('position').textContent = 'Card ' + (index + 1) + ' of ' + deck.cards.length;
@@ -97,9 +99,19 @@
     get('next').textContent = index === deck.cards.length - 1 ? 'Start over' : 'Next →';
   }
   function flip() { if (deck) { showingAnswer = !showingAnswer; render(); } }
+  function animateCard(direction) {
+    const card = get('card');
+    if (typeof card.animate !== 'function' ||
+        (typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
+    cardAnimation = card.animate([
+      { transform: 'translateX(' + (direction * 64) + 'px) rotate(' + (direction * 1.5) + 'deg)', opacity: 0 },
+      { transform: 'translateX(0) rotate(0deg)', opacity: 1 }
+    ], { duration: 240, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' });
+  }
   function move(delta) {
     if (!deck || index + delta < 0 || index + delta >= deck.cards.length) return;
     index += delta; showingAnswer = false; render();
+    animateCard(delta);
   }
   const cardElement = get('card');
   let gesture = null, suppressClickUntil = 0;
@@ -136,6 +148,7 @@
     if (!deck) return;
     if (index === deck.cards.length - 1) {
       index = 0; showingAnswer = false; render();
+      animateCard(1);
     } else {
       move(1);
     }
