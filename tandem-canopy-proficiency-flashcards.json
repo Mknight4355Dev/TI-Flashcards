@@ -1,17 +1,33 @@
 {
-  "schemaVersion": "1.0",
+  "schemaVersion": "1.1",
   "id": "tandem-canopy-proficiency",
   "title": "Tandem Canopy Piloting Proficiency",
   "createdAt": "2026-10-12",
   "language": "en",
   "description": "Recall flashcards from user-supplied course-material images; not official exam questions.",
-  "sourcePolicy": "Source_verified means faithful to the supplied image, not independent verification against every current manual. Older procedures and unattributed checklist values must not silently override newer manufacturer guidance.",
+  "sourcePolicy": "Original course answers are retained in sourceAnswer. Every card has comparison status and official references. Verified means direct substantive support in cited manuals; qualified/partially_supported do not mean prohibited. Course-only/not_found is not independent manual verification. Original question, IDs, recall format preserved. Uploaded manual editions are the baseline.",
   "usage": {
     "mode": "recall",
     "front": "question",
     "back": "answer",
-    "grading": "Self-assess recall cards; do not require correctOptionId. Use includeInQuiz for default scored practice; review excluded cards separately.",
-    "practice": "Rehearse EP handle sequences with the examiner in a training harness. Canopy drills are supervised course exercises."
+    "grading": "Recall/self-assessment; empty options and null correctOptionId. Default includeInQuiz admits only directly manual-verified cards. Show all cards in review mode; do not hide needs_review content from study.",
+    "practice": "Rehearse EP handle sequences with the examiner in a training harness. Canopy drills are supervised course exercises.",
+    "annotationFields": [
+      "sourceAnswer",
+      "officialAnswer",
+      "comparison.status",
+      "comparison.summary",
+      "comparison.references",
+      "comparison.evaluatorQuestion"
+    ],
+    "statusDefinitions": {
+      "verified": "VERIFIED",
+      "qualified": "QUALIFIED / CONTEXT",
+      "difference": "DIFFERENCE FOUND",
+      "partially_supported": "PARTIAL SUPPORT / OMITTED DETAILS",
+      "course_only": "COURSE-ONLY DETAIL",
+      "not_found": "NOT INDEPENDENTLY VERIFIED"
+    }
   },
   "sources": [
     {
@@ -25,12 +41,40 @@
         "1000013746.jpg",
         "1000013747.jpg"
       ]
+    },
+    {
+      "id": "ops",
+      "title": "Sigma Tandem Operations Manual, MAN016 Rev_2 (6/1/2026)",
+      "filename": "Man016_Rev2-Sigma-Tandem-Operations-Manual.pdf",
+      "revision": "Rev_2 6/1/2026",
+      "libraryFileId": "libfile_abd0f8aa54a08191a8eca6e8a5dcdd3c"
+    },
+    {
+      "id": "owner",
+      "title": "Sigma Tandem Owner Manual, MAN013 Rev.4.2 (8/11/2026)",
+      "filename": "Man013-Rev4-SigmaII-Tandem-Owners-Manual.pdf",
+      "revision": "Rev.4.2 8/11/2026",
+      "libraryFileId": "libfile_f5f03ed34d148191a097b1728d67992c"
+    },
+    {
+      "id": "irm",
+      "title": "USPA Instructional Rating Manual 2026",
+      "filename": "Man_IRM.pdf",
+      "revision": "2026",
+      "libraryFileId": "libfile_03daacdb20388191b175a0446cb47a6d"
     }
   ],
   "counts": {
     "total": 17,
-    "quizReady": 17,
-    "needsReview": 0
+    "quizReady": 3,
+    "needsReview": 14,
+    "comparison": {
+      "course_only": 9,
+      "difference": 2,
+      "partially_supported": 2,
+      "verified": 3,
+      "qualified": 1
+    }
   },
   "cards": [
     {
@@ -38,250 +82,658 @@
       "category": "Flare",
       "type": "recall",
       "question": "What are the three-flare drills and objective?",
-      "answer": "Find first-stage flare sweet spot: identify tandem pair penduluming under canopy nose; two-stage flare looking forward; repeat two-stage flare with eyes closed.",
+      "answer": "Find first-stage flare sweet spot: identify tandem pair penduluming under canopy nose; two-stage flare looking forward; repeat two-stage flare with eyes closed.\n\nOfficial-manual comparison [COURSE-ONLY DETAIL]: OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source. IRM p.163 supports a sweet-spot demonstration, but not the eyes-closed repetition specifically.\nReferences: OPS p.13; OPS p.14; IRM p.163\nAsk evaluator: Confirm drill sequence, brake system, altitude margin, stall avoidance and traffic supervision before rehearsal.",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
-      "status": "source_verified",
+      "explanation": "Official-manual comparison [COURSE-ONLY DETAIL]: OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source. IRM p.163 supports a sweet-spot demonstration, but not the eyes-closed repetition specifically.\nReferences: OPS p.13; OPS p.14; IRM p.163\nAsk evaluator: Confirm drill sequence, brake system, altitude margin, stall avoidance and traffic supervision before rehearsal.",
+      "status": "needs_review",
       "references": [
         {
           "sourceId": "tandem-canopy-proficiency",
           "printedPage": "1",
           "imageFilename": "1000013746.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "13",
+          "pdfPage": 24,
+          "section": "Canopy piloting proficiency framework"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "14",
+          "pdfPage": 25,
+          "section": "Briefing and safety constraints"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "163",
+          "pdfPage": 168,
+          "section": "Category A canopy instruction"
         }
       ],
       "includeInQuiz": true,
-      "requiresExaminerReview": false,
-      "reviewNote": null,
+      "requiresExaminerReview": true,
+      "reviewNote": "OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source. IRM p.163 supports a sweet-spot demonstration, but not the eyes-closed repetition specifically.",
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "course_only"
+      ],
+      "sourceAnswer": "Find first-stage flare sweet spot: identify tandem pair penduluming under canopy nose; two-stage flare looking forward; repeat two-stage flare with eyes closed.",
+      "officialAnswer": null,
+      "comparison": {
+        "status": "course_only",
+        "summary": "OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source. IRM p.163 supports a sweet-spot demonstration, but not the eyes-closed repetition specifically.",
+        "officialAnswer": null,
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "13",
+            "pdfPage": 24,
+            "section": "Canopy piloting proficiency framework"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "14",
+            "pdfPage": 25,
+            "section": "Briefing and safety constraints"
+          },
+          {
+            "sourceId": "irm",
+            "printedPage": "163",
+            "pdfPage": 168,
+            "section": "Category A canopy instruction"
+          }
+        ],
+        "evaluatorQuestion": "Confirm drill sequence, brake system, altitude margin, stall avoidance and traffic supervision before rehearsal.",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     },
     {
       "id": "tandem-canopy-proficiency-002",
       "category": "Flare",
       "type": "recall",
       "question": "What are the flare-familiarity drills?",
-      "answer": "Full brakes 8–10 seconds then full flight and observe flight cycle; 90-degree turn with quick return to full flight, then another with slow return; observe each cycle.",
+      "answer": "Full brakes 8–10 seconds then full flight and observe flight cycle; 90-degree turn with quick return to full flight, then another with slow return; observe each cycle.\n\nOfficial-manual comparison [COURSE-ONLY DETAIL]: OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source.\nReferences: OPS p.13; OPS p.14\nAsk evaluator: Confirm drill sequence, brake system, altitude margin, stall avoidance and traffic supervision before rehearsal.",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
-      "status": "source_verified",
+      "explanation": "Official-manual comparison [COURSE-ONLY DETAIL]: OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source.\nReferences: OPS p.13; OPS p.14\nAsk evaluator: Confirm drill sequence, brake system, altitude margin, stall avoidance and traffic supervision before rehearsal.",
+      "status": "needs_review",
       "references": [
         {
           "sourceId": "tandem-canopy-proficiency",
           "printedPage": "1",
           "imageFilename": "1000013746.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "13",
+          "pdfPage": 24,
+          "section": "Canopy piloting proficiency framework"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "14",
+          "pdfPage": 25,
+          "section": "Briefing and safety constraints"
         }
       ],
       "includeInQuiz": true,
-      "requiresExaminerReview": false,
-      "reviewNote": null,
+      "requiresExaminerReview": true,
+      "reviewNote": "OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source.",
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "course_only"
+      ],
+      "sourceAnswer": "Full brakes 8–10 seconds then full flight and observe flight cycle; 90-degree turn with quick return to full flight, then another with slow return; observe each cycle.",
+      "officialAnswer": null,
+      "comparison": {
+        "status": "course_only",
+        "summary": "OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source.",
+        "officialAnswer": null,
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "13",
+            "pdfPage": 24,
+            "section": "Canopy piloting proficiency framework"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "14",
+            "pdfPage": 25,
+            "section": "Briefing and safety constraints"
+          }
+        ],
+        "evaluatorQuestion": "Confirm drill sequence, brake system, altitude margin, stall avoidance and traffic supervision before rehearsal.",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     },
     {
       "id": "tandem-canopy-proficiency-003",
       "category": "Flare",
       "type": "recall",
       "question": "What are the braked-flare drills?",
-      "answer": "Hold quarter, half, and three-quarter brakes for 5 seconds each, then perform a dynamic flare from each setting.",
+      "answer": "Hold quarter, half, and three-quarter brakes for 5 seconds each, then perform a dynamic flare from each setting.\n\nOfficial-manual comparison [COURSE-ONLY DETAIL]: OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source.\nReferences: OPS p.13; OPS p.14\nAsk evaluator: Confirm drill sequence, brake system, altitude margin, stall avoidance and traffic supervision before rehearsal.",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
-      "status": "source_verified",
+      "explanation": "Official-manual comparison [COURSE-ONLY DETAIL]: OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source.\nReferences: OPS p.13; OPS p.14\nAsk evaluator: Confirm drill sequence, brake system, altitude margin, stall avoidance and traffic supervision before rehearsal.",
+      "status": "needs_review",
       "references": [
         {
           "sourceId": "tandem-canopy-proficiency",
           "printedPage": "1",
           "imageFilename": "1000013746.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "13",
+          "pdfPage": 24,
+          "section": "Canopy piloting proficiency framework"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "14",
+          "pdfPage": 25,
+          "section": "Briefing and safety constraints"
         }
       ],
       "includeInQuiz": true,
-      "requiresExaminerReview": false,
-      "reviewNote": null,
+      "requiresExaminerReview": true,
+      "reviewNote": "OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source.",
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "course_only"
+      ],
+      "sourceAnswer": "Hold quarter, half, and three-quarter brakes for 5 seconds each, then perform a dynamic flare from each setting.",
+      "officialAnswer": null,
+      "comparison": {
+        "status": "course_only",
+        "summary": "OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source.",
+        "officialAnswer": null,
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "13",
+            "pdfPage": 24,
+            "section": "Canopy piloting proficiency framework"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "14",
+            "pdfPage": 25,
+            "section": "Briefing and safety constraints"
+          }
+        ],
+        "evaluatorQuestion": "Confirm drill sequence, brake system, altitude margin, stall avoidance and traffic supervision before rehearsal.",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     },
     {
       "id": "tandem-canopy-proficiency-004",
       "category": "Rear risers",
       "type": "recall",
       "question": "What are the rear-riser familiarity drills?",
-      "answer": "90-degree right/left turns with brakes stowed; repeat unstowed; with brakes unstowed try a rear-riser flare grasping above guide rings and symmetrically pulling approximately 6–8 inches.",
+      "answer": "90-degree right/left turns with brakes stowed; repeat unstowed; with brakes unstowed try a rear-riser flare grasping above guide rings and symmetrically pulling approximately 6–8 inches.\n\nOfficial-manual comparison [COURSE-ONLY DETAIL]: OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source.\nReferences: OPS p.13; OPS p.14\nAsk evaluator: Confirm drill sequence, brake system, altitude margin, stall avoidance and traffic supervision before rehearsal.",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
-      "status": "source_verified",
+      "explanation": "Official-manual comparison [COURSE-ONLY DETAIL]: OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source.\nReferences: OPS p.13; OPS p.14\nAsk evaluator: Confirm drill sequence, brake system, altitude margin, stall avoidance and traffic supervision before rehearsal.",
+      "status": "needs_review",
       "references": [
         {
           "sourceId": "tandem-canopy-proficiency",
           "printedPage": "1",
           "imageFilename": "1000013746.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "13",
+          "pdfPage": 24,
+          "section": "Canopy piloting proficiency framework"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "14",
+          "pdfPage": 25,
+          "section": "Briefing and safety constraints"
         }
       ],
       "includeInQuiz": true,
-      "requiresExaminerReview": false,
-      "reviewNote": null,
+      "requiresExaminerReview": true,
+      "reviewNote": "OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source.",
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "course_only"
+      ],
+      "sourceAnswer": "90-degree right/left turns with brakes stowed; repeat unstowed; with brakes unstowed try a rear-riser flare grasping above guide rings and symmetrically pulling approximately 6–8 inches.",
+      "officialAnswer": null,
+      "comparison": {
+        "status": "course_only",
+        "summary": "OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source.",
+        "officialAnswer": null,
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "13",
+            "pdfPage": 24,
+            "section": "Canopy piloting proficiency framework"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "14",
+            "pdfPage": 25,
+            "section": "Briefing and safety constraints"
+          }
+        ],
+        "evaluatorQuestion": "Confirm drill sequence, brake system, altitude margin, stall avoidance and traffic supervision before rehearsal.",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     },
     {
       "id": "tandem-canopy-proficiency-005",
       "category": "Recovery",
       "type": "recall",
       "question": "What is the forced-recovery drill?",
-      "answer": "Aggressive 90–180-degree turn; neutralize turn then immediately symmetric flare, “match & finish”; repeat opposite direction. Objective: simulate collision/obstacle avoidance.",
+      "answer": "Aggressive 90–180-degree turn; neutralize turn then immediately symmetric flare, “match & finish”; repeat opposite direction. Objective: simulate collision/obstacle avoidance.\n\nOfficial-manual comparison [COURSE-ONLY DETAIL]: OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source. OPS restricts turns greater than 90 degrees below 500 feet and predictable flight below 1,000; the high-altitude drill is not a low-altitude avoidance authorization.\nReferences: OPS p.13; OPS p.14; OPS p.50; OPS p.52\nAsk evaluator: Confirm drill sequence, brake system, altitude margin, stall avoidance and traffic supervision before rehearsal.",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
-      "status": "source_verified",
+      "explanation": "Official-manual comparison [COURSE-ONLY DETAIL]: OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source. OPS restricts turns greater than 90 degrees below 500 feet and predictable flight below 1,000; the high-altitude drill is not a low-altitude avoidance authorization.\nReferences: OPS p.13; OPS p.14; OPS p.50; OPS p.52\nAsk evaluator: Confirm drill sequence, brake system, altitude margin, stall avoidance and traffic supervision before rehearsal.",
+      "status": "needs_review",
       "references": [
         {
           "sourceId": "tandem-canopy-proficiency",
           "printedPage": "1",
           "imageFilename": "1000013746.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "13",
+          "pdfPage": 24,
+          "section": "Canopy piloting proficiency framework"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "14",
+          "pdfPage": 25,
+          "section": "Briefing and safety constraints"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "50",
+          "pdfPage": 61,
+          "section": "Predictable flight"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "52",
+          "pdfPage": 63,
+          "section": "Turn limits"
         }
       ],
       "includeInQuiz": true,
-      "requiresExaminerReview": false,
-      "reviewNote": null,
+      "requiresExaminerReview": true,
+      "reviewNote": "OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source. OPS restricts turns greater than 90 degrees below 500 feet and predictable flight below 1,000; the high-altitude drill is not a low-altitude avoidance authorization.",
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "course_only"
+      ],
+      "sourceAnswer": "Aggressive 90–180-degree turn; neutralize turn then immediately symmetric flare, “match & finish”; repeat opposite direction. Objective: simulate collision/obstacle avoidance.",
+      "officialAnswer": null,
+      "comparison": {
+        "status": "course_only",
+        "summary": "OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source. OPS restricts turns greater than 90 degrees below 500 feet and predictable flight below 1,000; the high-altitude drill is not a low-altitude avoidance authorization.",
+        "officialAnswer": null,
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "13",
+            "pdfPage": 24,
+            "section": "Canopy piloting proficiency framework"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "14",
+            "pdfPage": 25,
+            "section": "Briefing and safety constraints"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "50",
+            "pdfPage": 61,
+            "section": "Predictable flight"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "52",
+            "pdfPage": 63,
+            "section": "Turn limits"
+          }
+        ],
+        "evaluatorQuestion": "Confirm drill sequence, brake system, altitude margin, stall avoidance and traffic supervision before rehearsal.",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     },
     {
       "id": "tandem-canopy-proficiency-006",
       "category": "Repositioning",
       "type": "recall",
       "question": "What is the repositioning-over-ground drill?",
-      "answer": "Hold three-quarter brakes; while in deep brakes turn 90 right, 90 left, 90 left, 90 right to original heading. Also called sashay, S-turn, or quad 90s; objective mid-pattern repositioning for accuracy.",
+      "answer": "Hold three-quarter brakes; while in deep brakes turn 90 right, 90 left, 90 left, 90 right to original heading. Also called sashay, S-turn, or quad 90s; objective mid-pattern repositioning for accuracy.\n\nOfficial-manual comparison [COURSE-ONLY DETAIL]: OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source. OPS discourages braked/stall-surge normal approaches; the training maneuver does not authorize low pattern S-turns.\nReferences: OPS p.13; OPS p.14; OPS p.50; OPS p.52\nAsk evaluator: Confirm drill sequence, brake system, altitude margin, stall avoidance and traffic supervision before rehearsal.",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
-      "status": "source_verified",
+      "explanation": "Official-manual comparison [COURSE-ONLY DETAIL]: OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source. OPS discourages braked/stall-surge normal approaches; the training maneuver does not authorize low pattern S-turns.\nReferences: OPS p.13; OPS p.14; OPS p.50; OPS p.52\nAsk evaluator: Confirm drill sequence, brake system, altitude margin, stall avoidance and traffic supervision before rehearsal.",
+      "status": "needs_review",
       "references": [
         {
           "sourceId": "tandem-canopy-proficiency",
           "printedPage": "1",
           "imageFilename": "1000013746.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "13",
+          "pdfPage": 24,
+          "section": "Canopy piloting proficiency framework"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "14",
+          "pdfPage": 25,
+          "section": "Briefing and safety constraints"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "50",
+          "pdfPage": 61,
+          "section": "Predictable flight"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "52",
+          "pdfPage": 63,
+          "section": "Normal landing approach"
         }
       ],
       "includeInQuiz": true,
-      "requiresExaminerReview": false,
-      "reviewNote": null,
+      "requiresExaminerReview": true,
+      "reviewNote": "OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source. OPS discourages braked/stall-surge normal approaches; the training maneuver does not authorize low pattern S-turns.",
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "course_only"
+      ],
+      "sourceAnswer": "Hold three-quarter brakes; while in deep brakes turn 90 right, 90 left, 90 left, 90 right to original heading. Also called sashay, S-turn, or quad 90s; objective mid-pattern repositioning for accuracy.",
+      "officialAnswer": null,
+      "comparison": {
+        "status": "course_only",
+        "summary": "OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source. OPS discourages braked/stall-surge normal approaches; the training maneuver does not authorize low pattern S-turns.",
+        "officialAnswer": null,
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "13",
+            "pdfPage": 24,
+            "section": "Canopy piloting proficiency framework"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "14",
+            "pdfPage": 25,
+            "section": "Briefing and safety constraints"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "50",
+            "pdfPage": 61,
+            "section": "Predictable flight"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "52",
+            "pdfPage": 63,
+            "section": "Normal landing approach"
+          }
+        ],
+        "evaluatorQuestion": "Confirm drill sequence, brake system, altitude margin, stall avoidance and traffic supervision before rehearsal.",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     },
     {
       "id": "tandem-canopy-proficiency-007",
       "category": "Flat turns",
       "type": "recall",
       "question": "What is the flat-turn-to-flare drill?",
-      "answer": "45-degree flat turns followed by a flare after each turn; objective obstacle avoidance.",
+      "answer": "45-degree flat turns followed by a flare after each turn; objective obstacle avoidance.\n\nOfficial-manual comparison [COURSE-ONLY DETAIL]: OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source.\nReferences: OPS p.13; OPS p.14\nAsk evaluator: Confirm drill sequence, brake system, altitude margin, stall avoidance and traffic supervision before rehearsal.",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
-      "status": "source_verified",
+      "explanation": "Official-manual comparison [COURSE-ONLY DETAIL]: OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source.\nReferences: OPS p.13; OPS p.14\nAsk evaluator: Confirm drill sequence, brake system, altitude margin, stall avoidance and traffic supervision before rehearsal.",
+      "status": "needs_review",
       "references": [
         {
           "sourceId": "tandem-canopy-proficiency",
           "printedPage": "1",
           "imageFilename": "1000013746.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "13",
+          "pdfPage": 24,
+          "section": "Canopy piloting proficiency framework"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "14",
+          "pdfPage": 25,
+          "section": "Briefing and safety constraints"
         }
       ],
       "includeInQuiz": true,
-      "requiresExaminerReview": false,
-      "reviewNote": null,
+      "requiresExaminerReview": true,
+      "reviewNote": "OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source.",
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "course_only"
+      ],
+      "sourceAnswer": "45-degree flat turns followed by a flare after each turn; objective obstacle avoidance.",
+      "officialAnswer": null,
+      "comparison": {
+        "status": "course_only",
+        "summary": "OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source.",
+        "officialAnswer": null,
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "13",
+            "pdfPage": 24,
+            "section": "Canopy piloting proficiency framework"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "14",
+            "pdfPage": 25,
+            "section": "Briefing and safety constraints"
+          }
+        ],
+        "evaluatorQuestion": "Confirm drill sequence, brake system, altitude margin, stall avoidance and traffic supervision before rehearsal.",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     },
     {
       "id": "tandem-canopy-proficiency-008",
       "category": "Turn rate",
       "type": "recall",
       "question": "How do you assess altitude loss in turns?",
-      "answer": "360-degree full-input turn then full flight, note altitude loss; repeat with quarter input, note altitude loss.",
+      "answer": "360-degree full-input turn then full flight, note altitude loss; repeat with quarter input, note altitude loss.\n\nOfficial-manual comparison [DIFFERENCE FOUND]: The card's general 2,000-foot completion rule does not override OPS's no-360-turns-below-2,500-foot rule.\nManual guidance: Complete both 360-degree exercises above 2,500 feet AGL with sufficient start altitude for altitude loss; the card supplies the full-input/quarter-input drill details.\nReferences: OPS p.50\nAsk evaluator: Confirm both 360 drills must finish above 2,500 feet and identify their start-altitude margin.",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
-      "status": "source_verified",
+      "explanation": "Official-manual comparison [DIFFERENCE FOUND]: The card's general 2,000-foot completion rule does not override OPS's no-360-turns-below-2,500-foot rule.\nManual guidance: Complete both 360-degree exercises above 2,500 feet AGL with sufficient start altitude for altitude loss; the card supplies the full-input/quarter-input drill details.\nReferences: OPS p.50\nAsk evaluator: Confirm both 360 drills must finish above 2,500 feet and identify their start-altitude margin.",
+      "status": "needs_review",
       "references": [
         {
           "sourceId": "tandem-canopy-proficiency",
           "printedPage": "2",
           "imageFilename": "1000013747.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "50",
+          "pdfPage": 61,
+          "section": "360-degree turn prohibition"
         }
       ],
       "includeInQuiz": true,
-      "requiresExaminerReview": false,
-      "reviewNote": null,
+      "requiresExaminerReview": true,
+      "reviewNote": "The card's general 2,000-foot completion rule does not override OPS's no-360-turns-below-2,500-foot rule.",
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "difference"
+      ],
+      "sourceAnswer": "360-degree full-input turn then full flight, note altitude loss; repeat with quarter input, note altitude loss.",
+      "officialAnswer": "Complete both 360-degree exercises above 2,500 feet AGL with sufficient start altitude for altitude loss; the card supplies the full-input/quarter-input drill details.",
+      "comparison": {
+        "status": "difference",
+        "summary": "The card's general 2,000-foot completion rule does not override OPS's no-360-turns-below-2,500-foot rule.",
+        "officialAnswer": "Complete both 360-degree exercises above 2,500 feet AGL with sufficient start altitude for altitude loss; the card supplies the full-input/quarter-input drill details.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "50",
+            "pdfPage": 61,
+            "section": "360-degree turn prohibition"
+          }
+        ],
+        "evaluatorQuestion": "Confirm both 360 drills must finish above 2,500 feet and identify their start-altitude margin.",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     },
     {
       "id": "tandem-canopy-proficiency-009",
       "category": "Traffic",
       "type": "recall",
       "question": "What stacking and communication exercises are listed?",
-      "answer": "Compare descent rates; use half brakes to increase vertical separation; pass on-level canopies using full-input turns; ideally establish canopy order by 2,000 feet/600 meters.",
+      "answer": "Compare descent rates; use half brakes to increase vertical separation; pass on-level canopies using full-input turns; ideally establish canopy order by 2,000 feet/600 meters.\n\nOfficial-manual comparison [PARTIAL SUPPORT / OMITTED DETAILS]: Descent-rate/stacking specifics remain card-sourced. OPS additionally mandates at least 100 feet canopy separation; passing drills cannot be treated as permission to violate separation.\nManual guidance: Maintain at least 100 feet canopy separation and predictable flight. Use the card's stacking exercises only under a briefed supervised traffic plan.\nReferences: OPS p.13; OPS p.14; OPS p.68\nAsk evaluator: Confirm drill sequence, brake system, altitude margin, stall avoidance and traffic supervision before rehearsal.",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
-      "status": "source_verified",
+      "explanation": "Official-manual comparison [PARTIAL SUPPORT / OMITTED DETAILS]: Descent-rate/stacking specifics remain card-sourced. OPS additionally mandates at least 100 feet canopy separation; passing drills cannot be treated as permission to violate separation.\nManual guidance: Maintain at least 100 feet canopy separation and predictable flight. Use the card's stacking exercises only under a briefed supervised traffic plan.\nReferences: OPS p.13; OPS p.14; OPS p.68\nAsk evaluator: Confirm drill sequence, brake system, altitude margin, stall avoidance and traffic supervision before rehearsal.",
+      "status": "needs_review",
       "references": [
         {
           "sourceId": "tandem-canopy-proficiency",
           "printedPage": "2",
           "imageFilename": "1000013747.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "13",
+          "pdfPage": 24,
+          "section": "Canopy piloting proficiency framework"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "14",
+          "pdfPage": 25,
+          "section": "Briefing and safety constraints"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "68",
+          "pdfPage": 79,
+          "section": "Canopy separation"
         }
       ],
       "includeInQuiz": true,
-      "requiresExaminerReview": false,
-      "reviewNote": null,
+      "requiresExaminerReview": true,
+      "reviewNote": "Descent-rate/stacking specifics remain card-sourced. OPS additionally mandates at least 100 feet canopy separation; passing drills cannot be treated as permission to violate separation.",
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "partially_supported"
+      ],
+      "sourceAnswer": "Compare descent rates; use half brakes to increase vertical separation; pass on-level canopies using full-input turns; ideally establish canopy order by 2,000 feet/600 meters.",
+      "officialAnswer": "Maintain at least 100 feet canopy separation and predictable flight. Use the card's stacking exercises only under a briefed supervised traffic plan.",
+      "comparison": {
+        "status": "partially_supported",
+        "summary": "Descent-rate/stacking specifics remain card-sourced. OPS additionally mandates at least 100 feet canopy separation; passing drills cannot be treated as permission to violate separation.",
+        "officialAnswer": "Maintain at least 100 feet canopy separation and predictable flight. Use the card's stacking exercises only under a briefed supervised traffic plan.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "13",
+            "pdfPage": 24,
+            "section": "Canopy piloting proficiency framework"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "14",
+            "pdfPage": 25,
+            "section": "Briefing and safety constraints"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "68",
+            "pdfPage": 79,
+            "section": "Canopy separation"
+          }
+        ],
+        "evaluatorQuestion": "Confirm drill sequence, brake system, altitude margin, stall avoidance and traffic supervision before rehearsal.",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     },
     {
       "id": "tandem-canopy-proficiency-010",
       "category": "Wind",
       "type": "recall",
       "question": "How are running, holding, and crabbing assessed?",
-      "answer": "Fly full flight and look down body line to assess ground track; determine heading angle needed for lateral ground track (crabbing).",
+      "answer": "Fly full flight and look down body line to assess ground track; determine heading angle needed for lateral ground track (crabbing).\n\nOfficial-manual comparison [VERIFIED]: Wind/ground-track concepts agree with IRM tandem canopy teaching; numeric drill details are not involved here.\nReferences: IRM p.162",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
-      "status": "source_verified",
+      "explanation": "Official-manual comparison [VERIFIED]: Wind/ground-track concepts agree with IRM tandem canopy teaching; numeric drill details are not involved here.\nReferences: IRM p.162",
+      "status": "verified",
       "references": [
         {
           "sourceId": "tandem-canopy-proficiency",
           "printedPage": "2",
           "imageFilename": "1000013747.jpg"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "162",
+          "pdfPage": 167,
+          "section": "Running, holding, crosswind drift and crabbing"
         }
       ],
       "includeInQuiz": true,
@@ -290,24 +742,50 @@
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "verified"
+      ],
+      "sourceAnswer": "Fly full flight and look down body line to assess ground track; determine heading angle needed for lateral ground track (crabbing).",
+      "officialAnswer": "Fly full flight and look down body line to assess ground track; determine heading angle needed for lateral ground track (crabbing).",
+      "comparison": {
+        "status": "verified",
+        "summary": "Wind/ground-track concepts agree with IRM tandem canopy teaching; numeric drill details are not involved here.",
+        "officialAnswer": "Fly full flight and look down body line to assess ground track; determine heading angle needed for lateral ground track (crabbing).",
+        "references": [
+          {
+            "sourceId": "irm",
+            "printedPage": "162",
+            "pdfPage": 167,
+            "section": "Running, holding, crosswind drift and crabbing"
+          }
+        ],
+        "evaluatorQuestion": null,
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     },
     {
       "id": "tandem-canopy-proficiency-011",
       "category": "Ground rules",
       "type": "recall",
       "question": "What check precedes every maneuver?",
-      "answer": "APT: Altitude, Position, Traffic.",
+      "answer": "APT: Altitude, Position, Traffic.\n\nOfficial-manual comparison [VERIFIED]: APT mnemonic agrees with the manual's requirement to maintain altitude, position, traffic and situational awareness.\nReferences: OPS p.50",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
-      "status": "source_verified",
+      "explanation": "Official-manual comparison [VERIFIED]: APT mnemonic agrees with the manual's requirement to maintain altitude, position, traffic and situational awareness.\nReferences: OPS p.50",
+      "status": "verified",
       "references": [
         {
           "sourceId": "tandem-canopy-proficiency",
           "printedPage": "2",
           "imageFilename": "1000013747.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "50",
+          "pdfPage": 61,
+          "section": "Canopy control awareness"
         }
       ],
       "includeInQuiz": true,
@@ -316,128 +794,324 @@
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "verified"
+      ],
+      "sourceAnswer": "APT: Altitude, Position, Traffic.",
+      "officialAnswer": "APT: Altitude, Position, Traffic.",
+      "comparison": {
+        "status": "verified",
+        "summary": "APT mnemonic agrees with the manual's requirement to maintain altitude, position, traffic and situational awareness.",
+        "officialAnswer": "APT: Altitude, Position, Traffic.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "50",
+            "pdfPage": 61,
+            "section": "Canopy control awareness"
+          }
+        ],
+        "evaluatorQuestion": null,
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     },
     {
       "id": "tandem-canopy-proficiency-012",
       "category": "Ground rules",
       "type": "recall",
       "question": "By what altitude must assigned maneuvers be completed?",
-      "answer": "2,000 feet/600 meters.",
+      "answer": "2,000 feet/600 meters.\n\nOfficial-manual comparison [DIFFERENCE FOUND]: 2,000 feet is the card's general completion floor, but the 360-degree drills have a stricter 2,500-foot restriction.\nManual guidance: General card maneuvers completed by 2,000 feet; 360-degree turns completed above 2,500 feet per OPS. Brief drill-specific start/end margins.\nReferences: OPS p.50\nAsk evaluator: Which minimum completion altitude applies to each assigned drill?",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
-      "status": "source_verified",
+      "explanation": "Official-manual comparison [DIFFERENCE FOUND]: 2,000 feet is the card's general completion floor, but the 360-degree drills have a stricter 2,500-foot restriction.\nManual guidance: General card maneuvers completed by 2,000 feet; 360-degree turns completed above 2,500 feet per OPS. Brief drill-specific start/end margins.\nReferences: OPS p.50\nAsk evaluator: Which minimum completion altitude applies to each assigned drill?",
+      "status": "needs_review",
       "references": [
         {
           "sourceId": "tandem-canopy-proficiency",
           "printedPage": "2",
           "imageFilename": "1000013747.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "50",
+          "pdfPage": 61,
+          "section": "360-degree turn prohibition"
         }
       ],
       "includeInQuiz": true,
-      "requiresExaminerReview": false,
-      "reviewNote": null,
+      "requiresExaminerReview": true,
+      "reviewNote": "2,000 feet is the card's general completion floor, but the 360-degree drills have a stricter 2,500-foot restriction.",
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "difference"
+      ],
+      "sourceAnswer": "2,000 feet/600 meters.",
+      "officialAnswer": "General card maneuvers completed by 2,000 feet; 360-degree turns completed above 2,500 feet per OPS. Brief drill-specific start/end margins.",
+      "comparison": {
+        "status": "difference",
+        "summary": "2,000 feet is the card's general completion floor, but the 360-degree drills have a stricter 2,500-foot restriction.",
+        "officialAnswer": "General card maneuvers completed by 2,000 feet; 360-degree turns completed above 2,500 feet per OPS. Brief drill-specific start/end margins.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "50",
+            "pdfPage": 61,
+            "section": "360-degree turn prohibition"
+          }
+        ],
+        "evaluatorQuestion": "Which minimum completion altitude applies to each assigned drill?",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     },
     {
       "id": "tandem-canopy-proficiency-013",
       "category": "Ground rules",
       "type": "recall",
       "question": "Which brake systems should be used for maneuvers?",
-      "answer": "Primary and secondary brakes.",
+      "answer": "Primary and secondary brakes.\n\nOfficial-manual comparison [COURSE-ONLY DETAIL]: OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source. OPS p.50 independently specifies primary-only then combined primary/secondary controllability checks, but that does not establish how many separate repetitions of each training drill are required.\nReferences: OPS p.13; OPS p.14; OPS p.50\nAsk evaluator: Are each drill's repetitions primary-only, secondary-only, combined, or some specified combination?",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
-      "status": "source_verified",
+      "explanation": "Official-manual comparison [COURSE-ONLY DETAIL]: OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source. OPS p.50 independently specifies primary-only then combined primary/secondary controllability checks, but that does not establish how many separate repetitions of each training drill are required.\nReferences: OPS p.13; OPS p.14; OPS p.50\nAsk evaluator: Are each drill's repetitions primary-only, secondary-only, combined, or some specified combination?",
+      "status": "needs_review",
       "references": [
         {
           "sourceId": "tandem-canopy-proficiency",
           "printedPage": "2",
           "imageFilename": "1000013747.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "13",
+          "pdfPage": 24,
+          "section": "Canopy piloting proficiency framework"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "14",
+          "pdfPage": 25,
+          "section": "Briefing and safety constraints"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "50",
+          "pdfPage": 61,
+          "section": "Controllability check brake combinations"
         }
       ],
       "includeInQuiz": true,
-      "requiresExaminerReview": false,
-      "reviewNote": null,
+      "requiresExaminerReview": true,
+      "reviewNote": "OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source. OPS p.50 independently specifies primary-only then combined primary/secondary controllability checks, but that does not establish how many separate repetitions of each training drill are required.",
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "course_only"
+      ],
+      "sourceAnswer": "Primary and secondary brakes.",
+      "officialAnswer": null,
+      "comparison": {
+        "status": "course_only",
+        "summary": "OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source. OPS p.50 independently specifies primary-only then combined primary/secondary controllability checks, but that does not establish how many separate repetitions of each training drill are required.",
+        "officialAnswer": null,
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "13",
+            "pdfPage": 24,
+            "section": "Canopy piloting proficiency framework"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "14",
+            "pdfPage": 25,
+            "section": "Briefing and safety constraints"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "50",
+            "pdfPage": 61,
+            "section": "Controllability check brake combinations"
+          }
+        ],
+        "evaluatorQuestion": "Are each drill's repetitions primary-only, secondary-only, combined, or some specified combination?",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     },
     {
       "id": "tandem-canopy-proficiency-014",
       "category": "Ground rules",
       "type": "recall",
       "question": "How may examiners organize or combine drills?",
-      "answer": "Jumps may occur in any order for weather, run-in/release issues, and DZ deconfliction; examiners have creative control; exercises can be combined if altitude permits; candidate can pull slightly higher for additional drill altitude.",
+      "answer": "Jumps may occur in any order for weather, run-in/release issues, and DZ deconfliction; examiners have creative control; exercises can be combined if altitude permits; candidate can pull slightly higher for additional drill altitude.\n\nOfficial-manual comparison [COURSE-ONLY DETAIL]: OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source.\nReferences: OPS p.13; OPS p.14\nAsk evaluator: Confirm drill sequence, brake system, altitude margin, stall avoidance and traffic supervision before rehearsal.",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
-      "status": "source_verified",
+      "explanation": "Official-manual comparison [COURSE-ONLY DETAIL]: OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source.\nReferences: OPS p.13; OPS p.14\nAsk evaluator: Confirm drill sequence, brake system, altitude margin, stall avoidance and traffic supervision before rehearsal.",
+      "status": "needs_review",
       "references": [
         {
           "sourceId": "tandem-canopy-proficiency",
           "printedPage": "2",
           "imageFilename": "1000013747.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "13",
+          "pdfPage": 24,
+          "section": "Canopy piloting proficiency framework"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "14",
+          "pdfPage": 25,
+          "section": "Briefing and safety constraints"
         }
       ],
       "includeInQuiz": true,
-      "requiresExaminerReview": false,
-      "reviewNote": null,
+      "requiresExaminerReview": true,
+      "reviewNote": "OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source.",
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "course_only"
+      ],
+      "sourceAnswer": "Jumps may occur in any order for weather, run-in/release issues, and DZ deconfliction; examiners have creative control; exercises can be combined if altitude permits; candidate can pull slightly higher for additional drill altitude.",
+      "officialAnswer": null,
+      "comparison": {
+        "status": "course_only",
+        "summary": "OPS endorses and requires briefing the canopy proficiency framework, but does not independently reproduce this exact drill sequence/numeric detail. The supplied UPT card remains the detailed source.",
+        "officialAnswer": null,
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "13",
+            "pdfPage": 24,
+            "section": "Canopy piloting proficiency framework"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "14",
+            "pdfPage": 25,
+            "section": "Briefing and safety constraints"
+          }
+        ],
+        "evaluatorQuestion": "Confirm drill sequence, brake system, altitude margin, stall avoidance and traffic supervision before rehearsal.",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     },
     {
       "id": "tandem-canopy-proficiency-015",
       "category": "Ground rules",
       "type": "recall",
       "question": "What preparation and accuracy requirements are listed?",
-      "answer": "Rehearse canopy dive flows on ground before jumping; landing accuracy as directed in Tandem Instructor Logbook.",
+      "answer": "Rehearse canopy dive flows on ground before jumping; landing accuracy as directed in Tandem Instructor Logbook.\n\nOfficial-manual comparison [PARTIAL SUPPORT / OMITTED DETAILS]: Accuracy remains referred to the UPT Logbook; IRM has separate rubric anchors of safe effective landing within 82 feet for Good and 60 feet for Excellent. These are not standalone overall pass/fail thresholds.\nManual guidance: Use the UPT Logbook requirements for UPT drills; separately apply the IRM landing rubric and brief the actual target. Ground rehearsal remains supported by the course framework.\nReferences: OPS p.13; OPS p.14; IRM p.203\nAsk evaluator: What target and accuracy standard will you score on UPT jumps versus USPA air evaluations?",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
-      "status": "source_verified",
+      "explanation": "Official-manual comparison [PARTIAL SUPPORT / OMITTED DETAILS]: Accuracy remains referred to the UPT Logbook; IRM has separate rubric anchors of safe effective landing within 82 feet for Good and 60 feet for Excellent. These are not standalone overall pass/fail thresholds.\nManual guidance: Use the UPT Logbook requirements for UPT drills; separately apply the IRM landing rubric and brief the actual target. Ground rehearsal remains supported by the course framework.\nReferences: OPS p.13; OPS p.14; IRM p.203\nAsk evaluator: What target and accuracy standard will you score on UPT jumps versus USPA air evaluations?",
+      "status": "needs_review",
       "references": [
         {
           "sourceId": "tandem-canopy-proficiency",
           "printedPage": "2",
           "imageFilename": "1000013747.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "13",
+          "pdfPage": 24,
+          "section": "Canopy piloting proficiency framework"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "14",
+          "pdfPage": 25,
+          "section": "Briefing and safety constraints"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "203",
+          "pdfPage": 208,
+          "section": "Tandem landing rubric"
         }
       ],
       "includeInQuiz": true,
-      "requiresExaminerReview": false,
-      "reviewNote": null,
+      "requiresExaminerReview": true,
+      "reviewNote": "Accuracy remains referred to the UPT Logbook; IRM has separate rubric anchors of safe effective landing within 82 feet for Good and 60 feet for Excellent. These are not standalone overall pass/fail thresholds.",
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "partially_supported"
+      ],
+      "sourceAnswer": "Rehearse canopy dive flows on ground before jumping; landing accuracy as directed in Tandem Instructor Logbook.",
+      "officialAnswer": "Use the UPT Logbook requirements for UPT drills; separately apply the IRM landing rubric and brief the actual target. Ground rehearsal remains supported by the course framework.",
+      "comparison": {
+        "status": "partially_supported",
+        "summary": "Accuracy remains referred to the UPT Logbook; IRM has separate rubric anchors of safe effective landing within 82 feet for Good and 60 feet for Excellent. These are not standalone overall pass/fail thresholds.",
+        "officialAnswer": "Use the UPT Logbook requirements for UPT drills; separately apply the IRM landing rubric and brief the actual target. Ground rehearsal remains supported by the course framework.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "13",
+            "pdfPage": 24,
+            "section": "Canopy piloting proficiency framework"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "14",
+            "pdfPage": 25,
+            "section": "Briefing and safety constraints"
+          },
+          {
+            "sourceId": "irm",
+            "printedPage": "203",
+            "pdfPage": 208,
+            "section": "Tandem landing rubric"
+          }
+        ],
+        "evaluatorQuestion": "What target and accuracy standard will you score on UPT jumps versus USPA air evaluations?",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     },
     {
       "id": "tandem-canopy-proficiency-016",
       "category": "Ground rules",
       "type": "recall",
       "question": "What if safety concerns or unforeseen circumstances prevent drill completion?",
-      "answer": "No repeat jumps necessary, but candidates are encouraged to complete all drills before final endorsement. Safety first.",
+      "answer": "No repeat jumps necessary, but candidates are encouraged to complete all drills before final endorsement. Safety first.\n\nOfficial-manual comparison [VERIFIED]: Safety constraints preventing drill execution do not automatically disqualify candidate; all skills must still be briefed. This does not waive separate USPA air/supervision evaluations.\nReferences: OPS p.13; OPS p.14",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
-      "status": "source_verified",
+      "explanation": "Official-manual comparison [VERIFIED]: Safety constraints preventing drill execution do not automatically disqualify candidate; all skills must still be briefed. This does not waive separate USPA air/supervision evaluations.\nReferences: OPS p.13; OPS p.14",
+      "status": "verified",
       "references": [
         {
           "sourceId": "tandem-canopy-proficiency",
           "printedPage": "2",
           "imageFilename": "1000013747.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "13",
+          "pdfPage": 24,
+          "section": "Canopy piloting proficiency"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "14",
+          "pdfPage": 25,
+          "section": "Required briefing and safety exception"
         }
       ],
       "includeInQuiz": true,
@@ -446,34 +1120,99 @@
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "verified"
+      ],
+      "sourceAnswer": "No repeat jumps necessary, but candidates are encouraged to complete all drills before final endorsement. Safety first.",
+      "officialAnswer": "Canopy drills highly recommended; examiner shall brief all skills. Unsafe airspace/weather/topography can prevent drill performance without automatic course disqualification.",
+      "comparison": {
+        "status": "verified",
+        "summary": "Safety constraints preventing drill execution do not automatically disqualify candidate; all skills must still be briefed. This does not waive separate USPA air/supervision evaluations.",
+        "officialAnswer": "Canopy drills highly recommended; examiner shall brief all skills. Unsafe airspace/weather/topography can prevent drill performance without automatic course disqualification.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "13",
+            "pdfPage": 24,
+            "section": "Canopy piloting proficiency"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "14",
+            "pdfPage": 25,
+            "section": "Required briefing and safety exception"
+          }
+        ],
+        "evaluatorQuestion": null,
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     },
     {
       "id": "tandem-canopy-proficiency-017",
       "category": "Ground rules",
       "type": "recall",
       "question": "What if the candidate is under a reserve?",
-      "answer": "Concentrate solely on landing priorities and dismiss the briefed canopy dive flow.",
+      "answer": "Concentrate solely on landing priorities and dismiss the briefed canopy dive flow.\n\nOfficial-manual comparison [QUALIFIED / CONTEXT]: Reserve landing priorities are consistent with the manual; dismissal of the assigned drill flow is explicitly card-sourced.\nManual guidance: Prioritize safe reserve canopy control and landing; instructor-only reserve controls, no secondary toggles; address reserve problems and seek slowest/softest landing. Card says dismiss planned drill flow.\nReferences: OPS p.55; OPS p.56",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
-      "status": "source_verified",
+      "explanation": "Official-manual comparison [QUALIFIED / CONTEXT]: Reserve landing priorities are consistent with the manual; dismissal of the assigned drill flow is explicitly card-sourced.\nManual guidance: Prioritize safe reserve canopy control and landing; instructor-only reserve controls, no secondary toggles; address reserve problems and seek slowest/softest landing. Card says dismiss planned drill flow.\nReferences: OPS p.55; OPS p.56",
+      "status": "needs_review",
       "references": [
         {
           "sourceId": "tandem-canopy-proficiency",
           "printedPage": "2",
           "imageFilename": "1000013747.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "55",
+          "pdfPage": 66,
+          "section": "Reserve operations"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "56",
+          "pdfPage": 67,
+          "section": "Reserve malfunctions"
         }
       ],
       "includeInQuiz": true,
-      "requiresExaminerReview": false,
-      "reviewNote": null,
+      "requiresExaminerReview": true,
+      "reviewNote": "Reserve landing priorities are consistent with the manual; dismissal of the assigned drill flow is explicitly card-sourced.",
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "qualified"
+      ],
+      "sourceAnswer": "Concentrate solely on landing priorities and dismiss the briefed canopy dive flow.",
+      "officialAnswer": "Prioritize safe reserve canopy control and landing; instructor-only reserve controls, no secondary toggles; address reserve problems and seek slowest/softest landing. Card says dismiss planned drill flow.",
+      "comparison": {
+        "status": "qualified",
+        "summary": "Reserve landing priorities are consistent with the manual; dismissal of the assigned drill flow is explicitly card-sourced.",
+        "officialAnswer": "Prioritize safe reserve canopy control and landing; instructor-only reserve controls, no secondary toggles; address reserve problems and seek slowest/softest landing. Card says dismiss planned drill flow.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "55",
+            "pdfPage": 66,
+            "section": "Reserve operations"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "56",
+            "pdfPage": 67,
+            "section": "Reserve malfunctions"
+          }
+        ],
+        "evaluatorQuestion": null,
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     }
-  ]
+  ],
+  "updatedAt": "2026-10-13"
 }

@@ -1,17 +1,33 @@
 {
-  "schemaVersion": "1.0",
+  "schemaVersion": "1.1",
   "id": "tandem-skydive-checklist",
   "title": "Tandem Skydive Checklist",
   "createdAt": "2026-10-12",
   "language": "en",
   "description": "Recall flashcards from user-supplied course-material images; not official exam questions.",
-  "sourcePolicy": "Source_verified means faithful to the supplied image, not independent verification against every current manual. Older procedures and unattributed checklist values must not silently override newer manufacturer guidance.",
+  "sourcePolicy": "Original course answers are retained in sourceAnswer. Every card has comparison status and official references. Verified means direct substantive support in cited manuals; qualified/partially_supported do not mean prohibited. Course-only/not_found is not independent manual verification. Original question, IDs, recall format preserved. Uploaded manual editions are the baseline.",
   "usage": {
     "mode": "recall",
     "front": "question",
     "back": "answer",
-    "grading": "Self-assess recall cards; do not require correctOptionId. Use includeInQuiz for default scored practice; review excluded cards separately.",
-    "practice": "Rehearse EP handle sequences with the examiner in a training harness. Canopy drills are supervised course exercises."
+    "grading": "Recall/self-assessment; empty options and null correctOptionId. Default includeInQuiz admits only directly manual-verified cards. Show all cards in review mode; do not hide needs_review content from study.",
+    "practice": "Rehearse EP handle sequences with the examiner in a training harness. Canopy drills are supervised course exercises.",
+    "annotationFields": [
+      "sourceAnswer",
+      "officialAnswer",
+      "comparison.status",
+      "comparison.summary",
+      "comparison.references",
+      "comparison.evaluatorQuestion"
+    ],
+    "statusDefinitions": {
+      "verified": "VERIFIED",
+      "qualified": "QUALIFIED / CONTEXT",
+      "difference": "DIFFERENCE FOUND",
+      "partially_supported": "PARTIAL SUPPORT / OMITTED DETAILS",
+      "course_only": "COURSE-ONLY DETAIL",
+      "not_found": "NOT INDEPENDENTLY VERIFIED"
+    }
   },
   "sources": [
     {
@@ -25,12 +41,38 @@
         "1000013733.jpg",
         "1000013734.jpg"
       ]
+    },
+    {
+      "id": "ops",
+      "title": "Sigma Tandem Operations Manual, MAN016 Rev_2 (6/1/2026)",
+      "filename": "Man016_Rev2-Sigma-Tandem-Operations-Manual.pdf",
+      "revision": "Rev_2 6/1/2026",
+      "libraryFileId": "libfile_abd0f8aa54a08191a8eca6e8a5dcdd3c"
+    },
+    {
+      "id": "owner",
+      "title": "Sigma Tandem Owner Manual, MAN013 Rev.4.2 (8/11/2026)",
+      "filename": "Man013-Rev4-SigmaII-Tandem-Owners-Manual.pdf",
+      "revision": "Rev.4.2 8/11/2026",
+      "libraryFileId": "libfile_f5f03ed34d148191a097b1728d67992c"
+    },
+    {
+      "id": "irm",
+      "title": "USPA Instructional Rating Manual 2026",
+      "filename": "Man_IRM.pdf",
+      "revision": "2026",
+      "libraryFileId": "libfile_03daacdb20388191b175a0446cb47a6d"
     }
   ],
   "counts": {
     "total": 19,
     "quizReady": 0,
-    "needsReview": 19
+    "needsReview": 19,
+    "comparison": {
+      "partially_supported": 9,
+      "qualified": 8,
+      "difference": 2
+    }
   },
   "cards": [
     {
@@ -38,494 +80,1337 @@
       "category": "20-minute call",
       "type": "recall",
       "question": "What are the initial preparation tasks?",
-      "answer": "Retrieve rig/student harness and move to tandem area; preflight rig; meet student; introduce yourself, ask experience and medical issues, build rapport, offer restroom opportunity.",
+      "answer": "Retrieve rig/student harness and move to tandem area; preflight rig; meet student; introduce yourself, ask experience and medical issues, build rapport, offer restroom opportunity.\n\nOfficial-manual comparison [PARTIAL SUPPORT / OMITTED DETAILS]: Preflight/student preparation is supported. Twenty-minute call, restroom offer and workflow timing are course choices, not manual mandates. Generic preflight answer is not a complete itemized inspection.\nManual guidance: Perform full prescribed gear/preflight and student preparation; briefing and medical/physical suitability checks required. Local timing/rapport/restroom details remain checklist guidance.\nReferences: OPS p.40; OPS p.38; OPS p.36; IRM p.159\nAsk evaluator: What complete preflight and passenger prerequisites must I demonstrate beyond this summary?",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "explanation": "Official-manual comparison [PARTIAL SUPPORT / OMITTED DETAILS]: Preflight/student preparation is supported. Twenty-minute call, restroom offer and workflow timing are course choices, not manual mandates. Generic preflight answer is not a complete itemized inspection.\nManual guidance: Perform full prescribed gear/preflight and student preparation; briefing and medical/physical suitability checks required. Local timing/rapport/restroom details remain checklist guidance.\nReferences: OPS p.40; OPS p.38; OPS p.36; IRM p.159\nAsk evaluator: What complete preflight and passenger prerequisites must I demonstrate beyond this summary?",
       "status": "needs_review",
       "references": [
         {
           "sourceId": "tandem-skydive-checklist",
           "printedPage": "1",
           "imageFilename": "1000013733.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "40",
+          "pdfPage": 51,
+          "section": "Gear checks"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "38",
+          "pdfPage": 49,
+          "section": "Student briefing"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "36",
+          "pdfPage": 47,
+          "section": "Passenger eligibility"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "159",
+          "pdfPage": 164,
+          "section": "Tandem PIC preboarding briefing"
         }
       ],
-      "includeInQuiz": false,
+      "includeInQuiz": true,
       "requiresExaminerReview": true,
-      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "reviewNote": "Preflight/student preparation is supported. Twenty-minute call, restroom offer and workflow timing are course choices, not manual mandates. Generic preflight answer is not a complete itemized inspection.",
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "partially_supported"
+      ],
+      "sourceAnswer": "Retrieve rig/student harness and move to tandem area; preflight rig; meet student; introduce yourself, ask experience and medical issues, build rapport, offer restroom opportunity.",
+      "officialAnswer": "Perform full prescribed gear/preflight and student preparation; briefing and medical/physical suitability checks required. Local timing/rapport/restroom details remain checklist guidance.",
+      "comparison": {
+        "status": "partially_supported",
+        "summary": "Preflight/student preparation is supported. Twenty-minute call, restroom offer and workflow timing are course choices, not manual mandates. Generic preflight answer is not a complete itemized inspection.",
+        "officialAnswer": "Perform full prescribed gear/preflight and student preparation; briefing and medical/physical suitability checks required. Local timing/rapport/restroom details remain checklist guidance.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "40",
+            "pdfPage": 51,
+            "section": "Gear checks"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "38",
+            "pdfPage": 49,
+            "section": "Student briefing"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "36",
+            "pdfPage": 47,
+            "section": "Passenger eligibility"
+          },
+          {
+            "sourceId": "irm",
+            "printedPage": "159",
+            "pdfPage": 164,
+            "section": "Tandem PIC preboarding briefing"
+          }
+        ],
+        "evaluatorQuestion": "What complete preflight and passenger prerequisites must I demonstrate beyond this summary?",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     },
     {
       "id": "tandem-skydive-checklist-002",
       "category": "20-minute call",
       "type": "recall",
       "question": "What are the harness-fitting and initial briefing tasks?",
-      "answer": "Select jumpsuit if applicable; fit/tighten harness as prescribed; explain actions and where hands will touch; review exit, skydive basics and deployment once harnessed; keep student near gear-up area.",
+      "answer": "Select jumpsuit if applicable; fit/tighten harness as prescribed; explain actions and where hands will touch; review exit, skydive basics and deployment once harnessed; keep student near gear-up area.\n\nOfficial-manual comparison [QUALIFIED / CONTEXT]: Fitting, professional touch explanation and briefing agree in principle; actual fit must follow manufacturer details, include jumpable harness configuration before boarding and explicit post-donning check.\nManual guidance: Fit/adjust harness to manufacturer guidance, including jumpable configuration before boarding; explain personal-space contact professionally; perform immediate post-donning check; train required student tasks.\nReferences: OPS p.34; IRM p.130; IRM p.131\nAsk evaluator: Which actions count as the post-donning check and full prescribed fit?",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "explanation": "Official-manual comparison [QUALIFIED / CONTEXT]: Fitting, professional touch explanation and briefing agree in principle; actual fit must follow manufacturer details, include jumpable harness configuration before boarding and explicit post-donning check.\nManual guidance: Fit/adjust harness to manufacturer guidance, including jumpable configuration before boarding; explain personal-space contact professionally; perform immediate post-donning check; train required student tasks.\nReferences: OPS p.34; IRM p.130; IRM p.131\nAsk evaluator: Which actions count as the post-donning check and full prescribed fit?",
       "status": "needs_review",
       "references": [
         {
           "sourceId": "tandem-skydive-checklist",
           "printedPage": "1",
           "imageFilename": "1000013733.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "34",
+          "pdfPage": 45,
+          "section": "Student harness final fit and preboarding readiness"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "130",
+          "pdfPage": 135,
+          "section": "Equipment fit and checks"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "131",
+          "pdfPage": 136,
+          "section": "Immediate post-donning check"
         }
       ],
-      "includeInQuiz": false,
+      "includeInQuiz": true,
       "requiresExaminerReview": true,
-      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "reviewNote": "Fitting, professional touch explanation and briefing agree in principle; actual fit must follow manufacturer details, include jumpable harness configuration before boarding and explicit post-donning check.",
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "qualified"
+      ],
+      "sourceAnswer": "Select jumpsuit if applicable; fit/tighten harness as prescribed; explain actions and where hands will touch; review exit, skydive basics and deployment once harnessed; keep student near gear-up area.",
+      "officialAnswer": "Fit/adjust harness to manufacturer guidance, including jumpable configuration before boarding; explain personal-space contact professionally; perform immediate post-donning check; train required student tasks.",
+      "comparison": {
+        "status": "qualified",
+        "summary": "Fitting, professional touch explanation and briefing agree in principle; actual fit must follow manufacturer details, include jumpable harness configuration before boarding and explicit post-donning check.",
+        "officialAnswer": "Fit/adjust harness to manufacturer guidance, including jumpable configuration before boarding; explain personal-space contact professionally; perform immediate post-donning check; train required student tasks.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "34",
+            "pdfPage": 45,
+            "section": "Student harness final fit and preboarding readiness"
+          },
+          {
+            "sourceId": "irm",
+            "printedPage": "130",
+            "pdfPage": 135,
+            "section": "Equipment fit and checks"
+          },
+          {
+            "sourceId": "irm",
+            "printedPage": "131",
+            "pdfPage": 136,
+            "section": "Immediate post-donning check"
+          }
+        ],
+        "evaluatorQuestion": "Which actions count as the post-donning check and full prescribed fit?",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     },
     {
       "id": "tandem-skydive-checklist-003",
       "category": "20-minute call",
       "type": "recall",
       "question": "What does the checklist say about donning the rig and moving to boarding?",
-      "answer": "Don and adjust rig. If rig left your sight since preflight, additional soft gear check. Move together at 5-minute call while maintaining positive student control.",
+      "answer": "Don and adjust rig. If rig left your sight since preflight, additional soft gear check. Move together at 5-minute call while maintaining positive student control.\n\nOfficial-manual comparison [PARTIAL SUPPORT / OMITTED DETAILS]: Positive escort agrees. Conditional soft check when gear leaves sight does not replace mandatory post-donning check or preboarding buddy check. Five-minute timing is course-specific.\nManual guidance: Perform post-donning check regardless of whether rig remained in sight; physically escort student; obtain mandatory preboarding buddy check; use local boarding schedule.\nReferences: IRM p.130; OPS p.42\nAsk evaluator: Who gives the buddy check and when is the post-donning check performed?",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "explanation": "Official-manual comparison [PARTIAL SUPPORT / OMITTED DETAILS]: Positive escort agrees. Conditional soft check when gear leaves sight does not replace mandatory post-donning check or preboarding buddy check. Five-minute timing is course-specific.\nManual guidance: Perform post-donning check regardless of whether rig remained in sight; physically escort student; obtain mandatory preboarding buddy check; use local boarding schedule.\nReferences: IRM p.130; OPS p.42\nAsk evaluator: Who gives the buddy check and when is the post-donning check performed?",
       "status": "needs_review",
       "references": [
         {
           "sourceId": "tandem-skydive-checklist",
           "printedPage": "1",
           "imageFilename": "1000013733.jpg"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "130",
+          "pdfPage": 135,
+          "section": "Four gear checks"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "42",
+          "pdfPage": 53,
+          "section": "Preboarding buddy check"
         }
       ],
-      "includeInQuiz": false,
+      "includeInQuiz": true,
       "requiresExaminerReview": true,
-      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "reviewNote": "Positive escort agrees. Conditional soft check when gear leaves sight does not replace mandatory post-donning check or preboarding buddy check. Five-minute timing is course-specific.",
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "partially_supported"
+      ],
+      "sourceAnswer": "Don and adjust rig. If rig left your sight since preflight, additional soft gear check. Move together at 5-minute call while maintaining positive student control.",
+      "officialAnswer": "Perform post-donning check regardless of whether rig remained in sight; physically escort student; obtain mandatory preboarding buddy check; use local boarding schedule.",
+      "comparison": {
+        "status": "partially_supported",
+        "summary": "Positive escort agrees. Conditional soft check when gear leaves sight does not replace mandatory post-donning check or preboarding buddy check. Five-minute timing is course-specific.",
+        "officialAnswer": "Perform post-donning check regardless of whether rig remained in sight; physically escort student; obtain mandatory preboarding buddy check; use local boarding schedule.",
+        "references": [
+          {
+            "sourceId": "irm",
+            "printedPage": "130",
+            "pdfPage": 135,
+            "section": "Four gear checks"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "42",
+            "pdfPage": 53,
+            "section": "Preboarding buddy check"
+          }
+        ],
+        "evaluatorQuestion": "Who gives the buddy check and when is the post-donning check performed?",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     },
     {
       "id": "tandem-skydive-checklist-004",
       "category": "Boarding",
       "type": "recall",
       "question": "What checks precede boarding?",
-      "answer": "Confirm boarding/exit order; maintain positive control in boarding area; check own gear and student harness just before boarding.",
+      "answer": "Confirm boarding/exit order; maintain positive control in boarding area; check own gear and student harness just before boarding.\n\nOfficial-manual comparison [PARTIAL SUPPORT / OMITTED DETAILS]: Boarding order/control/check principle agrees, but checklist omits required buddy check and explicit acceptable-winds/spot preparation.\nManual guidance: Confirm load/exit plan and winds; maintain supervision; complete student/self preboarding checks and receive buddy check of TI system.\nReferences: OPS p.42; IRM p.192; IRM p.202\nAsk evaluator: Who performs buddy check and how will wind confirmation be scored?",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "explanation": "Official-manual comparison [PARTIAL SUPPORT / OMITTED DETAILS]: Boarding order/control/check principle agrees, but checklist omits required buddy check and explicit acceptable-winds/spot preparation.\nManual guidance: Confirm load/exit plan and winds; maintain supervision; complete student/self preboarding checks and receive buddy check of TI system.\nReferences: OPS p.42; IRM p.192; IRM p.202\nAsk evaluator: Who performs buddy check and how will wind confirmation be scored?",
       "status": "needs_review",
       "references": [
         {
           "sourceId": "tandem-skydive-checklist",
           "printedPage": "1",
           "imageFilename": "1000013733.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "42",
+          "pdfPage": 53,
+          "section": "Buddy check"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "192",
+          "pdfPage": 197,
+          "section": "Supervision auto-unsats"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "202",
+          "pdfPage": 207,
+          "section": "Boarding and supervision rubric"
         }
       ],
-      "includeInQuiz": false,
+      "includeInQuiz": true,
       "requiresExaminerReview": true,
-      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "reviewNote": "Boarding order/control/check principle agrees, but checklist omits required buddy check and explicit acceptable-winds/spot preparation.",
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "partially_supported"
+      ],
+      "sourceAnswer": "Confirm boarding/exit order; maintain positive control in boarding area; check own gear and student harness just before boarding.",
+      "officialAnswer": "Confirm load/exit plan and winds; maintain supervision; complete student/self preboarding checks and receive buddy check of TI system.",
+      "comparison": {
+        "status": "partially_supported",
+        "summary": "Boarding order/control/check principle agrees, but checklist omits required buddy check and explicit acceptable-winds/spot preparation.",
+        "officialAnswer": "Confirm load/exit plan and winds; maintain supervision; complete student/self preboarding checks and receive buddy check of TI system.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "42",
+            "pdfPage": 53,
+            "section": "Buddy check"
+          },
+          {
+            "sourceId": "irm",
+            "printedPage": "192",
+            "pdfPage": 197,
+            "section": "Supervision auto-unsats"
+          },
+          {
+            "sourceId": "irm",
+            "printedPage": "202",
+            "pdfPage": 207,
+            "section": "Boarding and supervision rubric"
+          }
+        ],
+        "evaluatorQuestion": "Who performs buddy check and how will wind confirmation be scored?",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     },
     {
       "id": "tandem-skydive-checklist-005",
       "category": "Boarding",
       "type": "recall",
       "question": "What are the aircraft-entry tasks?",
-      "answer": "Maintain student control; stand between student and propeller if possible; remind student to watch head; direct seating; secure both seat belts and explain operation.",
+      "answer": "Maintain student control; stand between student and propeller if possible; remind student to watch head; direct seating; secure both seat belts and explain operation.\n\nOfficial-manual comparison [PARTIAL SUPPORT / OMITTED DETAILS]: Aircraft control and independent seat-belt use are supported. Exact head reminder and propeller-position technique are local checklist details, not independently verified wording.\nManual guidance: Maintain physical student supervision and secure independent seat belts; follow aircraft-specific boarding/safety briefing.\nReferences: OPS p.43; IRM p.202",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "explanation": "Official-manual comparison [PARTIAL SUPPORT / OMITTED DETAILS]: Aircraft control and independent seat-belt use are supported. Exact head reminder and propeller-position technique are local checklist details, not independently verified wording.\nManual guidance: Maintain physical student supervision and secure independent seat belts; follow aircraft-specific boarding/safety briefing.\nReferences: OPS p.43; IRM p.202",
       "status": "needs_review",
       "references": [
         {
           "sourceId": "tandem-skydive-checklist",
           "printedPage": "1",
           "imageFilename": "1000013733.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "43",
+          "pdfPage": 54,
+          "section": "Aircraft procedures"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "202",
+          "pdfPage": 207,
+          "section": "General aircraft supervision"
         }
       ],
-      "includeInQuiz": false,
+      "includeInQuiz": true,
       "requiresExaminerReview": true,
-      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "reviewNote": "Aircraft control and independent seat-belt use are supported. Exact head reminder and propeller-position technique are local checklist details, not independently verified wording.",
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "partially_supported"
+      ],
+      "sourceAnswer": "Maintain student control; stand between student and propeller if possible; remind student to watch head; direct seating; secure both seat belts and explain operation.",
+      "officialAnswer": "Maintain physical student supervision and secure independent seat belts; follow aircraft-specific boarding/safety briefing.",
+      "comparison": {
+        "status": "partially_supported",
+        "summary": "Aircraft control and independent seat-belt use are supported. Exact head reminder and propeller-position technique are local checklist details, not independently verified wording.",
+        "officialAnswer": "Maintain physical student supervision and secure independent seat belts; follow aircraft-specific boarding/safety briefing.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "43",
+            "pdfPage": 54,
+            "section": "Aircraft procedures"
+          },
+          {
+            "sourceId": "irm",
+            "printedPage": "202",
+            "pdfPage": 207,
+            "section": "General aircraft supervision"
+          }
+        ],
+        "evaluatorQuestion": null,
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     },
     {
       "id": "tandem-skydive-checklist-006",
       "category": "Ride to altitude",
       "type": "recall",
       "question": "When does this checklist remove seat belts?",
-      "answer": "At 1,500 feet; check both belts completely clear of legs. This is an unverified course-checklist value.",
+      "answer": "At 1,500 feet; check both belts completely clear of legs. This is an unverified course-checklist value.\n\nOfficial-manual comparison [QUALIFIED / CONTEXT]: 1,500 feet matches the manual's explicitly labeled example; earlier unverified wording was too broad. It is not a universal compulsory removal altitude.\nManual guidance: Example schedule removes belts at 1,500 feet; confirm aircraft/course schedule and ensure belts clear before exit.\nReferences: OPS p.43; OPS p.44\nAsk evaluator: Does our aircraft use this example schedule?",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "explanation": "Official-manual comparison [QUALIFIED / CONTEXT]: 1,500 feet matches the manual's explicitly labeled example; earlier unverified wording was too broad. It is not a universal compulsory removal altitude.\nManual guidance: Example schedule removes belts at 1,500 feet; confirm aircraft/course schedule and ensure belts clear before exit.\nReferences: OPS p.43; OPS p.44\nAsk evaluator: Does our aircraft use this example schedule?",
       "status": "needs_review",
       "references": [
         {
           "sourceId": "tandem-skydive-checklist",
           "printedPage": "1",
           "imageFilename": "1000013733.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "43",
+          "pdfPage": 54,
+          "section": "Aircraft procedures—example only"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "44",
+          "pdfPage": 55,
+          "section": "17-point seatbelt-disconnected check"
         }
       ],
-      "includeInQuiz": false,
+      "includeInQuiz": true,
       "requiresExaminerReview": true,
-      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "reviewNote": "1,500 feet matches the manual's explicitly labeled example; earlier unverified wording was too broad. It is not a universal compulsory removal altitude.",
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "qualified"
+      ],
+      "sourceAnswer": "At 1,500 feet; check both belts completely clear of legs. This is an unverified course-checklist value.",
+      "officialAnswer": "Example schedule removes belts at 1,500 feet; confirm aircraft/course schedule and ensure belts clear before exit.",
+      "comparison": {
+        "status": "qualified",
+        "summary": "1,500 feet matches the manual's explicitly labeled example; earlier unverified wording was too broad. It is not a universal compulsory removal altitude.",
+        "officialAnswer": "Example schedule removes belts at 1,500 feet; confirm aircraft/course schedule and ensure belts clear before exit.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "43",
+            "pdfPage": 54,
+            "section": "Aircraft procedures—example only"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "44",
+            "pdfPage": 55,
+            "section": "17-point seatbelt-disconnected check"
+          }
+        ],
+        "evaluatorQuestion": "Does our aircraft use this example schedule?",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     },
     {
       "id": "tandem-skydive-checklist-007",
       "category": "Ride to altitude",
       "type": "recall",
       "question": "What tasks follow seat-belt removal?",
-      "answer": "Hook both lower attachment points to instructor lower attachment rings; slightly tighten lower straps; complete system check including drogue; signal thumbs-up to door skydiver once complete.",
+      "answer": "Hook both lower attachment points to instructor lower attachment rings; slightly tighten lower straps; complete system check including drogue; signal thumbs-up to door skydiver once complete.\n\nOfficial-manual comparison [QUALIFIED / CONTEXT]: Lower hookup after 1,500 feet is optional in OPS example, whereas checklist instructs it. Early door opening requires at least one attachment before door opens.\nManual guidance: Lower hookup may occur under example schedule; ensure at least one attachment before early door opening, then all four secure for jump. Use a consistent hookup sequence.\nReferences: OPS p.43\nAsk evaluator: When are lowers required on our aircraft and when may the door open?",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "explanation": "Official-manual comparison [QUALIFIED / CONTEXT]: Lower hookup after 1,500 feet is optional in OPS example, whereas checklist instructs it. Early door opening requires at least one attachment before door opens.\nManual guidance: Lower hookup may occur under example schedule; ensure at least one attachment before early door opening, then all four secure for jump. Use a consistent hookup sequence.\nReferences: OPS p.43\nAsk evaluator: When are lowers required on our aircraft and when may the door open?",
       "status": "needs_review",
       "references": [
         {
           "sourceId": "tandem-skydive-checklist",
           "printedPage": "1",
           "imageFilename": "1000013733.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "43",
+          "pdfPage": 54,
+          "section": "Optional lowers and early door opening"
         }
       ],
-      "includeInQuiz": false,
+      "includeInQuiz": true,
       "requiresExaminerReview": true,
-      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "reviewNote": "Lower hookup after 1,500 feet is optional in OPS example, whereas checklist instructs it. Early door opening requires at least one attachment before door opens.",
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "qualified"
+      ],
+      "sourceAnswer": "Hook both lower attachment points to instructor lower attachment rings; slightly tighten lower straps; complete system check including drogue; signal thumbs-up to door skydiver once complete.",
+      "officialAnswer": "Lower hookup may occur under example schedule; ensure at least one attachment before early door opening, then all four secure for jump. Use a consistent hookup sequence.",
+      "comparison": {
+        "status": "qualified",
+        "summary": "Lower hookup after 1,500 feet is optional in OPS example, whereas checklist instructs it. Early door opening requires at least one attachment before door opens.",
+        "officialAnswer": "Lower hookup may occur under example schedule; ensure at least one attachment before early door opening, then all four secure for jump. Use a consistent hookup sequence.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "43",
+            "pdfPage": 54,
+            "section": "Optional lowers and early door opening"
+          }
+        ],
+        "evaluatorQuestion": "When are lowers required on our aircraft and when may the door open?",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     },
     {
       "id": "tandem-skydive-checklist-008",
       "category": "Hookup",
       "type": "recall",
       "question": "At what altitude does this checklist complete hookup?",
-      "answer": "8,000 feet. Vocalize actions and that each attachment is secure. This is an unverified course-checklist value.",
+      "answer": "8,000 feet. Vocalize actions and that each attachment is secure. This is an unverified course-checklist value.\n\nOfficial-manual comparison [QUALIFIED / CONTEXT]: 8,000 feet is supported as the manual's example hookup altitude; it is not universally mandated. Earlier answer's unverified label is corrected.\nManual guidance: Example schedule completes hookup at 8,000 feet, with all four attachments properly adjusted and verified before exit; earlier door opening requires an attachment.\nReferences: OPS p.43\nAsk evaluator: Confirm our aircraft hookup altitude and early-door contingency.",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "explanation": "Official-manual comparison [QUALIFIED / CONTEXT]: 8,000 feet is supported as the manual's example hookup altitude; it is not universally mandated. Earlier answer's unverified label is corrected.\nManual guidance: Example schedule completes hookup at 8,000 feet, with all four attachments properly adjusted and verified before exit; earlier door opening requires an attachment.\nReferences: OPS p.43\nAsk evaluator: Confirm our aircraft hookup altitude and early-door contingency.",
       "status": "needs_review",
       "references": [
         {
           "sourceId": "tandem-skydive-checklist",
           "printedPage": "1",
           "imageFilename": "1000013733.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "43",
+          "pdfPage": 54,
+          "section": "Example climb schedule and hookup"
         }
       ],
-      "includeInQuiz": false,
+      "includeInQuiz": true,
       "requiresExaminerReview": true,
-      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "reviewNote": "8,000 feet is supported as the manual's example hookup altitude; it is not universally mandated. Earlier answer's unverified label is corrected.",
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "qualified"
+      ],
+      "sourceAnswer": "8,000 feet. Vocalize actions and that each attachment is secure. This is an unverified course-checklist value.",
+      "officialAnswer": "Example schedule completes hookup at 8,000 feet, with all four attachments properly adjusted and verified before exit; earlier door opening requires an attachment.",
+      "comparison": {
+        "status": "qualified",
+        "summary": "8,000 feet is supported as the manual's example hookup altitude; it is not universally mandated. Earlier answer's unverified label is corrected.",
+        "officialAnswer": "Example schedule completes hookup at 8,000 feet, with all four attachments properly adjusted and verified before exit; earlier door opening requires an attachment.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "43",
+            "pdfPage": 54,
+            "section": "Example climb schedule and hookup"
+          }
+        ],
+        "evaluatorQuestion": "Confirm our aircraft hookup altitude and early-door contingency.",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     },
     {
       "id": "tandem-skydive-checklist-009",
       "category": "Hookup",
       "type": "recall",
       "question": "What is the complete-hookup check sequence listed?",
-      "answer": "Own chest/leg strap continuity and fit; tighten student back strap; tighten lowers; clip uppers; tighten uppers; check student leg buckles, loosen belly band, check chest strap; another complete systems check.",
+      "answer": "Own chest/leg strap continuity and fit; tighten student back strap; tighten lowers; clip uppers; tighten uppers; check student leg buckles, loosen belly band, check chest strap; another complete systems check.\n\nOfficial-manual comparison [PARTIAL SUPPORT / OMITTED DETAILS]: Checklist sequence is allowed as a consistent course method; OPS permits TI discretion in attachment order and additionally requires stowed running ends and full 17-point verification. IRM rubric mentions incorrect order, creating a scoring question.\nManual guidance: All four attachments secure; lowers snug, avoiding excessive tightness/looseness; ends stowed/no snags; consistent personal sequence; full 17-point system/harness verification. OPS does not mandate one attachment order.\nReferences: OPS p.43; OPS p.44; IRM p.202\nAsk evaluator: Is the course sequence required for scoring despite manufacturer order discretion?",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "explanation": "Official-manual comparison [PARTIAL SUPPORT / OMITTED DETAILS]: Checklist sequence is allowed as a consistent course method; OPS permits TI discretion in attachment order and additionally requires stowed running ends and full 17-point verification. IRM rubric mentions incorrect order, creating a scoring question.\nManual guidance: All four attachments secure; lowers snug, avoiding excessive tightness/looseness; ends stowed/no snags; consistent personal sequence; full 17-point system/harness verification. OPS does not mandate one attachment order.\nReferences: OPS p.43; OPS p.44; IRM p.202\nAsk evaluator: Is the course sequence required for scoring despite manufacturer order discretion?",
       "status": "needs_review",
       "references": [
         {
           "sourceId": "tandem-skydive-checklist",
           "printedPage": "1",
           "imageFilename": "1000013733.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "43",
+          "pdfPage": 54,
+          "section": "Hookup order discretion"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "44",
+          "pdfPage": 55,
+          "section": "17-point check"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "202",
+          "pdfPage": 207,
+          "section": "Hookup rubric"
         }
       ],
-      "includeInQuiz": false,
+      "includeInQuiz": true,
       "requiresExaminerReview": true,
-      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "reviewNote": "Checklist sequence is allowed as a consistent course method; OPS permits TI discretion in attachment order and additionally requires stowed running ends and full 17-point verification. IRM rubric mentions incorrect order, creating a scoring question.",
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "partially_supported"
+      ],
+      "sourceAnswer": "Own chest/leg strap continuity and fit; tighten student back strap; tighten lowers; clip uppers; tighten uppers; check student leg buckles, loosen belly band, check chest strap; another complete systems check.",
+      "officialAnswer": "All four attachments secure; lowers snug, avoiding excessive tightness/looseness; ends stowed/no snags; consistent personal sequence; full 17-point system/harness verification. OPS does not mandate one attachment order.",
+      "comparison": {
+        "status": "partially_supported",
+        "summary": "Checklist sequence is allowed as a consistent course method; OPS permits TI discretion in attachment order and additionally requires stowed running ends and full 17-point verification. IRM rubric mentions incorrect order, creating a scoring question.",
+        "officialAnswer": "All four attachments secure; lowers snug, avoiding excessive tightness/looseness; ends stowed/no snags; consistent personal sequence; full 17-point system/harness verification. OPS does not mandate one attachment order.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "43",
+            "pdfPage": 54,
+            "section": "Hookup order discretion"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "44",
+            "pdfPage": 55,
+            "section": "17-point check"
+          },
+          {
+            "sourceId": "irm",
+            "printedPage": "202",
+            "pdfPage": 207,
+            "section": "Hookup rubric"
+          }
+        ],
+        "evaluatorQuestion": "Is the course sequence required for scoring despite manufacturer order discretion?",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     },
     {
       "id": "tandem-skydive-checklist-010",
       "category": "Exit",
       "type": "recall",
       "question": "What door and exit tasks are listed?",
-      "answer": "Slide toward door while checking drogue security; set up, check drogue again, begin count; hard arch with limbs in wide X; check airspace, set drogue, check drogue; complete system check.",
+      "answer": "Slide toward door while checking drogue security; set up, check drogue again, begin count; hard arch with limbs in wide X; check airspace, set drogue, check drogue; complete system check.\n\nOfficial-manual comparison [PARTIAL SUPPORT / OMITTED DETAILS]: Generic system checks omit exact four-at-door and droguefall handle sequence; door check belongs before setting up/committing to door. Hard arch alone does not replace launch into relative wind and active flyaway. For Cat-A/B student arm assistance, IRM p.162 suggests wrist pulling, whereas OPS p.49 prohibits reaching around and pulling arms into position after drogue set; use manufacturer-specific elbow guidance/safety-position options and clarify scoring.\nManual guidance: Before door setup check both uppers, drogue and a release; final briefing/readiness/spot. Controlled launch/flyaway; visual drogue check; mandated left release, right release, cutaway, reserve, RSL, altitude check. Aim stable drogue set in 5–8 seconds.\nReferences: OPS p.44; OPS p.47; OPS p.48; OPS p.49; IRM p.192; OPS p.49; IRM p.162\nAsk evaluator: Do you expect the exact pre-door and six-item handle checks plus Cat-A/B-specific count? Will elbow guidance/safety-position retention satisfy the IRM objective instead of its wrist-pull suggestion?",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "explanation": "Official-manual comparison [PARTIAL SUPPORT / OMITTED DETAILS]: Generic system checks omit exact four-at-door and droguefall handle sequence; door check belongs before setting up/committing to door. Hard arch alone does not replace launch into relative wind and active flyaway. For Cat-A/B student arm assistance, IRM p.162 suggests wrist pulling, whereas OPS p.49 prohibits reaching around and pulling arms into position after drogue set; use manufacturer-specific elbow guidance/safety-position options and clarify scoring.\nManual guidance: Before door setup check both uppers, drogue and a release; final briefing/readiness/spot. Controlled launch/flyaway; visual drogue check; mandated left release, right release, cutaway, reserve, RSL, altitude check. Aim stable drogue set in 5–8 seconds.\nReferences: OPS p.44; OPS p.47; OPS p.48; OPS p.49; IRM p.192; OPS p.49; IRM p.162\nAsk evaluator: Do you expect the exact pre-door and six-item handle checks plus Cat-A/B-specific count? Will elbow guidance/safety-position retention satisfy the IRM objective instead of its wrist-pull suggestion?",
       "status": "needs_review",
       "references": [
         {
           "sourceId": "tandem-skydive-checklist",
           "printedPage": "2",
           "imageFilename": "1000013734.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "44",
+          "pdfPage": 55,
+          "section": "Four at door"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "47",
+          "pdfPage": 58,
+          "section": "Deployment timing"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "48",
+          "pdfPage": 59,
+          "section": "Drogue and handles"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "49",
+          "pdfPage": 60,
+          "section": "Altitude"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "192",
+          "pdfPage": 197,
+          "section": "Air/supervision auto-unsats"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "49",
+          "pdfPage": 60,
+          "section": "Student arm extension after drogue set"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "162",
+          "pdfPage": 167,
+          "section": "Physical assistance to start dive flow"
         }
       ],
-      "includeInQuiz": false,
+      "includeInQuiz": true,
       "requiresExaminerReview": true,
-      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "reviewNote": "Generic system checks omit exact four-at-door and droguefall handle sequence; door check belongs before setting up/committing to door. Hard arch alone does not replace launch into relative wind and active flyaway. For Cat-A/B student arm assistance, IRM p.162 suggests wrist pulling, whereas OPS p.49 prohibits reaching around and pulling arms into position after drogue set; use manufacturer-specific elbow guidance/safety-position options and clarify scoring.",
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "partially_supported"
+      ],
+      "sourceAnswer": "Slide toward door while checking drogue security; set up, check drogue again, begin count; hard arch with limbs in wide X; check airspace, set drogue, check drogue; complete system check.",
+      "officialAnswer": "Before door setup check both uppers, drogue and a release; final briefing/readiness/spot. Controlled launch/flyaway; visual drogue check; mandated left release, right release, cutaway, reserve, RSL, altitude check. Aim stable drogue set in 5–8 seconds.",
+      "comparison": {
+        "status": "partially_supported",
+        "summary": "Generic system checks omit exact four-at-door and droguefall handle sequence; door check belongs before setting up/committing to door. Hard arch alone does not replace launch into relative wind and active flyaway. For Cat-A/B student arm assistance, IRM p.162 suggests wrist pulling, whereas OPS p.49 prohibits reaching around and pulling arms into position after drogue set; use manufacturer-specific elbow guidance/safety-position options and clarify scoring.",
+        "officialAnswer": "Before door setup check both uppers, drogue and a release; final briefing/readiness/spot. Controlled launch/flyaway; visual drogue check; mandated left release, right release, cutaway, reserve, RSL, altitude check. Aim stable drogue set in 5–8 seconds.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "44",
+            "pdfPage": 55,
+            "section": "Four at door"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "47",
+            "pdfPage": 58,
+            "section": "Deployment timing"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "48",
+            "pdfPage": 59,
+            "section": "Drogue and handles"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "49",
+            "pdfPage": 60,
+            "section": "Altitude"
+          },
+          {
+            "sourceId": "irm",
+            "printedPage": "192",
+            "pdfPage": 197,
+            "section": "Air/supervision auto-unsats"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "49",
+            "pdfPage": 60,
+            "section": "Student arm extension after drogue set"
+          },
+          {
+            "sourceId": "irm",
+            "printedPage": "162",
+            "pdfPage": 167,
+            "section": "Physical assistance to start dive flow"
+          }
+        ],
+        "evaluatorQuestion": "Do you expect the exact pre-door and six-item handle checks plus Cat-A/B-specific count? Will elbow guidance/safety-position retention satisfy the IRM objective instead of its wrist-pull suggestion?",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     },
     {
       "id": "tandem-skydive-checklist-011",
       "category": "Drogue fall",
       "type": "recall",
       "question": "What orientation and deployment tasks are listed?",
-      "answer": "Face sun if possible; turn perpendicular to jump run before deployment if possible; at 6,000 feet wave and pull drogue release. The altitude is this checklist's planned value.",
+      "answer": "Face sun if possible; turn perpendicular to jump run before deployment if possible; at 6,000 feet wave and pull drogue release. The altitude is this checklist's planned value.\n\nOfficial-manual comparison [QUALIFIED / CONTEXT]: 6,000-foot planned pull is supported by IRM tandem plans. Face-sun/perpendicular-jump-run preferences are checklist choices, not universal manual requirements. Missing Cat-A/B student tasks cannot be replaced by these heading preferences.\nManual guidance: Tandem dive plans: lock on 6,500 feet; wave/pull 6,000. Air-evaluation failure floor is release below 5,000. Brief heading/traffic plan and complete category-specific student tasks.\nReferences: IRM p.23; IRM p.31; IRM p.192\nAsk evaluator: Confirm planned pull and headings, and student tasks for each category.",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "explanation": "Official-manual comparison [QUALIFIED / CONTEXT]: 6,000-foot planned pull is supported by IRM tandem plans. Face-sun/perpendicular-jump-run preferences are checklist choices, not universal manual requirements. Missing Cat-A/B student tasks cannot be replaced by these heading preferences.\nManual guidance: Tandem dive plans: lock on 6,500 feet; wave/pull 6,000. Air-evaluation failure floor is release below 5,000. Brief heading/traffic plan and complete category-specific student tasks.\nReferences: IRM p.23; IRM p.31; IRM p.192\nAsk evaluator: Confirm planned pull and headings, and student tasks for each category.",
       "status": "needs_review",
       "references": [
         {
           "sourceId": "tandem-skydive-checklist",
           "printedPage": "2",
           "imageFilename": "1000013734.jpg"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "23",
+          "pdfPage": 28,
+          "section": "Category A tandem plan"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "31",
+          "pdfPage": 36,
+          "section": "Category B tandem plan"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "192",
+          "pdfPage": 197,
+          "section": "Air thresholds"
         }
       ],
-      "includeInQuiz": false,
+      "includeInQuiz": true,
       "requiresExaminerReview": true,
-      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "reviewNote": "6,000-foot planned pull is supported by IRM tandem plans. Face-sun/perpendicular-jump-run preferences are checklist choices, not universal manual requirements. Missing Cat-A/B student tasks cannot be replaced by these heading preferences.",
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "qualified"
+      ],
+      "sourceAnswer": "Face sun if possible; turn perpendicular to jump run before deployment if possible; at 6,000 feet wave and pull drogue release. The altitude is this checklist's planned value.",
+      "officialAnswer": "Tandem dive plans: lock on 6,500 feet; wave/pull 6,000. Air-evaluation failure floor is release below 5,000. Brief heading/traffic plan and complete category-specific student tasks.",
+      "comparison": {
+        "status": "qualified",
+        "summary": "6,000-foot planned pull is supported by IRM tandem plans. Face-sun/perpendicular-jump-run preferences are checklist choices, not universal manual requirements. Missing Cat-A/B student tasks cannot be replaced by these heading preferences.",
+        "officialAnswer": "Tandem dive plans: lock on 6,500 feet; wave/pull 6,000. Air-evaluation failure floor is release below 5,000. Brief heading/traffic plan and complete category-specific student tasks.",
+        "references": [
+          {
+            "sourceId": "irm",
+            "printedPage": "23",
+            "pdfPage": 28,
+            "section": "Category A tandem plan"
+          },
+          {
+            "sourceId": "irm",
+            "printedPage": "31",
+            "pdfPage": 36,
+            "section": "Category B tandem plan"
+          },
+          {
+            "sourceId": "irm",
+            "printedPage": "192",
+            "pdfPage": 197,
+            "section": "Air thresholds"
+          }
+        ],
+        "evaluatorQuestion": "Confirm planned pull and headings, and student tasks for each category.",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     },
     {
       "id": "tandem-skydive-checklist-012",
       "category": "Canopy",
       "type": "recall",
       "question": "What checks come immediately after deployment?",
-      "answer": "Assess initial canopy; controllability check with both toggle sets; continuity check from canopy to student; turn appropriate direction; give student yellow toggles if applicable.",
+      "answer": "Assess initial canopy; controllability check with both toggle sets; continuity check from canopy to student; turn appropriate direction; give student yellow toggles if applicable.\n\nOfficial-manual comparison [DIFFERENCE FOUND]: Checklist order differs, combined-toggle wording is incomplete, and student gets toggles before comfort/penetration checks.\nManual guidance: Check/pressurize canopy, release primary toggles; establish proper heading; check flare and 90-degree left/right with primary only, then with primary+secondary; system continuity/accessibility/altitude check; adjust student; penetration check. Then optional student primary-toggle handoff, confirming lower-loop grip.\nReferences: OPS p.50; OPS p.51\nAsk evaluator: Which exact heading/check/handoff sequence should I demonstrate?",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "explanation": "Official-manual comparison [DIFFERENCE FOUND]: Checklist order differs, combined-toggle wording is incomplete, and student gets toggles before comfort/penetration checks.\nManual guidance: Check/pressurize canopy, release primary toggles; establish proper heading; check flare and 90-degree left/right with primary only, then with primary+secondary; system continuity/accessibility/altitude check; adjust student; penetration check. Then optional student primary-toggle handoff, confirming lower-loop grip.\nReferences: OPS p.50; OPS p.51\nAsk evaluator: Which exact heading/check/handoff sequence should I demonstrate?",
       "status": "needs_review",
       "references": [
         {
           "sourceId": "tandem-skydive-checklist",
           "printedPage": "2",
           "imageFilename": "1000013734.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "50",
+          "pdfPage": 61,
+          "section": "Postdeployment sequence"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "51",
+          "pdfPage": 62,
+          "section": "Adjustments, penetration and student handoff"
         }
       ],
-      "includeInQuiz": false,
+      "includeInQuiz": true,
       "requiresExaminerReview": true,
-      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "reviewNote": "Checklist order differs, combined-toggle wording is incomplete, and student gets toggles before comfort/penetration checks.",
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "difference"
+      ],
+      "sourceAnswer": "Assess initial canopy; controllability check with both toggle sets; continuity check from canopy to student; turn appropriate direction; give student yellow toggles if applicable.",
+      "officialAnswer": "Check/pressurize canopy, release primary toggles; establish proper heading; check flare and 90-degree left/right with primary only, then with primary+secondary; system continuity/accessibility/altitude check; adjust student; penetration check. Then optional student primary-toggle handoff, confirming lower-loop grip.",
+      "comparison": {
+        "status": "difference",
+        "summary": "Checklist order differs, combined-toggle wording is incomplete, and student gets toggles before comfort/penetration checks.",
+        "officialAnswer": "Check/pressurize canopy, release primary toggles; establish proper heading; check flare and 90-degree left/right with primary only, then with primary+secondary; system continuity/accessibility/altitude check; adjust student; penetration check. Then optional student primary-toggle handoff, confirming lower-loop grip.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "50",
+            "pdfPage": 61,
+            "section": "Postdeployment sequence"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "51",
+            "pdfPage": 62,
+            "section": "Adjustments, penetration and student handoff"
+          }
+        ],
+        "evaluatorQuestion": "Which exact heading/check/handoff sequence should I demonstrate?",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     },
     {
       "id": "tandem-skydive-checklist-013",
       "category": "Student comfort",
       "type": "recall",
       "question": "What comfort-adjustment sequence is listed?",
-      "answer": "Explain making student comfortable; use quick ejectors to remove lower straps, lengthen and promptly reattach; slightly loosen chest strap if necessary; ask student to bring knees to chest and slide back in harness.",
+      "answer": "Explain making student comfortable; use quick ejectors to remove lower straps, lengthen and promptly reattach; slightly loosen chest strap if necessary; ask student to bring knees to chest and slide back in harness.\n\nOfficial-manual comparison [DIFFERENCE FOUND]: Checklist fails to specify one lower at a time or reattachment to instructor harness. Chest adjustment is more precisely incremental in OPS.\nManual guidance: Explain comfort adjustment; chest and waist loosen in one-inch increments as needed; reposition legs/sit-back drill. Release ONE lateral, fully lengthen, reattach to instructor harness; then repeat other side.\nReferences: OPS p.51\nAsk evaluator: Please confirm one side at a time and actual instructor D-ring reattachment.",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "explanation": "Official-manual comparison [DIFFERENCE FOUND]: Checklist fails to specify one lower at a time or reattachment to instructor harness. Chest adjustment is more precisely incremental in OPS.\nManual guidance: Explain comfort adjustment; chest and waist loosen in one-inch increments as needed; reposition legs/sit-back drill. Release ONE lateral, fully lengthen, reattach to instructor harness; then repeat other side.\nReferences: OPS p.51\nAsk evaluator: Please confirm one side at a time and actual instructor D-ring reattachment.",
       "status": "needs_review",
       "references": [
         {
           "sourceId": "tandem-skydive-checklist",
           "printedPage": "2",
           "imageFilename": "1000013734.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "51",
+          "pdfPage": 62,
+          "section": "Student adjustment"
         }
       ],
-      "includeInQuiz": false,
+      "includeInQuiz": true,
       "requiresExaminerReview": true,
-      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "reviewNote": "Checklist fails to specify one lower at a time or reattachment to instructor harness. Chest adjustment is more precisely incremental in OPS.",
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "difference"
+      ],
+      "sourceAnswer": "Explain making student comfortable; use quick ejectors to remove lower straps, lengthen and promptly reattach; slightly loosen chest strap if necessary; ask student to bring knees to chest and slide back in harness.",
+      "officialAnswer": "Explain comfort adjustment; chest and waist loosen in one-inch increments as needed; reposition legs/sit-back drill. Release ONE lateral, fully lengthen, reattach to instructor harness; then repeat other side.",
+      "comparison": {
+        "status": "difference",
+        "summary": "Checklist fails to specify one lower at a time or reattachment to instructor harness. Chest adjustment is more precisely incremental in OPS.",
+        "officialAnswer": "Explain comfort adjustment; chest and waist loosen in one-inch increments as needed; reposition legs/sit-back drill. Release ONE lateral, fully lengthen, reattach to instructor harness; then repeat other side.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "51",
+            "pdfPage": 62,
+            "section": "Student adjustment"
+          }
+        ],
+        "evaluatorQuestion": "Please confirm one side at a time and actual instructor D-ring reattachment.",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     },
     {
       "id": "tandem-skydive-checklist-014",
       "category": "Landing preparation",
       "type": "recall",
       "question": "What practice and control-transfer tasks are listed?",
-      "answer": "Two practice landings emphasizing student feet up; retrieve black toggles by 1,500 feet.",
+      "answer": "Two practice landings emphasizing student feet up; retrieve black toggles by 1,500 feet.\n\nOfficial-manual comparison [QUALIFIED / CONTEXT]: Practice landing position and regaining secondary toggles agree. Exact two repetitions/1,500-foot timing is checklist-specific; OPS says regain secondaries before downwind. This does not necessarily end student primary-toggle participation.\nManual guidance: Rehearse legs/feet together and forward with knees slightly bent; regain secondary-toggle control before downwind leg. Maintain category-appropriate student primary-toggle participation where safe.\nReferences: OPS p.51; IRM p.163\nAsk evaluator: Two repetitions and secondaries by 1,500 for this course? May student continue yellow-toggle input through flare?",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "explanation": "Official-manual comparison [QUALIFIED / CONTEXT]: Practice landing position and regaining secondary toggles agree. Exact two repetitions/1,500-foot timing is checklist-specific; OPS says regain secondaries before downwind. This does not necessarily end student primary-toggle participation.\nManual guidance: Rehearse legs/feet together and forward with knees slightly bent; regain secondary-toggle control before downwind leg. Maintain category-appropriate student primary-toggle participation where safe.\nReferences: OPS p.51; IRM p.163\nAsk evaluator: Two repetitions and secondaries by 1,500 for this course? May student continue yellow-toggle input through flare?",
       "status": "needs_review",
       "references": [
         {
           "sourceId": "tandem-skydive-checklist",
           "printedPage": "2",
           "imageFilename": "1000013734.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "51",
+          "pdfPage": 62,
+          "section": "Landing preparation"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "163",
+          "pdfPage": 168,
+          "section": "Student canopy/flare involvement"
         }
       ],
-      "includeInQuiz": false,
+      "includeInQuiz": true,
       "requiresExaminerReview": true,
-      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "reviewNote": "Practice landing position and regaining secondary toggles agree. Exact two repetitions/1,500-foot timing is checklist-specific; OPS says regain secondaries before downwind. This does not necessarily end student primary-toggle participation.",
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "qualified"
+      ],
+      "sourceAnswer": "Two practice landings emphasizing student feet up; retrieve black toggles by 1,500 feet.",
+      "officialAnswer": "Rehearse legs/feet together and forward with knees slightly bent; regain secondary-toggle control before downwind leg. Maintain category-appropriate student primary-toggle participation where safe.",
+      "comparison": {
+        "status": "qualified",
+        "summary": "Practice landing position and regaining secondary toggles agree. Exact two repetitions/1,500-foot timing is checklist-specific; OPS says regain secondaries before downwind. This does not necessarily end student primary-toggle participation.",
+        "officialAnswer": "Rehearse legs/feet together and forward with knees slightly bent; regain secondary-toggle control before downwind leg. Maintain category-appropriate student primary-toggle participation where safe.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "51",
+            "pdfPage": 62,
+            "section": "Landing preparation"
+          },
+          {
+            "sourceId": "irm",
+            "printedPage": "163",
+            "pdfPage": 168,
+            "section": "Student canopy/flare involvement"
+          }
+        ],
+        "evaluatorQuestion": "Two repetitions and secondaries by 1,500 for this course? May student continue yellow-toggle input through flare?",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     },
     {
       "id": "tandem-skydive-checklist-015",
       "category": "Landing preparation",
       "type": "recall",
       "question": "What high-wind RSL altitude does this checklist list?",
-      "answer": "Below 1,000 feet. This differs from the 2026 EP study guide allowing disconnection below 1,500 feet including on ground; retain source distinction and confirm examiner expectations.",
+      "answer": "Below 1,000 feet. This differs from the 2026 EP study guide allowing disconnection below 1,500 feet including on ground; retain source distinction and confirm examiner expectations.\n\nOfficial-manual comparison [QUALIFIED / CONTEXT]: Below 1,000 feet is a narrower checklist rule inside OPS's below-1,500-foot allowance; not a direct violation. Manual permits ground disconnection and discourages routine non-high-wind removal.\nManual guidance: High-wind RSL disconnection may occur below 1,500 feet including on ground; use course-specific stricter timing if briefed. Do not routinely disconnect for non-high-wind conditions.\nReferences: OPS p.53; OPS p.54\nAsk evaluator: Is below 1,000 a local course rule or should I state the manufacturer allowance?",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "explanation": "Official-manual comparison [QUALIFIED / CONTEXT]: Below 1,000 feet is a narrower checklist rule inside OPS's below-1,500-foot allowance; not a direct violation. Manual permits ground disconnection and discourages routine non-high-wind removal.\nManual guidance: High-wind RSL disconnection may occur below 1,500 feet including on ground; use course-specific stricter timing if briefed. Do not routinely disconnect for non-high-wind conditions.\nReferences: OPS p.53; OPS p.54\nAsk evaluator: Is below 1,000 a local course rule or should I state the manufacturer allowance?",
       "status": "needs_review",
       "references": [
         {
           "sourceId": "tandem-skydive-checklist",
           "printedPage": "2",
           "imageFilename": "1000013734.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "53",
+          "pdfPage": 64,
+          "section": "High wind"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "54",
+          "pdfPage": 65,
+          "section": "Non-routine RSL removal note"
         }
       ],
-      "includeInQuiz": false,
+      "includeInQuiz": true,
       "requiresExaminerReview": true,
-      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "reviewNote": "Below 1,000 feet is a narrower checklist rule inside OPS's below-1,500-foot allowance; not a direct violation. Manual permits ground disconnection and discourages routine non-high-wind removal.",
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "qualified"
+      ],
+      "sourceAnswer": "Below 1,000 feet. This differs from the 2026 EP study guide allowing disconnection below 1,500 feet including on ground; retain source distinction and confirm examiner expectations.",
+      "officialAnswer": "High-wind RSL disconnection may occur below 1,500 feet including on ground; use course-specific stricter timing if briefed. Do not routinely disconnect for non-high-wind conditions.",
+      "comparison": {
+        "status": "qualified",
+        "summary": "Below 1,000 feet is a narrower checklist rule inside OPS's below-1,500-foot allowance; not a direct violation. Manual permits ground disconnection and discourages routine non-high-wind removal.",
+        "officialAnswer": "High-wind RSL disconnection may occur below 1,500 feet including on ground; use course-specific stricter timing if briefed. Do not routinely disconnect for non-high-wind conditions.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "53",
+            "pdfPage": 64,
+            "section": "High wind"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "54",
+            "pdfPage": 65,
+            "section": "Non-routine RSL removal note"
+          }
+        ],
+        "evaluatorQuestion": "Is below 1,000 a local course rule or should I state the manufacturer allowance?",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     },
     {
       "id": "tandem-skydive-checklist-016",
       "category": "Pattern",
       "type": "recall",
       "question": "What pattern-entry altitude does this checklist list?",
-      "answer": "600–700 feet, at the appropriate altitude. Treat as a course-specific value requiring verification against the jump plan and other source guidance.",
+      "answer": "600–700 feet, at the appropriate altitude. Treat as a course-specific value requiring verification against the jump plan and other source guidance.\n\nOfficial-manual comparison [QUALIFIED / CONTEXT]: 600–700-foot entry can fit in OPS downwind band; it is a narrower course plan, not inherently a violation.\nManual guidance: OPS downwind 1,000–600 feet; base 600–300; final turn no lower than 300; predictable flight below 1,000. Brief the actual DZ pattern.\nReferences: OPS p.50; OPS p.52\nAsk evaluator: What exact downwind/base/final plan applies to our eval?",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "explanation": "Official-manual comparison [QUALIFIED / CONTEXT]: 600–700-foot entry can fit in OPS downwind band; it is a narrower course plan, not inherently a violation.\nManual guidance: OPS downwind 1,000–600 feet; base 600–300; final turn no lower than 300; predictable flight below 1,000. Brief the actual DZ pattern.\nReferences: OPS p.50; OPS p.52\nAsk evaluator: What exact downwind/base/final plan applies to our eval?",
       "status": "needs_review",
       "references": [
         {
           "sourceId": "tandem-skydive-checklist",
           "printedPage": "2",
           "imageFilename": "1000013734.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "50",
+          "pdfPage": 61,
+          "section": "Predictable flight"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "52",
+          "pdfPage": 63,
+          "section": "Pattern altitudes"
         }
       ],
-      "includeInQuiz": false,
+      "includeInQuiz": true,
       "requiresExaminerReview": true,
-      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "reviewNote": "600–700-foot entry can fit in OPS downwind band; it is a narrower course plan, not inherently a violation.",
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "qualified"
+      ],
+      "sourceAnswer": "600–700 feet, at the appropriate altitude. Treat as a course-specific value requiring verification against the jump plan and other source guidance.",
+      "officialAnswer": "OPS downwind 1,000–600 feet; base 600–300; final turn no lower than 300; predictable flight below 1,000. Brief the actual DZ pattern.",
+      "comparison": {
+        "status": "qualified",
+        "summary": "600–700-foot entry can fit in OPS downwind band; it is a narrower course plan, not inherently a violation.",
+        "officialAnswer": "OPS downwind 1,000–600 feet; base 600–300; final turn no lower than 300; predictable flight below 1,000. Brief the actual DZ pattern.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "50",
+            "pdfPage": 61,
+            "section": "Predictable flight"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "52",
+            "pdfPage": 63,
+            "section": "Pattern altitudes"
+          }
+        ],
+        "evaluatorQuestion": "What exact downwind/base/final plan applies to our eval?",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     },
     {
       "id": "tandem-skydive-checklist-017",
       "category": "Landing",
       "type": "recall",
       "question": "What final-approach and landing actions are listed?",
-      "answer": "Repeat legs/feet up instruction; place instructor legs/feet under student's; flare when appropriate; assume slide landing; if winds permit ask student to stand at last moment; if catchers present ask student to open hands.",
+      "answer": "Repeat legs/feet up instruction; place instructor legs/feet under student's; flare when appropriate; assume slide landing; if winds permit ask student to stand at last moment; if catchers present ask student to open hands.\n\nOfficial-manual comparison [PARTIAL SUPPORT / OMITTED DETAILS]: Seated landing and legs-up rehearsal agree. Wind alone does not establish stand-up suitability; seated is highly recommended for all wind conditions. Catcher instruction should include releasing toggles when catchers control brake lines.\nManual guidance: Prepare legs-up and safe flare; seated landing preferred/highly recommended in all winds. Standing/walking require appropriate speed reduction and student leg tension/preparation. With catchers, give them toggles and have student release once they control brake lines.\nReferences: OPS p.52; IRM p.162; IRM p.203\nAsk evaluator: What factors justify stand-up versus seated, and what is the default for scoring?",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "explanation": "Official-manual comparison [PARTIAL SUPPORT / OMITTED DETAILS]: Seated landing and legs-up rehearsal agree. Wind alone does not establish stand-up suitability; seated is highly recommended for all wind conditions. Catcher instruction should include releasing toggles when catchers control brake lines.\nManual guidance: Prepare legs-up and safe flare; seated landing preferred/highly recommended in all winds. Standing/walking require appropriate speed reduction and student leg tension/preparation. With catchers, give them toggles and have student release once they control brake lines.\nReferences: OPS p.52; IRM p.162; IRM p.203\nAsk evaluator: What factors justify stand-up versus seated, and what is the default for scoring?",
       "status": "needs_review",
       "references": [
         {
           "sourceId": "tandem-skydive-checklist",
           "printedPage": "2",
           "imageFilename": "1000013734.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "52",
+          "pdfPage": 63,
+          "section": "Landing choices"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "162",
+          "pdfPage": 167,
+          "section": "Catcher toggle release"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "203",
+          "pdfPage": 208,
+          "section": "Safe landing-choice scoring"
         }
       ],
-      "includeInQuiz": false,
+      "includeInQuiz": true,
       "requiresExaminerReview": true,
-      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "reviewNote": "Seated landing and legs-up rehearsal agree. Wind alone does not establish stand-up suitability; seated is highly recommended for all wind conditions. Catcher instruction should include releasing toggles when catchers control brake lines.",
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "partially_supported"
+      ],
+      "sourceAnswer": "Repeat legs/feet up instruction; place instructor legs/feet under student's; flare when appropriate; assume slide landing; if winds permit ask student to stand at last moment; if catchers present ask student to open hands.",
+      "officialAnswer": "Prepare legs-up and safe flare; seated landing preferred/highly recommended in all winds. Standing/walking require appropriate speed reduction and student leg tension/preparation. With catchers, give them toggles and have student release once they control brake lines.",
+      "comparison": {
+        "status": "partially_supported",
+        "summary": "Seated landing and legs-up rehearsal agree. Wind alone does not establish stand-up suitability; seated is highly recommended for all wind conditions. Catcher instruction should include releasing toggles when catchers control brake lines.",
+        "officialAnswer": "Prepare legs-up and safe flare; seated landing preferred/highly recommended in all winds. Standing/walking require appropriate speed reduction and student leg tension/preparation. With catchers, give them toggles and have student release once they control brake lines.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "52",
+            "pdfPage": 63,
+            "section": "Landing choices"
+          },
+          {
+            "sourceId": "irm",
+            "printedPage": "162",
+            "pdfPage": 167,
+            "section": "Catcher toggle release"
+          },
+          {
+            "sourceId": "irm",
+            "printedPage": "203",
+            "pdfPage": 208,
+            "section": "Safe landing-choice scoring"
+          }
+        ],
+        "evaluatorQuestion": "What factors justify stand-up versus seated, and what is the default for scoring?",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     },
     {
       "id": "tandem-skydive-checklist-018",
       "category": "After landing",
       "type": "recall",
       "question": "What student-care tasks follow landing?",
-      "answer": "Disconnect student from rig; unbuckle belly/chest straps and loosen legs; keep harness on until gear-up area; instructor or videographer stays with student until clear of landing area.",
+      "answer": "Disconnect student from rig; unbuckle belly/chest straps and loosen legs; keep harness on until gear-up area; instructor or videographer stays with student until clear of landing area.\n\nOfficial-manual comparison [PARTIAL SUPPORT / OMITTED DETAILS]: Continued supervision back from landing agrees. Exact strap loosening/keeping harness on workflow is checklist-sourced, not independently verified as a required sequence.\nManual guidance: Keep student supervised through return to packing area; safe postlanding disconnect and harness removal using course workflow; supervision evaluation continues through debrief.\nReferences: IRM p.189; IRM p.192",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "explanation": "Official-manual comparison [PARTIAL SUPPORT / OMITTED DETAILS]: Continued supervision back from landing agrees. Exact strap loosening/keeping harness on workflow is checklist-sourced, not independently verified as a required sequence.\nManual guidance: Keep student supervised through return to packing area; safe postlanding disconnect and harness removal using course workflow; supervision evaluation continues through debrief.\nReferences: IRM p.189; IRM p.192",
       "status": "needs_review",
       "references": [
         {
           "sourceId": "tandem-skydive-checklist",
           "printedPage": "2",
           "imageFilename": "1000013734.jpg"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "189",
+          "pdfPage": 194,
+          "section": "Supervision evaluation scope"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "192",
+          "pdfPage": 197,
+          "section": "Supervision auto-unsat"
         }
       ],
-      "includeInQuiz": false,
+      "includeInQuiz": true,
       "requiresExaminerReview": true,
-      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "reviewNote": "Continued supervision back from landing agrees. Exact strap loosening/keeping harness on workflow is checklist-sourced, not independently verified as a required sequence.",
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "partially_supported"
+      ],
+      "sourceAnswer": "Disconnect student from rig; unbuckle belly/chest straps and loosen legs; keep harness on until gear-up area; instructor or videographer stays with student until clear of landing area.",
+      "officialAnswer": "Keep student supervised through return to packing area; safe postlanding disconnect and harness removal using course workflow; supervision evaluation continues through debrief.",
+      "comparison": {
+        "status": "partially_supported",
+        "summary": "Continued supervision back from landing agrees. Exact strap loosening/keeping harness on workflow is checklist-sourced, not independently verified as a required sequence.",
+        "officialAnswer": "Keep student supervised through return to packing area; safe postlanding disconnect and harness removal using course workflow; supervision evaluation continues through debrief.",
+        "references": [
+          {
+            "sourceId": "irm",
+            "printedPage": "189",
+            "pdfPage": 194,
+            "section": "Supervision evaluation scope"
+          },
+          {
+            "sourceId": "irm",
+            "printedPage": "192",
+            "pdfPage": 197,
+            "section": "Supervision auto-unsat"
+          }
+        ],
+        "evaluatorQuestion": null,
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     },
     {
       "id": "tandem-skydive-checklist-019",
       "category": "After landing",
       "type": "recall",
       "question": "What closes the jump workflow?",
-      "answer": "Stow toggles and gather canopy/gear; deliver gear to packing; meet student in tandem area to remove harness and debrief.",
+      "answer": "Stow toggles and gather canopy/gear; deliver gear to packing; meet student in tandem area to remove harness and debrief.\n\nOfficial-manual comparison [PARTIAL SUPPORT / OMITTED DETAILS]: Packing/harness workflow is local. A generic debrief omits scored student-led review, fixes/retraining and records.\nManual guidance: Facilitate student-led debrief with positives; 3–5 grouped prioritized improvement points and fixes, corrective retraining; review goals, logbook, progression card and next steps.\nReferences: IRM p.163; IRM p.192; IRM p.203\nAsk evaluator: Which corrective-practice, logbook/progression-card and debrief elements are expected?",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Answer transcribed or paraphrased from the named course material.",
+      "explanation": "Official-manual comparison [PARTIAL SUPPORT / OMITTED DETAILS]: Packing/harness workflow is local. A generic debrief omits scored student-led review, fixes/retraining and records.\nManual guidance: Facilitate student-led debrief with positives; 3–5 grouped prioritized improvement points and fixes, corrective retraining; review goals, logbook, progression card and next steps.\nReferences: IRM p.163; IRM p.192; IRM p.203\nAsk evaluator: Which corrective-practice, logbook/progression-card and debrief elements are expected?",
       "status": "needs_review",
       "references": [
         {
           "sourceId": "tandem-skydive-checklist",
           "printedPage": "2",
           "imageFilename": "1000013734.jpg"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "163",
+          "pdfPage": 168,
+          "section": "Tandem debrief"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "192",
+          "pdfPage": 197,
+          "section": "Retraining/debrief auto-unsats"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "203",
+          "pdfPage": 208,
+          "section": "Debrief rubric"
         }
       ],
-      "includeInQuiz": false,
+      "includeInQuiz": true,
       "requiresExaminerReview": true,
-      "reviewNote": "Course checklist has no visible revision; verify against applicable manuals and examiner briefing.",
+      "reviewNote": "Packing/harness workflow is local. A generic debrief omits scored student-led review, fixes/retraining and records.",
       "relatedQuestionIds": [],
       "tags": [
         "course_material",
-        "recall"
-      ]
+        "recall",
+        "manual_cross_reference",
+        "partially_supported"
+      ],
+      "sourceAnswer": "Stow toggles and gather canopy/gear; deliver gear to packing; meet student in tandem area to remove harness and debrief.",
+      "officialAnswer": "Facilitate student-led debrief with positives; 3–5 grouped prioritized improvement points and fixes, corrective retraining; review goals, logbook, progression card and next steps.",
+      "comparison": {
+        "status": "partially_supported",
+        "summary": "Packing/harness workflow is local. A generic debrief omits scored student-led review, fixes/retraining and records.",
+        "officialAnswer": "Facilitate student-led debrief with positives; 3–5 grouped prioritized improvement points and fixes, corrective retraining; review goals, logbook, progression card and next steps.",
+        "references": [
+          {
+            "sourceId": "irm",
+            "printedPage": "163",
+            "pdfPage": 168,
+            "section": "Tandem debrief"
+          },
+          {
+            "sourceId": "irm",
+            "printedPage": "192",
+            "pdfPage": 197,
+            "section": "Retraining/debrief auto-unsats"
+          },
+          {
+            "sourceId": "irm",
+            "printedPage": "203",
+            "pdfPage": 208,
+            "section": "Debrief rubric"
+          }
+        ],
+        "evaluatorQuestion": "Which corrective-practice, logbook/progression-card and debrief elements are expected?",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      }
     }
-  ]
+  ],
+  "updatedAt": "2026-10-13"
 }
