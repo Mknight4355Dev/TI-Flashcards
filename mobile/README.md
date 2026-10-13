@@ -61,6 +61,8 @@ For regular use, Android Studio's **Generate Signed App Bundle or APK** flow can
 
 ## Android behavior and updates
 
+The launcher icon source is `assets/icon.png`. On Windows, run `npm run icons` to regenerate the five launcher density sizes, round icons, and padded adaptive foreground layers. The script also writes `assets/launcher-preview.png` for checking square and circular masks. The original source image stays unchanged. Then run `npm run apk` and install the updated APK to see the new launcher icon on your phone.
+
 - Android Back returns from any question or answer to the deck picker. At the picker, Back closes the app.
 - The on-screen Back to decks control remains available.
 - The mobile layout uses touch controls and has extra spacing for screen edges.
