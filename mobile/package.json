@@ -9,7 +9,7 @@
   "scripts": {
     "icons": "powershell -NoProfile -File scripts/icons.ps1",
     "build": "node scripts/build.js",
-    "test": "npm run build && node scripts/verify.js",
+    "test": "npm run build && node scripts/verify.js && node scripts/verify-persistence.js",
     "sync": "npm run build && cap sync android",
     "android:add": "npm run build && cap add android",
     "android:open": "cap open android",

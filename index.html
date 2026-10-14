@@ -17,15 +17,21 @@
       <div id="deck-list" class="deck-list"></div>
     </section>
     <section id="study" aria-labelledby="title" hidden>
-    <button id="back-to-decks" class="back-button">? Back to decks</button>
+    <div class="study-toolbar" role="group" aria-label="Deck controls">
+      <button id="back-to-decks" class="back-button">Back to decks</button>
+      <button id="hide-card" title="Remove this card from the study rotation">Hide card</button>
+      <button id="reset-deck" title="Restore all cards in this deck" disabled>Reset deck</button>
+    </div>
     <header><div class="eyebrow">STUDY DECK</div><h1 id="title" tabindex="-1"></h1><p id="description"></p></header>
     <div class="deck-bar"><span id="position" role="status">Loading cards…</span><span id="category"></span></div>
+    <p id="storage-status" role="status" class="review"></p>
+    <p id="empty-deck" class="empty-deck" role="status" hidden>All cards in this deck are hidden. Select Reset deck to study all cards again.</p>
     <article id="card" class="card" role="button" tabindex="0" aria-label="Flip flashcard" aria-disabled="true">
       <div class="card-meta"><span id="side">QUESTION</span><span id="question-number"></span></div>
       <div id="content"><p>Loading your study deck…</p></div>
       <div id="hint" class="hint">Click the card to reveal the answer</div>
     </article>
-    <nav aria-label="Flashcard navigation"><button id="previous" disabled>← Previous</button><button id="flip" class="primary" disabled>Show answer</button><button id="next" disabled>Next →</button></nav>
+    <nav id="card-navigation" aria-label="Flashcard navigation"><button id="previous" disabled>← Previous</button><button id="flip" class="primary" disabled>Show answer</button><button id="next" disabled>Next →</button></nav>
     <p class="keyboard">Swipe left/right or use arrow keys to navigate. Space or Enter to flip. Escape to return to decks.</p>
     <p id="policy" class="policy"></p>
     </section>

@@ -13,3 +13,5 @@ Serve the app using the included server rather than opening index.html directly,
 To add a deck, include its filename in `deckFiles` in `app.js` and add its route to `files` in `server.js`.
 
 The separate [Android version](mobile/README.md) lives in `mobile/`. Its build tools and dependencies do not affect `npm start` or the PC app.
+
+Use **Hide card** beside **Back to decks** to remove the current card from that deck's study rotation. **Reset deck** restores all cards and starts at the first question. Hidden card IDs are saved separately for each deck on this browser or device and restored after reloading or restarting. Reset deck also clears that deck's saved progress. New cards appear automatically and reordering cards preserves progress. Clearing browser/app data or uninstalling the app removes saved progress; progress does not sync between devices. If saving is unavailable, hiding still works for the current session.

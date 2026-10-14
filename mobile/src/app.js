@@ -7,9 +7,34 @@
     'sigma-ep-study-guide-flashcards.json',
     'tandem-canopy-proficiency-flashcards.json',
     'tandem-skydive-checklist-flashcards.json'];
-  let selectedButton, cardAnimation;
-  function selectDeck(data, button) {
+  let selectedButton, cardAnimation, activeCards = [], hiddenCards, deckStorageKey;
+  const hiddenByDeck = new WeakMap();
+  function loadHiddenCards(data, key) {
+    try {
+      const saved = JSON.parse(localStorage.getItem(key) || '[]');
+      if (!Array.isArray(saved)) return new Set();
+      const validIds = new Set(data.cards.map(card => card.id));
+      return new Set(saved.filter(id => typeof id === 'string' && validIds.has(id)));
+    } catch (error) {
+      return new Set();
+    }
+  }
+  function saveHiddenCards() {
+    try {
+      if (hiddenCards.size) localStorage.setItem(deckStorageKey, JSON.stringify([...hiddenCards]));
+      else localStorage.removeItem(deckStorageKey);
+      get('storage-status').textContent = '';
+    } catch (error) {
+      get('storage-status').textContent = 'Progress could not be saved on this device. Hidden cards will be remembered for this session only.';
+    }
+  }
+  function selectDeck(data, button, file) {
     deck = data;
+    deckStorageKey = 'ti-flashcards:hidden:v1:' + file;
+    get('storage-status').textContent = '';
+    hiddenCards = hiddenByDeck.get(deck) || loadHiddenCards(deck, deckStorageKey);
+    hiddenByDeck.set(deck, hiddenCards);
+    activeCards = deck.cards.filter(card => !hiddenCards.has(card.id));
     selectedButton = button;
     index = 0;
     showingAnswer = false;
@@ -56,11 +81,26 @@
   }
   function render() {
     if (cardAnimation) cardAnimation.cancel();
-    const card = deck.cards[index], content = get('content');
+    const card = activeCards[index], content = get('content');
+    const empty = activeCards.length === 0;
+    get('card').hidden = empty;
+    get('card-navigation').hidden = empty;
+    get('empty-deck').hidden = !empty;
+    get('hide-card').disabled = empty;
+    get('reset-deck').disabled = hiddenCards.size === 0;
+    get('flip').disabled = empty;
+    get('previous').disabled = empty || index === 0;
+    get('next').disabled = empty;
+    get('position').textContent = empty ? '0 cards remaining' : 'Card ' + (index + 1) + ' of ' + activeCards.length;
+    if (hiddenCards.size) get('position').textContent += ' (' + hiddenCards.size + ' hidden)';
+    if (empty) {
+      content.textContent = '';
+      get('category').textContent = '';
+      return;
+    }
     content.textContent = '';
-    get('position').textContent = 'Card ' + (index + 1) + ' of ' + deck.cards.length;
     get('category').textContent = card.category || '';
-    get('question-number').textContent = 'Q' + (card.examQuestionNumber != null ? card.examQuestionNumber : (index + 1));
+    get('question-number').textContent = 'Q' + (card.examQuestionNumber != null ? card.examQuestionNumber : (deck.cards.indexOf(card) + 1));
     get('side').textContent = showingAnswer ? 'ANSWER' : 'QUESTION';
     get('card').classList.toggle('answer', showingAnswer);
     get('card').setAttribute('aria-label', showingAnswer ? 'Answer shown. Activate to show question.' : 'Question shown. Activate to reveal answer.');
@@ -96,9 +136,9 @@
     get('flip').textContent = showingAnswer ? 'Show question' : 'Show answer';
     get('previous').disabled = index === 0;
     get('next').disabled = false;
-    get('next').textContent = index === deck.cards.length - 1 ? 'Start over' : 'Next →';
+    get('next').textContent = index === activeCards.length - 1 ? 'Start over' : 'Next →';
   }
-  function flip() { if (deck) { showingAnswer = !showingAnswer; render(); } }
+  function flip() { if (deck && activeCards.length) { showingAnswer = !showingAnswer; render(); } }
   function animateCard(direction) {
     const card = get('card');
     if (typeof card.animate !== 'function' ||
@@ -109,7 +149,7 @@
     ], { duration: 240, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' });
   }
   function move(delta) {
-    if (!deck || index + delta < 0 || index + delta >= deck.cards.length) return;
+    if (!deck || index + delta < 0 || index + delta >= activeCards.length) return;
     index += delta; showingAnswer = false; render();
     animateCard(delta);
   }
@@ -117,7 +157,7 @@
   let gesture = null, suppressClickUntil = 0;
   cardElement.addEventListener('pointerdown', event => {
     if (!event.isPrimary) { gesture = null; return; }
-    if (!deck || event.pointerType === 'mouse') return;
+    if (!deck || !activeCards.length || event.pointerType === 'mouse') return;
     suppressClickUntil = 0;
     gesture = { id: event.pointerId, x: event.clientX, y: event.clientY };
     cardElement.setPointerCapture(event.pointerId);
@@ -143,10 +183,30 @@
   });
   get('flip').addEventListener('click', flip);
   get('back-to-decks').addEventListener('click', showSelection);
+  get('hide-card').addEventListener('click', () => {
+    if (!deck || !activeCards.length) return;
+    hiddenCards.add(activeCards[index].id);
+    saveHiddenCards();
+    activeCards.splice(index, 1);
+    index = Math.min(index, Math.max(0, activeCards.length - 1));
+    showingAnswer = false;
+    render();
+    if (activeCards.length) animateCard(1);
+    else get('reset-deck').focus();
+  });
+  get('reset-deck').addEventListener('click', () => {
+    if (!deck) return;
+    hiddenCards.clear();
+    saveHiddenCards();
+    activeCards = deck.cards.slice();
+    index = 0;
+    showingAnswer = false;
+    render();
+  });
   get('previous').addEventListener('click', () => move(-1));
   function next() {
-    if (!deck) return;
-    if (index === deck.cards.length - 1) {
+    if (!deck || !activeCards.length) return;
+    if (index === activeCards.length - 1) {
       index = 0; showingAnswer = false; render();
       animateCard(1);
     } else {
@@ -182,7 +242,7 @@
       add('h2', data.title || 'Flashcards', button);
       if (data.description) add('p', data.description, button);
       add('span', data.cards.length + ' cards - Start studying', button);
-      button.addEventListener('click', () => selectDeck(data, button));
+      button.addEventListener('click', () => selectDeck(data, button, file));
     });
   });
 }());
