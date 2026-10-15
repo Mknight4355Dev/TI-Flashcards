@@ -35,7 +35,10 @@ async function verify(file) {
   app['deck-list'].children[0].click();
   app['hide-card'].click();
   assert.deepEqual(JSON.parse(saved.get(key)), [firstId]);
+  assert.ok(app['deck-list'].children[0].children.at(-1).textContent.includes('1 hidden'), 'Picker updates immediately after hiding');
+  assert.ok(app['deck-list'].children[1].children.at(-1).textContent.includes('0 hidden'), 'Other deck count stays at zero');
   app = await start(file, storage, decks);
+  assert.ok(app['deck-list'].children[0].children.at(-1).textContent.includes('1 hidden'), 'Picker restores saved counts before opening a deck');
   app['deck-list'].children[0].click();
   assert.ok(app.position.textContent.includes('(1 hidden)'), 'Progress survives a fresh app instance');
   app['back-to-decks'].click();
@@ -53,6 +56,7 @@ async function verify(file) {
   assert.ok(app.position.textContent.includes('(1 hidden)'), 'Stale, duplicate and invalid IDs are ignored');
   app['reset-deck'].click();
   assert.equal(saved.has(key), false, 'Reset clears persisted progress');
+  assert.ok(app['deck-list'].children[0].children.at(-1).textContent.includes('0 hidden'), 'Picker updates after reset');
   app = await start(file, storage, decks);
   app['deck-list'].children[0].click();
   assert.ok(!app.position.textContent.includes('hidden'), 'Reset survives restart');

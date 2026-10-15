@@ -9,6 +9,11 @@
     'tandem-skydive-checklist-flashcards.json'];
   let selectedButton, cardAnimation, activeCards = [], hiddenCards, deckStorageKey;
   const hiddenByDeck = new WeakMap();
+  const deckSummaries = new WeakMap();
+  function updateDeckSummary(data) {
+    const count = hiddenByDeck.get(data).size;
+    deckSummaries.get(data).textContent = data.cards.length + ' cards - ' + count + ' hidden - Start studying';
+  }
   function loadHiddenCards(data, key) {
     try {
       const saved = JSON.parse(localStorage.getItem(key) || '[]');
@@ -20,6 +25,7 @@
     }
   }
   function saveHiddenCards() {
+    updateDeckSummary(deck);
     try {
       if (hiddenCards.size) localStorage.setItem(deckStorageKey, JSON.stringify([...hiddenCards]));
       else localStorage.removeItem(deckStorageKey);
@@ -241,7 +247,9 @@
       const button = add('button', '', get('deck-list'), 'deck-choice');
       add('h2', data.title || 'Flashcards', button);
       if (data.description) add('p', data.description, button);
-      add('span', data.cards.length + ' cards - Start studying', button);
+      hiddenByDeck.set(data, loadHiddenCards(data, 'ti-flashcards:hidden:v1:' + file));
+      deckSummaries.set(data, add('span', '', button));
+      updateDeckSummary(data);
       button.addEventListener('click', () => selectDeck(data, button, file));
     });
   });
