@@ -12,6 +12,27 @@ const FILES = [
 ];
 const URLS = FILES.map(file => new URL(file, BASE).href);
 const ALLOWED = new Set(URLS);
+let recovery = null;
+
+async function missingFrom(cache) {
+  const entries = await Promise.all(URLS.map(url => cache.match(url)));
+  return URLS.filter((url, index) => !entries[index]);
+}
+
+async function ensureOfflineCache() {
+  if (recovery) return recovery;
+  recovery = (async () => {
+    const cache = await caches.open(CACHE_NAME);
+    const missing = await missingFrom(cache);
+    await Promise.all(missing.map(async url => {
+      const response = await fetch(url, { cache: 'reload' });
+      if (!response.ok) throw new Error('Unable to cache ' + url);
+      await cache.put(url, response);
+    }));
+    return (await missingFrom(cache)).length === 0;
+  })();
+  try { return await recovery; } finally { recovery = null; }
+}
 
 self.addEventListener('install', event => {
   event.waitUntil((async () => {
@@ -42,17 +63,24 @@ self.addEventListener('fetch', event => {
   if (event.request.method !== 'GET' || !ALLOWED.has(event.request.url)) return;
   event.respondWith((async () => {
     const cache = await caches.open(CACHE_NAME);
-    return await cache.match(event.request) || fetch(event.request);
+    const cached = await cache.match(event.request);
+    if (cached) return cached;
+    const response = await fetch(event.request);
+    if (response.ok) {
+      try { await cache.put(event.request, response.clone()); } catch (error) { /* Online study still works. */ }
+    }
+    return response;
   })());
 });
 
 self.addEventListener('message', event => {
-  if (event.data !== 'VERIFY_OFFLINE' || !event.ports[0]) return;
+  if (!['VERIFY_OFFLINE', 'ENSURE_OFFLINE'].includes(event.data) || !event.ports[0]) return;
   event.waitUntil((async () => {
     try {
-      const cache = await caches.open(CACHE_NAME);
-      const entries = await Promise.all(URLS.map(url => cache.match(url)));
-      event.ports[0].postMessage({ ready: entries.every(Boolean) });
+      const ready = event.data === 'ENSURE_OFFLINE'
+        ? await ensureOfflineCache()
+        : (await missingFrom(await caches.open(CACHE_NAME))).length === 0;
+      event.ports[0].postMessage({ ready });
     } catch (error) {
       event.ports[0].postMessage({ ready: false });
     }

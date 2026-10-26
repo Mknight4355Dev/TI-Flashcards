@@ -2,6 +2,8 @@
 (function () {
   const invitation = document.getElementById('install-invitation');
   const action = document.getElementById('install-action');
+  const title = document.getElementById('install-title');
+  const description = document.getElementById('install-description');
   const help = document.getElementById('install-help');
   const status = document.getElementById('offline-status');
   const agent = navigator.userAgent;
@@ -12,23 +14,41 @@
   let installPrompt = null;
   let hasStudied = false;
   let dismissed = false;
-  let offlineReady = false;
+  let offlineState = 'checking';
   let updateWaiting = false;
+  let pendingCheck = null;
+  function withTimeout(promise, milliseconds) {
+    let timer;
+    return Promise.race([
+      promise,
+      new Promise(resolve => { timer = setTimeout(() => resolve(null), milliseconds); })
+    ]).finally(() => clearTimeout(timer));
+  }
   function showStatus() {
     const messages = [];
-    if (offlineReady) messages.push('All decks are ready for offline study.');
+    if (offlineState === 'ready') messages.push('All decks are ready for offline study.');
+    else if (offlineState === 'checking') messages.push('Checking offline files…');
+    else if (offlineState === 'incomplete') messages.push('Offline setup incomplete. Connect to the internet and keep this page open to finish downloading all decks.');
+    else messages.push('Offline download is unavailable in this browser. Online study still works.');
     if (updateWaiting) messages.push('An update is ready. Close and reopen TI Flashcards to use it.');
     status.textContent = messages.join(' ');
-    status.hidden = messages.length === 0;
+    status.hidden = false;
+    const ready = offlineState === 'ready';
+    title.textContent = ready ? 'Study anywhere, even offline' : 'Add TI Flashcards to your home screen';
+    description.textContent = ready
+      ? 'Add TI Flashcards to your home screen for quick access, even without an internet connection.'
+      : 'Get quick access to your study decks. Offline setup is not complete yet.';
+    action.textContent = ready ? 'Install for offline study' : 'Install app';
   }
   try { dismissed = sessionStorage.getItem('ti-flashcards:install-dismissed') === 'yes'; } catch (error) { /* Storage may be disabled. */ }
+  showStatus();
 
   function showInvitation() {
     if (!hasStudied || dismissed || standalone() || invitation.hidden === false) return;
     if (!installPrompt && !iosSafari && !android) return;
     invitation.hidden = false;
   }
-  document.addEventListener('ti-flashcards:study-started', () => { hasStudied = true; showInvitation(); });
+  document.addEventListener('ti-flashcards:study-started', () => { hasStudied = true; showInvitation(); if (registration) checkOffline(registration); });
   window.addEventListener('beforeinstallprompt', event => {
     event.preventDefault();
     installPrompt = event;
@@ -60,9 +80,46 @@
     help.hidden = false;
   });
 
-  if (!('serviceWorker' in navigator) || !window.isSecureContext) return;
-  navigator.serviceWorker.register('sw.js').then(async registration => {
-    window.addEventListener('online', () => registration.update().catch(() => {}));
+  let registration = null;
+  async function checkOffline(activeRegistration) {
+    if (pendingCheck) return pendingCheck;
+    offlineState = 'checking';
+    showStatus();
+    pendingCheck = (async () => {
+      const ready = await withTimeout(navigator.serviceWorker.ready, 8000);
+      const worker = navigator.serviceWorker.controller || (ready && ready.active) || activeRegistration.active;
+      if (!worker) return false;
+      const channel = new MessageChannel();
+      try {
+        return await new Promise(resolve => {
+          const timer = setTimeout(() => resolve(false), 10000);
+          channel.port1.onmessage = event => { clearTimeout(timer); resolve(event.data && event.data.ready === true); };
+          worker.postMessage('ENSURE_OFFLINE', [channel.port2]);
+        });
+      } finally { channel.port1.close(); }
+    })().catch(() => false).then(ready => {
+      offlineState = ready ? 'ready' : 'incomplete';
+      showStatus();
+    }).finally(() => { pendingCheck = null; });
+    return pendingCheck;
+  }
+
+  if (!('serviceWorker' in navigator) || !window.isSecureContext) {
+    offlineState = 'unavailable';
+    showStatus();
+    return;
+  }
+  navigator.serviceWorker.register('sw.js').then(activeRegistration => {
+    registration = activeRegistration;
+    window.addEventListener('online', () => {
+      registration.update().catch(() => {});
+      checkOffline(registration);
+    });
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) checkOffline(registration);
+    });
+    navigator.serviceWorker.addEventListener('controllerchange', () => checkOffline(registration));
+    navigator.serviceWorker.ready.then(() => checkOffline(registration)).catch(() => {});
     if (registration.waiting && navigator.serviceWorker.controller) {
       updateWaiting = true;
       showStatus();
@@ -77,17 +134,9 @@
         }
       });
     });
-    const ready = await navigator.serviceWorker.ready;
-    const worker = navigator.serviceWorker.controller || ready.active;
-    if (!worker) return;
-    const channel = new MessageChannel();
-    const verified = await new Promise(resolve => {
-      const timer = setTimeout(() => resolve(false), 5000);
-      channel.port1.onmessage = event => { clearTimeout(timer); resolve(event.data && event.data.ready === true); };
-      worker.postMessage('VERIFY_OFFLINE', [channel.port2]);
-    });
-    channel.port1.close();
-    offlineReady = verified;
+    checkOffline(registration);
+  }).catch(() => {
+    offlineState = 'incomplete';
     showStatus();
-  }).catch(() => { /* Online study remains available when offline setup fails. */ });
+  });
 }());

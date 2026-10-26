@@ -16,7 +16,7 @@ const caches = {
     if (!stores.has(name)) stores.set(name, new Map());
     const entries = stores.get(name);
     return {
-      async put(url, response) { entries.set(url, response); },
+      async put(url, response) { entries.set(typeof url === 'string' ? url : url.url, response); },
       async match(request) { return entries.get(typeof request === 'string' ? request : request.url); }
     };
   },
@@ -25,12 +25,13 @@ const caches = {
 };
 vm.runInNewContext(fs.readFileSync(path.join(site, 'sw.js'), 'utf8'), {
   URL, caches,
-  fetch: async (url, options) => {
+  fetch: async (request, options) => {
     if (!online) throw Error('Offline');
-    assert.equal(options.cache, 'reload', 'Updates bypass stale HTTP cache');
+    if (options) assert.equal(options.cache, 'reload', 'Updates bypass stale HTTP cache');
+    const url = typeof request === 'string' ? request : request.url;
     if (missing.has(url)) return { ok: false };
     const file = new URL(url).pathname.slice('/TI-Flashcards/'.length) || 'index.html';
-    return { ok: true, body: fs.readFileSync(path.join(site, file)) };
+    return { ok: true, body: fs.readFileSync(path.join(site, file)), clone() { return this; } };
   },
   self: {
     location: { href: base + 'sw.js' },
@@ -62,6 +63,18 @@ async function verify() {
   stores.get(cacheName).delete(base + 'tandem-skydive-checklist-flashcards.json');
   await dispatch('message', { data: 'VERIFY_OFFLINE', ports: [{ postMessage: value => { message = value; } }] });
   assert.equal(message.ready, false, 'Missing deck cannot report offline readiness');
-  console.log('PASS: failed caching, complete offline launch and decks, cache cleanup, and readiness verification');
+  await dispatch('message', { data: 'ENSURE_OFFLINE', ports: [{ postMessage: value => { message = value; } }] });
+  assert.equal(message.ready, false, 'Offline recovery cannot make an incomplete cache ready');
+  online = true;
+  await dispatch('message', { data: 'ENSURE_OFFLINE', ports: [{ postMessage: value => { message = value; } }] });
+  assert.equal(message.ready, true, 'Online recovery restores all missing assets');
+  online = false;
+  assert.ok(await dispatch('fetch', { request: { method: 'GET', url: base + 'tandem-skydive-checklist-flashcards.json' } }), 'Recovered deck works offline');
+  online = true;
+  stores.get(cacheName).delete(base + 'sigma-ep-study-guide-flashcards.json');
+  assert.ok(await dispatch('fetch', { request: { method: 'GET', url: base + 'sigma-ep-study-guide-flashcards.json' } }), 'Online cache miss still serves a deck');
+  online = false;
+  assert.ok(await dispatch('fetch', { request: { method: 'GET', url: base + 'sigma-ep-study-guide-flashcards.json' } }), 'Online cache miss is stored for offline use');
+  console.log('PASS: failed caching, offline launch, cache cleanup, verified recovery, and cache-miss storage');
 }
 verify().catch(error => { console.error(error); process.exitCode = 1; });

@@ -17,11 +17,11 @@
 </head>
 <body>
   <main>
+    <p id="offline-status" role="status" class="offline-status" hidden></p>
     <section id="selection" aria-labelledby="selection-title">
       <header><div class="eyebrow">STUDY DECKS</div><h1 id="selection-title">Tandem Instructor Flashcards</h1><p>Choose a deck to start studying.</p></header>
       <p id="selection-status" role="status">Loading decks?</p>
       <div id="deck-list" class="deck-list"></div>
-      <p id="offline-status" role="status" class="offline-status" hidden></p>
     </section>
     <section id="study" aria-labelledby="title" hidden>
     <div class="study-toolbar" role="group" aria-label="Deck controls">
@@ -45,8 +45,8 @@
     </section>
   </main>
   <aside id="install-invitation" class="install-invitation" aria-label="Install TI Flashcards" hidden>
-    <div><strong>Study anywhere, even offline</strong><p>Add TI Flashcards to your home screen for quick access, even without an internet connection.</p><p id="install-help" hidden></p></div>
-    <div class="install-actions"><button id="install-action" class="primary">Install for offline study</button><button id="install-dismiss">Continue in browser</button></div>
+    <div><strong id="install-title">Add TI Flashcards to your home screen</strong><p id="install-description">Get quick access to your study decks.</p><p id="install-help" hidden></p></div>
+    <div class="install-actions"><button id="install-action" class="primary">Install app</button><button id="install-dismiss">Continue in browser</button></div>
   </aside>
 </body>
 </html>
