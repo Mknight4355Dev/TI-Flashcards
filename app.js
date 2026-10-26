@@ -3,7 +3,6 @@
   const get = id => document.getElementById(id);
   let deck, index = 0, showingAnswer = false;
   const deckFiles = ['sigma-tandem-flashcards.json', 'uspa-ti-evaluation-flashcards.json',
-    'sigma-ep-performance-test-flashcards.json',
     'sigma-ep-study-guide-flashcards.json',
     'tandem-canopy-proficiency-flashcards.json',
     'tandem-skydive-checklist-flashcards.json'];
@@ -41,6 +40,7 @@
     hiddenCards = hiddenByDeck.get(deck) || loadHiddenCards(deck, deckStorageKey);
     hiddenByDeck.set(deck, hiddenCards);
     activeCards = deck.cards.filter(card => !hiddenCards.has(card.id));
+    get('review-comparisons').hidden = !deck.cards.some(card => card.reviewLabel);
     selectedButton = button;
     index = 0;
     showingAnswer = false;
@@ -54,6 +54,8 @@
     get('study').hidden = false;
     render();
     get('title').focus();
+    if (typeof document.dispatchEvent === 'function' && typeof Event === 'function')
+      document.dispatchEvent(new Event('ti-flashcards:study-started'));
   }
   function showSelection() {
     if (!deck) return;
@@ -94,6 +96,7 @@
     get('empty-deck').hidden = !empty;
     get('hide-card').disabled = empty;
     get('reset-deck').disabled = hiddenCards.size === 0;
+    get('review-comparisons').disabled = !activeCards.some(item => item.reviewLabel);
     get('flip').disabled = empty;
     get('previous').disabled = empty || index === 0;
     get('next').disabled = empty;
@@ -105,7 +108,7 @@
       return;
     }
     content.textContent = '';
-    get('category').textContent = card.category || '';
+    get('category').textContent = [card.category, card.reviewLabel].filter(Boolean).join(' · ');
     get('question-number').textContent = 'Q' + (card.examQuestionNumber != null ? card.examQuestionNumber : (deck.cards.indexOf(card) + 1));
     get('side').textContent = showingAnswer ? 'ANSWER' : 'QUESTION';
     get('card').classList.toggle('answer', showingAnswer);
@@ -209,6 +212,15 @@
     showingAnswer = false;
     render();
   });
+  get('review-comparisons').addEventListener('click', () => {
+    if (!deck) return;
+    const first = activeCards.findIndex(item => item.reviewLabel);
+    if (first < 0) return;
+    index = first;
+    showingAnswer = false;
+    render();
+    get('card').focus();
+  });
   get('previous').addEventListener('click', () => move(-1));
   function next() {
     if (!deck || !activeCards.length) return;
@@ -238,7 +250,7 @@
     }
   })).then(results => {
     get('selection-status').textContent = results.some(result => result.data)
-      ? '' : 'Unable to load decks. Start the app with npm start and open http://localhost:3000.';
+      ? '' : 'Unable to load decks. Check your connection and reload the page.';
     results.forEach(({ file, data, error }) => {
       if (error) {
         add('p', 'Unable to load ' + file + ': ' + error.message, get('deck-list'), 'review');

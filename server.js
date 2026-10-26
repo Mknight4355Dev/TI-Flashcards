@@ -3,11 +3,15 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const files = { '/': 'index.html', '/index.html': 'index.html', '/app.js': 'app.js', '/styles.css': 'styles.css', '/sigma-tandem-flashcards.json': 'sigma-tandem-flashcards.json', '/uspa-ti-evaluation-flashcards.json': 'uspa-ti-evaluation-flashcards.json' };
-files['/sigma-ep-performance-test-flashcards.json'] = 'sigma-ep-performance-test-flashcards.json';
 files['/sigma-ep-study-guide-flashcards.json'] = 'sigma-ep-study-guide-flashcards.json';
 files['/tandem-canopy-proficiency-flashcards.json'] = 'tandem-canopy-proficiency-flashcards.json';
 files['/tandem-skydive-checklist-flashcards.json'] = 'tandem-skydive-checklist-flashcards.json';
-const types = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json' };
+files['/web-pwa.js'] = 'web-pwa.js';
+files['/sw.js'] = 'sw.js';
+files['/manifest.webmanifest'] = 'manifest.webmanifest';
+files['/icons/icon-192.png'] = 'icons/icon-192.png';
+files['/icons/icon-512.png'] = 'icons/icon-512.png';
+const types = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.webmanifest': 'application/manifest+json', '.png': 'image/png' };
 const server = http.createServer((req, res) => {
   const name = files[req.url.split('?')[0]];
   if (!name) { res.writeHead(404); res.end('Not found'); return; }

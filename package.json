@@ -3,5 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "description": "Local Sigma Tandem flashcard study app",
-  "scripts": { "start": "node server.js" }
+  "scripts": {
+    "start": "node server.js",
+    "build:web": "node scripts/build-web.js",
+    "test:web": "npm run build:web && node scripts/verify-web.js && node scripts/verify-offline.js && node scripts/verify-pwa-ui.js && node scripts/verify-ep-merge.js"
+  }
 }

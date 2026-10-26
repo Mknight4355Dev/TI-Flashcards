@@ -60,7 +60,14 @@ async function verify() {
   vm.runInNewContext(native, context);
   await new Promise(resolve => setImmediate(resolve));
   const choices = elements['deck-list'].children;
-  assert.equal(choices.length, 6);
+  assert.equal(choices.length, 5);
+  choices[2].click();
+  assert.equal(elements['review-comparisons'].hidden, false);
+  elements['review-comparisons'].click();
+  assert.match(elements.category.textContent, /Source comparison 1 of 10: Study Guide/);
+  elements.next.click();
+  assert.match(elements.category.textContent, /Source comparison 1 of 10: Performance Test/);
+  elements['back-to-decks'].click();
   back();
   assert.equal(exits, 1, 'Back closes the app at the picker');
   for (const choice of choices) {
@@ -150,6 +157,6 @@ async function verify() {
   const config = JSON.parse(fs.readFileSync(path.join(root, 'capacitor.config.json'), 'utf8'));
   assert.equal(config.webDir, 'www');
   assert.equal(config.server, undefined, 'APK must use local assets');
-  console.log('PASS: offline decks, all six study flows and swipe navigation, hide/reset controls, last-card restart, native Back, and wrapper assets');
+  console.log('PASS: offline decks, all five study flows and swipe navigation, hide/reset controls, last-card restart, native Back, and wrapper assets');
 }
 verify().catch(error => { console.error(error); process.exitCode = 1; });

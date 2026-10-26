@@ -7,7 +7,6 @@ async function build() {
   const root = path.resolve(__dirname, '..');
   const output = path.join(root, 'www');
   const decks = ['sigma-tandem-flashcards.json', 'uspa-ti-evaluation-flashcards.json',
-    'sigma-ep-performance-test-flashcards.json',
     'sigma-ep-study-guide-flashcards.json',
     'tandem-canopy-proficiency-flashcards.json',
     'tandem-skydive-checklist-flashcards.json'];
