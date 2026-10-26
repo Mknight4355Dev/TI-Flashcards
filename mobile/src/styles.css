@@ -67,6 +67,7 @@ main { overflow-x: clip; }
 
 #storage-status:empty { display: none; }
 .disclaimer { padding: clamp(20px, 4vw, 36px); border: 1px solid var(--border); border-radius: 20px; background: var(--surface); }
+.disclaimer-icon { display: block; width: 96px; height: 96px; border-radius: 22px; margin-bottom: 18px; }
 .disclaimer p { color: var(--text); }
 .source-list { padding-left: 22px; line-height: 1.7; }
 .source-list li { margin: 10px 0; }
