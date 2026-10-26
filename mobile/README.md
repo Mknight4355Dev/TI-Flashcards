@@ -4,6 +4,8 @@ The PC app stays in the repository root. Run `npm start` there as before; it doe
 
 This folder contains an independent copy of the interface in `src/`. Both versions use the deck JSON files in the repository root. `npm run build` copies those files into the APK's web assets, so studying works offline without the PC server. Changes to the web interface are not automatically applied to this mobile copy.
 
+The first launch shows an independent-study notice. Select **I acknowledge** to reach the decks; the choice is saved on this device. Use **Review sources and notice** on the deck picker to see it again. The notice works offline, while opening its external manual links requires a connection. If local storage is unavailable, the choice lasts only until the app is restarted.
+
 ## Build tools
 
 Install Node.js 22 or newer and Android Studio 2025.2.1 or newer. In Android Studio, install Android SDK Platform 36 and the SDK build tools recommended by the generated project. Use Android Studio's bundled JDK for Gradle.

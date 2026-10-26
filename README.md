@@ -2,6 +2,8 @@
 
 Study online at https://mknight4355dev.github.io/TI-Flashcards/ after GitHub Pages is enabled. Installation is optional. Once the page reports **All decks are ready for offline study**, all five decks can be used without a connection in that browser. On a supported Android browser, choose **Install for offline study**; on iPhone Safari, use **Share > Add to Home Screen**. Browser storage keeps hidden cards on the same device, including across ordinary updates.
 
+On first launch, the web and Android apps show an independent-study notice with links to the Sigma and USPA source manuals. Select **I acknowledge** to open the decks. The acknowledgement is saved on that browser or device, so later launches open the deck picker directly. If storage is unavailable, the acknowledgement works until the page or app is restarted and the notice appears again. Use **Review sources and notice** on the deck picker to reopen it without changing hidden-card progress. The notice and links are bundled for offline viewing; opening an external source requires an internet connection.
+
 ## Local development and deployment
 
 Run `npm start` for the local browser app. Run `npm run test:web` to stage and verify the production site in `site-dist/`. The production site contains only the browser shell, PWA files, icons, and five deck JSON files. Node is needed to build or serve locally, not to run the deployed site.
@@ -16,7 +18,7 @@ For local development, open http://localhost:3000 after `npm start`. No dependen
 
 Click anywhere on a card to flip between the question and answer. Use Previous/Next, the arrow keys, or swipe left/right on a card to change cards. Swipe left advances (and restarts after the last card); swipe right goes back. Space or Enter also flips the card. Each new card starts on its question side.
 
-Choose from the Sigma, USPA, combined EP Study Guide and Performance Test, Tandem Canopy Piloting Proficiency, and Tandem Skydive Checklist decks on the opening screen. Use **Back to decks** or Escape at any point to return to the selection screen. Selecting a deck starts at its first question.
+After acknowledging the notice, choose from the Sigma, USPA, combined EP Study Guide and Performance Test, Tandem Canopy Piloting Proficiency, and Tandem Skydive Checklist decks. Use **Back to decks** or Escape at any point to return to the selection screen. Selecting a deck starts at its first question.
 
 The app reads the five root `*-flashcards.json` data sets directly. Questions retain their original choice order; answers include explanations, review notes, references, and linked procedure steps, and practice prompts when provided. All 270 cards are available across the five decks, including personal confirmations and questions needing review. This is an unscored study app.
 

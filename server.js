@@ -7,6 +7,7 @@ files['/sigma-ep-study-guide-flashcards.json'] = 'sigma-ep-study-guide-flashcard
 files['/tandem-canopy-proficiency-flashcards.json'] = 'tandem-canopy-proficiency-flashcards.json';
 files['/tandem-skydive-checklist-flashcards.json'] = 'tandem-skydive-checklist-flashcards.json';
 files['/web-pwa.js'] = 'web-pwa.js';
+files['/disclaimer.js'] = 'disclaimer.js';
 files['/sw.js'] = 'sw.js';
 files['/manifest.webmanifest'] = 'manifest.webmanifest';
 files['/icons/icon-192.png'] = 'icons/icon-192.png';

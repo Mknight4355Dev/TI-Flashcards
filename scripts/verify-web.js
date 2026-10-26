@@ -5,7 +5,7 @@ const path = require('node:path');
 const root = path.resolve(__dirname, '..');
 const site = path.join(root, 'site-dist');
 const expected = [
-  'index.html', 'app.js', 'web-pwa.js', 'styles.css', 'manifest.webmanifest', 'sw.js',
+  'index.html', 'app.js', 'disclaimer.js', 'web-pwa.js', 'styles.css', 'manifest.webmanifest', 'sw.js',
   'icons/icon-192.png', 'icons/icon-512.png',
   'sigma-tandem-flashcards.json', 'uspa-ti-evaluation-flashcards.json',
   'sigma-ep-study-guide-flashcards.json',

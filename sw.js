@@ -4,7 +4,7 @@
 const CACHE_NAME = 'ti-flashcards-__BUILD_VERSION__';
 const BASE = new URL('./', self.location.href);
 const FILES = [
-  './', 'index.html', 'app.js', 'web-pwa.js', 'styles.css', 'manifest.webmanifest',
+  './', 'index.html', 'app.js', 'disclaimer.js', 'web-pwa.js', 'styles.css', 'manifest.webmanifest',
   'icons/icon-192.png', 'icons/icon-512.png',
   'sigma-tandem-flashcards.json', 'uspa-ti-evaluation-flashcards.json',
   'sigma-ep-study-guide-flashcards.json',

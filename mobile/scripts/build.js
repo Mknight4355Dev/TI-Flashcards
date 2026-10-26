@@ -19,6 +19,7 @@ async function build() {
   for (const file of ['index.html', 'app.js', 'styles.css']) {
     fs.copyFileSync(path.join(root, 'src', file), path.join(output, file));
   }
+  fs.copyFileSync(path.join(root, '..', 'disclaimer.js'), path.join(output, 'disclaimer.js'));
   for (const file of decks) fs.copyFileSync(path.join(root, '..', file), path.join(output, file));
   await esbuild.build({
     entryPoints: [path.join(root, 'src', 'native.js')],

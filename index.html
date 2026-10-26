@@ -12,15 +12,31 @@
   <link rel="apple-touch-icon" href="icons/icon-192.png">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23163038'/%3E%3Cpath d='M8 9h16v14H8z' fill='none' stroke='%23bce5cb' stroke-width='2'/%3E%3C/svg%3E">
+  <script src="disclaimer.js" defer></script>
   <script src="app.js" defer></script>
   <script src="web-pwa.js" defer></script>
 </head>
 <body>
   <main>
     <p id="offline-status" role="status" class="offline-status" hidden></p>
-    <section id="selection" aria-labelledby="selection-title">
-      <header><div class="eyebrow">STUDY DECKS</div><h1 id="selection-title">Tandem Instructor Flashcards</h1><p>Choose a deck to start studying.</p></header>
+    <section id="disclaimer" class="disclaimer" aria-labelledby="disclaimer-title">
+      <div class="eyebrow">BEFORE YOU STUDY</div>
+      <h1 id="disclaimer-title" tabindex="-1">Independent study aid</h1>
+      <p>This independent study aid was created by a Tandem Instructor (TI) candidate. It was prepared using the sources below, current as of October 25, 2026. It was not produced by UPT or USPA.</p>
+      <p>Consult the official sources for current requirements and procedures. Opening these external sources requires an internet connection.</p>
+      <h2>Official sources</h2>
+      <ol class="source-list">
+        <li><a href="https://uptvector.com/wp-content/uploads/2025/12/Man016_Rev2-Sigma-Tandem-Operations-Manual.pdf" target="_blank" rel="noopener noreferrer">Sigma Tandem Operations Manual</a></li>
+        <li><a href="https://uptvector.com/wp-content/uploads/2026/06/Man013-Rev4-SigmaII-Tandem-Owners-Manual.pdf" target="_blank" rel="noopener noreferrer">Sigma II Tandem Owner’s Manual</a></li>
+        <li><a href="https://www.uspa.org/SIM" target="_blank" rel="noopener noreferrer">USPA Skydiver’s Information Manual</a></li>
+        <li><a href="https://www.uspa.org/IRM" target="_blank" rel="noopener noreferrer">USPA Instructional Rating Manual</a></li>
+      </ol>
+      <div class="disclaimer-actions"><button id="acknowledge-disclaimer" class="primary">I acknowledge</button><button id="return-to-decks" hidden>Back to decks</button></div>
+    </section>
+    <section id="selection" aria-labelledby="selection-title" hidden>
+      <header><div class="eyebrow">STUDY DECKS</div><h1 id="selection-title" tabindex="-1">Tandem Instructor Flashcards</h1><p>Choose a deck to start studying.</p></header>
       <p id="selection-status" role="status">Loading decks?</p>
+      <button id="review-sources" class="review-sources">Review sources and notice</button>
       <div id="deck-list" class="deck-list"></div>
     </section>
     <section id="study" aria-labelledby="title" hidden>
