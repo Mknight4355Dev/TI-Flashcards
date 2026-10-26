@@ -47,6 +47,8 @@ self.addEventListener('install', event => {
       await caches.delete(CACHE_NAME);
       throw error;
     }
+    // All new assets are cached before this worker takes over existing pages.
+    await self.skipWaiting();
   })());
 });
 

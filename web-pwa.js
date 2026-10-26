@@ -6,6 +6,7 @@
   const description = document.getElementById('install-description');
   const help = document.getElementById('install-help');
   const status = document.getElementById('offline-status');
+  const applyUpdate = document.getElementById('apply-update');
   const agent = navigator.userAgent;
   const iosDevice = /iPhone|iPad|iPod/.test(agent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
   const iosSafari = iosDevice && /Safari/.test(agent) && !/CriOS|FxiOS|EdgiOS/.test(agent);
@@ -16,7 +17,9 @@
   let dismissed = false;
   let offlineState = 'checking';
   let updateWaiting = false;
+  let activatedUpdate = false;
   let pendingCheck = null;
+  const hadControllerAtLoad = Boolean(navigator.serviceWorker && navigator.serviceWorker.controller);
   const dismissalKey = 'ti-flashcards:install-dismissed';
   function withTimeout(promise, milliseconds) {
     let timer;
@@ -31,9 +34,10 @@
     else if (offlineState === 'checking') messages.push('Checking offline files…');
     else if (offlineState === 'incomplete') messages.push('Offline setup incomplete. Connect to the internet and keep this page open to finish downloading all decks.');
     else messages.push('Offline download is unavailable in this browser. Online study still works.');
-    if (updateWaiting) messages.push('An update is ready. Close and reopen TI Flashcards to use it.');
+    if (updateWaiting) messages.push('A new version is ready. Return to decks to use it, or reload now.');
     status.textContent = messages.join(' ');
     status.hidden = false;
+    applyUpdate.hidden = !activatedUpdate;
     title.textContent = 'Add TI Flashcards to your home screen';
     description.textContent = 'Add a home-screen icon for quick access. Offline study also works in this browser once the decks are ready.';
     action.textContent = 'Add to home screen';
@@ -43,6 +47,7 @@
     try { dismissed = sessionStorage.getItem(dismissalKey) === 'yes'; } catch (error) { /* Storage may be disabled. */ }
   }
   showStatus();
+  applyUpdate.addEventListener('click', () => window.location.reload());
 
   function showInvitation() {
     if (!hasStudied || dismissed || standalone() || invitation.hidden === false) return;
@@ -114,14 +119,33 @@
   }
   navigator.serviceWorker.register('sw.js').then(activeRegistration => {
     registration = activeRegistration;
+    function refreshIfIdle() {
+      if (activatedUpdate && !document.hidden && document.getElementById('study').hidden) {
+        window.location.reload();
+        return true;
+      }
+      return false;
+    }
     window.addEventListener('online', () => {
       registration.update().catch(() => {});
       checkOffline(registration);
     });
     document.addEventListener('visibilitychange', () => {
-      if (!document.hidden) checkOffline(registration);
+      if (!document.hidden && !refreshIfIdle()) {
+        registration.update().catch(() => {});
+        checkOffline(registration);
+      }
     });
-    navigator.serviceWorker.addEventListener('controllerchange', () => checkOffline(registration));
+    document.addEventListener('ti-flashcards:selection-shown', refreshIfIdle);
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      checkOffline(registration);
+      if (hadControllerAtLoad) {
+        activatedUpdate = true;
+        updateWaiting = true;
+        showStatus();
+        refreshIfIdle();
+      }
+    });
     navigator.serviceWorker.ready.then(() => checkOffline(registration)).catch(() => {});
     if (registration.waiting && navigator.serviceWorker.controller) {
       updateWaiting = true;
@@ -138,6 +162,7 @@
       });
     });
     checkOffline(registration);
+    registration.update().catch(() => {});
   }).catch(() => {
     offlineState = 'incomplete';
     showStatus();

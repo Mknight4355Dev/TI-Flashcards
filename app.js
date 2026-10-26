@@ -69,6 +69,8 @@
     get('selection').hidden = false;
     document.title = 'Tandem Instructor Flashcards';
     selectedButton.focus();
+    if (typeof document.dispatchEvent === 'function' && typeof Event === 'function')
+      document.dispatchEvent(new Event('ti-flashcards:selection-shown'));
   }
   window.addEventListener('popstate', event => {
     const entry = event.state && decksByFile.get(event.state.tiFlashcardsDeck);

@@ -11,6 +11,7 @@ const handlers = {};
 const stores = new Map();
 const missing = new Set();
 let online = true;
+let activationsRequested = 0;
 const caches = {
   async open(name) {
     if (!stores.has(name)) stores.set(name, new Map());
@@ -35,6 +36,7 @@ vm.runInNewContext(fs.readFileSync(path.join(site, 'sw.js'), 'utf8'), {
   },
   self: {
     location: { href: base + 'sw.js' },
+    skipWaiting: async () => { activationsRequested++; },
     clients: { claim: async () => {} },
     addEventListener: (type, handler) => { handlers[type] = handler; }
   }
@@ -49,8 +51,10 @@ async function verify() {
   missing.add(base + 'sigma-tandem-flashcards.json');
   await assert.rejects(dispatch('install'));
   assert.equal(stores.has(cacheName), false, 'Incomplete offline cache is removed');
+  assert.equal(activationsRequested, 0, 'Incomplete updates cannot take over');
   missing.clear();
   await dispatch('install');
+  assert.equal(activationsRequested, 1, 'Fully cached updates activate even while old pages remain open');
   stores.set('ti-flashcards-old-version', new Map());
   await dispatch('activate');
   assert.equal(stores.has('ti-flashcards-old-version'), false, 'Old cache is removed');
@@ -75,6 +79,6 @@ async function verify() {
   assert.ok(await dispatch('fetch', { request: { method: 'GET', url: base + 'sigma-ep-study-guide-flashcards.json' } }), 'Online cache miss still serves a deck');
   online = false;
   assert.ok(await dispatch('fetch', { request: { method: 'GET', url: base + 'sigma-ep-study-guide-flashcards.json' } }), 'Online cache miss is stored for offline use');
-  console.log('PASS: failed caching, offline launch, cache cleanup, verified recovery, and cache-miss storage');
+  console.log('PASS: failed caching, safe update activation, offline launch, cache cleanup, recovery, and cache-miss storage');
 }
 verify().catch(error => { console.error(error); process.exitCode = 1; });

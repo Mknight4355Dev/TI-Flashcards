@@ -64,6 +64,7 @@ main { overflow-x: clip; }
 
 #storage-status:empty { display: none; }
 .offline-status { color: var(--accent); font-size: .875rem; }
+.apply-update { margin: 0 0 20px; padding: 9px 14px; font-size: .875rem; }
 .install-invitation { position: fixed; z-index: 10; left: 16px; right: 16px; bottom: 16px; max-width: 818px; margin: auto; padding: 18px; border: 1px solid var(--answer-border); border-radius: 14px; background: var(--surface); box-shadow: 0 12px 32px #000a; }
 .install-invitation p { margin: 8px 0 0; }
 .install-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }

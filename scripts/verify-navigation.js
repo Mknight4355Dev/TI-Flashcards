@@ -6,6 +6,7 @@ const vm = require('node:vm');
 
 const elements = new Map();
 const listeners = new Map();
+const appEvents = [];
 function element(id = '') {
   const handlers = new Map();
   return {
@@ -25,7 +26,7 @@ const get = id => {
 const document = {
   title: '', body: {}, documentElement: {},
   getElementById: get, createElement: () => element(),
-  addEventListener() {}, dispatchEvent() {}
+  addEventListener() {}, dispatchEvent(event) { appEvents.push(event.type); }
 };
 const window = { addEventListener(type, handler) { listeners.set(type, handler); } };
 const entries = [null];
@@ -61,6 +62,7 @@ setImmediate(() => {
   assert.equal(history.state.tiFlashcardsDeck, 'sigma-tandem-flashcards.json');
   history.back();
   assert.equal(get('selection').hidden, false, 'System Back returns to deck picker');
+  assert.ok(appEvents.includes('ti-flashcards:selection-shown'), 'Returning to picker announces an update-safe point');
   assert.equal(get('study').hidden, true);
   assert.equal(requests, initialRequests, 'Back navigation needs no network request');
 
