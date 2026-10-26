@@ -54,6 +54,8 @@
     get('study').hidden = false;
     render();
     get('title').focus();
+    if (typeof document.dispatchEvent === 'function' && typeof Event === 'function')
+      document.dispatchEvent(new Event('ti-flashcards:study-started'));
   }
   function showSelection() {
     if (!deck) return;
@@ -238,7 +240,7 @@
     }
   })).then(results => {
     get('selection-status').textContent = results.some(result => result.data)
-      ? '' : 'Unable to load decks. Start the app with npm start and open http://localhost:3000.';
+      ? '' : 'Unable to load decks. Check your connection and reload the page.';
     results.forEach(({ file, data, error }) => {
       if (error) {
         add('p', 'Unable to load ' + file + ': ' + error.message, get('deck-list'), 'review');

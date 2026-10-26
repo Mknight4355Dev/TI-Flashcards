@@ -1,6 +1,18 @@
 # Tandem Instructor Flashcards
 
-Run `npm start` from this folder, then open http://localhost:3000. No dependencies need to be installed.
+Study online at https://mknight4355dev.github.io/TI-Flashcards/ after GitHub Pages is enabled. Installation is optional. Once the page reports **All decks are ready for offline study**, all six decks can be used without a connection in that browser. On a supported Android browser, choose **Install for offline study**; on iPhone Safari, use **Share > Add to Home Screen**. Browser storage keeps hidden cards on the same device, including across ordinary updates.
+
+## Local development and deployment
+
+Run `npm start` for the local browser app. Run `npm run test:web` to stage and verify the production site in `site-dist/`. The production site contains only the browser shell, PWA files, icons, and six deck JSON files. Node is needed to build or serve locally, not to run the deployed site.
+
+To enable public deployment after approving and merging the feature branch, open repository **Settings > Pages** and select **GitHub Actions** as the build and deployment source. The workflow deploys on pushes to `main`. Its first successful run publishes the project site at the URL above. Do not use the repository root as the published artifact; the workflow uploads `site-dist/`.
+
+The service worker caches the complete site before reporting offline readiness. A new deployment receives a new cache version automatically. An available update waits until the current app session ends; close every open TI Flashcards tab or app window, then reopen to use it. If caching fails or storage is unavailable, online study still works, but no offline-ready message is shown.
+
+Manual release checks: open the published URL, study and reset all decks, reload in airplane mode after the offline-ready message, and check install and standalone launch on Android Chrome and iPhone Safari. Verify the Capacitor APK on a physical Android device as described in [mobile/README.md](mobile/README.md).
+
+For local development, open http://localhost:3000 after `npm start`. No dependencies need to be installed.
 
 Click anywhere on a card to flip between the question and answer. Use Previous/Next, the arrow keys, or swipe left/right on a card to change cards. Swipe left advances (and restarts after the last card); swipe right goes back. Space or Enter also flips the card. Each new card starts on its question side.
 
