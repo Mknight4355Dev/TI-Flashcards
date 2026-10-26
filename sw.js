@@ -7,7 +7,7 @@ const FILES = [
   './', 'index.html', 'app.js', 'web-pwa.js', 'styles.css', 'manifest.webmanifest',
   'icons/icon-192.png', 'icons/icon-512.png',
   'sigma-tandem-flashcards.json', 'uspa-ti-evaluation-flashcards.json',
-  'sigma-ep-performance-test-flashcards.json', 'sigma-ep-study-guide-flashcards.json',
+  'sigma-ep-study-guide-flashcards.json',
   'tandem-canopy-proficiency-flashcards.json', 'tandem-skydive-checklist-flashcards.json'
 ];
 const URLS = FILES.map(file => new URL(file, BASE).href);

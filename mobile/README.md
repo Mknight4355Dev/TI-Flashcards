@@ -69,6 +69,6 @@ The launcher icon source is `assets/icon.png`. On Windows, run `npm run icons` t
 - After editing a deck or files in `src/`, run `npm run apk` again and install the updated APK.
 - To add a deck, update the deck lists in `src/app.js` and `scripts/build.js`. Add a web server route separately if the PC app should also offer it.
 
-Before distributing, test both decks in airplane mode, question/answer flipping, the last-card restart, Back gestures, rotation, and long answer scrolling on a real phone.
+Before distributing, test all five decks in airplane mode, question/answer flipping, the last-card restart, Back gestures, rotation, and long answer scrolling on a real phone.
 
 Use **Hide card** beside **Back to decks** to remove the current card from that deck's study rotation. **Reset deck** restores all cards and starts at the first question. Hidden card IDs are saved separately for each deck on this browser or device and restored after reloading or restarting. Reset deck also clears that deck's saved progress. New cards appear automatically and reordering cards preserves progress. Clearing browser/app data or uninstalling the app removes saved progress; progress does not sync between devices. If saving is unavailable, hiding still works for the current session.

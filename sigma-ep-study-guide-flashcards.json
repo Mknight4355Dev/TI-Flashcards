@@ -1,16 +1,16 @@
 {
   "schemaVersion": "1.1",
   "id": "sigma-ep-study-guide",
-  "title": "EP Study Guide",
+  "title": "EP Study Guide and Performance Test",
   "createdAt": "2026-10-12",
   "language": "en",
-  "description": "Recall flashcards from user-supplied course-material images; not official exam questions.",
+  "description": "Combined recall flashcards from the EP Study Guide and EP Knowledge / Performance Test course materials; not official exam questions.",
   "sourcePolicy": "Original course answers are retained in sourceAnswer. Every card has comparison status and official references. Verified means direct substantive support in cited manuals; qualified/partially_supported do not mean prohibited. Course-only/not_found is not independent manual verification. Original question, IDs, recall format preserved. Uploaded manual editions are the baseline.",
   "usage": {
     "mode": "recall",
     "front": "question",
     "back": "answer",
-    "grading": "Recall/self-assessment; empty options and null correctOptionId. Default includeInQuiz admits only directly manual-verified cards. Show all cards in review mode; do not hide needs_review content from study.",
+    "grading": "Recall/self-assessment; empty options and null correctOptionId. Source-comparison pairs have includeInQuiz false and remain visible in ordinary study. The existing includeInQuiz flag on other cards does not by itself mean manual verification; check status and review notes before using a card in any future quiz mode.",
     "practice": "Rehearse EP handle sequences with the examiner in a training harness. Canopy drills are supervised course exercises.",
     "annotationFields": [
       "sourceAnswer",
@@ -47,6 +47,26 @@
       ]
     },
     {
+      "id": "sigma-ep-performance-test",
+      "title": "EP Knowledge / Performance Test",
+      "revision": "UPT Form 327 Rev. 1, 6/15/2025",
+      "providedPages": 5,
+      "totalPages": 6,
+      "missingPages": [],
+      "images": [
+        "1000013741.jpg",
+        "1000013742.jpg",
+        "1000013743.jpg",
+        "1000013744.jpg",
+        "1000013745.jpg"
+      ],
+      "notProvidedPages": [
+        6
+      ],
+      "studyContentComplete": true,
+      "page6Note": "User confirms page 6 contains signatures only; no study content missing."
+    },
+    {
       "id": "ops",
       "title": "Sigma Tandem Operations Manual, MAN016 Rev_2 (6/1/2026)",
       "filename": "Man016_Rev2-Sigma-Tandem-Operations-Manual.pdf",
@@ -69,14 +89,14 @@
     }
   ],
   "counts": {
-    "total": 72,
-    "quizReady": 44,
-    "needsReview": 28,
+    "total": 83,
+    "quizReady": 42,
+    "needsReview": 38,
     "comparison": {
-      "verified": 44,
-      "qualified": 13,
-      "partially_supported": 6,
-      "difference": 8,
+      "verified": 45,
+      "qualified": 15,
+      "partially_supported": 8,
+      "difference": 14,
       "not_found": 1
     }
   },
@@ -206,6 +226,11 @@
           "printedPage": "56",
           "pdfPage": 67,
           "section": "Core EPs / What is the total-malfunction procedure when the parachute container remains closed?"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -258,6 +283,11 @@
           "printedPage": "56",
           "pdfPage": 67,
           "section": "Core EPs / What is the partial-malfunction procedure?"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -310,6 +340,11 @@
           "printedPage": "56",
           "pdfPage": 67,
           "section": "Core EPs"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -362,6 +397,11 @@
           "printedPage": "57",
           "pdfPage": 68,
           "section": "Core EPs"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -530,6 +570,11 @@
           "printedPage": "44",
           "pdfPage": 55,
           "section": "Aircraft"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -588,6 +633,11 @@
           "printedPage": "45",
           "pdfPage": 56,
           "section": "Aircraft emergency attachment-side qualification"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -652,6 +702,11 @@
           "printedPage": "45",
           "pdfPage": 56,
           "section": "Aircraft emergency attachment-side qualification"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -716,6 +771,11 @@
           "printedPage": "45",
           "pdfPage": 56,
           "section": "Aircraft emergency attachment-side qualification"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -754,26 +814,38 @@
       }
     },
     {
-      "id": "sigma-ep-study-guide-013",
-      "category": "Aircraft",
+      "id": "sigma-ep-performance-test-010",
+      "category": "Freefall",
       "type": "recall",
-      "question": "How is student refusal in the aircraft handled?",
-      "answer": "Move forward to a safe location; disconnect student; sit with seat belts secured; descend with aircraft. The note says to exit if exiting is safer than trying to return inside.\n\nOfficial-manual comparison [VERIFIED]: The course answer agrees with the cited Sigma procedure.\nReferences: OPS p.45",
+      "question": "What is the proper handle-check order after setting the drogue?",
+      "answer": "Left drogue release; right drogue release; cutaway; reserve; RSL; altitude.\n\nOfficial-manual comparison [VERIFIED]: Order agrees with mandated Sigma droguefall check after visual drogue inspection.\nReferences: OPS p.48; OPS p.49; IRM p.192",
       "options": [],
       "correctOptionId": null,
-      "explanation": "Official-manual comparison [VERIFIED]: The course answer agrees with the cited Sigma procedure.\nReferences: OPS p.45",
+      "explanation": "Official-manual comparison [VERIFIED]: Order agrees with mandated Sigma droguefall check after visual drogue inspection.\nReferences: OPS p.48; OPS p.49; IRM p.192",
       "status": "verified",
       "references": [
         {
-          "sourceId": "sigma-ep-study-guide",
-          "printedPage": "2",
-          "imageFilename": "1000013736.jpg"
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
         },
         {
           "sourceId": "ops",
-          "printedPage": "45",
-          "pdfPage": 56,
-          "section": "Aircraft / How is student refusal in the aircraft handled?"
+          "printedPage": "48",
+          "pdfPage": 59,
+          "section": "Droguefall handle check"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "49",
+          "pdfPage": 60,
+          "section": "Altitude check"
+        },
+        {
+          "sourceId": "irm",
+          "printedPage": "192",
+          "pdfPage": 197,
+          "section": "Missed droguefall handle check auto-unsat"
         }
       ],
       "includeInQuiz": true,
@@ -786,18 +858,30 @@
         "manual_cross_reference",
         "verified"
       ],
-      "sourceAnswer": "Move forward to a safe location; disconnect student; sit with seat belts secured; descend with aircraft. The note says to exit if exiting is safer than trying to return inside.",
-      "officialAnswer": "Move forward to a safe location; disconnect student; sit with seat belts secured; descend with aircraft. The note says to exit if exiting is safer than trying to return inside.",
+      "sourceAnswer": "Left drogue release; right drogue release; cutaway; reserve; RSL; altitude.",
+      "officialAnswer": "Left drogue release; right drogue release; cutaway; reserve; RSL; altitude.",
       "comparison": {
         "status": "verified",
-        "summary": "The course answer agrees with the cited Sigma procedure.",
-        "officialAnswer": "Move forward to a safe location; disconnect student; sit with seat belts secured; descend with aircraft. The note says to exit if exiting is safer than trying to return inside.",
+        "summary": "Order agrees with mandated Sigma droguefall check after visual drogue inspection.",
+        "officialAnswer": "Left drogue release; right drogue release; cutaway; reserve; RSL; altitude.",
         "references": [
           {
             "sourceId": "ops",
-            "printedPage": "45",
-            "pdfPage": 56,
-            "section": "Aircraft / How is student refusal in the aircraft handled?"
+            "printedPage": "48",
+            "pdfPage": 59,
+            "section": "Droguefall handle check"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "49",
+            "pdfPage": 60,
+            "section": "Altitude check"
+          },
+          {
+            "sourceId": "irm",
+            "printedPage": "192",
+            "pdfPage": 197,
+            "section": "Missed droguefall handle check auto-unsat"
           }
         ],
         "evaluatorQuestion": null,
@@ -838,6 +922,11 @@
           "printedPage": "192",
           "pdfPage": 197,
           "section": "Tandem air auto-unsats"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -877,70 +966,6 @@
           }
         ],
         "evaluatorQuestion": "How will emergency-response rehearsal be separated from the normal evaluation stability and altitude thresholds?",
-        "reviewedAt": "2026-10-13",
-        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
-      }
-    },
-    {
-      "id": "sigma-ep-study-guide-015",
-      "category": "Freefall",
-      "type": "recall",
-      "question": "What is the main side-spin response?",
-      "answer": "Bring student's arms in, grab wrists and place at hips; straighten into tracking position; try to bring student's legs back with heels if necessary; roll belly-to-earth as spin slows. If not corrected within 10 seconds, set drogue if drogue side up; the listed drogue-side-down response is Total Malfunction EP.\n\nOfficial-manual comparison [QUALIFIED / CONTEXT]: Basic side-spin response agrees, but must be read with the discretionary drogue-side-down note, also covered in the next card.\nManual guidance: Use the listed arms/legs/tracking correction. If unsuccessful within ten seconds, default is set drogue if drogue side up, Total Malfunction EP if drogue side down. OPS also permits TI assessment that setting drogue side down may be advantageous; manage ensuing drogue/pair entanglement under its named procedure.\nReferences: OPS p.59; OPS p.60\nAsk evaluator: Which facts justify the drogue-side-down discretionary response in your evaluation?",
-      "options": [],
-      "correctOptionId": null,
-      "explanation": "Official-manual comparison [QUALIFIED / CONTEXT]: Basic side-spin response agrees, but must be read with the discretionary drogue-side-down note, also covered in the next card.\nManual guidance: Use the listed arms/legs/tracking correction. If unsuccessful within ten seconds, default is set drogue if drogue side up, Total Malfunction EP if drogue side down. OPS also permits TI assessment that setting drogue side down may be advantageous; manage ensuing drogue/pair entanglement under its named procedure.\nReferences: OPS p.59; OPS p.60\nAsk evaluator: Which facts justify the drogue-side-down discretionary response in your evaluation?",
-      "status": "needs_review",
-      "references": [
-        {
-          "sourceId": "sigma-ep-study-guide",
-          "printedPage": "2",
-          "imageFilename": "1000013736.jpg"
-        },
-        {
-          "sourceId": "ops",
-          "printedPage": "59",
-          "pdfPage": 70,
-          "section": "Freefall"
-        },
-        {
-          "sourceId": "ops",
-          "printedPage": "60",
-          "pdfPage": 71,
-          "section": "Side-spin discretion"
-        }
-      ],
-      "includeInQuiz": true,
-      "requiresExaminerReview": true,
-      "reviewNote": "Basic side-spin response agrees, but must be read with the discretionary drogue-side-down note, also covered in the next card.",
-      "relatedQuestionIds": [],
-      "tags": [
-        "course_material",
-        "recall",
-        "manual_cross_reference",
-        "qualified"
-      ],
-      "sourceAnswer": "Bring student's arms in, grab wrists and place at hips; straighten into tracking position; try to bring student's legs back with heels if necessary; roll belly-to-earth as spin slows. If not corrected within 10 seconds, set drogue if drogue side up; the listed drogue-side-down response is Total Malfunction EP.",
-      "officialAnswer": "Use the listed arms/legs/tracking correction. If unsuccessful within ten seconds, default is set drogue if drogue side up, Total Malfunction EP if drogue side down. OPS also permits TI assessment that setting drogue side down may be advantageous; manage ensuing drogue/pair entanglement under its named procedure.",
-      "comparison": {
-        "status": "qualified",
-        "summary": "Basic side-spin response agrees, but must be read with the discretionary drogue-side-down note, also covered in the next card.",
-        "officialAnswer": "Use the listed arms/legs/tracking correction. If unsuccessful within ten seconds, default is set drogue if drogue side up, Total Malfunction EP if drogue side down. OPS also permits TI assessment that setting drogue side down may be advantageous; manage ensuing drogue/pair entanglement under its named procedure.",
-        "references": [
-          {
-            "sourceId": "ops",
-            "printedPage": "59",
-            "pdfPage": 70,
-            "section": "Freefall"
-          },
-          {
-            "sourceId": "ops",
-            "printedPage": "60",
-            "pdfPage": 71,
-            "section": "Side-spin discretion"
-          }
-        ],
-        "evaluatorQuestion": "Which facts justify the drogue-side-down discretionary response in your evaluation?",
         "reviewedAt": "2026-10-13",
         "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
       }
@@ -1024,6 +1049,11 @@
           "printedPage": "56",
           "pdfPage": 67,
           "section": "Core EP sequences used by scenario labels"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -1082,6 +1112,11 @@
           "printedPage": "60",
           "pdfPage": 71,
           "section": "Freefall / What if you cannot locate the drogue?"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -1140,6 +1175,11 @@
           "printedPage": "56",
           "pdfPage": 67,
           "section": "Core EP sequences used by scenario labels"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -1198,6 +1238,11 @@
           "printedPage": "60",
           "pdfPage": 71,
           "section": "Freefall / What if the drogue deploys prematurely?"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -1230,58 +1275,6 @@
       }
     },
     {
-      "id": "sigma-ep-study-guide-021",
-      "category": "Freefall",
-      "type": "recall",
-      "question": "What if the left arm is incapacitated before drogue deployment?",
-      "answer": "Attempt to free arm; set drogue; check drogue; release drogue. If main malfunctions and arm remains incapacitated, pull cutaway and deploy reserve with RSL. If unable to release drogue with right hand, use RSL to deploy reserve.\n\nOfficial-manual comparison [DIFFERENCE FOUND]: The 2026 guide still orders a freeing attempt before setting the drogue and makes release appear unconditional. OPS sets/checks drogue first, then gives a one-attempt student-grab branch.\nManual guidance: Set drogue; check drogue. If incapacitation is caused by the student grabbing, make one freeing attempt: if successful continue jump; if unsuccessful release drogue. If main malfunctions and left arm remains incapacitated, pull cutaway and deploy reserve with RSL. If right hand cannot release drogue, use RSL to deploy reserve.\nReferences: OPS p.60\nAsk evaluator: Do you expect drogue set/check before the one freeing attempt, and continuation if it succeeds? How does injury differ from student grabbing?",
-      "options": [],
-      "correctOptionId": null,
-      "explanation": "Official-manual comparison [DIFFERENCE FOUND]: The 2026 guide still orders a freeing attempt before setting the drogue and makes release appear unconditional. OPS sets/checks drogue first, then gives a one-attempt student-grab branch.\nManual guidance: Set drogue; check drogue. If incapacitation is caused by the student grabbing, make one freeing attempt: if successful continue jump; if unsuccessful release drogue. If main malfunctions and left arm remains incapacitated, pull cutaway and deploy reserve with RSL. If right hand cannot release drogue, use RSL to deploy reserve.\nReferences: OPS p.60\nAsk evaluator: Do you expect drogue set/check before the one freeing attempt, and continuation if it succeeds? How does injury differ from student grabbing?",
-      "status": "needs_review",
-      "references": [
-        {
-          "sourceId": "sigma-ep-study-guide",
-          "printedPage": "2",
-          "imageFilename": "1000013736.jpg"
-        },
-        {
-          "sourceId": "ops",
-          "printedPage": "60",
-          "pdfPage": 71,
-          "section": "Freefall"
-        }
-      ],
-      "includeInQuiz": true,
-      "requiresExaminerReview": true,
-      "reviewNote": "The 2026 guide still orders a freeing attempt before setting the drogue and makes release appear unconditional. OPS sets/checks drogue first, then gives a one-attempt student-grab branch.",
-      "relatedQuestionIds": [],
-      "tags": [
-        "course_material",
-        "recall",
-        "manual_cross_reference",
-        "difference"
-      ],
-      "sourceAnswer": "Attempt to free arm; set drogue; check drogue; release drogue. If main malfunctions and arm remains incapacitated, pull cutaway and deploy reserve with RSL. If unable to release drogue with right hand, use RSL to deploy reserve.",
-      "officialAnswer": "Set drogue; check drogue. If incapacitation is caused by the student grabbing, make one freeing attempt: if successful continue jump; if unsuccessful release drogue. If main malfunctions and left arm remains incapacitated, pull cutaway and deploy reserve with RSL. If right hand cannot release drogue, use RSL to deploy reserve.",
-      "comparison": {
-        "status": "difference",
-        "summary": "The 2026 guide still orders a freeing attempt before setting the drogue and makes release appear unconditional. OPS sets/checks drogue first, then gives a one-attempt student-grab branch.",
-        "officialAnswer": "Set drogue; check drogue. If incapacitation is caused by the student grabbing, make one freeing attempt: if successful continue jump; if unsuccessful release drogue. If main malfunctions and left arm remains incapacitated, pull cutaway and deploy reserve with RSL. If right hand cannot release drogue, use RSL to deploy reserve.",
-        "references": [
-          {
-            "sourceId": "ops",
-            "printedPage": "60",
-            "pdfPage": 71,
-            "section": "Freefall"
-          }
-        ],
-        "evaluatorQuestion": "Do you expect drogue set/check before the one freeing attempt, and continuation if it succeeds? How does injury differ from student grabbing?",
-        "reviewedAt": "2026-10-13",
-        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
-      }
-    },
-    {
       "id": "sigma-ep-study-guide-022",
       "category": "Freefall",
       "type": "recall",
@@ -1302,6 +1295,11 @@
           "printedPage": "60",
           "pdfPage": 71,
           "section": "Freefall"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -1354,6 +1352,11 @@
           "printedPage": "60",
           "pdfPage": 71,
           "section": "Freefall / What if the student grabs both arms before drogue deployment?"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -1412,6 +1415,11 @@
           "printedPage": "56",
           "pdfPage": 67,
           "section": "Core EP sequences used by scenario labels"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "2",
+          "imageFilename": "1000013742.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -1450,70 +1458,6 @@
       }
     },
     {
-      "id": "sigma-ep-study-guide-025",
-      "category": "Drogue fall",
-      "type": "recall",
-      "question": "What if the drogue remains uninflated after being set?",
-      "answer": "Continue systems check. If it does not inflate within 6 seconds, release drogue; if it fails to extract deployment bag, Open Container with Drogue Issues EP.\n\nOfficial-manual comparison [QUALIFIED / CONTEXT]: Operational six-second response agrees. OWNER describes possible 6–8-second inflation of an uncocked drogue; this describes behavior, not a longer operational waiting instruction.\nManual guidance: Continue systems check. If it does not inflate within 6 seconds, release drogue; if it fails to extract deployment bag, Open Container with Drogue Issues EP.\nReferences: OPS p.61; OWNER p.116\nAsk evaluator: Confirm the six-second release trigger despite the Owner Manual behavior description.",
-      "options": [],
-      "correctOptionId": null,
-      "explanation": "Official-manual comparison [QUALIFIED / CONTEXT]: Operational six-second response agrees. OWNER describes possible 6–8-second inflation of an uncocked drogue; this describes behavior, not a longer operational waiting instruction.\nManual guidance: Continue systems check. If it does not inflate within 6 seconds, release drogue; if it fails to extract deployment bag, Open Container with Drogue Issues EP.\nReferences: OPS p.61; OWNER p.116\nAsk evaluator: Confirm the six-second release trigger despite the Owner Manual behavior description.",
-      "status": "needs_review",
-      "references": [
-        {
-          "sourceId": "sigma-ep-study-guide",
-          "printedPage": "3",
-          "imageFilename": "1000013737.jpg"
-        },
-        {
-          "sourceId": "ops",
-          "printedPage": "61",
-          "pdfPage": 72,
-          "section": "Drogue fall"
-        },
-        {
-          "sourceId": "owner",
-          "printedPage": "116",
-          "pdfPage": 126,
-          "section": "Uncocked drogue inflation behavior"
-        }
-      ],
-      "includeInQuiz": true,
-      "requiresExaminerReview": true,
-      "reviewNote": "Operational six-second response agrees. OWNER describes possible 6–8-second inflation of an uncocked drogue; this describes behavior, not a longer operational waiting instruction.",
-      "relatedQuestionIds": [],
-      "tags": [
-        "course_material",
-        "recall",
-        "manual_cross_reference",
-        "qualified"
-      ],
-      "sourceAnswer": "Continue systems check. If it does not inflate within 6 seconds, release drogue; if it fails to extract deployment bag, Open Container with Drogue Issues EP.",
-      "officialAnswer": "Continue systems check. If it does not inflate within 6 seconds, release drogue; if it fails to extract deployment bag, Open Container with Drogue Issues EP.",
-      "comparison": {
-        "status": "qualified",
-        "summary": "Operational six-second response agrees. OWNER describes possible 6–8-second inflation of an uncocked drogue; this describes behavior, not a longer operational waiting instruction.",
-        "officialAnswer": "Continue systems check. If it does not inflate within 6 seconds, release drogue; if it fails to extract deployment bag, Open Container with Drogue Issues EP.",
-        "references": [
-          {
-            "sourceId": "ops",
-            "printedPage": "61",
-            "pdfPage": 72,
-            "section": "Drogue fall"
-          },
-          {
-            "sourceId": "owner",
-            "printedPage": "116",
-            "pdfPage": 126,
-            "section": "Uncocked drogue inflation behavior"
-          }
-        ],
-        "evaluatorQuestion": "Confirm the six-second release trigger despite the Owner Manual behavior description.",
-        "reviewedAt": "2026-10-13",
-        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
-      }
-    },
-    {
       "id": "sigma-ep-study-guide-026",
       "category": "Drogue fall",
       "type": "recall",
@@ -1540,6 +1484,11 @@
           "printedPage": "56",
           "pdfPage": 67,
           "section": "Core EP sequences used by scenario labels"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "2",
+          "imageFilename": "1000013742.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -1604,6 +1553,11 @@
           "printedPage": "56",
           "pdfPage": 67,
           "section": "Core EP sequences used by scenario labels"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "2",
+          "imageFilename": "1000013742.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -1662,6 +1616,11 @@
           "printedPage": "61",
           "pdfPage": 72,
           "section": "Drogue fall"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "2",
+          "imageFilename": "1000013742.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -1714,6 +1673,11 @@
           "printedPage": "61",
           "pdfPage": 72,
           "section": "Drogue fall"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "2",
+          "imageFilename": "1000013742.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -1778,6 +1742,11 @@
           "printedPage": "56",
           "pdfPage": 67,
           "section": "Core EP sequences used by scenario labels"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "2",
+          "imageFilename": "1000013742.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -1842,6 +1811,11 @@
           "printedPage": "62",
           "pdfPage": 73,
           "section": "Drogue fall"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "2",
+          "imageFilename": "1000013742.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -1869,58 +1843,6 @@
           }
         ],
         "evaluatorQuestion": "With drogue out, immediate release or freeing attempt first?",
-        "reviewedAt": "2026-10-13",
-        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
-      }
-    },
-    {
-      "id": "sigma-ep-study-guide-032",
-      "category": "Drogue fall",
-      "type": "recall",
-      "question": "What if the right arm is incapacitated with the drogue out?",
-      "answer": "Release using left drogue release. If unable to release, deploy reserve. If main malfunctions and right arm remains incapacitated, deploy reserve. The guide also repeats reserve deployment if unable to release with left hand.\n\nOfficial-manual comparison [QUALIFIED / CONTEXT]: Default response agrees; read with the discretionary left-handed cutaway/student-assistance note in the following card.\nManual guidance: Release using left drogue release. If unable to release, deploy reserve. If main malfunctions and right arm remains incapacitated, deploy reserve. The guide also repeats reserve deployment if unable to release with left hand. OPS permits assessment of left-handed cutaway access and appropriate student assistance in a slow-speed malfunction.\nReferences: OPS p.62\nAsk evaluator: When should I use the reserve-only default versus discretionary cutaway/assistance?",
-      "options": [],
-      "correctOptionId": null,
-      "explanation": "Official-manual comparison [QUALIFIED / CONTEXT]: Default response agrees; read with the discretionary left-handed cutaway/student-assistance note in the following card.\nManual guidance: Release using left drogue release. If unable to release, deploy reserve. If main malfunctions and right arm remains incapacitated, deploy reserve. The guide also repeats reserve deployment if unable to release with left hand. OPS permits assessment of left-handed cutaway access and appropriate student assistance in a slow-speed malfunction.\nReferences: OPS p.62\nAsk evaluator: When should I use the reserve-only default versus discretionary cutaway/assistance?",
-      "status": "needs_review",
-      "references": [
-        {
-          "sourceId": "sigma-ep-study-guide",
-          "printedPage": "3",
-          "imageFilename": "1000013737.jpg"
-        },
-        {
-          "sourceId": "ops",
-          "printedPage": "62",
-          "pdfPage": 73,
-          "section": "Drogue fall"
-        }
-      ],
-      "includeInQuiz": true,
-      "requiresExaminerReview": true,
-      "reviewNote": "Default response agrees; read with the discretionary left-handed cutaway/student-assistance note in the following card.",
-      "relatedQuestionIds": [],
-      "tags": [
-        "course_material",
-        "recall",
-        "manual_cross_reference",
-        "qualified"
-      ],
-      "sourceAnswer": "Release using left drogue release. If unable to release, deploy reserve. If main malfunctions and right arm remains incapacitated, deploy reserve. The guide also repeats reserve deployment if unable to release with left hand.",
-      "officialAnswer": "Release using left drogue release. If unable to release, deploy reserve. If main malfunctions and right arm remains incapacitated, deploy reserve. The guide also repeats reserve deployment if unable to release with left hand. OPS permits assessment of left-handed cutaway access and appropriate student assistance in a slow-speed malfunction.",
-      "comparison": {
-        "status": "qualified",
-        "summary": "Default response agrees; read with the discretionary left-handed cutaway/student-assistance note in the following card.",
-        "officialAnswer": "Release using left drogue release. If unable to release, deploy reserve. If main malfunctions and right arm remains incapacitated, deploy reserve. The guide also repeats reserve deployment if unable to release with left hand. OPS permits assessment of left-handed cutaway access and appropriate student assistance in a slow-speed malfunction.",
-        "references": [
-          {
-            "sourceId": "ops",
-            "printedPage": "62",
-            "pdfPage": 73,
-            "section": "Drogue fall"
-          }
-        ],
-        "evaluatorQuestion": "When should I use the reserve-only default versus discretionary cutaway/assistance?",
         "reviewedAt": "2026-10-13",
         "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
       }
@@ -1998,6 +1920,11 @@
           "printedPage": "62",
           "pdfPage": 73,
           "section": "Drogue fall / What if both arms are incapacitated with the drogue out?"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "3",
+          "imageFilename": "1000013743.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -2050,6 +1977,11 @@
           "printedPage": "62",
           "pdfPage": 73,
           "section": "Drogue fall"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "3",
+          "imageFilename": "1000013743.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -2102,6 +2034,11 @@
           "printedPage": "62",
           "pdfPage": 73,
           "section": "Drogue fall / What if a parachute deploys prematurely?"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "3",
+          "imageFilename": "1000013743.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -2154,6 +2091,11 @@
           "printedPage": "63",
           "pdfPage": 74,
           "section": "Drogue fall / What if the altimeter is lost or broken?"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "3",
+          "imageFilename": "1000013743.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -2206,6 +2148,11 @@
           "printedPage": "63",
           "pdfPage": 74,
           "section": "Drogue fall / What if falling through clouds?"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "3",
+          "imageFilename": "1000013743.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -2264,6 +2211,11 @@
           "printedPage": "56",
           "pdfPage": 67,
           "section": "Core EP sequences used by scenario labels"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "3",
+          "imageFilename": "1000013743.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -2302,58 +2254,6 @@
       }
     },
     {
-      "id": "sigma-ep-study-guide-040",
-      "category": "Deployment",
-      "type": "recall",
-      "question": "What is the hard-drogue-release sequence in this guide?",
-      "answer": "Make second attempt; pull opposite release; if unsuccessful pull both release handles simultaneously. If drogue does not release, Total Malfunction EP.\n\nOfficial-manual comparison [QUALIFIED / CONTEXT]: Sequence agrees. If release actually succeeds/collapses the drogue but bag is not extracted, the adjacent collapsed-drogue-in-tow branch applies.\nManual guidance: Use opposite release then both releases simultaneously if unsuccessful; if drogue does not release, Total Malfunction EP. Collapsed drogue in tow instead uses Open Container with Drogue Issues EP.\nReferences: OPS p.63\nAsk evaluator: Will the scenario distinguish failure to release from collapse without bag extraction?",
-      "options": [],
-      "correctOptionId": null,
-      "explanation": "Official-manual comparison [QUALIFIED / CONTEXT]: Sequence agrees. If release actually succeeds/collapses the drogue but bag is not extracted, the adjacent collapsed-drogue-in-tow branch applies.\nManual guidance: Use opposite release then both releases simultaneously if unsuccessful; if drogue does not release, Total Malfunction EP. Collapsed drogue in tow instead uses Open Container with Drogue Issues EP.\nReferences: OPS p.63\nAsk evaluator: Will the scenario distinguish failure to release from collapse without bag extraction?",
-      "status": "needs_review",
-      "references": [
-        {
-          "sourceId": "sigma-ep-study-guide",
-          "printedPage": "4",
-          "imageFilename": "1000013738.jpg"
-        },
-        {
-          "sourceId": "ops",
-          "printedPage": "63",
-          "pdfPage": 74,
-          "section": "Deployment"
-        }
-      ],
-      "includeInQuiz": true,
-      "requiresExaminerReview": true,
-      "reviewNote": "Sequence agrees. If release actually succeeds/collapses the drogue but bag is not extracted, the adjacent collapsed-drogue-in-tow branch applies.",
-      "relatedQuestionIds": [],
-      "tags": [
-        "course_material",
-        "recall",
-        "manual_cross_reference",
-        "qualified"
-      ],
-      "sourceAnswer": "Make second attempt; pull opposite release; if unsuccessful pull both release handles simultaneously. If drogue does not release, Total Malfunction EP.",
-      "officialAnswer": "Use opposite release then both releases simultaneously if unsuccessful; if drogue does not release, Total Malfunction EP. Collapsed drogue in tow instead uses Open Container with Drogue Issues EP.",
-      "comparison": {
-        "status": "qualified",
-        "summary": "Sequence agrees. If release actually succeeds/collapses the drogue but bag is not extracted, the adjacent collapsed-drogue-in-tow branch applies.",
-        "officialAnswer": "Use opposite release then both releases simultaneously if unsuccessful; if drogue does not release, Total Malfunction EP. Collapsed drogue in tow instead uses Open Container with Drogue Issues EP.",
-        "references": [
-          {
-            "sourceId": "ops",
-            "printedPage": "63",
-            "pdfPage": 74,
-            "section": "Deployment"
-          }
-        ],
-        "evaluatorQuestion": "Will the scenario distinguish failure to release from collapse without bag extraction?",
-        "reviewedAt": "2026-10-13",
-        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
-      }
-    },
-    {
       "id": "sigma-ep-study-guide-041",
       "category": "Deployment",
       "type": "recall",
@@ -2380,6 +2280,11 @@
           "printedPage": "56",
           "pdfPage": 67,
           "section": "Core EP sequences used by scenario labels"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "3",
+          "imageFilename": "1000013743.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -2438,6 +2343,11 @@
           "printedPage": "63",
           "pdfPage": 74,
           "section": "Deployment / What if the drogue does not collapse during deployment?"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "3",
+          "imageFilename": "1000013743.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -2496,6 +2406,11 @@
           "printedPage": "56",
           "pdfPage": 67,
           "section": "Core EP sequences used by scenario labels"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "3",
+          "imageFilename": "1000013743.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -2520,70 +2435,6 @@
             "printedPage": "64",
             "pdfPage": 75,
             "section": "Deployment / What if the drogue bridle detaches on release?"
-          },
-          {
-            "sourceId": "ops",
-            "printedPage": "56",
-            "pdfPage": 67,
-            "section": "Core EP sequences used by scenario labels"
-          }
-        ],
-        "evaluatorQuestion": null,
-        "reviewedAt": "2026-10-13",
-        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
-      }
-    },
-    {
-      "id": "sigma-ep-study-guide-044",
-      "category": "Deployment",
-      "type": "recall",
-      "question": "How does body orientation affect the bag-lock EP?",
-      "answer": "Horizontal/belly-to-earth: Open Container with Drogue Issues EP. Any other orientation: Partial Malfunction EP. If RSL hangs up, sweep with right hand to clear it.\n\nOfficial-manual comparison [VERIFIED]: The course answer agrees with the cited Sigma procedure.\nReferences: OPS p.64; OPS p.56",
-      "options": [],
-      "correctOptionId": null,
-      "explanation": "Official-manual comparison [VERIFIED]: The course answer agrees with the cited Sigma procedure.\nReferences: OPS p.64; OPS p.56",
-      "status": "verified",
-      "references": [
-        {
-          "sourceId": "sigma-ep-study-guide",
-          "printedPage": "4",
-          "imageFilename": "1000013738.jpg"
-        },
-        {
-          "sourceId": "ops",
-          "printedPage": "64",
-          "pdfPage": 75,
-          "section": "Deployment / How does body orientation affect the bag-lock EP?"
-        },
-        {
-          "sourceId": "ops",
-          "printedPage": "56",
-          "pdfPage": 67,
-          "section": "Core EP sequences used by scenario labels"
-        }
-      ],
-      "includeInQuiz": true,
-      "requiresExaminerReview": false,
-      "reviewNote": null,
-      "relatedQuestionIds": [],
-      "tags": [
-        "course_material",
-        "recall",
-        "manual_cross_reference",
-        "verified"
-      ],
-      "sourceAnswer": "Horizontal/belly-to-earth: Open Container with Drogue Issues EP. Any other orientation: Partial Malfunction EP. If RSL hangs up, sweep with right hand to clear it.",
-      "officialAnswer": "Horizontal/belly-to-earth: Open Container with Drogue Issues EP. Any other orientation: Partial Malfunction EP. If RSL hangs up, sweep with right hand to clear it.",
-      "comparison": {
-        "status": "verified",
-        "summary": "The course answer agrees with the cited Sigma procedure.",
-        "officialAnswer": "Horizontal/belly-to-earth: Open Container with Drogue Issues EP. Any other orientation: Partial Malfunction EP. If RSL hangs up, sweep with right hand to clear it.",
-        "references": [
-          {
-            "sourceId": "ops",
-            "printedPage": "64",
-            "pdfPage": 75,
-            "section": "Deployment / How does body orientation affect the bag-lock EP?"
           },
           {
             "sourceId": "ops",
@@ -2624,6 +2475,11 @@
           "printedPage": "56",
           "pdfPage": 67,
           "section": "Core EP sequences used by scenario labels"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "3",
+          "imageFilename": "1000013743.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -2688,6 +2544,11 @@
           "printedPage": "56",
           "pdfPage": 67,
           "section": "Core EP sequences used by scenario labels"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "3",
+          "imageFilename": "1000013743.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -2752,6 +2613,11 @@
           "printedPage": "56",
           "pdfPage": 67,
           "section": "Core EP sequences used by scenario labels"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "3",
+          "imageFilename": "1000013743.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -2810,6 +2676,11 @@
           "printedPage": "64",
           "pdfPage": 75,
           "section": "Post-opening / What is the line-twist response?"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "3",
+          "imageFilename": "1000013743.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -2868,6 +2739,11 @@
           "printedPage": "56",
           "pdfPage": 67,
           "section": "Core EP sequences used by scenario labels"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "4",
+          "imageFilename": "1000013744.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -2932,6 +2808,11 @@
           "printedPage": "56",
           "pdfPage": 67,
           "section": "Core EP sequences used by scenario labels"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "4",
+          "imageFilename": "1000013744.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -2956,70 +2837,6 @@
             "printedPage": "65",
             "pdfPage": 76,
             "section": "Post-opening / What if a control line releases prematurely during opening?"
-          },
-          {
-            "sourceId": "ops",
-            "printedPage": "56",
-            "pdfPage": 67,
-            "section": "Core EP sequences used by scenario labels"
-          }
-        ],
-        "evaluatorQuestion": null,
-        "reviewedAt": "2026-10-13",
-        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
-      }
-    },
-    {
-      "id": "sigma-ep-study-guide-051",
-      "category": "Post-opening",
-      "type": "recall",
-      "question": "What is the broken-control-line response and its qualification?",
-      "answer": "Unstow all control lines; controllability check; determine rear-riser stall point; land using rear risers if safely landable, otherwise Partial Malfunction EP. Depending on which primary or secondary line failed, landing with only the remaining primary or secondary brakes may be possible; TI assesses situation.\n\nOfficial-manual comparison [VERIFIED]: The course answer agrees with the cited Sigma procedure.\nReferences: OPS p.65; OPS p.56",
-      "options": [],
-      "correctOptionId": null,
-      "explanation": "Official-manual comparison [VERIFIED]: The course answer agrees with the cited Sigma procedure.\nReferences: OPS p.65; OPS p.56",
-      "status": "verified",
-      "references": [
-        {
-          "sourceId": "sigma-ep-study-guide",
-          "printedPage": "4",
-          "imageFilename": "1000013738.jpg"
-        },
-        {
-          "sourceId": "ops",
-          "printedPage": "65",
-          "pdfPage": 76,
-          "section": "Post-opening / What is the broken-control-line response and its qualification?"
-        },
-        {
-          "sourceId": "ops",
-          "printedPage": "56",
-          "pdfPage": 67,
-          "section": "Core EP sequences used by scenario labels"
-        }
-      ],
-      "includeInQuiz": true,
-      "requiresExaminerReview": false,
-      "reviewNote": null,
-      "relatedQuestionIds": [],
-      "tags": [
-        "course_material",
-        "recall",
-        "manual_cross_reference",
-        "verified"
-      ],
-      "sourceAnswer": "Unstow all control lines; controllability check; determine rear-riser stall point; land using rear risers if safely landable, otherwise Partial Malfunction EP. Depending on which primary or secondary line failed, landing with only the remaining primary or secondary brakes may be possible; TI assesses situation.",
-      "officialAnswer": "Unstow all control lines; controllability check; determine rear-riser stall point; land using rear risers if safely landable, otherwise Partial Malfunction EP. Depending on which primary or secondary line failed, landing with only the remaining primary or secondary brakes may be possible; TI assesses situation.",
-      "comparison": {
-        "status": "verified",
-        "summary": "The course answer agrees with the cited Sigma procedure.",
-        "officialAnswer": "Unstow all control lines; controllability check; determine rear-riser stall point; land using rear risers if safely landable, otherwise Partial Malfunction EP. Depending on which primary or secondary line failed, landing with only the remaining primary or secondary brakes may be possible; TI assesses situation.",
-        "references": [
-          {
-            "sourceId": "ops",
-            "printedPage": "65",
-            "pdfPage": 76,
-            "section": "Post-opening / What is the broken-control-line response and its qualification?"
           },
           {
             "sourceId": "ops",
@@ -3060,6 +2877,11 @@
           "printedPage": "56",
           "pdfPage": 67,
           "section": "Core EP sequences used by scenario labels"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "4",
+          "imageFilename": "1000013744.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -3124,6 +2946,11 @@
           "printedPage": "56",
           "pdfPage": 67,
           "section": "Core EP sequences used by scenario labels"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "4",
+          "imageFilename": "1000013744.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -3188,6 +3015,11 @@
           "printedPage": "56",
           "pdfPage": 67,
           "section": "Core EP sequences used by scenario labels"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "4",
+          "imageFilename": "1000013744.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -3304,6 +3136,11 @@
           "printedPage": "56",
           "pdfPage": 67,
           "section": "Core EP sequences used by scenario labels"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "4",
+          "imageFilename": "1000013744.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -3342,82 +3179,6 @@
       }
     },
     {
-      "id": "sigma-ep-study-guide-057",
-      "category": "Post-opening",
-      "type": "recall",
-      "question": "What are the dual-canopy instructions on this form?",
-      "answer": "Canopy still in bag: attempt to contain. Biplane: fly front canopy. Side-by-side: gentle inputs, steer canopies into each other. Downplane: cut away main if risers are not entangled. Keep brake settings the same on main and reserve. If landing both, choose large open area and PLF.\n\nOfficial-manual comparison [PARTIAL SUPPORT / OMITTED DETAILS]: The handout compresses several state-dependent procedures; a biplane's dominant canopy is usually, not invariably, the front canopy.\nManual guidance: Establish entanglement certainty and match toggle configuration. Side-by-side: gentle inputs to steer canopies together. Biplane: small gentle turns on dominant canopy, usually front. Downplane: cut away main if risers not entangled. Separate canopies before elective main cutaway when certainly clear; the manual describes leftmost-rear-riser separation. If one canopy remains bagged, distinguish inflated reserve/bagged main from inflated main/bagged reserve; see OPS p.67 for clearing/cutaway versus gathering reserve and allowing inflation if it begins. Pick large open area and PLF if landing both. Apply 1,500-foot no-cutaway limitation.\nReferences: OPS p.66; OPS p.67; OPS p.55\nAsk evaluator: Please evaluate separate configurations, bagged-main/bagged-reserve cases, entanglement certainty, and the no-cutaway limit.",
-      "options": [],
-      "correctOptionId": null,
-      "explanation": "Official-manual comparison [PARTIAL SUPPORT / OMITTED DETAILS]: The handout compresses several state-dependent procedures; a biplane's dominant canopy is usually, not invariably, the front canopy.\nManual guidance: Establish entanglement certainty and match toggle configuration. Side-by-side: gentle inputs to steer canopies together. Biplane: small gentle turns on dominant canopy, usually front. Downplane: cut away main if risers not entangled. Separate canopies before elective main cutaway when certainly clear; the manual describes leftmost-rear-riser separation. If one canopy remains bagged, distinguish inflated reserve/bagged main from inflated main/bagged reserve; see OPS p.67 for clearing/cutaway versus gathering reserve and allowing inflation if it begins. Pick large open area and PLF if landing both. Apply 1,500-foot no-cutaway limitation.\nReferences: OPS p.66; OPS p.67; OPS p.55\nAsk evaluator: Please evaluate separate configurations, bagged-main/bagged-reserve cases, entanglement certainty, and the no-cutaway limit.",
-      "status": "needs_review",
-      "references": [
-        {
-          "sourceId": "sigma-ep-study-guide",
-          "printedPage": "5",
-          "imageFilename": "1000013739.jpg"
-        },
-        {
-          "sourceId": "ops",
-          "printedPage": "66",
-          "pdfPage": 77,
-          "section": "Post-opening"
-        },
-        {
-          "sourceId": "ops",
-          "printedPage": "67",
-          "pdfPage": 78,
-          "section": "Dual canopy partially deployed"
-        },
-        {
-          "sourceId": "ops",
-          "printedPage": "55",
-          "pdfPage": 66,
-          "section": "No-cutaway limit"
-        }
-      ],
-      "includeInQuiz": true,
-      "requiresExaminerReview": true,
-      "reviewNote": "The handout compresses several state-dependent procedures; a biplane's dominant canopy is usually, not invariably, the front canopy.",
-      "relatedQuestionIds": [],
-      "tags": [
-        "course_material",
-        "recall",
-        "manual_cross_reference",
-        "partially_supported"
-      ],
-      "sourceAnswer": "Canopy still in bag: attempt to contain. Biplane: fly front canopy. Side-by-side: gentle inputs, steer canopies into each other. Downplane: cut away main if risers are not entangled. Keep brake settings the same on main and reserve. If landing both, choose large open area and PLF.",
-      "officialAnswer": "Establish entanglement certainty and match toggle configuration. Side-by-side: gentle inputs to steer canopies together. Biplane: small gentle turns on dominant canopy, usually front. Downplane: cut away main if risers not entangled. Separate canopies before elective main cutaway when certainly clear; the manual describes leftmost-rear-riser separation. If one canopy remains bagged, distinguish inflated reserve/bagged main from inflated main/bagged reserve; see OPS p.67 for clearing/cutaway versus gathering reserve and allowing inflation if it begins. Pick large open area and PLF if landing both. Apply 1,500-foot no-cutaway limitation.",
-      "comparison": {
-        "status": "partially_supported",
-        "summary": "The handout compresses several state-dependent procedures; a biplane's dominant canopy is usually, not invariably, the front canopy.",
-        "officialAnswer": "Establish entanglement certainty and match toggle configuration. Side-by-side: gentle inputs to steer canopies together. Biplane: small gentle turns on dominant canopy, usually front. Downplane: cut away main if risers not entangled. Separate canopies before elective main cutaway when certainly clear; the manual describes leftmost-rear-riser separation. If one canopy remains bagged, distinguish inflated reserve/bagged main from inflated main/bagged reserve; see OPS p.67 for clearing/cutaway versus gathering reserve and allowing inflation if it begins. Pick large open area and PLF if landing both. Apply 1,500-foot no-cutaway limitation.",
-        "references": [
-          {
-            "sourceId": "ops",
-            "printedPage": "66",
-            "pdfPage": 77,
-            "section": "Post-opening"
-          },
-          {
-            "sourceId": "ops",
-            "printedPage": "67",
-            "pdfPage": 78,
-            "section": "Dual canopy partially deployed"
-          },
-          {
-            "sourceId": "ops",
-            "printedPage": "55",
-            "pdfPage": 66,
-            "section": "No-cutaway limit"
-          }
-        ],
-        "evaluatorQuestion": "Please evaluate separate configurations, bagged-main/bagged-reserve cases, entanglement certainty, and the no-cutaway limit.",
-        "reviewedAt": "2026-10-13",
-        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
-      }
-    },
-    {
       "id": "sigma-ep-study-guide-058",
       "category": "Post-opening",
       "type": "recall",
@@ -3438,6 +3199,11 @@
           "printedPage": "67",
           "pdfPage": 78,
           "section": "Post-opening / What if entering a cloud under canopy?"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "4",
+          "imageFilename": "1000013744.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -3606,6 +3372,11 @@
           "printedPage": "67",
           "pdfPage": 78,
           "section": "Post-opening"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "4",
+          "imageFilename": "1000013744.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -3658,6 +3429,11 @@
           "printedPage": "68",
           "pdfPage": 79,
           "section": "Entanglements / What is the imminent-collision procedure?"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "4",
+          "imageFilename": "1000013744.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -3710,6 +3486,11 @@
           "printedPage": "68",
           "pdfPage": 79,
           "section": "Entanglements / What is the initial response to entanglement with another jumper?"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "4",
+          "imageFilename": "1000013744.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -3762,6 +3543,11 @@
           "printedPage": "68",
           "pdfPage": 79,
           "section": "Entanglements / What if two jumpers are entangled above 3,000 feet with one good canopy?"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "4",
+          "imageFilename": "1000013744.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -3814,6 +3600,11 @@
           "printedPage": "68",
           "pdfPage": 79,
           "section": "Entanglements / What if two jumpers are entangled below 3,000 feet with one good canopy?"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "5",
+          "imageFilename": "1000013745.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -3866,6 +3657,11 @@
           "printedPage": "69",
           "pdfPage": 80,
           "section": "Entanglements"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "5",
+          "imageFilename": "1000013745.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -3898,70 +3694,6 @@
       }
     },
     {
-      "id": "sigma-ep-study-guide-067",
-      "category": "Hazardous landings",
-      "type": "recall",
-      "question": "What does the high-wind landing procedure say about the RSL and collapse?",
-      "answer": "RSL may be disconnected below 1,500 feet AGL, including on ground. On landing pass toggles to catchers; if none, sit down, release one toggle and pull the other hand-over-hand; pivot toward pulled toggle and contain canopy nose. If unable to collapse, disconnect RSL if needed, then pull cutaway. Routine RSL removal in non-high-wind conditions is strongly discouraged.\n\nOfficial-manual comparison [PARTIAL SUPPORT / OMITTED DETAILS]: Timing and seated/single-toggle collapse agree. OPS additionally permits a rear-riser stall from seated position.\nManual guidance: RSL may be disconnected below 1,500 feet including on ground; routine non-high-wind removal discouraged. Hand toggles to catchers. Without catchers, seated landing; collapse with one toggle hand-over-hand OR stall on rear risers from seated position; pivot/contain canopy. If unable, disconnect RSL if needed and cut away.\nReferences: OPS p.53; OPS p.54\nAsk evaluator: Do you accept both listed seated canopy-collapse methods?",
-      "options": [],
-      "correctOptionId": null,
-      "explanation": "Official-manual comparison [PARTIAL SUPPORT / OMITTED DETAILS]: Timing and seated/single-toggle collapse agree. OPS additionally permits a rear-riser stall from seated position.\nManual guidance: RSL may be disconnected below 1,500 feet including on ground; routine non-high-wind removal discouraged. Hand toggles to catchers. Without catchers, seated landing; collapse with one toggle hand-over-hand OR stall on rear risers from seated position; pivot/contain canopy. If unable, disconnect RSL if needed and cut away.\nReferences: OPS p.53; OPS p.54\nAsk evaluator: Do you accept both listed seated canopy-collapse methods?",
-      "status": "needs_review",
-      "references": [
-        {
-          "sourceId": "sigma-ep-study-guide",
-          "printedPage": "6",
-          "imageFilename": "1000013740.jpg"
-        },
-        {
-          "sourceId": "ops",
-          "printedPage": "53",
-          "pdfPage": 64,
-          "section": "Hazardous landings"
-        },
-        {
-          "sourceId": "ops",
-          "printedPage": "54",
-          "pdfPage": 65,
-          "section": "High-wind landing continuation"
-        }
-      ],
-      "includeInQuiz": true,
-      "requiresExaminerReview": true,
-      "reviewNote": "Timing and seated/single-toggle collapse agree. OPS additionally permits a rear-riser stall from seated position.",
-      "relatedQuestionIds": [],
-      "tags": [
-        "course_material",
-        "recall",
-        "manual_cross_reference",
-        "partially_supported"
-      ],
-      "sourceAnswer": "RSL may be disconnected below 1,500 feet AGL, including on ground. On landing pass toggles to catchers; if none, sit down, release one toggle and pull the other hand-over-hand; pivot toward pulled toggle and contain canopy nose. If unable to collapse, disconnect RSL if needed, then pull cutaway. Routine RSL removal in non-high-wind conditions is strongly discouraged.",
-      "officialAnswer": "RSL may be disconnected below 1,500 feet including on ground; routine non-high-wind removal discouraged. Hand toggles to catchers. Without catchers, seated landing; collapse with one toggle hand-over-hand OR stall on rear risers from seated position; pivot/contain canopy. If unable, disconnect RSL if needed and cut away.",
-      "comparison": {
-        "status": "partially_supported",
-        "summary": "Timing and seated/single-toggle collapse agree. OPS additionally permits a rear-riser stall from seated position.",
-        "officialAnswer": "RSL may be disconnected below 1,500 feet including on ground; routine non-high-wind removal discouraged. Hand toggles to catchers. Without catchers, seated landing; collapse with one toggle hand-over-hand OR stall on rear risers from seated position; pivot/contain canopy. If unable, disconnect RSL if needed and cut away.",
-        "references": [
-          {
-            "sourceId": "ops",
-            "printedPage": "53",
-            "pdfPage": 64,
-            "section": "Hazardous landings"
-          },
-          {
-            "sourceId": "ops",
-            "printedPage": "54",
-            "pdfPage": 65,
-            "section": "High-wind landing continuation"
-          }
-        ],
-        "evaluatorQuestion": "Do you accept both listed seated canopy-collapse methods?",
-        "reviewedAt": "2026-10-13",
-        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
-      }
-    },
-    {
       "id": "sigma-ep-study-guide-068",
       "category": "Hazardous landings",
       "type": "recall",
@@ -3982,6 +3714,11 @@
           "printedPage": "53",
           "pdfPage": 64,
           "section": "Hazardous landings"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "5",
+          "imageFilename": "1000013745.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -4034,6 +3771,11 @@
           "printedPage": "53",
           "pdfPage": 64,
           "section": "Hazardous landings / What is the tree-landing response?"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "5",
+          "imageFilename": "1000013745.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -4086,6 +3828,11 @@
           "printedPage": "53",
           "pdfPage": 64,
           "section": "Hazardous landings / What is the wire-landing response?"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "5",
+          "imageFilename": "1000013745.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -4138,6 +3885,11 @@
           "printedPage": "54",
           "pdfPage": 65,
           "section": "Hazardous landings / What if a dust devil catches the canopy on landing?"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "5",
+          "imageFilename": "1000013745.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -4190,6 +3942,11 @@
           "printedPage": "54",
           "pdfPage": 65,
           "section": "Obstacles: avoid target fixation; both feet; PLF"
+        },
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "5",
+          "imageFilename": "1000013745.jpg"
         }
       ],
       "includeInQuiz": true,
@@ -4221,7 +3978,1235 @@
         "reviewedAt": "2026-10-13",
         "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
       }
+    },
+    {
+      "id": "sigma-ep-study-guide-013",
+      "category": "Aircraft",
+      "type": "recall",
+      "question": "How is student refusal in the aircraft handled?",
+      "answer": "Move forward to a safe location; disconnect student; sit with seat belts secured; descend with aircraft. The note says to exit if exiting is safer than trying to return inside.\n\nOfficial-manual comparison [VERIFIED]: The course answer agrees with the cited Sigma procedure.\nReferences: OPS p.45",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Official-manual comparison [VERIFIED]: The course answer agrees with the cited Sigma procedure.\nReferences: OPS p.45",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-study-guide",
+          "printedPage": "2",
+          "imageFilename": "1000013736.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "45",
+          "pdfPage": 56,
+          "section": "Aircraft / How is student refusal in the aircraft handled?"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall",
+        "manual_cross_reference",
+        "verified"
+      ],
+      "sourceAnswer": "Move forward to a safe location; disconnect student; sit with seat belts secured; descend with aircraft. The note says to exit if exiting is safer than trying to return inside.",
+      "officialAnswer": "Move forward to a safe location; disconnect student; sit with seat belts secured; descend with aircraft. The note says to exit if exiting is safer than trying to return inside.",
+      "comparison": {
+        "status": "verified",
+        "summary": "The course answer agrees with the cited Sigma procedure.",
+        "officialAnswer": "Move forward to a safe location; disconnect student; sit with seat belts secured; descend with aircraft. The note says to exit if exiting is safer than trying to return inside.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "45",
+            "pdfPage": 56,
+            "section": "Aircraft / How is student refusal in the aircraft handled?"
+          }
+        ],
+        "evaluatorQuestion": null,
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      },
+      "reviewLabel": "Source comparison 1 of 10: Study Guide (1 of 2)"
+    },
+    {
+      "id": "sigma-ep-performance-test-009",
+      "category": "Aircraft",
+      "type": "recall",
+      "question": "How is student refusal in the aircraft handled?",
+      "answer": "Move forward to safe location; disconnect student; sit secured with seat belts and descend with aircraft. Older test omits the newer note about exiting if safer than returning inside.\n\nOfficial-manual comparison [DIFFERENCE FOUND]: Older test omits the refusal exception: OPS p.45 permits exiting if safer than returning inside.\nManual guidance: Move forward to safe location; disconnect student; sit secured with seat belts and descend with aircraft. Older test omits the newer note about exiting if safer than returning inside.\nReferences: OPS p.45\nAsk evaluator: When would you expect the safer-to-exit refusal exception?",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Official-manual comparison [DIFFERENCE FOUND]: Older test omits the refusal exception: OPS p.45 permits exiting if safer than returning inside.\nManual guidance: Move forward to safe location; disconnect student; sit secured with seat belts and descend with aircraft. Older test omits the newer note about exiting if safer than returning inside.\nReferences: OPS p.45\nAsk evaluator: When would you expect the safer-to-exit refusal exception?",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "45",
+          "pdfPage": 56,
+          "section": "Aircraft / How is student refusal in the aircraft handled?"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Older test omits the refusal exception: OPS p.45 permits exiting if safer than returning inside.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall",
+        "manual_cross_reference",
+        "difference"
+      ],
+      "sourceAnswer": "Move forward to safe location; disconnect student; sit secured with seat belts and descend with aircraft. Older test omits the newer note about exiting if safer than returning inside.",
+      "officialAnswer": "Move forward to safe location; disconnect student; sit secured with seat belts and descend with aircraft. Older test omits the newer note about exiting if safer than returning inside.",
+      "comparison": {
+        "status": "difference",
+        "summary": "Older test omits the refusal exception: OPS p.45 permits exiting if safer than returning inside.",
+        "officialAnswer": "Move forward to safe location; disconnect student; sit secured with seat belts and descend with aircraft. Older test omits the newer note about exiting if safer than returning inside.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "45",
+            "pdfPage": 56,
+            "section": "Aircraft / How is student refusal in the aircraft handled?"
+          }
+        ],
+        "evaluatorQuestion": "When would you expect the safer-to-exit refusal exception?",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      },
+      "reviewLabel": "Source comparison 1 of 10: Performance Test (2 of 2)"
+    },
+    {
+      "id": "sigma-ep-study-guide-015",
+      "category": "Freefall",
+      "type": "recall",
+      "question": "What is the main side-spin response?",
+      "answer": "Bring student's arms in, grab wrists and place at hips; straighten into tracking position; try to bring student's legs back with heels if necessary; roll belly-to-earth as spin slows. If not corrected within 10 seconds, set drogue if drogue side up; the listed drogue-side-down response is Total Malfunction EP.\n\nOfficial-manual comparison [QUALIFIED / CONTEXT]: Basic side-spin response agrees, but must be read with the discretionary drogue-side-down note, also covered in the next card.\nManual guidance: Use the listed arms/legs/tracking correction. If unsuccessful within ten seconds, default is set drogue if drogue side up, Total Malfunction EP if drogue side down. OPS also permits TI assessment that setting drogue side down may be advantageous; manage ensuing drogue/pair entanglement under its named procedure.\nReferences: OPS p.59; OPS p.60\nAsk evaluator: Which facts justify the drogue-side-down discretionary response in your evaluation?",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Official-manual comparison [QUALIFIED / CONTEXT]: Basic side-spin response agrees, but must be read with the discretionary drogue-side-down note, also covered in the next card.\nManual guidance: Use the listed arms/legs/tracking correction. If unsuccessful within ten seconds, default is set drogue if drogue side up, Total Malfunction EP if drogue side down. OPS also permits TI assessment that setting drogue side down may be advantageous; manage ensuing drogue/pair entanglement under its named procedure.\nReferences: OPS p.59; OPS p.60\nAsk evaluator: Which facts justify the drogue-side-down discretionary response in your evaluation?",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "sigma-ep-study-guide",
+          "printedPage": "2",
+          "imageFilename": "1000013736.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "59",
+          "pdfPage": 70,
+          "section": "Freefall"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "60",
+          "pdfPage": 71,
+          "section": "Side-spin discretion"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Basic side-spin response agrees, but must be read with the discretionary drogue-side-down note, also covered in the next card.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall",
+        "manual_cross_reference",
+        "qualified"
+      ],
+      "sourceAnswer": "Bring student's arms in, grab wrists and place at hips; straighten into tracking position; try to bring student's legs back with heels if necessary; roll belly-to-earth as spin slows. If not corrected within 10 seconds, set drogue if drogue side up; the listed drogue-side-down response is Total Malfunction EP.",
+      "officialAnswer": "Use the listed arms/legs/tracking correction. If unsuccessful within ten seconds, default is set drogue if drogue side up, Total Malfunction EP if drogue side down. OPS also permits TI assessment that setting drogue side down may be advantageous; manage ensuing drogue/pair entanglement under its named procedure.",
+      "comparison": {
+        "status": "qualified",
+        "summary": "Basic side-spin response agrees, but must be read with the discretionary drogue-side-down note, also covered in the next card.",
+        "officialAnswer": "Use the listed arms/legs/tracking correction. If unsuccessful within ten seconds, default is set drogue if drogue side up, Total Malfunction EP if drogue side down. OPS also permits TI assessment that setting drogue side down may be advantageous; manage ensuing drogue/pair entanglement under its named procedure.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "59",
+            "pdfPage": 70,
+            "section": "Freefall"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "60",
+            "pdfPage": 71,
+            "section": "Side-spin discretion"
+          }
+        ],
+        "evaluatorQuestion": "Which facts justify the drogue-side-down discretionary response in your evaluation?",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      },
+      "reviewLabel": "Source comparison 2 of 10: Study Guide (1 of 2)"
+    },
+    {
+      "id": "sigma-ep-performance-test-012",
+      "category": "Freefall",
+      "type": "recall",
+      "question": "What is the main side-spin response?",
+      "answer": "Bring student's arms in, place wrists at hips; straighten to tracking position; roll belly-to-earth as spin slows. If not corrected in 10 seconds, set drogue if drogue side up; if drogue side down, Total Malfunction EP. Older test omits newer discretionary note and heel-assistance detail.\n\nOfficial-manual comparison [DIFFERENCE FOUND]: Older test omits drogue-side-down discretion and heel-assisted leg correction; OPS pp.59–60 includes both.\nManual guidance: Use the listed arms/legs/tracking correction. If unsuccessful within ten seconds, default is set drogue if drogue side up, Total Malfunction EP if drogue side down. OPS also permits TI assessment that setting drogue side down may be advantageous; manage ensuing drogue/pair entanglement under its named procedure.\nReferences: OPS p.59; OPS p.60\nAsk evaluator: Will you score the newer side-spin branch and discretion?",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Official-manual comparison [DIFFERENCE FOUND]: Older test omits drogue-side-down discretion and heel-assisted leg correction; OPS pp.59–60 includes both.\nManual guidance: Use the listed arms/legs/tracking correction. If unsuccessful within ten seconds, default is set drogue if drogue side up, Total Malfunction EP if drogue side down. OPS also permits TI assessment that setting drogue side down may be advantageous; manage ensuing drogue/pair entanglement under its named procedure.\nReferences: OPS p.59; OPS p.60\nAsk evaluator: Will you score the newer side-spin branch and discretion?",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "59",
+          "pdfPage": 70,
+          "section": "Freefall"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "60",
+          "pdfPage": 71,
+          "section": "Side-spin discretion"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Older test omits drogue-side-down discretion and heel-assisted leg correction; OPS pp.59–60 includes both.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall",
+        "manual_cross_reference",
+        "difference"
+      ],
+      "sourceAnswer": "Bring student's arms in, place wrists at hips; straighten to tracking position; roll belly-to-earth as spin slows. If not corrected in 10 seconds, set drogue if drogue side up; if drogue side down, Total Malfunction EP. Older test omits newer discretionary note and heel-assistance detail.",
+      "officialAnswer": "Use the listed arms/legs/tracking correction. If unsuccessful within ten seconds, default is set drogue if drogue side up, Total Malfunction EP if drogue side down. OPS also permits TI assessment that setting drogue side down may be advantageous; manage ensuing drogue/pair entanglement under its named procedure.",
+      "comparison": {
+        "status": "difference",
+        "summary": "Older test omits drogue-side-down discretion and heel-assisted leg correction; OPS pp.59–60 includes both.",
+        "officialAnswer": "Use the listed arms/legs/tracking correction. If unsuccessful within ten seconds, default is set drogue if drogue side up, Total Malfunction EP if drogue side down. OPS also permits TI assessment that setting drogue side down may be advantageous; manage ensuing drogue/pair entanglement under its named procedure.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "59",
+            "pdfPage": 70,
+            "section": "Freefall"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "60",
+            "pdfPage": 71,
+            "section": "Side-spin discretion"
+          }
+        ],
+        "evaluatorQuestion": "Will you score the newer side-spin branch and discretion?",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      },
+      "reviewLabel": "Source comparison 2 of 10: Performance Test (2 of 2)"
+    },
+    {
+      "id": "sigma-ep-study-guide-021",
+      "category": "Freefall",
+      "type": "recall",
+      "question": "What if the left arm is incapacitated before drogue deployment?",
+      "answer": "Attempt to free arm; set drogue; check drogue; release drogue. If main malfunctions and arm remains incapacitated, pull cutaway and deploy reserve with RSL. If unable to release drogue with right hand, use RSL to deploy reserve.\n\nOfficial-manual comparison [DIFFERENCE FOUND]: The 2026 guide still orders a freeing attempt before setting the drogue and makes release appear unconditional. OPS sets/checks drogue first, then gives a one-attempt student-grab branch.\nManual guidance: Set drogue; check drogue. If incapacitation is caused by the student grabbing, make one freeing attempt: if successful continue jump; if unsuccessful release drogue. If main malfunctions and left arm remains incapacitated, pull cutaway and deploy reserve with RSL. If right hand cannot release drogue, use RSL to deploy reserve.\nReferences: OPS p.60\nAsk evaluator: Do you expect drogue set/check before the one freeing attempt, and continuation if it succeeds? How does injury differ from student grabbing?",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Official-manual comparison [DIFFERENCE FOUND]: The 2026 guide still orders a freeing attempt before setting the drogue and makes release appear unconditional. OPS sets/checks drogue first, then gives a one-attempt student-grab branch.\nManual guidance: Set drogue; check drogue. If incapacitation is caused by the student grabbing, make one freeing attempt: if successful continue jump; if unsuccessful release drogue. If main malfunctions and left arm remains incapacitated, pull cutaway and deploy reserve with RSL. If right hand cannot release drogue, use RSL to deploy reserve.\nReferences: OPS p.60\nAsk evaluator: Do you expect drogue set/check before the one freeing attempt, and continuation if it succeeds? How does injury differ from student grabbing?",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "sigma-ep-study-guide",
+          "printedPage": "2",
+          "imageFilename": "1000013736.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "60",
+          "pdfPage": 71,
+          "section": "Freefall"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "The 2026 guide still orders a freeing attempt before setting the drogue and makes release appear unconditional. OPS sets/checks drogue first, then gives a one-attempt student-grab branch.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall",
+        "manual_cross_reference",
+        "difference"
+      ],
+      "sourceAnswer": "Attempt to free arm; set drogue; check drogue; release drogue. If main malfunctions and arm remains incapacitated, pull cutaway and deploy reserve with RSL. If unable to release drogue with right hand, use RSL to deploy reserve.",
+      "officialAnswer": "Set drogue; check drogue. If incapacitation is caused by the student grabbing, make one freeing attempt: if successful continue jump; if unsuccessful release drogue. If main malfunctions and left arm remains incapacitated, pull cutaway and deploy reserve with RSL. If right hand cannot release drogue, use RSL to deploy reserve.",
+      "comparison": {
+        "status": "difference",
+        "summary": "The 2026 guide still orders a freeing attempt before setting the drogue and makes release appear unconditional. OPS sets/checks drogue first, then gives a one-attempt student-grab branch.",
+        "officialAnswer": "Set drogue; check drogue. If incapacitation is caused by the student grabbing, make one freeing attempt: if successful continue jump; if unsuccessful release drogue. If main malfunctions and left arm remains incapacitated, pull cutaway and deploy reserve with RSL. If right hand cannot release drogue, use RSL to deploy reserve.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "60",
+            "pdfPage": 71,
+            "section": "Freefall"
+          }
+        ],
+        "evaluatorQuestion": "Do you expect drogue set/check before the one freeing attempt, and continuation if it succeeds? How does injury differ from student grabbing?",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      },
+      "reviewLabel": "Source comparison 3 of 10: Study Guide (1 of 2)"
+    },
+    {
+      "id": "sigma-ep-performance-test-017",
+      "category": "Freefall",
+      "type": "recall",
+      "question": "What if the left arm is incapacitated before drogue deployment?",
+      "answer": "Attempt to free arm; set and check drogue. If main malfunctions and left arm remains incapacitated, pull cutaway and deploy reserve with RSL. If unable to release drogue with right hand, use RSL to deploy reserve. The test does not explicitly list release drogue between check and main-malfunction condition.\n\nOfficial-manual comparison [DIFFERENCE FOUND]: Older test starts with freeing the arm and does not explicitly list release between drogue check and the main-malfunction branch. OPS sets/checks first, then one student-grab attempt with continue-versus-release branches.\nManual guidance: Set drogue; check drogue. If incapacitation is caused by the student grabbing, make one freeing attempt: if successful continue jump; if unsuccessful release drogue. If main malfunctions and left arm remains incapacitated, pull cutaway and deploy reserve with RSL. If right hand cannot release drogue, use RSL to deploy reserve.\nReferences: OPS p.60\nAsk evaluator: Do you expect drogue set/check before the one freeing attempt, and continuation if it succeeds? How does injury differ from student grabbing?",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Official-manual comparison [DIFFERENCE FOUND]: Older test starts with freeing the arm and does not explicitly list release between drogue check and the main-malfunction branch. OPS sets/checks first, then one student-grab attempt with continue-versus-release branches.\nManual guidance: Set drogue; check drogue. If incapacitation is caused by the student grabbing, make one freeing attempt: if successful continue jump; if unsuccessful release drogue. If main malfunctions and left arm remains incapacitated, pull cutaway and deploy reserve with RSL. If right hand cannot release drogue, use RSL to deploy reserve.\nReferences: OPS p.60\nAsk evaluator: Do you expect drogue set/check before the one freeing attempt, and continuation if it succeeds? How does injury differ from student grabbing?",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "1",
+          "imageFilename": "1000013741.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "60",
+          "pdfPage": 71,
+          "section": "Freefall"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Older test starts with freeing the arm and does not explicitly list release between drogue check and the main-malfunction branch. OPS sets/checks first, then one student-grab attempt with continue-versus-release branches.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall",
+        "manual_cross_reference",
+        "difference"
+      ],
+      "sourceAnswer": "Attempt to free arm; set and check drogue. If main malfunctions and left arm remains incapacitated, pull cutaway and deploy reserve with RSL. If unable to release drogue with right hand, use RSL to deploy reserve. The test does not explicitly list release drogue between check and main-malfunction condition.",
+      "officialAnswer": "Set drogue; check drogue. If incapacitation is caused by the student grabbing, make one freeing attempt: if successful continue jump; if unsuccessful release drogue. If main malfunctions and left arm remains incapacitated, pull cutaway and deploy reserve with RSL. If right hand cannot release drogue, use RSL to deploy reserve.",
+      "comparison": {
+        "status": "difference",
+        "summary": "Older test starts with freeing the arm and does not explicitly list release between drogue check and the main-malfunction branch. OPS sets/checks first, then one student-grab attempt with continue-versus-release branches.",
+        "officialAnswer": "Set drogue; check drogue. If incapacitation is caused by the student grabbing, make one freeing attempt: if successful continue jump; if unsuccessful release drogue. If main malfunctions and left arm remains incapacitated, pull cutaway and deploy reserve with RSL. If right hand cannot release drogue, use RSL to deploy reserve.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "60",
+            "pdfPage": 71,
+            "section": "Freefall"
+          }
+        ],
+        "evaluatorQuestion": "Do you expect drogue set/check before the one freeing attempt, and continuation if it succeeds? How does injury differ from student grabbing?",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      },
+      "reviewLabel": "Source comparison 3 of 10: Performance Test (2 of 2)"
+    },
+    {
+      "id": "sigma-ep-study-guide-025",
+      "category": "Drogue fall",
+      "type": "recall",
+      "question": "What if the drogue remains uninflated after being set?",
+      "answer": "Continue systems check. If it does not inflate within 6 seconds, release drogue; if it fails to extract deployment bag, Open Container with Drogue Issues EP.\n\nOfficial-manual comparison [QUALIFIED / CONTEXT]: Operational six-second response agrees. OWNER describes possible 6–8-second inflation of an uncocked drogue; this describes behavior, not a longer operational waiting instruction.\nManual guidance: Continue systems check. If it does not inflate within 6 seconds, release drogue; if it fails to extract deployment bag, Open Container with Drogue Issues EP.\nReferences: OPS p.61; OWNER p.116\nAsk evaluator: Confirm the six-second release trigger despite the Owner Manual behavior description.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Official-manual comparison [QUALIFIED / CONTEXT]: Operational six-second response agrees. OWNER describes possible 6–8-second inflation of an uncocked drogue; this describes behavior, not a longer operational waiting instruction.\nManual guidance: Continue systems check. If it does not inflate within 6 seconds, release drogue; if it fails to extract deployment bag, Open Container with Drogue Issues EP.\nReferences: OPS p.61; OWNER p.116\nAsk evaluator: Confirm the six-second release trigger despite the Owner Manual behavior description.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "sigma-ep-study-guide",
+          "printedPage": "3",
+          "imageFilename": "1000013737.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "61",
+          "pdfPage": 72,
+          "section": "Drogue fall"
+        },
+        {
+          "sourceId": "owner",
+          "printedPage": "116",
+          "pdfPage": 126,
+          "section": "Uncocked drogue inflation behavior"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Operational six-second response agrees. OWNER describes possible 6–8-second inflation of an uncocked drogue; this describes behavior, not a longer operational waiting instruction.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall",
+        "manual_cross_reference",
+        "qualified"
+      ],
+      "sourceAnswer": "Continue systems check. If it does not inflate within 6 seconds, release drogue; if it fails to extract deployment bag, Open Container with Drogue Issues EP.",
+      "officialAnswer": "Continue systems check. If it does not inflate within 6 seconds, release drogue; if it fails to extract deployment bag, Open Container with Drogue Issues EP.",
+      "comparison": {
+        "status": "qualified",
+        "summary": "Operational six-second response agrees. OWNER describes possible 6–8-second inflation of an uncocked drogue; this describes behavior, not a longer operational waiting instruction.",
+        "officialAnswer": "Continue systems check. If it does not inflate within 6 seconds, release drogue; if it fails to extract deployment bag, Open Container with Drogue Issues EP.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "61",
+            "pdfPage": 72,
+            "section": "Drogue fall"
+          },
+          {
+            "sourceId": "owner",
+            "printedPage": "116",
+            "pdfPage": 126,
+            "section": "Uncocked drogue inflation behavior"
+          }
+        ],
+        "evaluatorQuestion": "Confirm the six-second release trigger despite the Owner Manual behavior description.",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      },
+      "reviewLabel": "Source comparison 4 of 10: Study Guide (1 of 2)"
+    },
+    {
+      "id": "sigma-ep-performance-test-021",
+      "category": "Drogue fall",
+      "type": "recall",
+      "question": "What if the drogue remains uninflated after being set?",
+      "answer": "Wait 6 seconds to determine whether drogue inflates; if not, release drogue; if it fails to extract deployment bag, Open Container with Drogue Issues EP.\n\nOfficial-manual comparison [QUALIFIED / CONTEXT]: The six-second response agrees, but OPS continues systems check during that interval; OWNER's 6–8-second inflation description does not extend the six-second response.\nManual guidance: Continue systems check. If it does not inflate within 6 seconds, release drogue; if it fails to extract deployment bag, Open Container with Drogue Issues EP.\nReferences: OPS p.61; OWNER p.116\nAsk evaluator: Confirm the six-second release trigger despite the Owner Manual behavior description.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Official-manual comparison [QUALIFIED / CONTEXT]: The six-second response agrees, but OPS continues systems check during that interval; OWNER's 6–8-second inflation description does not extend the six-second response.\nManual guidance: Continue systems check. If it does not inflate within 6 seconds, release drogue; if it fails to extract deployment bag, Open Container with Drogue Issues EP.\nReferences: OPS p.61; OWNER p.116\nAsk evaluator: Confirm the six-second release trigger despite the Owner Manual behavior description.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "2",
+          "imageFilename": "1000013742.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "61",
+          "pdfPage": 72,
+          "section": "Drogue fall"
+        },
+        {
+          "sourceId": "owner",
+          "printedPage": "116",
+          "pdfPage": 126,
+          "section": "Uncocked drogue inflation behavior"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "The six-second response agrees, but OPS continues systems check during that interval; OWNER's 6–8-second inflation description does not extend the six-second response.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall",
+        "manual_cross_reference",
+        "qualified"
+      ],
+      "sourceAnswer": "Wait 6 seconds to determine whether drogue inflates; if not, release drogue; if it fails to extract deployment bag, Open Container with Drogue Issues EP.",
+      "officialAnswer": "Continue systems check. If it does not inflate within 6 seconds, release drogue; if it fails to extract deployment bag, Open Container with Drogue Issues EP.",
+      "comparison": {
+        "status": "qualified",
+        "summary": "The six-second response agrees, but OPS continues systems check during that interval; OWNER's 6–8-second inflation description does not extend the six-second response.",
+        "officialAnswer": "Continue systems check. If it does not inflate within 6 seconds, release drogue; if it fails to extract deployment bag, Open Container with Drogue Issues EP.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "61",
+            "pdfPage": 72,
+            "section": "Drogue fall"
+          },
+          {
+            "sourceId": "owner",
+            "printedPage": "116",
+            "pdfPage": 126,
+            "section": "Uncocked drogue inflation behavior"
+          }
+        ],
+        "evaluatorQuestion": "Confirm the six-second release trigger despite the Owner Manual behavior description.",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      },
+      "reviewLabel": "Source comparison 4 of 10: Performance Test (2 of 2)"
+    },
+    {
+      "id": "sigma-ep-study-guide-032",
+      "category": "Drogue fall",
+      "type": "recall",
+      "question": "What if the right arm is incapacitated with the drogue out?",
+      "answer": "Release using left drogue release. If unable to release, deploy reserve. If main malfunctions and right arm remains incapacitated, deploy reserve. The guide also repeats reserve deployment if unable to release with left hand.\n\nOfficial-manual comparison [QUALIFIED / CONTEXT]: Default response agrees; read with the discretionary left-handed cutaway/student-assistance note in the following card.\nManual guidance: Release using left drogue release. If unable to release, deploy reserve. If main malfunctions and right arm remains incapacitated, deploy reserve. The guide also repeats reserve deployment if unable to release with left hand. OPS permits assessment of left-handed cutaway access and appropriate student assistance in a slow-speed malfunction.\nReferences: OPS p.62\nAsk evaluator: When should I use the reserve-only default versus discretionary cutaway/assistance?",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Official-manual comparison [QUALIFIED / CONTEXT]: Default response agrees; read with the discretionary left-handed cutaway/student-assistance note in the following card.\nManual guidance: Release using left drogue release. If unable to release, deploy reserve. If main malfunctions and right arm remains incapacitated, deploy reserve. The guide also repeats reserve deployment if unable to release with left hand. OPS permits assessment of left-handed cutaway access and appropriate student assistance in a slow-speed malfunction.\nReferences: OPS p.62\nAsk evaluator: When should I use the reserve-only default versus discretionary cutaway/assistance?",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "sigma-ep-study-guide",
+          "printedPage": "3",
+          "imageFilename": "1000013737.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "62",
+          "pdfPage": 73,
+          "section": "Drogue fall"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Default response agrees; read with the discretionary left-handed cutaway/student-assistance note in the following card.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall",
+        "manual_cross_reference",
+        "qualified"
+      ],
+      "sourceAnswer": "Release using left drogue release. If unable to release, deploy reserve. If main malfunctions and right arm remains incapacitated, deploy reserve. The guide also repeats reserve deployment if unable to release with left hand.",
+      "officialAnswer": "Release using left drogue release. If unable to release, deploy reserve. If main malfunctions and right arm remains incapacitated, deploy reserve. The guide also repeats reserve deployment if unable to release with left hand. OPS permits assessment of left-handed cutaway access and appropriate student assistance in a slow-speed malfunction.",
+      "comparison": {
+        "status": "qualified",
+        "summary": "Default response agrees; read with the discretionary left-handed cutaway/student-assistance note in the following card.",
+        "officialAnswer": "Release using left drogue release. If unable to release, deploy reserve. If main malfunctions and right arm remains incapacitated, deploy reserve. The guide also repeats reserve deployment if unable to release with left hand. OPS permits assessment of left-handed cutaway access and appropriate student assistance in a slow-speed malfunction.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "62",
+            "pdfPage": 73,
+            "section": "Drogue fall"
+          }
+        ],
+        "evaluatorQuestion": "When should I use the reserve-only default versus discretionary cutaway/assistance?",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      },
+      "reviewLabel": "Source comparison 5 of 10: Study Guide (1 of 2)"
+    },
+    {
+      "id": "sigma-ep-performance-test-028",
+      "category": "Drogue fall",
+      "type": "recall",
+      "question": "What if the right arm is incapacitated with the drogue out?",
+      "answer": "Attempt to free right arm; release drogue using left release. If main malfunctions and arm remains incapacitated, deploy reserve; if unable to release with left hand, deploy reserve. Newer guide omits initial free-arm attempt and adds discretion note.\n\nOfficial-manual comparison [DIFFERENCE FOUND]: Older test inserts a freeing attempt before left-hand release and omits the newer cutaway/student-assistance discretion. OPS p.62 starts with left-hand release.\nManual guidance: Release using left drogue release. If unable to release, deploy reserve. If main malfunctions and right arm remains incapacitated, deploy reserve. The guide also repeats reserve deployment if unable to release with left hand. OPS permits assessment of left-handed cutaway access and appropriate student assistance in a slow-speed malfunction.\nReferences: OPS p.62\nAsk evaluator: Should I use immediate left-hand release, and when is discretionary cutaway/assistance appropriate?",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Official-manual comparison [DIFFERENCE FOUND]: Older test inserts a freeing attempt before left-hand release and omits the newer cutaway/student-assistance discretion. OPS p.62 starts with left-hand release.\nManual guidance: Release using left drogue release. If unable to release, deploy reserve. If main malfunctions and right arm remains incapacitated, deploy reserve. The guide also repeats reserve deployment if unable to release with left hand. OPS permits assessment of left-handed cutaway access and appropriate student assistance in a slow-speed malfunction.\nReferences: OPS p.62\nAsk evaluator: Should I use immediate left-hand release, and when is discretionary cutaway/assistance appropriate?",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "3",
+          "imageFilename": "1000013743.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "62",
+          "pdfPage": 73,
+          "section": "Drogue fall"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Older test inserts a freeing attempt before left-hand release and omits the newer cutaway/student-assistance discretion. OPS p.62 starts with left-hand release.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall",
+        "manual_cross_reference",
+        "difference"
+      ],
+      "sourceAnswer": "Attempt to free right arm; release drogue using left release. If main malfunctions and arm remains incapacitated, deploy reserve; if unable to release with left hand, deploy reserve. Newer guide omits initial free-arm attempt and adds discretion note.",
+      "officialAnswer": "Release using left drogue release. If unable to release, deploy reserve. If main malfunctions and right arm remains incapacitated, deploy reserve. The guide also repeats reserve deployment if unable to release with left hand. OPS permits assessment of left-handed cutaway access and appropriate student assistance in a slow-speed malfunction.",
+      "comparison": {
+        "status": "difference",
+        "summary": "Older test inserts a freeing attempt before left-hand release and omits the newer cutaway/student-assistance discretion. OPS p.62 starts with left-hand release.",
+        "officialAnswer": "Release using left drogue release. If unable to release, deploy reserve. If main malfunctions and right arm remains incapacitated, deploy reserve. The guide also repeats reserve deployment if unable to release with left hand. OPS permits assessment of left-handed cutaway access and appropriate student assistance in a slow-speed malfunction.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "62",
+            "pdfPage": 73,
+            "section": "Drogue fall"
+          }
+        ],
+        "evaluatorQuestion": "Should I use immediate left-hand release, and when is discretionary cutaway/assistance appropriate?",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      },
+      "reviewLabel": "Source comparison 5 of 10: Performance Test (2 of 2)"
+    },
+    {
+      "id": "sigma-ep-study-guide-040",
+      "category": "Deployment",
+      "type": "recall",
+      "question": "What is the hard-drogue-release sequence in this guide?",
+      "answer": "Make second attempt; pull opposite release; if unsuccessful pull both release handles simultaneously. If drogue does not release, Total Malfunction EP.\n\nOfficial-manual comparison [QUALIFIED / CONTEXT]: Sequence agrees. If release actually succeeds/collapses the drogue but bag is not extracted, the adjacent collapsed-drogue-in-tow branch applies.\nManual guidance: Use opposite release then both releases simultaneously if unsuccessful; if drogue does not release, Total Malfunction EP. Collapsed drogue in tow instead uses Open Container with Drogue Issues EP.\nReferences: OPS p.63\nAsk evaluator: Will the scenario distinguish failure to release from collapse without bag extraction?",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Official-manual comparison [QUALIFIED / CONTEXT]: Sequence agrees. If release actually succeeds/collapses the drogue but bag is not extracted, the adjacent collapsed-drogue-in-tow branch applies.\nManual guidance: Use opposite release then both releases simultaneously if unsuccessful; if drogue does not release, Total Malfunction EP. Collapsed drogue in tow instead uses Open Container with Drogue Issues EP.\nReferences: OPS p.63\nAsk evaluator: Will the scenario distinguish failure to release from collapse without bag extraction?",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "sigma-ep-study-guide",
+          "printedPage": "4",
+          "imageFilename": "1000013738.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "63",
+          "pdfPage": 74,
+          "section": "Deployment"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Sequence agrees. If release actually succeeds/collapses the drogue but bag is not extracted, the adjacent collapsed-drogue-in-tow branch applies.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall",
+        "manual_cross_reference",
+        "qualified"
+      ],
+      "sourceAnswer": "Make second attempt; pull opposite release; if unsuccessful pull both release handles simultaneously. If drogue does not release, Total Malfunction EP.",
+      "officialAnswer": "Use opposite release then both releases simultaneously if unsuccessful; if drogue does not release, Total Malfunction EP. Collapsed drogue in tow instead uses Open Container with Drogue Issues EP.",
+      "comparison": {
+        "status": "qualified",
+        "summary": "Sequence agrees. If release actually succeeds/collapses the drogue but bag is not extracted, the adjacent collapsed-drogue-in-tow branch applies.",
+        "officialAnswer": "Use opposite release then both releases simultaneously if unsuccessful; if drogue does not release, Total Malfunction EP. Collapsed drogue in tow instead uses Open Container with Drogue Issues EP.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "63",
+            "pdfPage": 74,
+            "section": "Deployment"
+          }
+        ],
+        "evaluatorQuestion": "Will the scenario distinguish failure to release from collapse without bag extraction?",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      },
+      "reviewLabel": "Source comparison 6 of 10: Study Guide (1 of 2)"
+    },
+    {
+      "id": "sigma-ep-performance-test-035",
+      "category": "Deployment",
+      "type": "recall",
+      "question": "What is the hard-drogue-release sequence in this guide?",
+      "answer": "Second attempt; pull opposite release; if unsuccessful pull both releases simultaneously. If drogue does not release, Total Malfunction EP. If second attempt collapses drogue but does not extract deployment bag, Open Container with Drogue Issues EP.\n\nOfficial-manual comparison [QUALIFIED / CONTEXT]: Older test's explicit collapse-without-bag-extraction branch agrees with OPS's adjacent Collapsed Drogue in Tow entry; it is not a contradiction.\nManual guidance: Use opposite release then both releases simultaneously if unsuccessful; if drogue does not release, Total Malfunction EP. Collapsed drogue in tow instead uses Open Container with Drogue Issues EP.\nReferences: OPS p.63\nAsk evaluator: Will the scenario distinguish failure to release from collapse without bag extraction?",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Official-manual comparison [QUALIFIED / CONTEXT]: Older test's explicit collapse-without-bag-extraction branch agrees with OPS's adjacent Collapsed Drogue in Tow entry; it is not a contradiction.\nManual guidance: Use opposite release then both releases simultaneously if unsuccessful; if drogue does not release, Total Malfunction EP. Collapsed drogue in tow instead uses Open Container with Drogue Issues EP.\nReferences: OPS p.63\nAsk evaluator: Will the scenario distinguish failure to release from collapse without bag extraction?",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "3",
+          "imageFilename": "1000013743.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "63",
+          "pdfPage": 74,
+          "section": "Deployment"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Older test's explicit collapse-without-bag-extraction branch agrees with OPS's adjacent Collapsed Drogue in Tow entry; it is not a contradiction.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall",
+        "manual_cross_reference",
+        "qualified"
+      ],
+      "sourceAnswer": "Second attempt; pull opposite release; if unsuccessful pull both releases simultaneously. If drogue does not release, Total Malfunction EP. If second attempt collapses drogue but does not extract deployment bag, Open Container with Drogue Issues EP.",
+      "officialAnswer": "Use opposite release then both releases simultaneously if unsuccessful; if drogue does not release, Total Malfunction EP. Collapsed drogue in tow instead uses Open Container with Drogue Issues EP.",
+      "comparison": {
+        "status": "qualified",
+        "summary": "Older test's explicit collapse-without-bag-extraction branch agrees with OPS's adjacent Collapsed Drogue in Tow entry; it is not a contradiction.",
+        "officialAnswer": "Use opposite release then both releases simultaneously if unsuccessful; if drogue does not release, Total Malfunction EP. Collapsed drogue in tow instead uses Open Container with Drogue Issues EP.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "63",
+            "pdfPage": 74,
+            "section": "Deployment"
+          }
+        ],
+        "evaluatorQuestion": "Will the scenario distinguish failure to release from collapse without bag extraction?",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      },
+      "reviewLabel": "Source comparison 6 of 10: Performance Test (2 of 2)"
+    },
+    {
+      "id": "sigma-ep-study-guide-044",
+      "category": "Deployment",
+      "type": "recall",
+      "question": "How does body orientation affect the bag-lock EP?",
+      "answer": "Horizontal/belly-to-earth: Open Container with Drogue Issues EP. Any other orientation: Partial Malfunction EP. If RSL hangs up, sweep with right hand to clear it.\n\nOfficial-manual comparison [VERIFIED]: The course answer agrees with the cited Sigma procedure.\nReferences: OPS p.64; OPS p.56",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Official-manual comparison [VERIFIED]: The course answer agrees with the cited Sigma procedure.\nReferences: OPS p.64; OPS p.56",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-study-guide",
+          "printedPage": "4",
+          "imageFilename": "1000013738.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "64",
+          "pdfPage": 75,
+          "section": "Deployment / How does body orientation affect the bag-lock EP?"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "56",
+          "pdfPage": 67,
+          "section": "Core EP sequences used by scenario labels"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall",
+        "manual_cross_reference",
+        "verified"
+      ],
+      "sourceAnswer": "Horizontal/belly-to-earth: Open Container with Drogue Issues EP. Any other orientation: Partial Malfunction EP. If RSL hangs up, sweep with right hand to clear it.",
+      "officialAnswer": "Horizontal/belly-to-earth: Open Container with Drogue Issues EP. Any other orientation: Partial Malfunction EP. If RSL hangs up, sweep with right hand to clear it.",
+      "comparison": {
+        "status": "verified",
+        "summary": "The course answer agrees with the cited Sigma procedure.",
+        "officialAnswer": "Horizontal/belly-to-earth: Open Container with Drogue Issues EP. Any other orientation: Partial Malfunction EP. If RSL hangs up, sweep with right hand to clear it.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "64",
+            "pdfPage": 75,
+            "section": "Deployment / How does body orientation affect the bag-lock EP?"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "56",
+            "pdfPage": 67,
+            "section": "Core EP sequences used by scenario labels"
+          }
+        ],
+        "evaluatorQuestion": null,
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      },
+      "reviewLabel": "Source comparison 7 of 10: Study Guide (1 of 2)"
+    },
+    {
+      "id": "sigma-ep-performance-test-039",
+      "category": "Deployment",
+      "type": "recall",
+      "question": "How does body orientation affect the bag-lock EP?",
+      "answer": "This older test lists Partial Malfunction EP for bag lock, with right-hand sweep if RSL hangs up. The 2026 guide instead branches by body orientation: horizontal/belly-to-earth uses Open Container with Drogue Issues EP; other orientation uses Partial Malfunction EP.\n\nOfficial-manual comparison [DIFFERENCE FOUND]: Older test says Partial Malfunction EP for all bag locks. OPS p.64 uses Open Container with Drogue Issues EP when horizontal/belly-to-earth and Partial Malfunction EP in other orientations.\nManual guidance: This older test lists Partial Malfunction EP for bag lock, with right-hand sweep if RSL hangs up. The 2026 guide instead branches by body orientation: horizontal/belly-to-earth uses Open Container with Drogue Issues EP; other orientation uses Partial Malfunction EP.\nReferences: OPS p.64; OPS p.56\nAsk evaluator: Will body orientation be specified and the newer RSL/EP branch scored?",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Official-manual comparison [DIFFERENCE FOUND]: Older test says Partial Malfunction EP for all bag locks. OPS p.64 uses Open Container with Drogue Issues EP when horizontal/belly-to-earth and Partial Malfunction EP in other orientations.\nManual guidance: This older test lists Partial Malfunction EP for bag lock, with right-hand sweep if RSL hangs up. The 2026 guide instead branches by body orientation: horizontal/belly-to-earth uses Open Container with Drogue Issues EP; other orientation uses Partial Malfunction EP.\nReferences: OPS p.64; OPS p.56\nAsk evaluator: Will body orientation be specified and the newer RSL/EP branch scored?",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "3",
+          "imageFilename": "1000013743.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "64",
+          "pdfPage": 75,
+          "section": "Deployment / How does body orientation affect the bag-lock EP?"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "56",
+          "pdfPage": 67,
+          "section": "Core EP sequences used by scenario labels"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Older test says Partial Malfunction EP for all bag locks. OPS p.64 uses Open Container with Drogue Issues EP when horizontal/belly-to-earth and Partial Malfunction EP in other orientations.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall",
+        "manual_cross_reference",
+        "difference"
+      ],
+      "sourceAnswer": "This older test lists Partial Malfunction EP for bag lock, with right-hand sweep if RSL hangs up. The 2026 guide instead branches by body orientation: horizontal/belly-to-earth uses Open Container with Drogue Issues EP; other orientation uses Partial Malfunction EP.",
+      "officialAnswer": "This older test lists Partial Malfunction EP for bag lock, with right-hand sweep if RSL hangs up. The 2026 guide instead branches by body orientation: horizontal/belly-to-earth uses Open Container with Drogue Issues EP; other orientation uses Partial Malfunction EP.",
+      "comparison": {
+        "status": "difference",
+        "summary": "Older test says Partial Malfunction EP for all bag locks. OPS p.64 uses Open Container with Drogue Issues EP when horizontal/belly-to-earth and Partial Malfunction EP in other orientations.",
+        "officialAnswer": "This older test lists Partial Malfunction EP for bag lock, with right-hand sweep if RSL hangs up. The 2026 guide instead branches by body orientation: horizontal/belly-to-earth uses Open Container with Drogue Issues EP; other orientation uses Partial Malfunction EP.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "64",
+            "pdfPage": 75,
+            "section": "Deployment / How does body orientation affect the bag-lock EP?"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "56",
+            "pdfPage": 67,
+            "section": "Core EP sequences used by scenario labels"
+          }
+        ],
+        "evaluatorQuestion": "Will body orientation be specified and the newer RSL/EP branch scored?",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      },
+      "reviewLabel": "Source comparison 7 of 10: Performance Test (2 of 2)"
+    },
+    {
+      "id": "sigma-ep-study-guide-051",
+      "category": "Post-opening",
+      "type": "recall",
+      "question": "What is the broken-control-line response and its qualification?",
+      "answer": "Unstow all control lines; controllability check; determine rear-riser stall point; land using rear risers if safely landable, otherwise Partial Malfunction EP. Depending on which primary or secondary line failed, landing with only the remaining primary or secondary brakes may be possible; TI assesses situation.\n\nOfficial-manual comparison [VERIFIED]: The course answer agrees with the cited Sigma procedure.\nReferences: OPS p.65; OPS p.56",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Official-manual comparison [VERIFIED]: The course answer agrees with the cited Sigma procedure.\nReferences: OPS p.65; OPS p.56",
+      "status": "verified",
+      "references": [
+        {
+          "sourceId": "sigma-ep-study-guide",
+          "printedPage": "4",
+          "imageFilename": "1000013738.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "65",
+          "pdfPage": 76,
+          "section": "Post-opening / What is the broken-control-line response and its qualification?"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "56",
+          "pdfPage": 67,
+          "section": "Core EP sequences used by scenario labels"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": false,
+      "reviewNote": null,
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall",
+        "manual_cross_reference",
+        "verified"
+      ],
+      "sourceAnswer": "Unstow all control lines; controllability check; determine rear-riser stall point; land using rear risers if safely landable, otherwise Partial Malfunction EP. Depending on which primary or secondary line failed, landing with only the remaining primary or secondary brakes may be possible; TI assesses situation.",
+      "officialAnswer": "Unstow all control lines; controllability check; determine rear-riser stall point; land using rear risers if safely landable, otherwise Partial Malfunction EP. Depending on which primary or secondary line failed, landing with only the remaining primary or secondary brakes may be possible; TI assesses situation.",
+      "comparison": {
+        "status": "verified",
+        "summary": "The course answer agrees with the cited Sigma procedure.",
+        "officialAnswer": "Unstow all control lines; controllability check; determine rear-riser stall point; land using rear risers if safely landable, otherwise Partial Malfunction EP. Depending on which primary or secondary line failed, landing with only the remaining primary or secondary brakes may be possible; TI assesses situation.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "65",
+            "pdfPage": 76,
+            "section": "Post-opening / What is the broken-control-line response and its qualification?"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "56",
+            "pdfPage": 67,
+            "section": "Core EP sequences used by scenario labels"
+          }
+        ],
+        "evaluatorQuestion": null,
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      },
+      "reviewLabel": "Source comparison 8 of 10: Study Guide (1 of 2)"
+    },
+    {
+      "id": "sigma-ep-performance-test-046",
+      "category": "Post-opening",
+      "type": "recall",
+      "question": "What is the broken-control-line response and its qualification?",
+      "answer": "Unstow all control lines; controllability check; determine rear-riser stall point; land on rear risers if safe, otherwise Partial Malfunction EP. Older test omits newer primary/secondary brake qualification.\n\nOfficial-manual comparison [PARTIAL SUPPORT / OMITTED DETAILS]: Rear-riser landing branch agrees, but older test omits the manual's possible use of only intact primary or secondary brakes, depending on the failed control line.\nManual guidance: Unstow all control lines; controllability check; determine rear-riser stall point; land on rear risers if safe, otherwise Partial Malfunction EP. Older test omits newer primary/secondary brake qualification.\nReferences: OPS p.65; OPS p.56\nAsk evaluator: How do primary versus secondary line failures change the safely-landable assessment?",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Official-manual comparison [PARTIAL SUPPORT / OMITTED DETAILS]: Rear-riser landing branch agrees, but older test omits the manual's possible use of only intact primary or secondary brakes, depending on the failed control line.\nManual guidance: Unstow all control lines; controllability check; determine rear-riser stall point; land on rear risers if safe, otherwise Partial Malfunction EP. Older test omits newer primary/secondary brake qualification.\nReferences: OPS p.65; OPS p.56\nAsk evaluator: How do primary versus secondary line failures change the safely-landable assessment?",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "4",
+          "imageFilename": "1000013744.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "65",
+          "pdfPage": 76,
+          "section": "Post-opening / What is the broken-control-line response and its qualification?"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "56",
+          "pdfPage": 67,
+          "section": "Core EP sequences used by scenario labels"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Rear-riser landing branch agrees, but older test omits the manual's possible use of only intact primary or secondary brakes, depending on the failed control line.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall",
+        "manual_cross_reference",
+        "partially_supported"
+      ],
+      "sourceAnswer": "Unstow all control lines; controllability check; determine rear-riser stall point; land on rear risers if safe, otherwise Partial Malfunction EP. Older test omits newer primary/secondary brake qualification.",
+      "officialAnswer": "Unstow all control lines; controllability check; determine rear-riser stall point; land on rear risers if safe, otherwise Partial Malfunction EP. Older test omits newer primary/secondary brake qualification.",
+      "comparison": {
+        "status": "partially_supported",
+        "summary": "Rear-riser landing branch agrees, but older test omits the manual's possible use of only intact primary or secondary brakes, depending on the failed control line.",
+        "officialAnswer": "Unstow all control lines; controllability check; determine rear-riser stall point; land on rear risers if safe, otherwise Partial Malfunction EP. Older test omits newer primary/secondary brake qualification.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "65",
+            "pdfPage": 76,
+            "section": "Post-opening / What is the broken-control-line response and its qualification?"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "56",
+            "pdfPage": 67,
+            "section": "Core EP sequences used by scenario labels"
+          }
+        ],
+        "evaluatorQuestion": "How do primary versus secondary line failures change the safely-landable assessment?",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      },
+      "reviewLabel": "Source comparison 8 of 10: Performance Test (2 of 2)"
+    },
+    {
+      "id": "sigma-ep-study-guide-057",
+      "category": "Post-opening",
+      "type": "recall",
+      "question": "What are the dual-canopy instructions on this form?",
+      "answer": "Canopy still in bag: attempt to contain. Biplane: fly front canopy. Side-by-side: gentle inputs, steer canopies into each other. Downplane: cut away main if risers are not entangled. Keep brake settings the same on main and reserve. If landing both, choose large open area and PLF.\n\nOfficial-manual comparison [PARTIAL SUPPORT / OMITTED DETAILS]: The handout compresses several state-dependent procedures; a biplane's dominant canopy is usually, not invariably, the front canopy.\nManual guidance: Establish entanglement certainty and match toggle configuration. Side-by-side: gentle inputs to steer canopies together. Biplane: small gentle turns on dominant canopy, usually front. Downplane: cut away main if risers not entangled. Separate canopies before elective main cutaway when certainly clear; the manual describes leftmost-rear-riser separation. If one canopy remains bagged, distinguish inflated reserve/bagged main from inflated main/bagged reserve; see OPS p.67 for clearing/cutaway versus gathering reserve and allowing inflation if it begins. Pick large open area and PLF if landing both. Apply 1,500-foot no-cutaway limitation.\nReferences: OPS p.66; OPS p.67; OPS p.55\nAsk evaluator: Please evaluate separate configurations, bagged-main/bagged-reserve cases, entanglement certainty, and the no-cutaway limit.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Official-manual comparison [PARTIAL SUPPORT / OMITTED DETAILS]: The handout compresses several state-dependent procedures; a biplane's dominant canopy is usually, not invariably, the front canopy.\nManual guidance: Establish entanglement certainty and match toggle configuration. Side-by-side: gentle inputs to steer canopies together. Biplane: small gentle turns on dominant canopy, usually front. Downplane: cut away main if risers not entangled. Separate canopies before elective main cutaway when certainly clear; the manual describes leftmost-rear-riser separation. If one canopy remains bagged, distinguish inflated reserve/bagged main from inflated main/bagged reserve; see OPS p.67 for clearing/cutaway versus gathering reserve and allowing inflation if it begins. Pick large open area and PLF if landing both. Apply 1,500-foot no-cutaway limitation.\nReferences: OPS p.66; OPS p.67; OPS p.55\nAsk evaluator: Please evaluate separate configurations, bagged-main/bagged-reserve cases, entanglement certainty, and the no-cutaway limit.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "sigma-ep-study-guide",
+          "printedPage": "5",
+          "imageFilename": "1000013739.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "66",
+          "pdfPage": 77,
+          "section": "Post-opening"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "67",
+          "pdfPage": 78,
+          "section": "Dual canopy partially deployed"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "55",
+          "pdfPage": 66,
+          "section": "No-cutaway limit"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "The handout compresses several state-dependent procedures; a biplane's dominant canopy is usually, not invariably, the front canopy.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall",
+        "manual_cross_reference",
+        "partially_supported"
+      ],
+      "sourceAnswer": "Canopy still in bag: attempt to contain. Biplane: fly front canopy. Side-by-side: gentle inputs, steer canopies into each other. Downplane: cut away main if risers are not entangled. Keep brake settings the same on main and reserve. If landing both, choose large open area and PLF.",
+      "officialAnswer": "Establish entanglement certainty and match toggle configuration. Side-by-side: gentle inputs to steer canopies together. Biplane: small gentle turns on dominant canopy, usually front. Downplane: cut away main if risers not entangled. Separate canopies before elective main cutaway when certainly clear; the manual describes leftmost-rear-riser separation. If one canopy remains bagged, distinguish inflated reserve/bagged main from inflated main/bagged reserve; see OPS p.67 for clearing/cutaway versus gathering reserve and allowing inflation if it begins. Pick large open area and PLF if landing both. Apply 1,500-foot no-cutaway limitation.",
+      "comparison": {
+        "status": "partially_supported",
+        "summary": "The handout compresses several state-dependent procedures; a biplane's dominant canopy is usually, not invariably, the front canopy.",
+        "officialAnswer": "Establish entanglement certainty and match toggle configuration. Side-by-side: gentle inputs to steer canopies together. Biplane: small gentle turns on dominant canopy, usually front. Downplane: cut away main if risers not entangled. Separate canopies before elective main cutaway when certainly clear; the manual describes leftmost-rear-riser separation. If one canopy remains bagged, distinguish inflated reserve/bagged main from inflated main/bagged reserve; see OPS p.67 for clearing/cutaway versus gathering reserve and allowing inflation if it begins. Pick large open area and PLF if landing both. Apply 1,500-foot no-cutaway limitation.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "66",
+            "pdfPage": 77,
+            "section": "Post-opening"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "67",
+            "pdfPage": 78,
+            "section": "Dual canopy partially deployed"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "55",
+            "pdfPage": 66,
+            "section": "No-cutaway limit"
+          }
+        ],
+        "evaluatorQuestion": "Please evaluate separate configurations, bagged-main/bagged-reserve cases, entanglement certainty, and the no-cutaway limit.",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      },
+      "reviewLabel": "Source comparison 9 of 10: Study Guide (1 of 2)"
+    },
+    {
+      "id": "sigma-ep-performance-test-051",
+      "category": "Post-opening",
+      "type": "recall",
+      "question": "What are the dual-canopy instructions on this form?",
+      "answer": "Contain canopy in bag; biplane fly front; side-by-side gentle inputs steering canopies together; downplane cut away main if risers not entangled. If entangled, try bringing canopies overhead by aggressively pulling a rear riser on either canopy. Keep brakes matched; choose large open area and PLF if landing both.\n\nOfficial-manual comparison [PARTIAL SUPPORT / OMITTED DETAILS]: Older test has an aggressive rear-riser maneuver for entangled downplanes not stated in the current dual-canopy section; it also compresses partially-deployed configurations.\nManual guidance: Establish entanglement certainty and match toggle configuration. Side-by-side: gentle inputs to steer canopies together. Biplane: small gentle turns on dominant canopy, usually front. Downplane: cut away main if risers not entangled. Separate canopies before elective main cutaway when certainly clear; the manual describes leftmost-rear-riser separation. If one canopy remains bagged, distinguish inflated reserve/bagged main from inflated main/bagged reserve; see OPS p.67 for clearing/cutaway versus gathering reserve and allowing inflation if it begins. Pick large open area and PLF if landing both. Apply 1,500-foot no-cutaway limitation.\nReferences: OPS p.66; OPS p.67; OPS p.55\nAsk evaluator: Is the older aggressive rear-riser maneuver still taught? Please distinguish bagged main/reserve and entangled/clear risers.",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Official-manual comparison [PARTIAL SUPPORT / OMITTED DETAILS]: Older test has an aggressive rear-riser maneuver for entangled downplanes not stated in the current dual-canopy section; it also compresses partially-deployed configurations.\nManual guidance: Establish entanglement certainty and match toggle configuration. Side-by-side: gentle inputs to steer canopies together. Biplane: small gentle turns on dominant canopy, usually front. Downplane: cut away main if risers not entangled. Separate canopies before elective main cutaway when certainly clear; the manual describes leftmost-rear-riser separation. If one canopy remains bagged, distinguish inflated reserve/bagged main from inflated main/bagged reserve; see OPS p.67 for clearing/cutaway versus gathering reserve and allowing inflation if it begins. Pick large open area and PLF if landing both. Apply 1,500-foot no-cutaway limitation.\nReferences: OPS p.66; OPS p.67; OPS p.55\nAsk evaluator: Is the older aggressive rear-riser maneuver still taught? Please distinguish bagged main/reserve and entangled/clear risers.",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "4",
+          "imageFilename": "1000013744.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "66",
+          "pdfPage": 77,
+          "section": "Post-opening"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "67",
+          "pdfPage": 78,
+          "section": "Dual canopy partially deployed"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "55",
+          "pdfPage": 66,
+          "section": "No-cutaway limit"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Older test has an aggressive rear-riser maneuver for entangled downplanes not stated in the current dual-canopy section; it also compresses partially-deployed configurations.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall",
+        "manual_cross_reference",
+        "partially_supported"
+      ],
+      "sourceAnswer": "Contain canopy in bag; biplane fly front; side-by-side gentle inputs steering canopies together; downplane cut away main if risers not entangled. If entangled, try bringing canopies overhead by aggressively pulling a rear riser on either canopy. Keep brakes matched; choose large open area and PLF if landing both.",
+      "officialAnswer": "Establish entanglement certainty and match toggle configuration. Side-by-side: gentle inputs to steer canopies together. Biplane: small gentle turns on dominant canopy, usually front. Downplane: cut away main if risers not entangled. Separate canopies before elective main cutaway when certainly clear; the manual describes leftmost-rear-riser separation. If one canopy remains bagged, distinguish inflated reserve/bagged main from inflated main/bagged reserve; see OPS p.67 for clearing/cutaway versus gathering reserve and allowing inflation if it begins. Pick large open area and PLF if landing both. Apply 1,500-foot no-cutaway limitation.",
+      "comparison": {
+        "status": "partially_supported",
+        "summary": "Older test has an aggressive rear-riser maneuver for entangled downplanes not stated in the current dual-canopy section; it also compresses partially-deployed configurations.",
+        "officialAnswer": "Establish entanglement certainty and match toggle configuration. Side-by-side: gentle inputs to steer canopies together. Biplane: small gentle turns on dominant canopy, usually front. Downplane: cut away main if risers not entangled. Separate canopies before elective main cutaway when certainly clear; the manual describes leftmost-rear-riser separation. If one canopy remains bagged, distinguish inflated reserve/bagged main from inflated main/bagged reserve; see OPS p.67 for clearing/cutaway versus gathering reserve and allowing inflation if it begins. Pick large open area and PLF if landing both. Apply 1,500-foot no-cutaway limitation.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "66",
+            "pdfPage": 77,
+            "section": "Post-opening"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "67",
+            "pdfPage": 78,
+            "section": "Dual canopy partially deployed"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "55",
+            "pdfPage": 66,
+            "section": "No-cutaway limit"
+          }
+        ],
+        "evaluatorQuestion": "Is the older aggressive rear-riser maneuver still taught? Please distinguish bagged main/reserve and entangled/clear risers.",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      },
+      "reviewLabel": "Source comparison 9 of 10: Performance Test (2 of 2)"
+    },
+    {
+      "id": "sigma-ep-study-guide-067",
+      "category": "Hazardous landings",
+      "type": "recall",
+      "question": "What does the high-wind landing procedure say about the RSL and collapse?",
+      "answer": "RSL may be disconnected below 1,500 feet AGL, including on ground. On landing pass toggles to catchers; if none, sit down, release one toggle and pull the other hand-over-hand; pivot toward pulled toggle and contain canopy nose. If unable to collapse, disconnect RSL if needed, then pull cutaway. Routine RSL removal in non-high-wind conditions is strongly discouraged.\n\nOfficial-manual comparison [PARTIAL SUPPORT / OMITTED DETAILS]: Timing and seated/single-toggle collapse agree. OPS additionally permits a rear-riser stall from seated position.\nManual guidance: RSL may be disconnected below 1,500 feet including on ground; routine non-high-wind removal discouraged. Hand toggles to catchers. Without catchers, seated landing; collapse with one toggle hand-over-hand OR stall on rear risers from seated position; pivot/contain canopy. If unable, disconnect RSL if needed and cut away.\nReferences: OPS p.53; OPS p.54\nAsk evaluator: Do you accept both listed seated canopy-collapse methods?",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Official-manual comparison [PARTIAL SUPPORT / OMITTED DETAILS]: Timing and seated/single-toggle collapse agree. OPS additionally permits a rear-riser stall from seated position.\nManual guidance: RSL may be disconnected below 1,500 feet including on ground; routine non-high-wind removal discouraged. Hand toggles to catchers. Without catchers, seated landing; collapse with one toggle hand-over-hand OR stall on rear risers from seated position; pivot/contain canopy. If unable, disconnect RSL if needed and cut away.\nReferences: OPS p.53; OPS p.54\nAsk evaluator: Do you accept both listed seated canopy-collapse methods?",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "sigma-ep-study-guide",
+          "printedPage": "6",
+          "imageFilename": "1000013740.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "53",
+          "pdfPage": 64,
+          "section": "Hazardous landings"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "54",
+          "pdfPage": 65,
+          "section": "High-wind landing continuation"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Timing and seated/single-toggle collapse agree. OPS additionally permits a rear-riser stall from seated position.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall",
+        "manual_cross_reference",
+        "partially_supported"
+      ],
+      "sourceAnswer": "RSL may be disconnected below 1,500 feet AGL, including on ground. On landing pass toggles to catchers; if none, sit down, release one toggle and pull the other hand-over-hand; pivot toward pulled toggle and contain canopy nose. If unable to collapse, disconnect RSL if needed, then pull cutaway. Routine RSL removal in non-high-wind conditions is strongly discouraged.",
+      "officialAnswer": "RSL may be disconnected below 1,500 feet including on ground; routine non-high-wind removal discouraged. Hand toggles to catchers. Without catchers, seated landing; collapse with one toggle hand-over-hand OR stall on rear risers from seated position; pivot/contain canopy. If unable, disconnect RSL if needed and cut away.",
+      "comparison": {
+        "status": "partially_supported",
+        "summary": "Timing and seated/single-toggle collapse agree. OPS additionally permits a rear-riser stall from seated position.",
+        "officialAnswer": "RSL may be disconnected below 1,500 feet including on ground; routine non-high-wind removal discouraged. Hand toggles to catchers. Without catchers, seated landing; collapse with one toggle hand-over-hand OR stall on rear risers from seated position; pivot/contain canopy. If unable, disconnect RSL if needed and cut away.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "53",
+            "pdfPage": 64,
+            "section": "Hazardous landings"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "54",
+            "pdfPage": 65,
+            "section": "High-wind landing continuation"
+          }
+        ],
+        "evaluatorQuestion": "Do you accept both listed seated canopy-collapse methods?",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      },
+      "reviewLabel": "Source comparison 10 of 10: Study Guide (1 of 2)"
+    },
+    {
+      "id": "sigma-ep-performance-test-059",
+      "category": "Hazardous landings",
+      "type": "recall",
+      "question": "What does the high-wind landing procedure say about the RSL and collapse?",
+      "answer": "Disconnect RSL. On landing give toggles to catchers; if none, once feet touch ground release one toggle and pull other hand-over-hand, pivot toward pulled toggle and contain canopy nose. If unable to collapse, pull cutaway. Newer guide specifies below-1,500-foot RSL timing and sitting down.\n\nOfficial-manual comparison [DIFFERENCE FOUND]: Older test omits the below-1,500-foot RSL allowance/non-routine-removal qualification and uses feet-touch-ground rather than explicit seated landing; it omits rear-riser collapse alternative.\nManual guidance: RSL may be disconnected below 1,500 feet including on ground; routine non-high-wind removal discouraged. Hand toggles to catchers. Without catchers, seated landing; collapse with one toggle hand-over-hand OR stall on rear risers from seated position; pivot/contain canopy. If unable, disconnect RSL if needed and cut away.\nReferences: OPS p.53; OPS p.54\nAsk evaluator: Which RSL timing and seated-collapse sequence should I demonstrate?",
+      "options": [],
+      "correctOptionId": null,
+      "explanation": "Official-manual comparison [DIFFERENCE FOUND]: Older test omits the below-1,500-foot RSL allowance/non-routine-removal qualification and uses feet-touch-ground rather than explicit seated landing; it omits rear-riser collapse alternative.\nManual guidance: RSL may be disconnected below 1,500 feet including on ground; routine non-high-wind removal discouraged. Hand toggles to catchers. Without catchers, seated landing; collapse with one toggle hand-over-hand OR stall on rear risers from seated position; pivot/contain canopy. If unable, disconnect RSL if needed and cut away.\nReferences: OPS p.53; OPS p.54\nAsk evaluator: Which RSL timing and seated-collapse sequence should I demonstrate?",
+      "status": "needs_review",
+      "references": [
+        {
+          "sourceId": "sigma-ep-performance-test",
+          "printedPage": "5",
+          "imageFilename": "1000013745.jpg"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "53",
+          "pdfPage": 64,
+          "section": "Hazardous landings"
+        },
+        {
+          "sourceId": "ops",
+          "printedPage": "54",
+          "pdfPage": 65,
+          "section": "High-wind landing continuation"
+        }
+      ],
+      "includeInQuiz": false,
+      "requiresExaminerReview": true,
+      "reviewNote": "Older test omits the below-1,500-foot RSL allowance/non-routine-removal qualification and uses feet-touch-ground rather than explicit seated landing; it omits rear-riser collapse alternative.",
+      "relatedQuestionIds": [],
+      "tags": [
+        "course_material",
+        "recall",
+        "manual_cross_reference",
+        "difference"
+      ],
+      "sourceAnswer": "Disconnect RSL. On landing give toggles to catchers; if none, once feet touch ground release one toggle and pull other hand-over-hand, pivot toward pulled toggle and contain canopy nose. If unable to collapse, pull cutaway. Newer guide specifies below-1,500-foot RSL timing and sitting down.",
+      "officialAnswer": "RSL may be disconnected below 1,500 feet including on ground; routine non-high-wind removal discouraged. Hand toggles to catchers. Without catchers, seated landing; collapse with one toggle hand-over-hand OR stall on rear risers from seated position; pivot/contain canopy. If unable, disconnect RSL if needed and cut away.",
+      "comparison": {
+        "status": "difference",
+        "summary": "Older test omits the below-1,500-foot RSL allowance/non-routine-removal qualification and uses feet-touch-ground rather than explicit seated landing; it omits rear-riser collapse alternative.",
+        "officialAnswer": "RSL may be disconnected below 1,500 feet including on ground; routine non-high-wind removal discouraged. Hand toggles to catchers. Without catchers, seated landing; collapse with one toggle hand-over-hand OR stall on rear risers from seated position; pivot/contain canopy. If unable, disconnect RSL if needed and cut away.",
+        "references": [
+          {
+            "sourceId": "ops",
+            "printedPage": "53",
+            "pdfPage": 64,
+            "section": "Hazardous landings"
+          },
+          {
+            "sourceId": "ops",
+            "printedPage": "54",
+            "pdfPage": 65,
+            "section": "High-wind landing continuation"
+          }
+        ],
+        "evaluatorQuestion": "Which RSL timing and seated-collapse sequence should I demonstrate?",
+        "reviewedAt": "2026-10-13",
+        "baseline": "Uploaded MAN016 Rev_2, MAN013 Rev.4.2, and 2026 IRM; not a claim of subsequent bulletin verification."
+      },
+      "reviewLabel": "Source comparison 10 of 10: Performance Test (2 of 2)"
     }
   ],
-  "updatedAt": "2026-10-13"
+  "updatedAt": "2026-10-25"
 }

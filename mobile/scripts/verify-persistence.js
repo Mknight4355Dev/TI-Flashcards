@@ -80,6 +80,13 @@ async function verify(file) {
   assert.ok(app['storage-status'].textContent.includes('could not be saved'));
   app['reset-deck'].click();
   assert.ok(!app.position.textContent.includes('hidden'));
+  app = await start(file, storage, decks);
+  app['deck-list'].children[2].click();
+  assert.equal(app['review-comparisons'].hidden, false, 'Merged EP deck exposes comparison review');
+  app['review-comparisons'].click();
+  assert.ok(app.category.textContent.includes('Source comparison 1 of 10: Study Guide'));
+  app.next.click();
+  assert.ok(app.category.textContent.includes('Source comparison 1 of 10: Performance Test'));
 }
 (async () => {
   for (const file of ['app.js', 'mobile/src/app.js']) await verify(file);
