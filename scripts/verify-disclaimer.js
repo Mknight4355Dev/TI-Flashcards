@@ -12,6 +12,8 @@ const built = path.join(root, mode === 'web' ? 'site-dist' : 'mobile/www');
 const htmlFiles = [sourceHtml, path.join(built, 'index.html')];
 const script = fs.readFileSync(path.join(root, 'disclaimer.js'), 'utf8');
 assert.deepEqual(fs.readFileSync(path.join(built, 'disclaimer.js')), Buffer.from(script), 'Shared disclaimer script must be bundled');
+assert.deepEqual(fs.readFileSync(path.join(built, 'icons', 'icon-192.png')),
+  fs.readFileSync(path.join(root, 'icons', 'icon-192.png')), 'App icon must be bundled with the notice');
 
 const sources = [
   ['Sigma Tandem Operations Manual', 'https://uptvector.com/wp-content/uploads/2025/12/Man016_Rev2-Sigma-Tandem-Operations-Manual.pdf'],
@@ -22,6 +24,7 @@ const sources = [
 for (const file of htmlFiles) {
   const html = fs.readFileSync(file, 'utf8');
   assert.match(html, /<section id="disclaimer"/);
+  assert.match(html, /<img class="disclaimer-icon" src="icons\/icon-192\.png" alt="TI Flashcards app icon" width="96" height="96">/);
   assert.match(html, /<section id="selection"[^>]* hidden>/, 'Deck picker must start hidden');
   assert.ok(html.indexOf('src="disclaimer.js"') < html.indexOf('src="app.js"'), 'Acknowledgement runs before the study app');
   assert.match(html, /created by a Tandem Instructor \(TI\) candidate/);

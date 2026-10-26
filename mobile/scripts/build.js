@@ -20,6 +20,8 @@ async function build() {
     fs.copyFileSync(path.join(root, 'src', file), path.join(output, file));
   }
   fs.copyFileSync(path.join(root, '..', 'disclaimer.js'), path.join(output, 'disclaimer.js'));
+  fs.mkdirSync(path.join(output, 'icons'), { recursive: true });
+  fs.copyFileSync(path.join(root, '..', 'icons', 'icon-192.png'), path.join(output, 'icons', 'icon-192.png'));
   for (const file of decks) fs.copyFileSync(path.join(root, '..', file), path.join(output, file));
   await esbuild.build({
     entryPoints: [path.join(root, 'src', 'native.js')],
