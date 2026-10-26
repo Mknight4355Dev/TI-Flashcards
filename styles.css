@@ -30,7 +30,10 @@ p { line-height: 1.65; }
 .options strong { color: var(--accent); }
 .context, .review { padding: 14px 18px; border-left: 3px solid var(--accent); background: var(--inset); }
 .review { background: var(--review); border-color: var(--warning); }
-.status { display: inline-block; margin: 0 0 18px; font-size: .875rem; font-weight: 600; }
+.status { display: inline-block; margin: 0 0 18px; padding: 5px 10px; border-radius: 999px; background: var(--inset); color: var(--accent); font-size: .75rem; font-weight: 700; }
+.answer-text { line-height: 1.4; margin-bottom: 28px; }
+.comparison-heading { margin: 0 0 8px; color: var(--muted); font-size: .875rem; font-weight: 700; }
+.explanation { margin: 0 0 24px; padding: 16px 18px; border-radius: 10px; background: var(--inset); font-size: .95rem; line-height: 1.6; white-space: pre-line; }
 h3 { font-size: 1rem; margin-top: 24px; }
 .references { color: var(--muted); font-size: .875rem; padding-left: 20px; line-height: 1.7; }
 .hint { margin-top: 30px; padding-top: 18px; border-top: 1px solid var(--border); color: var(--muted); font-size: .875rem; }

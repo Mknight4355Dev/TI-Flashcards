@@ -7,8 +7,17 @@ const vm = require('node:vm');
 const elements = new Map();
 const documentHandlers = new Map();
 const windowHandlers = new Map();
+const saved = new Map();
+let storageBlocked = false;
 const get = id => {
-  if (!elements.has(id)) elements.set(id, { hidden: id === 'install-invitation' || id === 'offline-status', textContent: '', addEventListener() {} });
+  if (!elements.has(id)) {
+    const handlers = new Map();
+    elements.set(id, {
+      hidden: id === 'install-invitation' || id === 'offline-status', textContent: '',
+      addEventListener(type, handler) { handlers.set(type, handler); },
+      click() { handlers.get('click')(); }
+    });
+  }
   return elements.get(id);
 };
 const document = {
@@ -42,30 +51,59 @@ class MessageChannel {
     this.port2 = { peer: this.port1 };
   }
 }
-vm.runInNewContext(fs.readFileSync(path.resolve(__dirname, '..', 'web-pwa.js'), 'utf8'), {
-  document, window, navigator, MessageChannel, setTimeout, clearTimeout,
-  matchMedia: () => ({ matches: false }),
-  sessionStorage: { getItem: () => null, setItem() {} }
-});
+const localStorage = {
+  getItem(key) { if (storageBlocked) throw new Error('Storage blocked'); return saved.get(key) || null; },
+  setItem(key, value) { if (storageBlocked) throw new Error('Storage blocked'); saved.set(key, value); }
+};
+function loadPage() {
+  elements.clear();
+  documentHandlers.clear();
+  windowHandlers.clear();
+  vm.runInNewContext(fs.readFileSync(path.resolve(__dirname, '..', 'web-pwa.js'), 'utf8'), {
+    document, window, navigator, MessageChannel, setTimeout, clearTimeout,
+    matchMedia: () => ({ matches: false }), localStorage,
+    sessionStorage: { getItem: () => null, setItem() {} }
+  });
+}
+loadPage();
 const settle = () => new Promise(resolve => setTimeout(resolve, 15));
 async function verify() {
   await settle();
   documentHandlers.get('ti-flashcards:study-started')();
   await settle();
   assert.equal(get('install-invitation').hidden, false);
-  assert.equal(get('install-action').textContent, 'Install app');
-  assert.doesNotMatch(get('install-description').textContent, /even without an internet connection/);
+  assert.equal(get('install-action').textContent, 'Add to home screen');
+  assert.match(get('install-description').textContent, /Offline study also works in this browser once the decks are ready/);
   assert.match(get('offline-status').textContent, /Offline setup incomplete/);
   cacheReady = true;
   windowHandlers.get('online')();
   await settle();
-  assert.equal(get('install-action').textContent, 'Install for offline study');
+  assert.equal(get('install-action').textContent, 'Add to home screen');
   assert.match(get('offline-status').textContent, /All decks are ready for offline study/);
   cacheReady = false;
   documentHandlers.get('visibilitychange')();
   await settle();
-  assert.equal(get('install-action').textContent, 'Install app', 'A lost cache removes the offline claim');
+  assert.equal(get('install-action').textContent, 'Add to home screen');
   assert.match(get('offline-status').textContent, /Offline setup incomplete/);
-  console.log('PASS: installation copy waits for verified offline readiness and rechecks after cache loss');
+  get('install-dismiss').click();
+  assert.equal(saved.get('ti-flashcards:install-dismissed'), 'yes', 'Continue in browser saves the choice');
+  loadPage();
+  await settle();
+  documentHandlers.get('ti-flashcards:study-started')();
+  assert.equal(get('install-invitation').hidden, true, 'Saved choice suppresses later invitations');
+
+  storageBlocked = true;
+  loadPage();
+  await settle();
+  documentHandlers.get('ti-flashcards:study-started')();
+  assert.equal(get('install-invitation').hidden, false);
+  get('install-dismiss').click();
+  documentHandlers.get('ti-flashcards:study-started')();
+  assert.equal(get('install-invitation').hidden, true, 'Choice lasts for the current page');
+  loadPage();
+  await settle();
+  documentHandlers.get('ti-flashcards:study-started')();
+  assert.equal(get('install-invitation').hidden, false, 'Choice cannot persist without storage');
+  console.log('PASS: optional home-screen prompt, saved dismissal, blocked storage, and offline status');
 }
 verify().catch(error => { console.error(error); process.exitCode = 1; });

@@ -6,6 +6,6 @@
   "scripts": {
     "start": "node server.js",
     "build:web": "node scripts/build-web.js",
-    "test:web": "npm run build:web && node scripts/verify-web.js && node scripts/verify-offline.js && node scripts/verify-pwa-ui.js && node scripts/verify-ep-merge.js && node scripts/verify-disclaimer.js web"
+    "test:web": "npm run build:web && node scripts/verify-web.js && node scripts/verify-offline.js && node scripts/verify-pwa-ui.js && node scripts/verify-navigation.js && node scripts/verify-card-presentation.js && node scripts/verify-ep-merge.js && node scripts/verify-disclaimer.js web"
   }
 }

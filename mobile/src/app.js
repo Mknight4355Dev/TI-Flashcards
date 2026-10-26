@@ -113,9 +113,22 @@
     get('card').setAttribute('aria-label', showingAnswer ? 'Answer shown. Activate to show question.' : 'Question shown. Activate to reveal answer.');
     if (showingAnswer) {
       add('div', statuses[card.status] || card.status || '', content, 'status');
-      add('h2', (card.correctOptionId ? card.correctOptionId + '. ' : '') + card.answer, content);
-      if (card.explanation) add('p', card.explanation, content);
-      if (card.reviewNote) add('p', card.reviewNote, content, 'review');
+      const repeatedExplanation = card.explanation && '\n\n' + card.explanation;
+      const answer = repeatedExplanation && card.answer.endsWith(repeatedExplanation)
+        ? card.answer.slice(0, -repeatedExplanation.length) : card.answer;
+      add('h2', (card.correctOptionId ? card.correctOptionId + '. ' : '') + answer, content, 'answer-text');
+      if (card.explanation) {
+        let explanation = card.references?.length
+          ? card.explanation.split(/\r?\n/).filter(line => !/^References:\s*/.test(line)).join('\n').trim()
+          : card.explanation;
+        const comparisonHeading = /^Official-manual comparison \[([^\]]+)\]:\s*/.exec(explanation);
+        if (comparisonHeading) {
+          add('h3', 'Official-manual comparison' + (comparisonHeading[1] === 'VERIFIED' ? '' : ' · ' + comparisonHeading[1]), content, 'comparison-heading');
+          explanation = explanation.slice(comparisonHeading[0].length);
+        }
+        if (explanation) add('p', explanation, content, 'explanation');
+      }
+      if (card.reviewNote && !card.explanation?.includes(card.reviewNote)) add('p', card.reviewNote, content, 'review');
       if (card.practicePrompt) {
         add('h3', 'Practice prompt', content);
         add('p', card.practicePrompt, content);
