@@ -10,7 +10,7 @@
     "mode": "recall",
     "front": "question",
     "back": "answer",
-    "grading": "Recall/self-assessment; empty options and null correctOptionId. Source-comparison pairs have includeInQuiz false and remain visible in ordinary study. The existing includeInQuiz flag on other cards does not by itself mean manual verification; check status and review notes before using a card in any future quiz mode.",
+    "grading": "Recall/self-assessment; empty options and null correctOptionId. Each source-comparison pair has one card with includeInQuiz false; both remain visible in ordinary study. An includeInQuiz true flag does not by itself mean manual verification; check status and review notes before using a card in any future quiz mode.",
     "practice": "Rehearse EP handle sequences with the examiner in a training harness. Canopy drills are supervised course exercises.",
     "annotationFields": [
       "sourceAnswer",
@@ -90,7 +90,7 @@
   ],
   "counts": {
     "total": 83,
-    "quizReady": 42,
+    "quizReady": 43,
     "needsReview": 38,
     "comparison": {
       "verified": 45,
@@ -889,7 +889,7 @@
           "section": "Aircraft / How is student refusal in the aircraft handled?"
         }
       ],
-      "includeInQuiz": false,
+      "includeInQuiz": true,
       "requiresExaminerReview": true,
       "reviewNote": "Older test omits the refusal exception: OPS p.45 permits exiting if safer than returning inside.",
       "relatedQuestionIds": [],
@@ -1094,7 +1094,7 @@
           "section": "Side-spin discretion"
         }
       ],
-      "includeInQuiz": false,
+      "includeInQuiz": true,
       "requiresExaminerReview": true,
       "reviewNote": "Older test omits drogue-side-down discretion and heel-assisted leg correction; OPS pp.59–60 includes both.",
       "relatedQuestionIds": [],
@@ -1510,7 +1510,7 @@
           "section": "Freefall"
         }
       ],
-      "includeInQuiz": false,
+      "includeInQuiz": true,
       "requiresExaminerReview": true,
       "reviewNote": "Older test starts with freeing the arm and does not explicitly list release between drogue check and the main-malfunction branch. OPS sets/checks first, then one student-grab attempt with continue-versus-release branches.",
       "relatedQuestionIds": [],
@@ -1752,7 +1752,7 @@
           "section": "Uncocked drogue inflation behavior"
         }
       ],
-      "includeInQuiz": false,
+      "includeInQuiz": true,
       "requiresExaminerReview": true,
       "reviewNote": "Operational six-second response agrees. OWNER describes possible 6–8-second inflation of an uncocked drogue; this describes behavior, not a longer operational waiting instruction.",
       "relatedQuestionIds": [],
@@ -2319,7 +2319,7 @@
           "section": "Drogue fall"
         }
       ],
-      "includeInQuiz": false,
+      "includeInQuiz": true,
       "requiresExaminerReview": true,
       "reviewNote": "Older test inserts a freeing attempt before left-hand release and omits the newer cutaway/student-assistance discretion. OPS p.62 starts with left-hand release.",
       "relatedQuestionIds": [],
@@ -2778,7 +2778,7 @@
           "section": "Deployment"
         }
       ],
-      "includeInQuiz": false,
+      "includeInQuiz": true,
       "requiresExaminerReview": true,
       "reviewNote": "Sequence agrees. If release actually succeeds/collapses the drogue but bag is not extracted, the adjacent collapsed-drogue-in-tow branch applies.",
       "relatedQuestionIds": [],
@@ -3085,7 +3085,7 @@
           "section": "Core EP sequences used by scenario labels"
         }
       ],
-      "includeInQuiz": false,
+      "includeInQuiz": true,
       "requiresExaminerReview": false,
       "reviewNote": null,
       "relatedQuestionIds": [],
@@ -3682,7 +3682,7 @@
           "section": "Core EP sequences used by scenario labels"
         }
       ],
-      "includeInQuiz": false,
+      "includeInQuiz": true,
       "requiresExaminerReview": true,
       "reviewNote": "Rear-riser landing branch agrees, but older test omits the manual's possible use of only intact primary or secondary brakes, depending on the failed control line.",
       "relatedQuestionIds": [],
@@ -4081,7 +4081,7 @@
           "section": "No-cutaway limit"
         }
       ],
-      "includeInQuiz": false,
+      "includeInQuiz": true,
       "requiresExaminerReview": true,
       "reviewNote": "The handout compresses several state-dependent procedures; a biplane's dominant canopy is usually, not invariably, the front canopy.",
       "relatedQuestionIds": [],
@@ -4809,7 +4809,7 @@
           "section": "High-wind landing continuation"
         }
       ],
-      "includeInQuiz": false,
+      "includeInQuiz": true,
       "requiresExaminerReview": true,
       "reviewNote": "Older test omits the below-1,500-foot RSL allowance/non-routine-removal qualification and uses feet-touch-ground rather than explicit seated landing; it omits rear-riser collapse alternative.",
       "relatedQuestionIds": [],

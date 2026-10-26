@@ -66,3 +66,11 @@ button { min-height: 48px; touch-action: manipulation; }
 main { overflow-x: clip; }
 
 #storage-status:empty { display: none; }
+.disclaimer { padding: clamp(20px, 4vw, 36px); border: 1px solid var(--border); border-radius: 20px; background: var(--surface); }
+.disclaimer p { color: var(--text); }
+.source-list { padding-left: 22px; line-height: 1.7; }
+.source-list li { margin: 10px 0; }
+.source-list a { color: var(--accent); overflow-wrap: anywhere; }
+.source-list a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.disclaimer-actions { display: flex; gap: 10px; margin-top: 24px; }
+.review-sources { margin-bottom: 20px; }

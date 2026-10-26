@@ -31,8 +31,8 @@ for (const original of source.cards) {
     assert.ok(variant, 'Differing Performance Test card must remain');
     assert.equal(variant.answer, original.answer, 'Performance Test answer must be unchanged');
     assert.deepEqual(variant.references, original.references, 'Performance Test citations must be unchanged');
-    assert.equal(match.includeInQuiz, false);
-    assert.equal(variant.includeInQuiz, false);
+    assert.equal([match.includeInQuiz, variant.includeInQuiz].filter(value => value === true).length, 1,
+      'Exactly one variant in each differing pair must be included in a future quiz');
     assert.match(match.reviewLabel, /Study Guide \(1 of 2\)/);
     assert.match(variant.reviewLabel, /Performance Test \(2 of 2\)/);
     const position = merged.cards.indexOf(match);
@@ -42,7 +42,7 @@ for (const original of source.cards) {
 }
 assert.deepEqual([identical, differing, unique], [53, 10, 1]);
 assert.equal(merged.cards.at(-1).id, 'sigma-ep-performance-test-010', 'Unmatched Performance Test card belongs at the end');
-assert.equal(merged.cards.filter(card => card.includeInQuiz === false).length, 20);
+assert.equal(merged.cards.filter(card => card.reviewLabel && card.includeInQuiz === false).length, 10);
 assert.equal(merged.counts.total, merged.cards.length);
 assert.equal(merged.counts.quizReady, merged.cards.filter(card => card.includeInQuiz && card.status === 'verified').length);
 assert.equal(merged.counts.needsReview, merged.cards.filter(card => card.requiresExaminerReview).length);
