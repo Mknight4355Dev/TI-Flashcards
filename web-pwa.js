@@ -17,6 +17,7 @@
   let offlineState = 'checking';
   let updateWaiting = false;
   let pendingCheck = null;
+  const dismissalKey = 'ti-flashcards:install-dismissed';
   function withTimeout(promise, milliseconds) {
     let timer;
     return Promise.race([
@@ -33,14 +34,14 @@
     if (updateWaiting) messages.push('An update is ready. Close and reopen TI Flashcards to use it.');
     status.textContent = messages.join(' ');
     status.hidden = false;
-    const ready = offlineState === 'ready';
-    title.textContent = ready ? 'Study anywhere, even offline' : 'Add TI Flashcards to your home screen';
-    description.textContent = ready
-      ? 'Add TI Flashcards to your home screen for quick access, even without an internet connection.'
-      : 'Get quick access to your study decks. Offline setup is not complete yet.';
-    action.textContent = ready ? 'Install for offline study' : 'Install app';
+    title.textContent = 'Add TI Flashcards to your home screen';
+    description.textContent = 'Add a home-screen icon for quick access. Offline study also works in this browser once the decks are ready.';
+    action.textContent = 'Add to home screen';
   }
-  try { dismissed = sessionStorage.getItem('ti-flashcards:install-dismissed') === 'yes'; } catch (error) { /* Storage may be disabled. */ }
+  try { dismissed = localStorage.getItem(dismissalKey) === 'yes'; } catch (error) { /* Storage may be disabled. */ }
+  if (!dismissed) {
+    try { dismissed = sessionStorage.getItem(dismissalKey) === 'yes'; } catch (error) { /* Storage may be disabled. */ }
+  }
   showStatus();
 
   function showInvitation() {
@@ -58,7 +59,9 @@
   document.getElementById('install-dismiss').addEventListener('click', () => {
     invitation.hidden = true;
     dismissed = true;
-    try { sessionStorage.setItem('ti-flashcards:install-dismissed', 'yes'); } catch (error) { /* Storage may be disabled. */ }
+    try { localStorage.setItem(dismissalKey, 'yes'); } catch (error) {
+      try { sessionStorage.setItem(dismissalKey, 'yes'); } catch (sessionError) { /* Remember for this page only. */ }
+    }
   });
   action.addEventListener('click', async () => {
     if (installPrompt) {

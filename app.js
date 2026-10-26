@@ -9,6 +9,7 @@
   let selectedButton, cardAnimation, activeCards = [], hiddenCards, deckStorageKey;
   const hiddenByDeck = new WeakMap();
   const deckSummaries = new WeakMap();
+  const decksByFile = new Map();
   function updateDeckSummary(data) {
     const count = hiddenByDeck.get(data).size;
     deckSummaries.get(data).textContent = data.cards.length + ' cards - ' + count + ' hidden - Start studying';
@@ -33,7 +34,8 @@
       get('storage-status').textContent = 'Progress could not be saved on this device. Hidden cards will be remembered for this session only.';
     }
   }
-  function selectDeck(data, button, file) {
+  function selectDeck(data, button, file, fromHistory = false) {
+    if (!fromHistory) history.pushState({ tiFlashcardsDeck: file }, '');
     deck = data;
     deckStorageKey = 'ti-flashcards:hidden:v1:' + file;
     get('storage-status').textContent = '';
@@ -51,14 +53,16 @@
     get('card').removeAttribute('aria-disabled');
     get('flip').disabled = false;
     get('selection').hidden = true;
+    get('disclaimer').hidden = true;
     get('study').hidden = false;
     render();
     get('title').focus();
     if (typeof document.dispatchEvent === 'function' && typeof Event === 'function')
       document.dispatchEvent(new Event('ti-flashcards:study-started'));
   }
-  function showSelection() {
+  function showSelection(fromHistory = false) {
     if (!deck) return;
+    if (!fromHistory && history.state && history.state.tiFlashcardsDeck) history.back();
     if (cardAnimation) cardAnimation.cancel();
     deck = null;
     get('study').hidden = true;
@@ -66,6 +70,11 @@
     document.title = 'Tandem Instructor Flashcards';
     selectedButton.focus();
   }
+  window.addEventListener('popstate', event => {
+    const entry = event.state && decksByFile.get(event.state.tiFlashcardsDeck);
+    if (entry) selectDeck(entry.data, entry.button, entry.file, true);
+    else showSelection(true);
+  });
   const statuses = { verified: 'Verified', source_verified: 'Source verified', derived: 'Derived answer', needs_review: 'Needs review', self_attestation: 'Personal confirmation' };
   function add(tag, text, parent, className) {
     const element = document.createElement(tag);
@@ -115,9 +124,22 @@
     get('card').setAttribute('aria-label', showingAnswer ? 'Answer shown. Activate to show question.' : 'Question shown. Activate to reveal answer.');
     if (showingAnswer) {
       add('div', statuses[card.status] || card.status || '', content, 'status');
-      add('h2', (card.correctOptionId ? card.correctOptionId + '. ' : '') + card.answer, content);
-      if (card.explanation) add('p', card.explanation, content);
-      if (card.reviewNote) add('p', card.reviewNote, content, 'review');
+      const repeatedExplanation = card.explanation && '\n\n' + card.explanation;
+      const answer = repeatedExplanation && card.answer.endsWith(repeatedExplanation)
+        ? card.answer.slice(0, -repeatedExplanation.length) : card.answer;
+      add('h2', (card.correctOptionId ? card.correctOptionId + '. ' : '') + answer, content, 'answer-text');
+      if (card.explanation) {
+        let explanation = card.references?.length
+          ? card.explanation.split(/\r?\n/).filter(line => !/^References:\s*/.test(line)).join('\n').trim()
+          : card.explanation;
+        const comparisonHeading = /^Official-manual comparison \[([^\]]+)\]:\s*/.exec(explanation);
+        if (comparisonHeading) {
+          add('h3', 'Official-manual comparison' + (comparisonHeading[1] === 'VERIFIED' ? '' : ' · ' + comparisonHeading[1]), content, 'comparison-heading');
+          explanation = explanation.slice(comparisonHeading[0].length);
+        }
+        if (explanation) add('p', explanation, content, 'explanation');
+      }
+      if (card.reviewNote && !card.explanation?.includes(card.reviewNote)) add('p', card.reviewNote, content, 'review');
       if (card.practicePrompt) {
         add('h3', 'Practice prompt', content);
         add('p', card.practicePrompt, content);
@@ -191,7 +213,7 @@
     if (event.key === ' ' || event.key === 'Enter') { event.preventDefault(); flip(); }
   });
   get('flip').addEventListener('click', flip);
-  get('back-to-decks').addEventListener('click', showSelection);
+  get('back-to-decks').addEventListener('click', () => showSelection());
   get('hide-card').addEventListener('click', () => {
     if (!deck || !activeCards.length) return;
     hiddenCards.add(activeCards[index].id);
@@ -262,6 +284,7 @@
       hiddenByDeck.set(data, loadHiddenCards(data, 'ti-flashcards:hidden:v1:' + file));
       deckSummaries.set(data, add('span', '', button));
       updateDeckSummary(data);
+      decksByFile.set(file, { data, button, file });
       button.addEventListener('click', () => selectDeck(data, button, file));
     });
   });

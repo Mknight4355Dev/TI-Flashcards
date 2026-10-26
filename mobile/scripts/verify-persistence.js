@@ -17,8 +17,10 @@ async function start(file, storage, decks) {
     getElementById: id => elements[id] || (elements[id] = new Element()),
     createElement: () => new Element(), addEventListener() {}
   };
+  const window = { addEventListener() {} };
+  const history = { state: null, pushState(state) { this.state = state; }, back() { this.state = null; } };
   vm.runInNewContext(fs.readFileSync(path.join(root, file), 'utf8'), {
-    document, localStorage: storage,
+    document, window, history, localStorage: storage,
     fetch: async filename => ({ ok: true, json: async () => JSON.parse(JSON.stringify(decks[filename])) })
   });
   await new Promise(resolve => setImmediate(resolve));
